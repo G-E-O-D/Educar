@@ -24,6 +24,9 @@ jobs:
       - name: Instalar dependencias (lockfile)
         run: npm ci
 
+      - name: Generar artefactos de versión
+        run: node scripts/gen-version.mjs
+
       - name: Verificar tipos
         run: npm run typecheck
 
@@ -33,8 +36,8 @@ jobs:
       - name: Tests unitarios
         run: npm run test
 
-      - name: Generar versión y construir
-        run: npm run build
+      - name: Construir (web + api)
+        run: npm run build --workspace=apps/api && npm run build --workspace=apps/web
 
       - name: Instalar navegadores Playwright
         run: npx playwright install --with-deps chromium

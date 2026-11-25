@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+﻿import { test, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 
 // ── Panel docente ──────────────────────────────────────────────────────────
@@ -7,13 +7,15 @@ test.describe('Panel docente (/panel)', () => {
     await page.goto('/panel');
   });
 
-  test('renderiza el título de página "Panel docente"', async ({ page }) => {
-    await expect(page.getByRole('heading', { name: /panel docente/i })).toBeVisible();
+  test('renderiza encabezado de saludo al docente', async ({ page }) => {
+    // Dashboard now shows a greeting h1 (Buenos días/tardes/noches, docente)
+    // .first() avoids strict-mode: sidebar also has an h1 "Panel docente"
+    await expect(page.getByRole('heading', { name: /docente/i }).first()).toBeVisible();
   });
 
   test('muestra el aviso de datos ficticios', async ({ page }) => {
-    await expect(page.getByRole('note')).toBeVisible();
-    await expect(page.getByRole('note')).toContainText('ficticios');
+    await expect(page.getByRole('note').first()).toBeVisible();
+    await expect(page.getByRole('note').first()).toContainText('ficticios');
   });
 
   test('muestra sidebar con navegación', async ({ page }) => {
@@ -42,6 +44,13 @@ test.describe('Panel docente (/panel)', () => {
       .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa'])
       .analyze();
     expect(results.violations).toHaveLength(0);
+  });
+
+  test('no hay overflow horizontal a 320px', async ({ page, browserName }) => {
+    if (browserName !== 'chromium') test.skip();
+    await page.setViewportSize({ width: 320, height: 568 });
+    const overflow = await page.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth);
+    expect(overflow).toBe(false);
   });
 });
 
@@ -73,6 +82,13 @@ test.describe('Biblioteca inteligente (/biblioteca)', () => {
       .analyze();
     expect(results.violations).toHaveLength(0);
   });
+
+  test('no hay overflow horizontal a 320px', async ({ page, browserName }) => {
+    if (browserName !== 'chromium') test.skip();
+    await page.setViewportSize({ width: 320, height: 568 });
+    const overflow = await page.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth);
+    expect(overflow).toBe(false);
+  });
 });
 
 // ── Generador de actividades ───────────────────────────────────────────────
@@ -83,8 +99,8 @@ test.describe('Generador de actividades (/actividades)', () => {
 
   test('renderiza el selector de área curricular', async ({ page }) => {
     await expect(page.getByRole('button', { name: 'Matemática', exact: true })).toBeVisible();
-    // exact: true avoids matching format buttons whose description text contains "Lengua"
-    await expect(page.getByRole('button', { name: 'Lengua', exact: true })).toBeVisible();
+    // Área renombrada de "Lengua" a "Prácticas del Lenguaje"
+    await expect(page.getByRole('button', { name: 'Prácticas del Lenguaje', exact: true })).toBeVisible();
   });
 
   test('renderiza el selector de grado', async ({ page }) => {
@@ -113,6 +129,13 @@ test.describe('Generador de actividades (/actividades)', () => {
       .analyze();
     expect(results.violations).toHaveLength(0);
   });
+
+  test('no hay overflow horizontal a 320px', async ({ page, browserName }) => {
+    if (browserName !== 'chromium') test.skip();
+    await page.setViewportSize({ width: 320, height: 568 });
+    const overflow = await page.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth);
+    expect(overflow).toBe(false);
+  });
 });
 
 // ── Portal del alumno ──────────────────────────────────────────────────────
@@ -130,11 +153,25 @@ test.describe('Portal del alumno (/alumno)', () => {
     await expect(page.getByRole('heading', { level: 2 })).toContainText('equivalente');
   });
 
+  test('toggle Modo tranquilo es visible y funciona', async ({ page }) => {
+    const toggle = page.getByRole('switch', { name: /modo tranquilo/i });
+    await expect(toggle).toBeVisible();
+    await toggle.click();
+    await expect(toggle).toHaveAttribute('aria-checked', 'true');
+  });
+
   test('sin violaciones axe A/AA en pantalla de bienvenida', async ({ page }) => {
     const results = await new AxeBuilder({ page })
       .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa'])
       .analyze();
     expect(results.violations).toHaveLength(0);
+  });
+
+  test('no hay overflow horizontal a 320px', async ({ page, browserName }) => {
+    if (browserName !== 'chromium') test.skip();
+    await page.setViewportSize({ width: 320, height: 568 });
+    const overflow = await page.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth);
+    expect(overflow).toBe(false);
   });
 });
 
@@ -164,13 +201,38 @@ test.describe('Seguimiento pedagógico (/seguimiento)', () => {
       .analyze();
     expect(results.violations).toHaveLength(0);
   });
+
+  test('no hay overflow horizontal a 320px', async ({ page, browserName }) => {
+    if (browserName !== 'chromium') test.skip();
+    await page.setViewportSize({ width: 320, height: 568 });
+    const overflow = await page.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth);
+    expect(overflow).toBe(false);
+  });
+});
+
+// ── Demo de componentes ────────────────────────────────────────────────────
+test.describe('Demo de componentes (/demo)', () => {
+  test.beforeEach(async ({ page }) => {
+    await page.goto('/demo');
+  });
+
+  test('renderiza la página sin errores', async ({ page }) => {
+    await expect(page.getByRole('main')).toBeVisible();
+  });
+
+  test('no hay overflow horizontal a 320px', async ({ page, browserName }) => {
+    if (browserName !== 'chromium') test.skip();
+    await page.setViewportSize({ width: 320, height: 568 });
+    const overflow = await page.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth);
+    expect(overflow).toBe(false);
+  });
 });
 
 // ── Navegación entre prototipo ─────────────────────────────────────────────
 test.describe('Navegación del prototipo', () => {
   test('desde la landing se puede llegar a /panel', async ({ page }) => {
     await page.goto('/');
-    await page.getByRole('link', { name: /ver el panel docente/i }).click();
+    await page.getByRole('link', { name: /ver el panel docente/i }).first().click();
     await expect(page).toHaveURL('/panel');
   });
 

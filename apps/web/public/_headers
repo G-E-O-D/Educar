@@ -1,0 +1,25 @@
+# Cloudflare Pages — reglas de caché y seguridad
+# Preparado en Etapa 01.3; activar en el primer deploy.
+
+# version.json: nunca cachear (siempre la versión actual)
+/version.json
+  Cache-Control: no-store
+
+# Assets con hash en el nombre: caché larga e inmutable
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# HTML: revalidar siempre (el hash del bundle puede cambiar)
+/*.html
+  Cache-Control: no-cache
+
+# Raíz
+/
+  Cache-Control: no-cache
+
+# Cabeceras de seguridad para todos los recursos
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()

@@ -17,6 +17,10 @@ export default defineConfig({
   },
   server: {
     port: 5173,
+    headers: {
+      // /version.json nunca debe cachearse (el Worker y el static asset comparten esta regla)
+      'Cache-Control': 'no-store',
+    },
     proxy: {
       '/api': {
         target: 'http://localhost:8787',

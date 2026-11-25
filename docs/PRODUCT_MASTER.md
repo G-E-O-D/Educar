@@ -90,3 +90,37 @@ Derivado de auditoría competitiva de Plani (2026-11-25). Requisitos documentale
 **Importación:** Detectar contenidos curriculares en documentos Word/PDF importados; mapearlos al diseño oficial cuando sea posible; informar errores e incertidumbres; no alterar el original sin aprobación.
 
 **Estado:** REQUISITO DOCUMENTADO — no implementar motor curricular hasta Etapa 02 con aprobación explícita del propietario.
+
+### 18 | Hallazgos P01 Plani y requerimientos derivados (2026-11-25)
+
+Auditoría de Plani con prueba P01 (planificación anual, Cs. Sociales 4.°). Hallazgos observados en la interacción real del prototipo Etapa 01.3, no en el producto competidor.
+
+**Hallazgos del prototipo (Etapa 01.3):**
+1. La planificación generada no incluye modos de conocer diferenciados de los conceptos, aunque el DC 2018 los separa explícitamente.
+2. Las referencias curriculares son simuladas; no existe motor de verificación real (aplazar a Etapa 02).
+3. El generador de actividades no distingue entre actividad formativa y evaluación integradora.
+4. El portal alumno no persiste respuestas entre sesiones.
+5. El seguimiento muestra % de respuestas correctas pero no diferencía primer intento de práctica con ayuda.
+6. No existe exportación a DOCX/PDF del material generado.
+7. El modo tranquilo (StudentPage) aplica cambios visuales pero no persiste la preferencia.
+8. Los fixtures compartidos (DashboardPage + TrackingPage) garantizan coherencia de datos ficticios entre vistas.
+
+**Requerimientos nuevos derivados (Etapa 02+, no implementar antes):**
+
+**R-18.1 Distinción conceptos/modos de conocer/indicadores:** La interfaz de planificación debe separar visualmente estos tres componentes del DC 2018. No mezclarlos en un campo genérico de "contenidos".
+
+**R-18.2 Referencia verificable en planificación exportada:** Cada contenido incluido en una planificación exportada debe citar área, bloque, página impresa y PDF del DC 2018. Simulaciones deben indicar "referencia pendiente de verificación".
+
+**R-18.3 Tipos de actividad diferenciados:** El generador debe distinguir entre actividad formativa (práctica), evaluación (con puntaje) y recuperatorio. Cada tipo tiene estructura, instrucciones y solucionario con forma distinta.
+
+**R-18.4 Persistencia mínima en portal alumno:** Guardar avance del ejercicio actual en sessionStorage para evitar pérdida por recarga accidental. Persistencia entre sesiones requiere revisión jurídica previa (menores).
+
+**R-18.5 Métricas de seguimiento diferenciadas por intento:** Separar resultado de primer intento, práctica con ayuda y resultado comparable. No promediar los tres sin indicar denominador y condición.
+
+**R-18.6 Preferencia de accesibilidad persistida:** La preferencia de modo tranquilo (y otros apoyos de accesibilidad futuros) debe persistir en localStorage. No depender de que el alumno la reactive en cada visita.
+
+**R-18.7 Exportación de material generado:** El generador debe poder exportar la vista previa a PDF imprimible A4 con márgenes, formato de consignas y solucionario separado. DOCX es deseable pero secundario. No implementar antes de Etapa 04.
+
+**R-18.8 Separación fixture/datos reales:** Los fixtures compartidos (`apps/web/src/data/fixtures.ts`) son la única fuente de datos ficticios del prototipo. Cuando se integre la base de datos real (Etapa 03+), estos fixtures deben reemplazarse completamente, no convivir con datos reales.
+
+**Estado:** REQUERIMIENTOS DOCUMENTADOS — no implementar hasta la etapa indicada en cada ítem y con aprobación explícita del propietario.

@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+﻿import { test, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 
 test.describe('Página de inicio (Landing)', () => {
@@ -10,9 +10,9 @@ test.describe('Página de inicio (Landing)', () => {
     await expect(page).toHaveTitle(/Plataforma educativa/);
   });
 
-  test('muestra el encabezado principal con "Primaria PBA"', async ({ page }) => {
+  test('muestra el encabezado principal con "Primaria bonaerense"', async ({ page }) => {
     await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
-    await expect(page.getByRole('heading', { level: 1 })).toContainText('Primaria PBA');
+    await expect(page.getByRole('heading', { level: 1 })).toContainText('Primaria bonaerense');
   });
 
   test('muestra sección hero con CTA al panel', async ({ page }) => {

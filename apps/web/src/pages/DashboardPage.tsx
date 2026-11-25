@@ -1,22 +1,26 @@
-import { Link } from 'react-router-dom';
+﻿import { Link } from 'react-router-dom';
 import {
   BookOpen, Sparkles, BarChart3, CalendarCheck,
   ArrowRight, Clock, FileText, Lightbulb, ChevronRight,
-  TrendingUp, AlertCircle,
+  TrendingUp, AlertCircle, GraduationCap, Shield,
+  PackageOpen,
 } from 'lucide-react';
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
+import { STUDENTS, FIXTURE_GRADE, FIXTURE_PERIOD, deriveStats } from '@/data/fixtures';
 
-const QUICK_ACTIONS = [
-  { icon: FileText, label: 'Nueva planificación', to: '/actividades', color: 'bg-brand-primary-light text-brand-primary' },
-  { icon: BookOpen, label: 'Buscar recursos', to: '/biblioteca', color: 'bg-brand-secondary-light text-teal-700' },
-  { icon: Lightbulb, label: 'Generar actividad', to: '/actividades', color: 'bg-amber-50 text-amber-700' },
-  { icon: BarChart3, label: 'Ver seguimiento', to: '/seguimiento', color: 'bg-status-success-bg text-status-success' },
-];
+function getGreeting() {
+  const h = new Date().getHours();
+  if (h < 12) return 'Buenos días';
+  if (h < 19) return 'Buenas tardes';
+  return 'Buenas noches';
+}
+
+const { supportCount, avgCorrect, doneTopics, totalTopics, coveragePct } = deriveStats();
 
 const NEXT_CLASS = {
   subject: 'Matemática',
-  grade: '3.° B',
+  grade: FIXTURE_GRADE,
   time: 'Hoy · 9:00 hs',
   topic: 'Fracciones equivalentes',
   sequence: 'Secuencia 4, Clase 2 de 4',
@@ -25,66 +29,103 @@ const NEXT_CLASS = {
 };
 
 const AGENDA = [
-  { day: 'Hoy', subject: 'Matemática', grade: '3.° B', time: '9:00', done: false },
-  { day: 'Hoy', subject: 'Lengua', grade: '3.° B', time: '11:00', done: false },
-  { day: 'Martes', subject: 'Ciencias Nat.', grade: '3.° B', time: '9:00', done: false },
-  { day: 'Martes', subject: 'Matemática', grade: '3.° B', time: '11:00', done: false },
-  { day: 'Miércoles', subject: 'Lengua', grade: '3.° B', time: '9:00', done: false },
+  { day: 'Hoy',       subject: 'Matemática',      grade: FIXTURE_GRADE, time: '9:00'  },
+  { day: 'Hoy',       subject: 'Prác. Lenguaje',  grade: FIXTURE_GRADE, time: '11:00' },
+  { day: 'Martes',    subject: 'Cs. Naturales',         grade: FIXTURE_GRADE, time: '9:00'  },
+  { day: 'Martes',    subject: 'Matemática',       grade: FIXTURE_GRADE, time: '11:00' },
+  { day: 'Miércoles', subject: 'Prác. Lenguaje', grade: FIXTURE_GRADE, time: '9:00' },
 ];
 
 const RECENT_MATERIALS = [
-  { title: 'Ficha: Fracciones equivalentes', subject: 'Matemática', grade: '3.° B', type: 'Ficha alumno', date: 'Hoy' },
-  { title: 'Evaluación: Comprensión lectora', subject: 'Lengua', grade: '3.° B', type: 'Evaluación', date: 'Ayer' },
-  { title: 'Cuadernillo: Multiplicación', subject: 'Matemática', grade: '3.° B', type: 'Cuadernillo', date: 'Lun' },
-  { title: 'Dictado: Uso de la H', subject: 'Lengua', grade: '3.° B', type: 'Dictado', date: 'Vie' },
-];
-
-const ALERTS = [
-  { text: '3 alumnos con contenidos pendientes de refuerzo', variant: 'warning' as const },
-  { text: 'Quedan 12 semanas para fin de año — 68% del currículo cubierto', variant: 'primary' as const },
-];
-
-const MODULES = [
-  { icon: BookOpen, label: 'Biblioteca', to: '/biblioteca', desc: 'Recursos con licencia verificada', badge: null },
-  { icon: Sparkles, label: 'Generador', to: '/actividades', desc: 'Fichas, evaluaciones, dictados', badge: 'Nuevo' },
-  { icon: CalendarCheck, label: 'Agenda', to: '/panel', desc: 'Próximas clases y fechas', badge: null },
-  { icon: BarChart3, label: 'Seguimiento', to: '/seguimiento', desc: 'Evolución por alumno y contenido', badge: null },
+  { title: 'Ficha: Fracciones equivalentes',       subject: 'Matemática',   grade: FIXTURE_GRADE, type: 'Ficha',       date: 'Hoy'  },
+  { title: 'Evaluación: Comprensión lectora', subject: 'Prac. Lenguaje', grade: FIXTURE_GRADE, type: 'Evaluación', date: 'Ayer' },
+  { title: 'Cuadernillo: Multiplicación',     subject: 'Matemática',   grade: FIXTURE_GRADE, type: 'Cuadernillo', date: 'Lun'  },
+  { title: 'Dictado: Uso de la H',                 subject: 'Prac. Lenguaje',    grade: FIXTURE_GRADE, type: 'Dictado',     date: 'Vie'  },
 ];
 
 export function DashboardPage() {
   return (
     <div className="p-4 sm:p-6 lg:p-8 max-w-7xl mx-auto space-y-6">
 
-      {/* Alerts */}
-      {ALERTS.map((a, i) => (
-        <div
-          key={i}
-          className={`flex items-start gap-3 rounded-xl px-4 py-3 text-sm font-medium ${
-            a.variant === 'warning'
-              ? 'bg-status-warning-bg text-status-warning border border-amber-200'
-              : 'bg-brand-primary-light text-brand-primary border border-indigo-200'
-          }`}
-        >
-          <AlertCircle className="h-4 w-4 mt-0.5 shrink-0" aria-hidden="true" />
-          {a.text}
+      {/* Saludo y contexto */}
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+        <div>
+          <h1 className="text-2xl font-bold text-text-primary">{getGreeting()}, docente</h1>
+          {/* text-text-secondary (no muted) para pasar contraste WCAG AA en surface-bg */}
+          <p className="text-sm text-text-secondary mt-0.5">{FIXTURE_GRADE} &middot; {FIXTURE_PERIOD} &middot; Datos ficticios</p>
         </div>
-      ))}
+        <Badge variant="warning" className="sm:shrink-0">Prototipo &mdash; sin datos reales</Badge>
+      </div>
+
+      {/* Aviso de datos ficticios */}
+      <div role="note" className="flex items-start gap-3 rounded-xl px-4 py-3 text-sm font-medium bg-brand-primary-light text-brand-primary border border-indigo-200">
+        <AlertCircle className="h-4 w-4 mt-0.5 shrink-0" aria-hidden="true" />
+        <span>Todos los datos de este panel son ficticios. No representan alumnos ni docentes reales.</span>
+      </div>
+
+      {/* Preparar una clase completa */}
+      <section aria-labelledby="prepare-heading" className="bg-gradient-to-r from-brand-primary to-indigo-500 rounded-2xl p-5 sm:p-6">
+        <div className="flex flex-col sm:flex-row sm:items-center gap-4">
+          <div className="flex-1">
+            <div className="flex items-center gap-2 mb-1">
+              <PackageOpen className="h-5 w-5 text-white" aria-hidden="true" />
+              <h2 id="prepare-heading" className="font-bold text-white">Preparar una clase completa</h2>
+            </div>
+            <p className="text-brand-primary-light text-sm">
+              Planificaci&oacute;n, ficha alumno, solucionario y materiales de apoyo juntos.{' '}
+              <span className="font-semibold text-white">Proyectado.</span>
+            </p>
+          </div>
+          <Button
+            variant="secondary"
+            size="sm"
+            rightIcon={<ArrowRight className="h-4 w-4" aria-hidden="true" />}
+            asChild
+          >
+            <Link to="/actividades">Ir al generador &rarr;</Link>
+          </Button>
+        </div>
+      </section>
 
       {/* Stats */}
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4" aria-label="Resumen estadístico">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4" aria-label="Resumen del seguimiento">
         {[
-          { label: 'Contenidos cubiertos', val: '68%', sub: 'de 3.° B', icon: TrendingUp, color: 'text-status-success' },
-          { label: 'Clases dadas', val: '24', sub: 'este año', icon: CalendarCheck, color: 'text-brand-primary' },
-          { label: 'Materiales creados', val: '41', sub: 'este año', icon: FileText, color: 'text-teal-700' },
-          { label: 'Alumnos activos', val: '28', sub: 'en 3.° B', icon: BarChart3, color: 'text-amber-700' },
+          {
+            label: 'Alumnos en seguimiento',
+            val: STUDENTS.length.toString(),
+            sub: FIXTURE_GRADE,
+            icon: GraduationCap,
+            color: 'text-brand-primary',
+          },
+          {
+            label: 'Cobertura curricular',
+            val: `${coveragePct}%`,
+            sub: `${doneTopics}/${totalTopics} contenidos`,
+            icon: TrendingUp,
+            color: 'text-status-success',
+          },
+          {
+            label: 'Respuestas correctas (prom.)',
+            val: `${avgCorrect}%`,
+            sub: 'Actividades autocorregibles',
+            icon: BarChart3,
+            color: 'text-teal-700',
+          },
+          {
+            label: 'Con necesidad de apoyo',
+            val: supportCount.toString(),
+            sub: `de ${STUDENTS.length} alumnos`,
+            icon: AlertCircle,
+            color: 'text-status-warning',
+          },
         ].map(({ label, val, sub, icon: Icon, color }) => (
           <div key={label} className="bg-surface-card rounded-2xl p-5 border border-border-default">
             <div className="flex items-center justify-between mb-3">
-              <p className="text-xs text-text-muted font-medium">{label}</p>
-              <Icon className={`h-4 w-4 ${color}`} aria-hidden="true" />
+              <p className="text-xs text-text-secondary font-medium leading-tight">{label}</p>
+              <Icon className={`h-4 w-4 shrink-0 ${color}`} aria-hidden="true" />
             </div>
             <p className={`text-2xl font-bold ${color}`}>{val}</p>
-            <p className="text-xs text-text-muted mt-0.5">{sub}</p>
+            <p className="text-xs text-text-secondary mt-0.5">{sub}</p>
           </div>
         ))}
       </div>
@@ -92,13 +133,19 @@ export function DashboardPage() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Left column */}
         <div className="lg:col-span-2 space-y-6">
-          {/* Quick actions */}
+
+          {/* Acciones rápidas */}
           <section aria-labelledby="qa-heading">
             <h2 id="qa-heading" className="text-sm font-semibold text-text-secondary uppercase tracking-wide mb-3">
-              Acciones rápidas
+              Acciones r&aacute;pidas
             </h2>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-              {QUICK_ACTIONS.map((a) => (
+              {[
+                { icon: FileText,  label: 'Nueva planificación', to: '/actividades', color: 'bg-brand-primary-light text-brand-primary'   },
+                { icon: BookOpen,  label: 'Buscar recursos',           to: '/biblioteca',  color: 'bg-brand-secondary-light text-teal-700'      },
+                { icon: Sparkles,  label: 'Generar actividad',         to: '/actividades', color: 'bg-amber-50 text-amber-700'                  },
+                { icon: BarChart3, label: 'Ver seguimiento',           to: '/seguimiento', color: 'bg-status-success-bg text-status-success'    },
+              ].map((a) => (
                 <Link
                   key={a.label}
                   to={a.to}
@@ -115,10 +162,10 @@ export function DashboardPage() {
             </div>
           </section>
 
-          {/* Next class */}
+          {/* Próxima clase */}
           <section aria-labelledby="next-class-heading" className="bg-surface-card rounded-2xl border border-border-default p-5">
             <div className="flex items-center justify-between mb-4">
-              <h2 id="next-class-heading" className="font-semibold text-text-primary">Próxima clase</h2>
+              <h2 id="next-class-heading" className="font-semibold text-text-primary">Pr&oacute;xima clase</h2>
               <Badge variant="success" size="sm">{NEXT_CLASS.status}</Badge>
             </div>
             <div className="flex items-start gap-4">
@@ -131,7 +178,7 @@ export function DashboardPage() {
                   <Badge variant="primary" size="sm">{NEXT_CLASS.grade}</Badge>
                 </div>
                 <p className="text-sm text-text-secondary mb-0.5">{NEXT_CLASS.topic}</p>
-                <p className="text-xs text-text-muted mb-3">{NEXT_CLASS.sequence}</p>
+                <p className="text-xs text-text-secondary mb-3">{NEXT_CLASS.sequence}</p>
                 <div className="flex flex-wrap gap-2">
                   {NEXT_CLASS.materials.map((m) => (
                     <span
@@ -144,13 +191,13 @@ export function DashboardPage() {
                 </div>
               </div>
               <div className="text-right shrink-0 hidden sm:block">
-                <Clock className="h-4 w-4 text-text-muted ml-auto mb-1" aria-hidden="true" />
-                <p className="text-xs text-text-muted">{NEXT_CLASS.time}</p>
+                <Clock className="h-4 w-4 text-text-secondary ml-auto mb-1" aria-hidden="true" />
+                <p className="text-xs text-text-secondary">{NEXT_CLASS.time}</p>
               </div>
             </div>
           </section>
 
-          {/* Recent materials */}
+          {/* Materiales recientes */}
           <section aria-labelledby="recent-heading">
             <div className="flex items-center justify-between mb-3">
               <h2 id="recent-heading" className="font-semibold text-text-primary">Materiales recientes</h2>
@@ -161,13 +208,13 @@ export function DashboardPage() {
             <div className="bg-surface-card rounded-2xl border border-border-default divide-y divide-border-default overflow-hidden">
               {RECENT_MATERIALS.map((m) => (
                 <div key={m.title} className="flex items-center gap-3 px-5 py-3.5 hover:bg-surface-bg transition-colors">
-                  <FileText className="h-4 w-4 text-text-muted shrink-0" aria-hidden="true" />
+                  <FileText className="h-4 w-4 text-text-secondary shrink-0" aria-hidden="true" />
                   <div className="flex-1 min-w-0">
                     <p className="text-sm font-medium text-text-primary truncate">{m.title}</p>
-                    <p className="text-xs text-text-muted">{m.subject} · {m.grade}</p>
+                    <p className="text-xs text-text-secondary">{m.subject} &middot; {m.grade}</p>
                   </div>
                   <Badge variant="default" size="sm">{m.type}</Badge>
-                  <span className="text-xs text-text-muted shrink-0">{m.date}</span>
+                  <span className="text-xs text-text-secondary shrink-0">{m.date}</span>
                 </div>
               ))}
             </div>
@@ -182,27 +229,34 @@ export function DashboardPage() {
             <div className="space-y-2">
               {AGENDA.map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <div className="text-right w-14 shrink-0">
+                  <div className="text-right w-16 shrink-0">
                     <p className="text-xs font-medium text-text-secondary">{item.day}</p>
-                    <p className="text-xs text-text-muted">{item.time}</p>
+                    <p className="text-xs text-text-secondary">{item.time}</p>
                   </div>
                   <div className="h-full w-px bg-border-default shrink-0" aria-hidden="true" />
                   <div>
                     <p className="text-sm font-medium text-text-primary">{item.subject}</p>
-                    <p className="text-xs text-text-muted">{item.grade}</p>
+                    <p className="text-xs text-text-secondary">{item.grade}</p>
                   </div>
                 </div>
               ))}
             </div>
           </section>
 
-          {/* Modules */}
+          {/* Módulos */}
           <section aria-labelledby="modules-heading">
             <h2 id="modules-heading" className="text-sm font-semibold text-text-secondary uppercase tracking-wide mb-3">
-              Módulos
+              M&oacute;dulos
             </h2>
             <div className="space-y-2">
-              {MODULES.map((m) => (
+              {[
+                { icon: BookOpen,     label: 'Biblioteca',    to: '/biblioteca',  desc: 'Recursos con fuente documentada', badge: null         },
+                { icon: Sparkles,     label: 'Generador',     to: '/actividades', desc: 'Fichas, evaluaciones, dictados',  badge: 'Nuevo'      },
+                { icon: CalendarCheck,label: 'Agenda',        to: '/panel',       desc: 'Próximas clases y fechas',  badge: null         },
+                { icon: BarChart3,    label: 'Seguimiento',   to: '/seguimiento', desc: 'Cobertura y actividades',         badge: null         },
+                { icon: Shield,       label: 'Ed. inclusiva', to: '/actividades', desc: 'Apoyos en el generador',          badge: 'Proyectado' },
+                { icon: Lightbulb,    label: 'Laboratorios',  to: '/panel',       desc: 'Matemática y Ciencias',     badge: 'Proyectado' },
+              ].map((m) => (
                 <Link
                   key={m.label}
                   to={m.to}
@@ -214,15 +268,34 @@ export function DashboardPage() {
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2">
                       <p className="text-sm font-semibold text-text-primary">{m.label}</p>
-                      {m.badge && <Badge variant="accent" size="sm">{m.badge}</Badge>}
+                      {m.badge && (
+                        <Badge variant={m.badge === 'Proyectado' ? 'default' : 'accent'} size="sm">
+                          {m.badge}
+                        </Badge>
+                      )}
                     </div>
-                    <p className="text-xs text-text-muted">{m.desc}</p>
+                    <p className="text-xs text-text-secondary">{m.desc}</p>
                   </div>
-                  <ChevronRight className="h-4 w-4 text-text-muted group-hover:text-brand-primary transition-colors" aria-hidden="true" />
+                  <ChevronRight className="h-4 w-4 text-text-secondary group-hover:text-brand-primary transition-colors" aria-hidden="true" />
                 </Link>
               ))}
             </div>
           </section>
+
+          {/* Alertas pendientes */}
+          {supportCount > 0 && (
+            <section aria-labelledby="support-heading" className="bg-status-warning-bg rounded-xl border border-amber-200 p-4">
+              <div className="flex items-center gap-2 mb-3">
+                <AlertCircle className="h-4 w-4 text-status-warning" aria-hidden="true" />
+                <h2 id="support-heading" className="text-sm font-semibold text-status-warning">
+                  {supportCount} {supportCount === 1 ? 'alumno' : 'alumnos'} con actividades pendientes
+                </h2>
+              </div>
+              <Button variant="outline" size="sm" asChild className="w-full">
+                <Link to="/seguimiento">Ver seguimiento</Link>
+              </Button>
+            </section>
+          )}
         </div>
       </div>
     </div>

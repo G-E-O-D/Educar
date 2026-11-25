@@ -22,8 +22,9 @@ playwright-report/
 e2e-screenshots/
 docs/evidence/visual/
 
-# Version artifacts (generated per build)
+# Version artifacts (generated per build — nunca commitear, CI los regenera)
 apps/web/public/version.json
+apps/api/src/version-data.ts
 
 # IDE
 .vscode/settings.json

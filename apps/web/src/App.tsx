@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { Layout } from './components/layout/Layout';
 import { LayoutApp } from './components/layout/LayoutApp';
+import { LayoutStudent } from './components/layout/LayoutStudent';
 import { LandingPage } from './pages/LandingPage';
 import { DashboardPage } from './pages/DashboardPage';
 import { LibraryPage } from './pages/LibraryPage';
@@ -15,9 +16,14 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       { path: '/', element: <LandingPage /> },
-      { path: '/alumno', element: <StudentPage /> },
       { path: '/demo', element: <ComponentsPage /> },
       { path: '*', element: <NotFoundPage /> },
+    ],
+  },
+  {
+    element: <LayoutStudent />,
+    children: [
+      { path: '/alumno', element: <StudentPage /> },
     ],
   },
   {
