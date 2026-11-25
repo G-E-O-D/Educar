@@ -1,0 +1,45 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build outputs
+dist/
+build/
+.wrangler/
+.output/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+.dev.vars
+
+# Test artifacts
+coverage/
+test-results/
+playwright-report/
+e2e-screenshots/
+docs/evidence/visual/
+
+# Version artifacts (generated per build)
+apps/web/public/version.json
+
+# IDE
+.vscode/settings.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs (long: redirect to scratchpad for review)
+*.log
+logs/
+
+# TypeScript
+*.tsbuildinfo

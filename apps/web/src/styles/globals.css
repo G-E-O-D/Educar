@@ -1,0 +1,139 @@
+@import "tailwindcss";
+
+/* ── Tokens semánticos ───────────────────────────────────── */
+:root {
+  /* Marca */
+  --brand-primary: #635BDB;
+  --brand-primary-hover: #5249C5;
+  --brand-primary-light: #EEF0FB;
+  --brand-secondary: #14B8A6;
+  --brand-secondary-hover: #0E9E8E;
+  --brand-secondary-light: #E6F7F5;
+  --brand-accent: #F4B860;
+  --brand-accent-light: #FEF3DC;
+
+  /* Superficies */
+  --surface-bg: #F7F8FC;
+  --surface-card: #FFFFFF;
+  --surface-elevated: #FFFFFF;
+  --surface-overlay: rgba(36, 48, 71, 0.5);
+
+  /* Texto — todos pasan AA sobre blanco/superficies claras */
+  --text-primary: #243047;    /* 10.97:1 sobre blanco */
+  --text-secondary: #4A5568;  /* 7.00:1 sobre blanco */
+  --text-muted: #64748B;      /* 4.77:1 sobre blanco ✓ AA */
+  --text-on-brand: #FFFFFF;
+  --text-link: #635BDB;       /* 4.72:1 sobre blanco ✓ AA */
+
+  /* Bordes */
+  --border-default: #E2E8F0;
+  --border-strong: #CBD5E0;
+  --border-focus: #635BDB;
+
+  /* Estados — texto AA sobre fondos de estado */
+  --status-success: #166534;      /* oscuro para AA sobre #F0FDF4 */
+  --status-success-bg: #F0FDF4;
+  --status-success-border: #BBF7D0;
+  --status-warning: #92400E;      /* oscuro para AA sobre #FFFBEB: 6.23:1 ✓ */
+  --status-warning-bg: #FFFBEB;
+  --status-warning-border: #FDE68A;
+  --status-error: #991B1B;        /* oscuro para AA sobre #FEF2F2 */
+  --status-error-bg: #FEF2F2;
+  --status-error-border: #FECACA;
+  --status-info: #1E40AF;         /* oscuro para AA sobre #EFF6FF */
+  --status-info-bg: #EFF6FF;
+  --status-info-border: #BFDBFE;
+}
+
+/* Tema oscuro — preparado, no activado todavía */
+/* .dark { --surface-bg: #0F172A; ... } */
+
+/* ── Tailwind theme inline ───────────────────────────────── */
+@theme inline {
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-primary-hover: var(--brand-primary-hover);
+  --color-brand-primary-light: var(--brand-primary-light);
+  --color-brand-secondary: var(--brand-secondary);
+  --color-brand-secondary-hover: var(--brand-secondary-hover);
+  --color-brand-secondary-light: var(--brand-secondary-light);
+  --color-brand-accent: var(--brand-accent);
+  --color-brand-accent-light: var(--brand-accent-light);
+  --color-surface-bg: var(--surface-bg);
+  --color-surface-card: var(--surface-card);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-text-on-brand: var(--text-on-brand);
+  --color-text-link: var(--text-link);
+  --color-border-default: var(--border-default);
+  --color-border-strong: var(--border-strong);
+  --color-status-success: var(--status-success);
+  --color-status-success-bg: var(--status-success-bg);
+  --color-status-warning: var(--status-warning);
+  --color-status-warning-bg: var(--status-warning-bg);
+  --color-status-error: var(--status-error);
+  --color-status-error-bg: var(--status-error-bg);
+  --color-status-info: var(--status-info);
+  --color-status-info-bg: var(--status-info-bg);
+
+  --font-sans: 'Inter', 'Plus Jakarta Sans', ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* ── Base ────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  font-family: var(--font-sans);
+  color: var(--text-primary);
+  background-color: var(--surface-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body { margin: 0; min-height: 100vh; }
+
+/* ── Accesibilidad ───────────────────────────────────────── */
+/* Skip link */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-link:focus {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  width: auto;
+  height: auto;
+  padding: 0.75rem 1.25rem;
+  background: var(--brand-primary);
+  color: white;
+  border-radius: 0.5rem;
+  z-index: 9999;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* Foco visible global */
+*:focus-visible {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
