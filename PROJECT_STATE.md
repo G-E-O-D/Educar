@@ -2,7 +2,7 @@
 
 > **Última actualización:** 2026-11-25  
 > **Versión:** 0.2.0  
-> **Estado:** Etapa 01.3 en curso — refinamiento visual, correcciones técnicas, fixtures compartidos
+> **Estado:** Etapa 01.3 completada — commit `1e05841`
 
 ---
 
