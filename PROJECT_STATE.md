@@ -13,15 +13,15 @@
 | Monorepo         | ✅ Configurado (npm workspaces) |
 | TypeScript       | ✅ Typecheck limpio, strict mode |
 | ESLint           | ✅ 0 errores (`react/no-unescaped-entities` corregido en ActivitiesPage) |
-| Build producción | ✅ Vite 8 — pendiente re-verificar con cambios 01.3 |
-| Tests unitarios (web) | ✅ Vitest — 16 tests previos + 8 nuevos (fixtures.test.ts) |
+| Build producción | ✅ Vite 8 — limpio |
+| Tests unitarios (web) | ✅ Vitest — 24/24 (components.test.tsx + fixtures.test.ts) |
 | Tests unitarios (api)  | ✅ Vitest + coverage-v8 configurado |
-| Tests E2E        | ⏳ Playwright — pendiente correr tras actualizaciones 01.3 (última ejecución: 138/138) |
-| Accesibilidad    | ⏳ WCAG 2.2 AA — pendiente re-correr axe con páginas actualizadas |
+| Tests E2E        | ✅ Playwright — 162/162 en 3 viewports (Desktop 1440, Tablet 768, Mobile 390) |
+| Accesibilidad    | ✅ WCAG 2.2 AA — axe pasa en todas las rutas (incluido landing post opacity-80 fix) |
 | Seguridad (devDeps) | ⚠️ Vulnerabilidades solo en devDependencies — no afectan build de producción |
 | Versionado       | ✅ gen-version.mjs con detección dirty; version-data.ts gitignoreado |
 | Cache headers    | ✅ _headers Cloudflare Pages + vite.config.ts dev server |
-| Git              | ✅ Commit 01.2 — 01.3 pendiente de commit final |
+| Git              | ✅ Commit `1e05841` — Etapa 01.3 completa |
 | Deploy           | 🚫 Ninguno — solo prototipo local |
 
 ---
@@ -57,9 +57,9 @@
 - `.github/workflows/ci.yml` — genera versión antes de typecheck y tests
 
 ### Calidad
-- Vitest (web) — 16 tests previos + 8 nuevos en `fixtures.test.ts`
+- Vitest (web) — 24 tests: `components.test.tsx` (16) + `fixtures.test.ts` (8)
 - Vitest (api) — `vitest.config.ts` con coverage-v8 configurado
-- Playwright — `home.spec.ts` y `prototype.spec.ts` actualizados: H1 "Primaria bonaerense", "Prácticas del Lenguaje", tests 320px para todas las rutas (/panel /biblioteca /actividades /alumno /seguimiento /demo), test Modo tranquilo
+- Playwright — 162/162 en Desktop/Tablet/Mobile: H1 "Primaria bonaerense", "Prácticas del Lenguaje", 320px todas las rutas, axe A/AA en todas las páginas, test Modo tranquilo
 - ESLint flat config — 0 errores (react/no-unescaped-entities resuelto)
 
 ### Documentación
