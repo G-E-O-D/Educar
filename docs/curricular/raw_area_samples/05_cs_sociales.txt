@@ -1,0 +1,118 @@
+AREA: 05_cs_sociales  |  digital d180-d235  |  printed p179-p234
+Total pages in area: 56
+======================================================================
+
+
+--- d180 (p179) ---
+Ciencias Sociales
+
+--- d181 (p180) ---
+Diseño Curricular para la Escuela Primaria •  Dirección General de Cultura y Educación.
+180
+ Enfoque Curricular y Orientaciones para la Enseñanza
+Es responsabilidad de las instituciones educativas enseñar a 
+comprender el mundo social construido y cambiante, en el cual vi-
+ven niños, jóvenes y adultos, tanto en el pasado como en el presente.
+Es así que la escuela enfrenta un desafío en la enseñanza de las 
+Ciencias Sociales, ya que interpela a la sociedad en su conjunto, a 
+las relaciones que se establecen en ella y a las distintas maneras de 
+expresarse y de convivir que tienen las diversas identidades cultu-
+rales que la componen.
+Para ello, es fundamental el rol que cumplen los docentes de 
+toda la provincia de Buenos Aires en la búsqueda de diferentes mi-
+radas de aproximación sobre los procesos sociohistóricos y que im-
+plican su enseñanza, a partir de contenidos (conceptos y modos de 
+conocer) relevantes para la sociedad del presente.
+Es primordial que las instituciones educativas incentiven el de-
+sarrollo de capacidades y habilidades acordes al mundo contem-
+poráneo y se comprometan en la construcción de un pensamiento 
+crítico y reflexivo, cuestionando, en forma permanente, prejuicios y 
+estereotipos para el logro de una convivencia democrática y respe-
+tuosa hacia las diversidades culturales que la integran. 
+En el área de las Ciencias Sociales, desde el campo científico, las 
+diferentes disciplinas sociales que la integran (la Historia, la Geo-
+grafía, la Sociología, la Antropología, la Economía o las Ciencias Polí-
+ticas) aportan sus saberes (ideas, conceptos y herramientas de aná-
+lisis) para contribuir a la reflexión sobre las múltiples perspectivas y 
+complejidades que caracterizan a las sociedades, es decir, habilitan 
+el camino de nuevas prácticas docentes que incorporen las distin-
+tas dimensiones de las realidades estudiadas (política, económica, 
+social y cultural), en su reconocimiento de lo provisorio y dinámico 
+que distingue al conocimiento s
+--- d182 (p181) ---
+Ciencias Sociales
+Ciencias Sociales
+181
+provincia y la nación; los lineamientos curriculares propuestos por 
+la Educación Sexual Integral (ESI) y los principios que fundamentan 
+la Formación Ética y Ciudadana, en correspondencia con el respeto 
+por las diversas identidades culturales y la defensa de los Derechos 
+Humanos como ejes de toda situación escolar.
+Es decir que, desde este enfoque, las previsiones didácticas se 
+constituyen en propuestas integradoras, que vinculan estas temáti-
+cas en la cotidianeidad escolar, transformando a las situaciones de 
+enseñanza en potentes herramientas para el aprendizaje y la for-
+mación integral de los estudiantes de la provincia.
+Asimismo, este Diseño Curricular plantea el trabajo con las efe-
+mérides tradicionales, junto con otras que recuperan la historia re-
+ciente de la Argentina, haciendo hincapié en la reflexión sobre la 
+lucha sostenida a través del tiempo por promulgar, sostener y uni-
+versalizar los derechos inalienables de la humanidad.  
+Los abordajes colectivos de los acontecimientos, relevantes 
+para la comunidad, la provincia o la nación, son oportunidades para 
+poner en diálogo y mostrar a las familias y al conjunto de la comu-
+nidad escolar el producto del trabajo áulico sobre contenidos re-
+lacionados con los hechos que se evocan, propiciando momentos 
+de integración y estrechando lazos en los principios éticos y ciuda-
+danos del mundo contemporáneo, como así también reconociendo 
+cambios y continuidades en las formas de recordar, celebrar y feste-
+jar en el entramado institucional y/o comunal. 
+Este enfoque de las Ciencias Sociales privilegia el trabajo sobre 
+situaciones problemáticas sociales que integren contenidos y situa-
+ciones, en que el estudiante sea protagonista de sus aprendizajes. La 
+escuela podrá complejizar las miradas sobre las experiencias socio-
+culturales del pasado y del presente, potenciando el “poder hacer” 
+con otros, en un trabajo colaborativo, a partir del Aprendizaje Basa-
+do en Prob
+--- d183 (p182) ---
+Diseño Curricular para la Enseñanza Primaria •  Dirección General de Cultura y Educación
+182
+A partir de lo anteriormente enunciado, se concluye que el tra-
+bajo con diversidad de fuentes es un punto de inflexión en el abor-
+daje de los problemas sociales. 
+Será un desafío multiplicar las situaciones de enseñanza que 
+lleven a los estudiantes a buscar información en distintas fuentes, 
+compararlas entre sí y cotejarlas con fuentes de otra índole, para 
+analizar los modos de vida de las sociedades, contextualizando a 
+los sujetos sociales en un tiempo y un espacio e incluyéndolos en 
+una trama donde se reconozcan sus acciones e intenciones de vida.
+Finalmente, se destaca que es primordial que, tanto estudiantes como 
+maestros –en su rol de profesionales de la educación–, comprendan a 
+las sociedades del pasado y del presente valiéndose de las acciones 
+propias del lenguaje: hablando, escuchando, leyendo y escribiendo 
+acerca de los modos de vida estudiados.
+En definitiva, el logro de una ciudadanía crítica e informada y la 
+igualdad de aprendizajes en los estudiantes estarán ligados estre-
+chamente al desarrollo de capacidades en vinculación directa con 
+las situaciones de enseñanza promovidas por los docentes y con 
+el acceso a las nuevas tecnologías, buscando multiplicar las opor-
+tunidades en las escuelas de reconocer las diversidades presentes, 
+valorándolas y promoviendo el aprender juntos.
+
+--- d234 (p233) ---
+
+--- d235 (p234) ---
+
+--- d236 (p235) ---
+Ciencias Naturales
+
+
+STRUCTURE KEYWORDS FOUND:
+  Primer Ciclo: d[184, 203, 229, 230]
+  Segundo Ciclo: d[200, 231, 232, 233]
+  Propósitos: d[184, 200]
+  Objetivos: d[185, 194, 201, 209, 220]
+  Modos de conocer: d[186, 188, 190, 192, 195, 196, 198, 202, 203, 204, 205, 210, 211, 214, 215, 216, 221, 222, 225, 226]
+  Situaciones de enseñanza: d[187, 188, 191, 193, 196, 198, 203, 206, 212, 217, 222, 227]
+  Orientaciones: d[181]
+  Unidad Pedagógica: d[185]

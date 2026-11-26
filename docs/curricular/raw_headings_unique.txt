@@ -1,0 +1,145 @@
+p001 sz 51.0  Diseño Curricular
+p001 sz 35.0  Primer Ciclo
+p001 sz 35.0  Segundo Ciclo
+p001 sz 25.0  para la Educación Primaria
+p007 sz 14.0  Presentación del Diseño Curricular para el Nivel Primario.
+p007 sz 14.0  Aprobado por Resolución N° 1482/17
+p012 sz 29.0  Índice
+p013 sz 28.0  Te damos la mano, caminemos juntos...
+p014 sz 16.0  Principios organizadores del Diseño Curricular para el Nivel Primario
+p014 sz 14.0  La Educación entendida como política pública
+p015 sz 14.0  Consideraciones sobre la actualización curricular
+p015 sz 14.0  Características generales de la propuesta curricular
+p017 sz 14.0  Expectativas de desempeño al egreso
+p017 sz 14.0  de la educación primaria
+p019 sz 14.0  Palabras finales
+p022 sz 51.0  Educación inclusiva
+p023 sz 14.0  La educación inclusiva
+p024 sz 14.0  Orientaciones metodológicas
+p029 sz 22.0  Bibliografía
+p032 sz 37.0  Tecnología de la Información y
+p032 sz 37.0  la Comunicación
+p033 sz 16.0  Las tecnologías de la información, la innovación educativa y el rol docente
+p033 sz 14.0  Dimensiones del uso de la tecnología
+p036 sz 14.0  Transversalidad y planificación de las TIC
+p036 sz 14.0  De lo técnico a lo pedagógico
+p037 sz 16.0  Primero
+p037 sz 16.0  Segundo
+p037 sz 16.0  Tercero
+p037 sz 16.0  Cuarto
+p037 sz 16.0  Quinto
+p037 sz 16.0  Sexto
+p038 sz 14.0  Contenidos
+p038 sz 14.0  Sobre los modos de conocer
+p038 sz 14.0  Recursos
+p044 sz 51.0  Prácticas del Lenguaje
+p045 sz 16.0  Enfoque Curricular y Orientaciones para la Enseñanza
+p045 sz 14.0  Ámbitos de incumbencia
+p045 sz 14.0  Modalidades de trabajo en el aula
+p046 sz 14.0  Enfoque alfabetizador equilibrado
+p046 sz 14.0  Presupuestos teóricos que guían una
+p046 sz 14.0  propuesta equilibrada e integradora
+p048 sz 16.0  Propósitos para el Primer Ciclo
+p048 sz 16.0  UNIDAD PEDAGÓGICA
+p048 sz 14.0  Objetivos de la Unidad Pedagógica
+p048 sz 22.0  PRIMER CICLO
+p060 sz 16.0  TERCER AÑO
+p060 sz 14.0  Objetivos
+p069 sz 16.0  Propósitos para el Segundo Ciclo
+p069 sz 16.0  CUARTO AÑO
+p069 sz 14.0  Objetivos del año
+p069 sz 22.0  SEGUNDO CICLO
+p078 sz 16.0  QUINTO AÑO
+p085 sz 16.0  SEXTO AÑO
+p095 sz 14.0  Sitios recomendados
+p098 sz 51.0  Matemática
+p100 sz 14.0  Propósitos del área
+p101 sz 18.0  Unidad Pedagógica
+p101 sz 14.0  Propósitos del Ciclo
+p102 sz 14.0  BLOQUE: Números Naturales
+p105 sz 14.0  BLOQUE: Operaciones con Números Naturales
+p112 sz 14.0  BLOQUE: Medida
+p114 sz 14.0  BLOQUE: Geometría
+p117 sz 14.0  BLOQUE: Espacio
+p121 sz 18.0  Tercer año
+p135 sz 18.0  Cuarto año
+p140 sz 14.0  BLOQUE: Números Racionales
+p142 sz 14.0  BLOQUE: Medidas
+p143 sz 14.0  BLOQUE: Proporcionalidad
+p147 sz 18.0  Quinto año
+p161 sz 18.0  Sexto año
+p166 sz 14.0  BLOQUE: Números racionales
+p171 sz 14.0  BLOQUE: Geometría y espacio
+p180 sz 51.0  Ciencias Sociales
+p184 sz 16.0  Propósitos generales del área
+p184 sz 14.0  Propósitos del ciclo
+p186 sz 14.0  BLOQUE: Sociedades y culturas: Cambios y continuidades
+p186 sz 16.0  PRIMER AÑO
+p188 sz 14.0  BLOQUE: Sociedades, culturas y organización del espacio
+p190 sz 14.0  BLOQUE: Sociedades, culturas: cambios y continuidades
+p190 sz 16.0  SEGUNDO AÑO
+p195 sz 14.0  BLOQUE: Sociedades, culturas: Cambios y continuidades
+p202 sz 14.0  BLOQUE: Las sociedades a través del tiempo
+p204 sz 14.0  BLOQUE: Sociedades y territorios
+p230 sz 14.0  Enlaces interesantes
+p231 sz 14.0  Bibliografía General Disciplinar – Segundo Ciclo
+p232 sz 14.0  Bibliografía de consulta para los temas de enseñanza
+p236 sz 51.0  Ciencias Naturales
+p237 sz 16.0  Marco general de la enseñanza de las Ciencias Naturales en la Escuela Primaria
+p237 sz 14.0  La concepción de ciencia y las implicancias en su
+p237 sz 14.0  enseñanza
+p237 sz 14.0  La finalidad de la educación científica en la Escuela
+p237 sz 14.0  Primaria
+p238 sz 14.0  La enseñanza de las Ciencias Naturales por
+p238 sz 14.0  indagación
+p238 sz 14.0  La progresión de los contenidos en la enseñanza de
+p238 sz 14.0  las Ciencias Naturales
+p239 sz 14.0  La integración de las tecnologías digitales en la
+p239 sz 14.0  enseñanza de las Ciencias Naturales
+p240 sz 14.0  ¿Qué se espera que aprendan de Ciencias Naturales los niños al terminar la Escuela Primaria?
+p241 sz 16.0  Propósitos específicos
+p241 sz 14.0  Objetivos de la unidad pedagógica
+p244 sz 16.0  PRIMERO Y SEGUNDO AÑO
+p244 sz 14.0  Objetivos generales del año
+p244 sz 14.0  BLOQUE: Seres vivos
+p264 sz 16.0  CUARTO  AÑO
+p272 sz 16.0  QUINTO  AÑO
+p282 sz 16.0  SEXTO  AÑO
+p294 sz 51.0  Inglés
+p295 sz 14.0  Modos de conocer o
+p295 sz 14.0  tasks
+p296 sz 14.0  Cómo leer los contenidos en relación con los
+p296 sz 14.0  indicadores de avance
+p296 sz 14.0  La planificación por proyectos
+p296 sz 14.0  La enseñanza diversificada
+p297 sz 14.0  El contexto literario
+p297 sz 14.0  Evaluación
+p298 sz 16.0  Propósitos generales del área y ciclo:
+p309 sz 14.0  Otras referencias
+p312 sz 51.0  Educación Artística
+p313 sz 16.0  Enfoque curricular y orientaciones generales para la enseñanza.
+p313 sz 14.0  Ejes estructuradores
+p313 sz 14.0  Espacio
+p313 sz 14.0  Tiempo
+p314 sz 14.0  Subjetividad
+p314 sz 14.0  Relato
+p314 sz 14.0  Instancias relacionales del abordaje de los contenidos
+p315 sz 14.0  Modelos evaluativos
+p317 sz 16.0  Propósitos para Primer Ciclo
+p334 sz 16.0  Primer ciclo
+p342 sz 16.0  Segundo ciclo
+p342 sz 16.0  Propósitos del Segundo Ciclo
+p370 sz 14.0  Notas
+p372 sz 51.0  Educación Física
+p373 sz 16.0  Educación Física. Enfoque curricular y orientaciones generales para la enseñanza.
+p377 sz 14.0  Los bloques de contenidos para el Primer Ciclo
+p377 sz 14.0  de la escolaridad primaria son:
+p378 sz 14.0  BLOQUE: Conciencia y constitución corporal – Nociones corporales y capacidades motoras
+p378 sz 14.0  PRIMER AÑO de la Unidad Pedagógica
+p379 sz 14.0  BLOQUE: Prácticas gimnásticas, atléticas y acuáticas – Habilidades motoras básicas y combinadas
+p381 sz 14.0  BLOQUE: Prácticas vinculadas con el ambiente natural – Campamentos y juegos en el ambiente
+p382 sz 14.0  BLOQUE: Prácticas ludomotrices – Los juegos sociomotores y el jugar con los otros
+p385 sz 14.0  SEGUNDO AÑO de la Unidad Pedagógica
+p392 sz 14.0  Objetivos del año:
+p401 sz 14.0  Los bloques de contenidos para el Segundo Ciclo
+p431 sz 14.0  Páginas web

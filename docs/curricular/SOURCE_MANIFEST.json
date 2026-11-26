@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0",
+  "generated": "2026-11-26",
+  "generated_by": "Etapa 02.1 — Auditoría documental curricular",
+
+  "file": {
+    "name": "dis-curricular-PBA-completo.pdf",
+    "path": "docs/dis-curricular-PBA-completo.pdf",
+    "size_bytes": 3617659,
+    "size_mb": 3.45,
+    "sha256": "1C53A2CC9D8AACC1D1B4CFD6DEAC2AF7FCDAD0834D232C9C391705EB46271A38",
+    "extension": ".pdf",
+    "magic_bytes": "%PDF-1.6",
+    "integrity": "VALID — no .crdownload suffix, header confirms PDF 1.6, fully readable"
+  },
+
+  "document": {
+    "title_official": "Diseño Curricular para la Educación Primaria — Primer Ciclo y Segundo Ciclo",
+    "title_from_cover": "Diseño Curricular para la Educación Primaria",
+    "subtitle_from_cover": "Primer Ciclo / Segundo Ciclo",
+    "organism": "Dirección General de Cultura y Educación, Provincia de Buenos Aires",
+    "subsecretaria": "Subsecretaría de Educación",
+    "coordinacion": "Sergio Siciliano (coord. general)",
+    "edition": "1a ed.",
+    "place": "La Plata, Provincia de Buenos Aires",
+    "year_copyright": 2018,
+    "isbn": "978-987-676-095-9",
+    "cdd": "375.001",
+    "legal_deposit": "Ley N° 11.723",
+    "approval_resolution": "Resolución N° 1482/17",
+    "approval_body": "Dirección General de Cultura y Educación",
+    "approval_session_date": "2017-11-15",
+    "supersedes_resolution": "N° 3160/07",
+    "effective_from": "Ciclo lectivo 2018"
+  },
+
+  "metadata_pdf": {
+    "creator": "Adobe InDesign CS6 (Macintosh)",
+    "producer": "Adobe PDF Library 10.0.1",
+    "creation_date": "D:20171225183604-03'00'",
+    "creation_date_iso": "2017-12-25T18:36:04-03:00",
+    "mod_date": "D:20180104091128-03'00'",
+    "mod_date_iso": "2018-01-04T09:11:28-03:00",
+    "title_embedded": "",
+    "author_embedded": "",
+    "subject_embedded": "",
+    "keywords_embedded": "",
+    "note": "Title and author fields are empty in PDF metadata; identification is from document body"
+  },
+
+  "pages": {
+    "total_digital": 433,
+    "bibliographic_record_says": "450 p.",
+    "discrepancy": 17,
+    "discrepancy_note": "17 pages difference likely reflects blank/cover pages not included in this PDF edition",
+    "page_size": "A4 approximation (595.3 × 841.9 pt = 210 × 297 mm)",
+    "orientation": "portrait",
+    "offset_rule": "printed_page = digital_page - 1 (verified at 12 sample points throughout document, consistent)",
+    "first_printed_page": 5,
+    "first_digital_page": 6,
+    "covers_unnumbered": true,
+    "text_layer": "present and machine-readable (Adobe InDesign source, not scanned)",
+    "encrypted": false
+  },
+
+  "normative_references": [
+    "Ley Provincial de Educación N° 13688",
+    "Ley N° 13666",
+    "Ley N° 14815",
+    "Ley N° 14828",
+    "Decreto N° 1018/16",
+    "Acuerdos CFE N° 79/09, 134/11, 154/11, 174/12",
+    "Resolución DGCyE N° 3655/07 (Marco General de Política Curricular)",
+    "Resolución CFE N° 285/16 (Plan Estratégico Nacional 2016-2021)",
+    "Resolución N° 81/13 DGCyE"
+  ],
+
+  "hash_reproducibility": {
+    "command": "Get-FileHash docs/dis-curricular-PBA-completo.pdf -Algorithm SHA256",
+    "verified": true,
+    "note": "Hash computed from the unmodified source file. Do not alter the original."
+  }
+}

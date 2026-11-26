@@ -1,8 +1,8 @@
 # PROJECT_STATE.md — Plataforma educativa PBA
 
-> **Última actualización:** 2026-11-25  
+> **Última actualización:** 2026-11-26  
 > **Versión:** 0.2.0  
-> **Estado:** Etapa 01.3 completada — commit `1e05841`
+> **Estado:** Etapa 02.1 completada — auditoría documental curricular
 
 ---
 
@@ -144,6 +144,68 @@ educar/
 - No hay autenticación, sesión ni perfil de usuario real
 - Los recursos de la Biblioteca no son descargables en este prototipo
 
+---
+
+## Etapa 02.1 — Auditoría documental curricular (2026-11-26)
+
+### Fuente documental identificada
+
+| Campo | Valor |
+|-------|-------|
+| Archivo | `docs/dis-curricular-PBA-completo.pdf` |
+| SHA-256 | `1C53A2CC9D8AACC1D1B4CFD6DEAC2AF7FCDAD0834D232C9C391705EB46271A38` |
+| Título | *Diseño Curricular para la Educación Primaria — Primer Ciclo y Segundo Ciclo* |
+| Organismo | DGCyE, Provincia de Buenos Aires |
+| Resolución | N° 1482/17 · Vigencia desde ciclo lectivo 2018 |
+| Páginas | 433 (digital); regla: `printed_page = digital_page − 1` |
+| Calidad | Texto directo (no OCR); hiphenación tipográfica presente |
+
+### Entregables generados
+
+| Archivo | Descripción |
+|---------|-------------|
+| `docs/curricular/SOURCE_MANIFEST.json` | Metadatos técnicos del PDF, SHA-256, referencias normativas |
+| `docs/curricular/DOCUMENT_AUDIT.md` | Auditoría de integridad, vigencia y calidad del documento |
+| `docs/curricular/CURRICULAR_STRUCTURE.md` | Mapa completo de áreas, rangos de páginas, estructura interna |
+| `docs/curricular/EXTRACTION_STRATEGY.md` | 4 tipos de estructura + metodología de extracción por área |
+| `docs/curricular/GOLDEN_CASES.json` | 13 casos de referencia verificados para pruebas de regresión |
+| `docs/curricular/ISSUES_REGISTER.md` | 11 problemas registrados (4 ALTA, 5 MEDIA, 2 BAJA) |
+
+### Validaciones ejecutadas
+
+- SHA-256 calculado y confirmado
+- Regla de desplazamiento de páginas verificada en 12 puntos de muestreo
+- 13 casos de referencia (golden cases) verificados con texto exacto del documento
+- Estructura de las 10 secciones principales auditada
+- Términos canónicos verificados: "ciclo hidrológico" (no "ciclo del agua"), ortografía/acentuación integrada (no como bloque separado)
+
+### Problemas encontrados
+
+Ver `docs/curricular/ISSUES_REGISTER.md` para detalle completo.
+
+| Prioridad | Issues |
+|-----------|--------|
+| ALTA | I-01 (vigencia normativa), I-05 (celdas combinadas), I-10 (docs/.venv/), I-11 (permisos PDF) |
+| MEDIA | I-02, I-03, I-06, I-07, I-08 |
+| BAJA | I-04, I-09 |
+
+### Decisiones pendientes
+
+1. **I-01** — Verificar vigencia de Resolución N° 1482/17 en 2026 (SINBA / Boletín Oficial PBA)
+2. **I-11** — Decidir si el PDF fuente se incluye en git o se mantiene fuera del control de versiones
+3. **I-02 / I-03** — Definir tratamiento de Formación Ética y Ciudadana y Educación Tecnológica como áreas virtuales o contenidos transversales únicamente
+4. **Aprobación visual del propietario** requerida antes de Etapa 02.2
+
+### Scripts de análisis (en `docs/curricular/scripts/`)
+
+10 scripts Python que requieren `docs/.venv/` (PyMuPDF 2.2). El directorio `.venv/` **no se incluye en git** (ver I-10).
+
+---
+
 ## Próximo paso
 
-Presentar el prototipo al propietario para **aprobación visual** antes de comenzar Etapa 02. No avanzar sin confirmación explícita.
+**Etapa 02.2 — Extracción curricular estructurada** (bloqueada hasta aprobación del propietario).
+
+Prioridad de extracción: Matemática completa → Prácticas del Lenguaje Segundo Ciclo → Ciencias Sociales Segundo Ciclo → Ciencias Naturales → resto.
+
+Bloqueos previos a iniciar: resolver I-01, I-05, I-10, I-11 (ver ISSUES_REGISTER.md).

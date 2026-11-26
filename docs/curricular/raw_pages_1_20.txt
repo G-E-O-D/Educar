@@ -1,0 +1,747 @@
+
+============================================================
+PAGE 1 (0-idx 0)
+============================================================
+49
+Diseño Curricular para la Escuela Primaria •  Dirección General de Cultura y Educación.
+Diseño Curricular  
+Primer Ciclo
+Segundo Ciclo
+para la Educación Primaria
+
+============================================================
+PAGE 2 (0-idx 1)
+============================================================
+Diseño Curricular  para la Educación Primaria
+
+============================================================
+PAGE 3 (0-idx 2)
+============================================================
+
+============================================================
+PAGE 4 (0-idx 3)
+============================================================
+AUTORIDADES PROVINCIALES 
+Gobernadora
+Lic. María Eugenia Vidal
+Vicegobernador
+Dr. Daniel Salvador
+Director General de Cultura y Educación
+Presidente del Consejo General de Cultura y Educación
+Lic. Gabriel Sánchez  Zinny
+Subsecretario de Educación
+Lic. Sergio H. Siciliano        
+Subsecretario Administrativo
+Lic. Ignacio Sanguinetti
+Subsecretaria de Políticas Docentes y Gestión Territorial
+Dra. Florencia Castro
+Vicepresidente 1º 
+Consejo General de Cultura y Educación
+Mg. Diego Julio Martínez 
+Vicepresidente 2º 
+Consejo General de Cultura y Educación  
+Lic. Reynaldo Claudio Gómez
+Consejeros del Consejo General de Cultura y Educación
+Prof. María Valeria Iglesias, Prof. Ricardo Atilio Diani, Prof. Néstor Carasa, Lic. Luciana Padulo, 
+Prof. Graciela Salvador, Prof. María del Carmen Pan Rivas, Prof. Graciela Veneciano y 
+Lic. Marcelo Zarlenga
+
+============================================================
+PAGE 5 (0-idx 4)
+============================================================
+Edición y diseño
+Dirección de Producción de Contenidos
+© 2018, Dirección General de Cultura y Educación
+Subsecretaría de Educación
+Calle 13 entre 56 y 57 (1900) La Plata
+Provincia de Buenos Aires
+ISBN 978-987-676-095-9
+Hecho el depósito que marca la Ley N° 11.723
+Diseño Curricular para la Educación Primaria
+Primer Ciclo y Segundo Ciclo
+Agradecemos a:
+A los asesores que integran la Comisión Técnico Pedagógica del Consejo General de Cultura y Educación, 
+por su valioso aporte para la revisión de la propuesta.
+A Las autoridades de la Dirección Provincial de Educación Primaria y sus equipos de especialistas.
+A la Dirección de Formación Continua y su equipo de capacitadores y especialistas.
+A las Direcciones que integran la Subsecretaría de Educación por sus aportes a la construcción de este DC.
+A los inspectores, directivos y docentes que han colaborado en los distintos momentos de la producción de este DC.
+Dirección General de Cultura y Educación de la Provincia de Buenos Aires
+   Diseño curricular para la educación primaria : primer ciclo y segundo ciclo ; coordinación general 
+de Sergio Siciliano. - 1a ed. - La Plata : Dirección General de Cultura y Educación de la Provincia de 
+Buenos Aires, 2018.
+   450 p. ; 30 x 21 cm.
+   ISBN 978-987-676-095-9
+   1. Educación Primaria. 2. Currículo de Escuela Primaria. 3. Buenos Aires . I. Siciliano, Sergio, coord. 
+II. Título.
+   CDD 375.001
+
+============================================================
+PAGE 6 (0-idx 5)
+============================================================
+5
+Palabras preliminares
+Palabras preliminares
+Estimados supervisores, directores, docentes, padres y alumnos:
+Palabras iniciales
+Los sistemas educativos del siglo XXI están signados por importantes y vertiginosas transformaciones que nos ofrecen la 
+oportunidad de innovar y volver a pensar prácticas pedagógicas que contribuyan con la construcción de mejores aprendizajes 
+en el aula.  
+Vivimos en un mundo globalizado y diverso que nos enfrenta al reto de encontrar soluciones para las desigualdades que 
+aún subsisten. En este escenario, debemos formar ciudadanos creativos, participativos, que valoren la diversidad y que se 
+animen a ser transformadores de la realidad.
+Asumir el enorme desafío de conducir el sistema educativo de la Provincia de Buenos Aires, con su complejidad, heteroge-
+neidad y diversidad, requiere planificar y llevar adelante en equipo, las líneas político pedagógicas que luego se expresan en 
+el accionar cotidiano de las escuelas. 
+ El Diseño Curricular del Nivel Primario expresa un proyecto pedagógico político que encarna el modelo de sociedad que 
+deseamos acompañar en nuestras instituciones educativas. Este modelo empieza a cobrar vida en la escuela a partir de la 
+construcción conjunta de saberes, en donde prime la investigación, la indagación, la búsqueda y se desarrollen competencias, 
+destrezas, estrategias que permitan la autonomía por parte de los niños en la construcción y la búsqueda nuevos conocimientos. 
+Creemos que la tarea de enseñar requiere de una fuerte convicción que trasciende el voluntarismo individual, creemos 
+también, que es posible generar las mejores condiciones para que la Provincia de Buenos Aires pueda alcanzar la excelencia 
+educativa. Somos capaces de generar una propuesta educativa que pueda dar respuesta a las exigencias del presente y del 
+futuro y que valore la diversidad cultural como un camino viable para construir una escuela de todos. Estamos convencidos 
+de que todos los alumnos pueden participar del acto educativo, y que es en esa participación, donde puede reconocerse como 
+sujeto transformador de su proyecto de vida y de su contexto.
+En esta línea, uno de los propósitos que persigue este instrumento es el de acompañar a las escuelas y sus docentes, pro-
+poniendo nuevas lógicas que nos alienten a repensar diferentes alternativas de la enseñanza en la escuela y en el aula. Tal 
+como lo explicita Phillips Meirieu: 
+La responsabilidad del educador es hacer emerger el deseo de aprender. Es el educador quien debe crear situaciones que 
+favorezcan la emergencia de este deseo. El enseñante no puede desear en lugar del alumno, pero puede crear situaciones favo-
+rables para que emerja el deseo. Estas situaciones serán más favorables si son diversificadas, variadas, estimulantes intelec-
+tualmente y activas. Es decir, que pondrán al alumno en la posición de actuar y no simplemente en la posición de recibir.
+Los invito a ese desafío…
+Lic. Gabriel Sánchez Zinny
+Director General de Cultura y Educación
+
+============================================================
+PAGE 7 (0-idx 6)
+============================================================
+6
+Diseño Curricular para la Enseñanza Primaria •  Dirección General de Cultura y Educación
+Presentación del Diseño Curricular para el Nivel Primario.
+Aprobado por Resolución N° 1482/17
+A las familias, docentes, equipos directivos y de supervisión de la Provincia de Buenos Aires.
+La Ley de Educación Provincial N° 13688 encomienda la revisión curricular periódica de los Diseños Curriculares de 
+los distintos Niveles y Modalidades.
+Es entonces que, en el marco de las acciones de gestión curricular provincial, se ha iniciado este proceso de actuali-
+zación del Diseño Curricular del Nivel Primario, aprobado por Resolución Ministerial N° 3160 del año 2006.
+Durante el presente año, la Subsecretaría de Educación, inició acciones de consulta territorial a distintos actores del 
+sistema pertenecientes al nivel Primario. Para esta gestión, fue muy importante recabar ideas, opiniones y necesida-
+des de los diversos sectores del sistema educativo: familias, alumnos, equipos docentes, directivos y de supervisión 
+educativa.
+Este primer paso permitió avanzar en un recorrido hacia la consolidación de una propuesta aún más enriquecida, 
+actualizada y de calidad para la formación de los alumnos del Nivel Primario de la Provincia de Buenos Aires.
+Por otra parte, las autoridades del Ministerio de Educación de la Nación, en su oportunidad, han solicitado iniciar 
+este proceso de actualización curricular. En este sentido, para la Provincia de Buenos Aires, se sugiere realizar ajustes 
+necesarios en diversas áreas para tramitar la validez nacional de las cohortes 2018 y subsiguientes. 
+Cabe señalar que estas sugerencias han sido evaluadas en relación con las propias necesidades, expectativas y 
+posibilidades del sistema educativo provincial, en consonancia con las expectativas de formación para los alumnos del 
+sistema educativo bonaerense.
+La participación responsable de todos ha posibilitado la construcción de los acuerdos necesarios que redundarán en 
+pos de la mejora de la formación de los alumnos del nivel,  trascendiendo a las gestiones de gobierno del sistema, y que 
+tiene como principal objetivo enriquecer las propuestas pedagógicas de los docentes con una clara mirada al futuro.
+Considero que esta propuesta curricular contribuirá a la clarificación y la organización de la tarea de enseñanza y a 
+la toma de decisiones didáctica de los docentes.
+Los procesos de comprensión, de producción de textos y resolución de problemas deben afianzarse y profundizarse 
+para alcanzar mejores niveles de desempeño.
+Resulta necesario, entonces, pensar en una propuesta accesible y clara que permita optimizar los tiempos de la 
+enseñanza, en particular en estas áreas mencionadas.
+ Se ha definido un esquema organizador para recuperar y presentar los contenidos considerados como recorte 
+epistemológico y modos de conocer, los indicadores de avance y progreso de los aprendizajes de los alumnos y las 
+situaciones de enseñanza orientadoras, presentadas por bloques.
+
+============================================================
+PAGE 8 (0-idx 7)
+============================================================
+7
+Presentación
+Presentación
+Respecto de los enfoques para la enseñanza, éstos se han conservado en los sustantivo, pero se buscó profundi-
+zar algunos aspectos, tales como la enseñanza por indagación en Ciencias Naturales o el enfoque articulador para 
+la enseñanza de la Matemática.
+En Prácticas del Lenguaje, se han incorporado orientaciones y definiciones para fortalecer la adquisición del sis-
+tema de escritura, todo ello en el marco del enfoque social de las prácticas de escritura.
+A la vez, este Diseño Curricular se completa con la elaboración de Documentos Curriculares de todas las áreas, 
+en particular referidos a la planificación didáctica y ejemplos de secuencias de enseñanza de los diversos bloques 
+de contenidos, los que acercamos a todos los docentes y estarán disponibles en forma digital para su consulta y 
+utilización.
+Complementariamente, la Subsecretaría de Educación dispondrá acciones de acompañamiento para favorecer 
+una mejor apropiación del Diseño Curricular, tales como encuentros con Directores, Docentes y Supervisores para 
+tratamiento del material, propuestas de capacitación virtual y presencial a cargo de la Dirección de Formación Do-
+cente Continua y la producción de nuevos materiales que completarán y orientarán la implementación del Diseño 
+Curricular.
+La mejora de los aprendizajes de nuestros alumnos, horizonte  central de nuestra tarea educativa, requiere del 
+esfuerzo de todos y de la actualización de todas las estrategias pedagógicas disponibles.
+El Diseño Curricular, como herramienta fundamental y necesaria para acompañar el trabajo de los docentes en el 
+aula, resultará un elemento esencial para alcanzar este objetivo.
+Lic. Sergio H. Siciliano
+Subsecretario de Educación
+
+============================================================
+PAGE 9 (0-idx 8)
+============================================================
+
+============================================================
+PAGE 10 (0-idx 9)
+============================================================
+9
+Resolución
+Resolución
+Gobierno de la Provincia de Buenos Aires
+Resolución firma conjunta
+Referencia: Expediente 5802-2288226/2017
+VISTO el Expediente N° 5802-2288226/2017   y la Ley Provincial de Edu-
+cación N° 13688, los Acuerdos del Consejo Federal de Educación  N° 79/09, 
+134/11, 154/11, 174/12, las Resoluciones   de la Dirección General de Cultura 
+y Educación N° 3655/07, N° 3160/07, N° 81/13, y;
+CONSIDERANDO
+Que la Ley Provincial N° 13688,  en su Artículo 106, establece que la Direc-
+ción General de Cultura y Educación prescribirá la enseñanza de contenidos 
+educativos,  social y científicamente  pertinentes,  mediante  Diseños Curricu-
+lares  y documentos de desarrollo curricular para cada Nivel y para las Mo-
+dalidades que corresponda, los cuales deberán ser revisados periódicamente;
+Que  conforme  a  lo  dispuesto  en  el  Artículo  107  de  la  ley  aludida,  los 
+Diseños  Curriculares  deberán  considerar contenidos comunes establecidos 
+por la Ley de Educación Nacional y los acuerdos  del Consejo Federal de Edu-
+cación en el marco de la legislación vigente;
+Que en su Artículo 11, la Ley N° 13688 determina que la Provincia, a través 
+de la Dirección General de Cultura y Educación, dicta su política educativa  en 
+concordancia  con la política educativa nacional y controla su cumplimiento 
+en todos sus aspectos con la finalidad de consolidar la unidad nacional y pro-
+vincial, respetando las particularidades de cada región y distrito educativo;
+Que en  este sentido,  el Artículo  27  establece  que  el nivel  de  Educación 
+Primaria  define  sus diseños curriculares, en articulación con los diferentes 
+Niveles y Modalidades;
+Que los  acuerdos  Federales  N°  79/09,  134/11,  154/11,  174/12,  que 
+incorporan  definiciones  y lineamientos para la educación primaria, se en-
+cuentran  en consonancia  con el Marco General  de Política  Curricular, esta-
+blecido  por la provincia  de Buenos Aires en la Resolución N° 3655/07;
+Que por Resolución  N° 3160/07 se aprobó el Diseño Curricular corres-
+pondiente a la Educación Primaria, existiendo observaciones al mismo por 
+parte  de  la Comisión  Nacional  de  Validez  Nacional,  durante  el año  2016, 
+con base en el informe técnico de la Comisión Nacional de Gestión  Educati-
+va,  comprometiéndose  esta Jurisdicción  Provincial  a  efectuar  las  adecua-
+ciones  en  el marco  del “Plan Estratégico para el otorgamiento de la Validez 
+Nacional 2014-2016”;
+Que  las  áreas  del  diseño  que  han  recibido  observaciones   y  reco-
+mendaciones   son:  Ciencias   Naturales,  Ciencias Sociales, Lenguas Extran-
+jeras,   Lengua  (Prácticas  del  Lenguaje),  Matemática,  Artística,  Formación 
+Ética  y  Ciudadana,   Educación  Tecnológica; así como aspectos  referidos al 
+tratamiento  de la Ley de Educación  Sexual Integral y a cuestiones  relativas 
+a los métodos  organizativos  y didácticos de la Unidad pedagógica;
+Que en atención a los informes  técnicos realizados  por las áreas eva-
+luadoras del Ministerio de Educación Nacional, esta Dirección General de 
+Cultura y Educación comenzó un proceso de revisión del Diseño Curricular 
+vigente para el Nivel Primario;
+Que durante los años 2016 y 2017, se implementaron acciones tendien-
+tes a identificar fortalezas y debilidades en la organización y abordaje de los 
+contenidos curriculares del Nivel;
+ Que estas acciones incluyeron  asistencias  técnicas, encuentros  de tra-
+bajo con Inspectores, Directores y Docentes, encuestas territoriales y resulta-
+dos de operativos de evaluación;  la información allí relevada  se constituyó 
+en un eje fundamental  que orientó la toma de decisiones para la revisión y 
+actualización del diseño curricular;
+Que el presente conforma una propuesta Curricular para el Nivel Prima-
+rio que garantiza,  para los/as niños/as bonaerenses,  una formación integral, 
+brindando más oportunidades para el aprendizaje de saberes significativos 
+en los diversos campos de conocimiento;
+Que  el  Consejo General de Cultura y Educación  aprobó y aconseja el 
+dictado de la presente Resolución en sesión de fecha 15 de noviembre de 
+2017, recomendando, por un lado, la elaboración de documentos de apoyo 
+
+============================================================
+PAGE 11 (0-idx 10)
+============================================================
+10
+Diseño Curricular para la Enseñanza Primaria •  Dirección General de Cultura y Educación
+complementarios al Diseño Curricular que utilicen estrategias  de  comuni-
+cación  y  difusión  y  por  otro,  la  realización  de  jornadas  de  capacitación 
+en  servicio  a  los  efectos  de  lograr la universalización  de la presente pro-
+puesta;
+Que la presente  medida  se dicta  en  uso de  las  facultades  conferidas 
+por los  artículos  69   incisos  e) e   inc. y) de la Ley  Nº 13688, los alcances de 
+las Leyes N° 13666, N° 14815, N° 14828 y el Decreto N° 1018/16;
+Por ello,
+EL DIRECTOR GENERAL DE CULTURA Y EDUCACION RESUELVE:
+ARTÍCULO  1º. Aprobar  el Diseño  Curricular  correspondiente  al Nivel 
+de  Educación Primaria, como Anexos IF-2017-04069468-GDEBA- DPEPDGCYE, 
+que  consta  de  ocho (8)  páginas;  Anexo  IF-2017-04069441-GDEBA-DPEPDGCYE, 
+que consta de ocho (8) páginas; Anexo IF-2017-04069436-GDEBA-DPEPDGCYE, 
+que  consta  de  doce (12) páginas; Anexo IF-2017-04069417-GDEBA-DPEPD-
+GCYE, que consta de  cinco  (5)  páginas;  Anexo  IF-2017-04069401-GDE-
+BA-DPEPDGCYE,   que  consta  de  setenta   y  una  (71)  páginas; Anexo IF-
+2017- 04069380-GDEBA-DPEPDGCYE,  que  consta  de  tres  (3)  páginas;  Anexo 
+IF-2017-04069363-GDEBA-DPEPDGCYE, que consta de ciento diecinueve (119) 
+páginas; Anexo IF-2017-04069347-GDEBA-DPEPDGCYE,  que consta de cuatro 
+(4) páginas; Anexo IF-2017-04069313- GDEBA-DPEPDGCYE,   que  consta  de 
+sesenta  y seis  (66) páginas; Anexo IF-2017-04069292-GDEBA-DPEPDGCYE, 
+que consta de cinco (5)  páginas;  Anexo  IF-2017-04069277-GDEBA-DPEPD-
+GCYE,  que  consta  de  setenta  y  siete  (77)  páginas;  Anexo  IF-2017-
+04069250- GDEBA-DPEPDGCYE,  que consta de seis (6) páginas; Anexo 
+IF-2017-04069103-GDEBA-DPEPDGCYE, que consta de setenta y siete (77) 
+páginas;   Anexo   IF-2017-04068962-GDEBA-DPEPDGCYE,   que   consta   de 
+cuatro   (4)   páginas;  Anexo IF-2017-04068804-GDEBA- DPEPDGCYE,   que 
+consta  de  setenta  (70)  páginas;  Anexo  IF-2017-04068728-GDEBA-DPEPDG-
+CYE,  que  consta  de siete (7) páginas; Anexo IF-2017-04068385-GDEBA-DPEP-
+DGCYE,  que consta de quince (15) páginas; Anexo IF-2017-04069065-GDE-
+BA-DPEPDGCYE, que consta de cuatro (4) páginas, y que pasan a integrar la 
+presente.
+ARTÍCULO  2º.   Encomendar  a  la  Subsecretaría  de  Educación  la  ela-
+boración  de  documentos  de  apoyo  complementarios  al Diseño Curricular 
+aprobado en la presente.
+ARTÍCULO  3º. Dejar sin efecto la Resolución  N° 3160/07 y toda otra nor-
+ma en cuanto  se oponga a la presente, a partir del ciclo lectivo 2018.
+ARTÍCULO  4º. La  presente  Resolución  será  refrendada  por el Vicepre-
+sidente  1º  del Consejo  General  de  Cultura y Educación y por el Subsecre-
+tario de Educación de este Organismo.
+ARTÍCULO  5º. Registrar esta Resolución  que será desglosada  para su 
+archivo en la Dirección de Coordinación Administrativa,  la que en su lugar 
+agregará  copia  autenticada  de  la misma.  Comunicar  al Departamento 
+Mesa General  de Entradas y Salidas; notificar al Consejo General  de  Cultura 
+y  Educación;  a  la  Subsecretaría  de  Educación;  a  la  Subsecretaria  de 
+Políticas Docentes y Gestión Territorial, a la Subsecretaría  Administrativa;  a 
+la Dirección Provincial de Gestión Educativa; a las Direcciones Provinciales de 
+Nivel y Modalidad de Gestión Estatal;  a  la Dirección  Provincial  de  Educa-
+ción  de  Gestión  Privada;  a  la Dirección  Provincial  de  Políticas  Socioedu-
+cativa,  a la Dirección Provincial  de  Consejos  Escolares,  a  la Dirección  de 
+Inspección  General;  a  todas las  Jefaturas de Región y por su intermedio a 
+todas las Jefaturas  Distritales  e instituciones  educativas;   al Centro  de Do-
+cumentación  e Información de la Dirección General de Cultura y Educación 
+(CENDIE).  Publicar  en  el Boletín  Oficial  y en  el Sistema  de   Información 
+Normativa  de la provincia de Buenos Aires -SINBA -. Cumplido, archivar.
+Vicepresidente 1º 
+Consejo General de Cultura y Educación
+Mg. Diego Julio Martínez
+Subsecretario de Educación
+Lic. Sergio Héctor Siciliano   
+Director General de Cultura y Educación
+Presidente del Consejo General de Cultura y Educación
+Lic. Gabriel Sánchez  Zinny
+
+============================================================
+PAGE 12 (0-idx 11)
+============================================================
+11
+Índice
+Índice
+Índice
+Principios organizadores del Diseño Curricular para el Nivel Primario ...........................................................................................13	
+Módulo Educación Inclusiva...............................................................................................................................................................................23
+Módulo Tic................................................................................................................................................................................................................33
+Prácticas del Lenguaje .......................................................................................................................................................................................43
+Matemática .............................................................................................................................................................................................................97
+Ciencias Sociales ............................................................................................................................................................................................... 179
+Ciencias Naturales ............................................................................................................................................................................................ 235
+Inglés...................................................................................................................................................................................................................... 293
+Educación Artística............................................................................................................................................................................................ 311
+La enseñanza de la Plástica Visual 
+La enseñanza de la Música
+La enseñanza de la Danza
+La enseñanza de Teatro
+Educación Física................................................................................................................................................................................................. 371
+
+============================================================
+PAGE 13 (0-idx 12)
+============================================================
+Te damos la mano, caminemos juntos...
+
+============================================================
+PAGE 14 (0-idx 13)
+============================================================
+13
+Presentación general
+Presentación general
+  Principios organizadores del Diseño Curricular para el Nivel Primario
+La Educación entendida como política pública 
+El actual escenario educativo nos encuentra, luego diez años de 
+sancionada la Ley Provincial de Educación N° 13.688/06, ante el de-
+safío de lograr que todos los niños y niñas1 de nuestra provincia al-
+cancen una educación de calidad que les permitan contar con las 
+herramientas necesarias para construir futuro, lograr autonomía y 
+contribuir al crecimiento de la sociedad bonaerense en su conjunto.
+En esta línea, la Declaración de Purmamarca, aprobada por el 
+Consejo Federal de Educación el 12 de febrero de 2016, afirma la uná-
+nime voluntad de trabajar sobre lo construido a lo largo de estos años 
+en pos de concretar los desafíos pendientes, para afianzar el valor 
+central de la Educación como principal política de Estado que garan-
+tice el desarrollo social y económico del país. 
+Para ello, es indispensable implementar en la Provincia una agen-
+da pública que diseñe acciones conducentes al logro de un aprendi-
+zaje continuo que favorezca el desarrollo integral de todos y cada uno 
+de los niños y niñas; jerarquizando al docente en su rol de autoridad 
+pedagógica y como agente estratégico de un cambio cultural, partien-
+do de procesos de evaluación sistémica que continúe poniendo en va-
+lor la Educación y, junto a las familias y a la sociedad en su conjunto, 
+lograr una formación de calidad para todos.
+En este sentido, la Provincia de Buenos Aires aprobó e impulsa el 
+1	
+Este Diseño Curricular aborda cuestiones de género en forma explícita a lo largo de 
+toda la Educación Primaria. El análisis de los estereotipos que se promueven en los 
+medios de comunicación, la reflexión sobre los personajes literarios, la participa-
+ción de las mujeres en política, son ejemplos de algunos de los contenidos que se 
+proponen en las diferentes áreas. 
+	
+En relación al sexismo del lenguaje, en esta edición –y con el único ánimo de facilitar 
+la lectura-, se utilizó un criterio exclusivamente lingüístico-gramatical en la escritu-
+ra. Se apeló al uso del masculino que, en español, es un género no marcado, dado que 
+posee un valor de uso genérico que designa a todos los elementos de una clase. 
+	
+En esta línea, se desestimó la incorporación de cláusulas coordinadas –niñas y ni-
+ños- a fin de evitar que las mismas se vuelvan artificiosas ya que conllevan des-
+doblamientos en varios elementos de la oración: “las niñas y los niños fueron en-
+trevistadas y entrevistados por los conductores y las conductoras del programa de 
+televisión”. Se descartó, asimismo, la utilización de las barras “os/as” por tratarse de 
+un recurso característico de ámbitos administrativos o burocráticos. 
+Plan Estratégico Nacional 2016-2021 “ARGENTINA ENSEÑA Y APREN-
+DE” –Resolución N° 285/16 del Consejo Federal de Educación–, en el 
+que se establece, dentro de los ejes centrales de la política educativa, 
+el aprendizaje de saberes y capacidades fundamentales como estra-
+tegia para avanzar hacia una concepción más amplia del aprendizaje 
+para el siglo xxi.
+Es prioritario entonces, fortalecer los aprendizajes en la escuela 
+primaria bonaerense, iniciando un proceso de revisión y actualiza-
+ción curricular que establezca los principios organizadores para el 
+Nivel en la Provincia de Buenos Aires, en línea con el Marco General 
+de Política Curricular, en el cual se prioricen la innovación y el inter-
+cambio de experiencias como mecanismos para el desarrollo de nue-
+vas modalidades de organización y gestión pedagógica e institucio-
+nal, conducentes a sostener las trayectorias educativas de los niños y 
+niñas y la mejora de aprendizajes significativos a través del desarrollo 
+de grandes ejes transversales.
+El propósito es avanzar hacia el desarrollo de una política pública 
+educativa integral, inclusiva y de calidad que atienda las particulari-
+dades de la jurisdicción y abarque a todos los niveles y modalidades 
+del sistema educativo.
+La escuela es el espacio público donde se produce el encuentro 
+sistemático entre estudiantes, docentes y conocimiento que tiene la 
+responsabilidad indelegable de generar las mejores condiciones de 
+enseñanza para garantizar el desarrollo de las trayectorias educati-
+vas de todos los alumnos en los tiempos previstos, en el contexto de 
+las particularidades de cada estudiante.
+Es necesario fortalecer y disponer un conjunto de acciones que 
+favorezcan el ingreso, la permanencia con aprendizajes significativos 
+y el egreso de los estudiantes, mediante la implementación de proce-
+sos de enseñanza de calidad.
+Asimismo, busca promover una educación acorde a las deman-
+das de la sociedad contemporánea y las transformaciones culturales, 
+económicas y tecnológicas que la dinamizan.
+
+============================================================
+PAGE 15 (0-idx 14)
+============================================================
+14
+Diseño Curricular para la Enseñanza Primaria •  Dirección General de Cultura y Educación
+Para el cumplimiento de estas metas, el estado Provincial define 
+políticas curriculares para los distintos niveles y modalidades del sis-
+tema educativo, expresadas en los diseños curriculares prescriptivos, 
+paradigmáticos, relacionales y comunes.	
+ El Diseño Curricular para el Nivel Primario se fundamenta en la 
+concepción de educación común, entendida como la práctica social 
+de transmisión cultural que garantiza el derecho universal a la edu-
+cación, sostenido en las nociones de diversidad, interculturalidad e 
+igualdad de oportunidades.
+Consideraciones sobre la actualización curricular
+El Diseño Curricular y sus propuestas constituyen marcos de re-
+ferencia que requieren revisión periódica. Su implementación define 
+la tarea docente y posibilita nuevas prácticas que permiten la ela-
+boración de revisiones superadoras y su materialización en nuevos 
+documentos curriculares. La política curricular de la provincia de Bue-
+nos Aires concibe los procesos de revisión, diseño y desarrollo curricular 
+como procesos continuos y simultáneos.
+Este proceso, entonces, inicia con la recepción del Informe analítico 
+producido por el Ministerio de Educación Nacional, en el que se realizan 
+referencias acerca de contenidos de las áreas curriculares, su ubicación 
+en el entramado curricular y la intensidad de su desarrollo, entre otros 
+aportes de orden epistemológico. Asimismo, se presentan sugerencias 
+específicas acerca de la incorporación de contenidos y actividades que 
+aborden con mayor definición los aprendizajes de Formación Ciudada-
+na, Tecnología y Educación Sexual Integral. Los Núcleos de Aprendizajes 
+Prioritarios (NAP) y sus desarrollos documentales posteriores han cons-
+tituido el marco general de este documento ministerial para la actuali-
+zación y validación de las certificaciones del Nivel Primario Provincial.
+En los últimos años numerosas escuelas de la Provincia han llevado 
+a cabo diversas experiencias innovadoras, en el marco de distintos pro-
+gramas y proyectos educativos (Programa de Educación Sexual Integral, 
+Educación inclusiva, Uso pedagógico de las TIC, Proyecto de fortaleci-
+miento de las prácticas de enseñanza en escuelas rurales, La escuela 
+sale del aula, entre otros). Estas propuestas fueron acompañadas por 
+materiales de desarrollo curricular producidos por los distintos equipos 
+de especialistas de la Dirección Provincial de Educación Primaria.
+Se han organizado encuentros provinciales y regionales con Ins-
+pectores y Directores del Nivel Primario, mesas de trabajo y asisten-
+cias territoriales y es a partir de esta presencia en territorio es que se 
+han podido recuperar las características y condiciones de las prácti-
+cas pedagógicas institucionales situadas, con la posibilidad de pro-
+fundizar en ellas reconociendo sus posibilidades, potencialidades y 
+dificultades.
+ Sumado a esto, el análisis de los resultados de diversos opera-
+tivos de evaluación nacionales y provinciales, ha permitido un cono-
+cimiento más abarcador de la evolución de los aprendizajes de los 
+niños de nuestra provincia. 
+Características generales de la propuesta curricular
+A los fines de que se constituya en una herramienta de consulta 
+permanente, se consensó la revisión de algunos aspectos vinculados 
+con la organización general del material, la progresión de contenidos, la 
+inclusión de la Unidad Pedagógica, los aportes del campo de las TIC, la 
+educación inclusiva, entre otros temas que esta actualización aborda.
+Ofrecemos la información sobre la propuesta de actualización 
+organizada en tres apartados: aspectos generales, estructura interna 
+de las áreas curriculares, y nuevos aportes: enfoques curriculares y 
+contenidos transversales.
+Aspectos generales
+	
+Formato regular para todas las áreas. Consta de una estructura in-
+terna unificada que garantice la consistencia interna del documento. 
+
+============================================================
+PAGE 16 (0-idx 15)
+============================================================
+Presentación general
+15
+	
+Registro: Claro y simple, que orienta la lectura de los docentes 
+sobre el qué enseñar –conceptos disciplinares- y el cómo –modos 
+de conocer. Se incluyen en todas las áreas situaciones de ense-
+ñanza y los indicadores de avance por bloques de contenidos. 
+	
+Estructura ciclada y graduada. Se mantiene la lógica ciclada y, a 
+la vez, se ofrece una orientación sobre cómo graduar los conteni-
+dos por año. 
+	
+Materiales complementarios. Los contenidos del diseño curricu-
+lar se acompañan con materiales sobre cómo planificar los con-
+tenidos, cómo secuenciarlos y generar evaluaciones acordes a las 
+propuestas.
+Estructura interna de las áreas curriculares 
+El documento de cada área curricular presenta los siguientes 
+apartados:
+	
+Propósitos generales del área por ciclo: Se utiliza la categoría 
+Propósitos en todas las  áreas, en tanto orientadores para la en-
+señanza y facilitadores para evaluar. Son enunciados en orden 
+regular para facilitar su ubicación en cada uno de los bloques de 
+contenidos de cada área curricular.
+	
+Objetivos por año: además de mantener los propósitos por ciclo 
+que garanticen la lógica ciclada, cada una presenta objetivos 
+que se corresponden con la orientación sobre contenidos espe-
+cíficos.
+	
+Contenidos a enseñar: se consideran contenidos a enseñar tan-
+to los conceptos disciplinares (el qué de los campos del conoci-
+miento) como los modos de conocer (el cómo acceder a la cons-
+trucción del conocimiento). 
+	
+Situaciones de enseñanza: a través de ejemplos concretos, se 
+propone un repertorio variado de situaciones que promuevan el 
+aprendizaje de los contenidos enunciados.
+	
+Indicadores de avance: para cada año y bloque de conteni-
+dos. Se presentan los contenidos asociados a los indicadores de 
+avances y los modos de conocer de cada campo disciplinar en 
+todas las áreas.
+Por otra parte, se da continuidad a los enfoques epistemológicos 
+generales de las áreas curriculares, las orientaciones didácticas y a 
+las referencias bibliográficas y de recursos para ampliar la informa-
+ción que se incluyen en los Materiales Complementarios al docu-
+mento del diseño.
+Nuevos aportes: enfoques curriculares y contenidos 
+transversales 
+	
+Se presenta en Prácticas del Lenguaje la posibilidad de abordar 
+un enfoque alfabetizador equilibrado integrador, en línea de recu-
+peración de los aportes del DC vigente, sumando orientaciones 
+para posibilitar otros procesos didácticos.
+En la construcción de este enfoque alfabetizador se reconocen 
+los caminos recorridos a lo largo de años, en los que se destacó la 
+dimensión social del lenguaje y se valoró su aprendizaje en función 
+de las prácticas sociales que se desarrollan en diferentes ámbitos.
+El objetivo de este enfoque equilibrado integrador es que los 
+alumnos logren ser partícipes plenos de la cultura escrita en la cual 
+están insertos. En este contexto, la lectura y la escritura no pueden 
+pensarse alejadas de las prácticas sociales en donde se desarrollan.
+En las secuencias de enseñanza del enfoque equilibrado todos 
+los ámbitos del área de prácticas del lenguaje son considerados es-
+pacios propicios para la alfabetización.
+Dado que para desplegar las prácticas de lectura y escritura se 
+involucran procesos cognitivos, la metacognición es parte sustan-
+cial de la propuesta. Por este motivo, se enseñan estrategias lectoras 
+y de escritura que favorezcan la comprensión y producción de tex-
+tos al mismo tiempo que se reflexiona sobre la lengua como sistema 
+de modo continuo y simultáneo a las prácticas. 
+
+============================================================
+PAGE 17 (0-idx 16)
+============================================================
+16
+Diseño Curricular para la Enseñanza Primaria •  Dirección General de Cultura y Educación
+	
+Se incluyen apartados destinados al desarrollo de propuestas de 
+trabajo relativas a contenidos transversales: 
+Módulo TIC: destinado a profundizar orientaciones y aportar 
+ejemplos para establecer vinculación y transversalidad en las áreas.
+Módulo Educación inclusiva: destinado al desarrollo de funda-
+mentos y orientaciones para dar respuesta a las necesidades educa-
+tivas de todos los alumnos del sistema.
+Formación Ciudadana, Medio Ambiente y Educación Sexual In-
+tegral: se presentan incluidos en el desarrollo de los contenidos de 
+distintas áreas. 
+	
+Se incluyen estrategias y herramientas para el aprendizaje basa-
+do en proyectos disciplinarios e interdisciplinarios por ciclo. Serán 
+elaborados por la Dirección Provincial de Educación Primaria y se 
+ofrecerán como Materiales complementarios para la enseñanza 
+y el aprendizaje.
+Este proceso de actualización ofrece a los docentes de las es-
+cuelas primarias de la Provincia de Buenos Aires la oportunidad de 
+planificar la enseñanza pudiendo tomar del Diseño la información 
+necesaria que asegure la progresión de los contenidos de manera tal 
+que el alumno pueda enriquecer sus puentes cognitivos a la par que 
+progresa en los contenidos aprendidos.
+Expectativas de desempeño al egreso 
+de la educación primaria
+En el Nivel Primario se propone una visión de los conocimientos 
+de la cultura y de la ciencia en permanente transformación, resultado 
+de distintos momentos históricos, sociales y culturales ocurridos a lo 
+largo de los años. Interrogarse acerca del modo en que se construye el 
+conocimiento, problematizarlo, ponerlo en tensión y experimentación 
+es parte de un intercambio colectivo y de un proceso individual que 
+sucede en las aulas y que le permite al egresado de este nivel educativo 
+seguir profundizando creativamente y con creciente autonomía en los 
+campos de interés que lo hayan convocado en esta etapa.
+En la misma línea, al ofrecer a los niños espacios de evaluación 
+de su desempeño como instancias de reconocimiento de sus progre-
+sos, se garantiza una mayor conciencia de sus potencialidades, del 
+modo y del tiempo que cada uno de ellos necesita para consolidar 
+determinados aprendizajes que se continúan en el Nivel Secundario. 
+Las innovaciones tecnológicas, las prácticas de lectura y escritura 
+llevadas adelante en forma autónoma, la comunicación clara de las 
+ideas, la indagación como modo de conocer el mundo, el pensamiento 
+matemático, el conocimiento de lenguas extranjeras que permite ma-
+yor conciencia intercultural, el movimiento y el cuidado del cuerpo, el 
+análisis de los fenómenos sociales, ambientales, la experiencia estética 
+de las manifestaciones artístico-culturales, son algunos de los núcleos 
+de aprendizaje que suceden durante los años de educación primaria. 
+En las distintas áreas, al terminar la Educación Primaria, se espe-
+ra que los alumnos: 
+	
+Se alfabeticen y se desenvuelvan con autonomía en la cultura 
+escrita a través de prácticas de lectura, escritura y oralidad rela-
+cionadas con sus intereses y necesidades propias de diferentes 
+ámbitos. Al mismo tiempo, puedan desempeñarse en el estudio 
+con prácticas ajustadas a los diferentes propósitos, puedan dis-
+frutar de la lectura de diferentes géneros, ejerzan prácticas que 
+contribuyan con su formación ciudadana y, en ese marco, valo-
+ren la diversidad lingüística desde una perspectiva intercultural.
+	
+Interpreten la realidad y tomen decisiones a partir del pensa-
+miento matemático para la resolución de problemas. Usen de 
+forma flexible estrategias del quehacer matemático para, por un 
+lado, explorar, anticipar, validar, conjeturar y hacerse preguntas 
+y por otro, sean capaces de modelizar, entender, predecir y crear 
+argumentos y comunicar e interpretar ideas a través de distintas 
+representaciones.
+
+============================================================
+PAGE 18 (0-idx 17)
+============================================================
+Presentación general
+17
+	
+Puedan desarrollar diversas formas de comprender los fenó-
+menos naturales y de interactuar con la realidad, a partir de 
+modelos explicativos cada vez más cercanos a los modelos 
+científicos. Al mismo tiempo, puedan ampliar y potenciar su cu-
+riosidad y creatividad, formulando nuevas preguntas y nuevas 
+formas de indagar el mundo que los rodea en colaboración con 
+otros y logren construir una mirada crítica frente al conocimien-
+to científico y tecnológico y desarrollar actitudes de compromiso 
+con el entorno social y natural del que forman parte. 
+	
+Se formen como sujetos críticos y reflexivos, conocedores de 
+diversas manifestaciones artísticas del entorno cultural, de los 
+códigos necesarios paara acceder a ellas, tengan el derecho a dis-
+frutarlas, y también a producirlas, cuenten con espacios para el 
+reconocimiento del hacer artístico superando lo lúdico expresivo: 
+un proceso que implica esfuerzo, perseverancia, reflexión y toma 
+de decisiones. También, participen de experiencias grupales don-
+de se valoricen los aportes individuales y se dé lugar a diferentes 
+miradas e interpretaciones.
+	
+Avancen en la construcción de nociones temporales y espacia-
+les cada vez más complejas, usen categorías y nociones tempo-
+rales que den cuenta de la sucesión de acontecimientos y pue-
+dan contextualizarlas. Vislumbren que las realidades materiales 
+son resultado de un proceso de construcción social a lo largo del 
+tiempo, en el que participan diversos actores con intenciones, vi-
+siones e ideas diferentes.
+	
+Disfruten de prácticas ludomotrices, atléticas, gimnásticas y 
+motrices expresivas, experiencias en el ambiente y en el medio 
+acuático. Además, construyan modos de convivencia democrá-
+tica, asumiendo actitudes de responsabilidad, solidaridad y res-
+peto. Al mismo tiempo, reconozcan los cambios corporales y las 
+modificaciones funcionales que se producen en el propio cuerpo 
+como consecuencia del desarrollo de las capacidades motoras y 
+logren una adecuada alineación postural, dominio global y seg-
+mentario en diferentes situaciones motrices. 
+	
+Puedan emplear el inglés con comodidad y confianza como un 
+vehículo genuino para la comunicación y para la expresión de 
+sus identidades, emociones, deseos y opiniones. También sean 
+capaces de comprender y producir textos en distintas modali-
+dades y soportes, así como de usar distintas formas de media-
+ción lingüístico-cultural para aprender la lengua y comunicarse 
+en ella. También se espera que desarrollen la capacidad meta-
+lingüística crítica en relación con las lenguas y culturas repre-
+sentadas en la comunidad escolar y fortalezcan su consciencia 
+ciudadana e intercultural. 
+	
+Experimenten cotidianamente situaciones en aulas inclusivas 
+en las que se valore la diversidad y pluralidad como un aspec-
+to positivo, fomentando vínculos de cooperación y respeto. De 
+este modo, se construyen las bases sólidas de una sociedad más 
+justa que garantice la inclusión plena de todos sus ciudadanos. 
+La perspectiva de género -eje transversal en las diferentes áreas- 
+también va en sintonía con esta aspiración. 
+	
+Exploren las posibilidades que ofrecen las TIC, hagan un análi-
+sis crítico sobre su uso e identifiquen prácticas culturales vincu-
+ladas a ella y desarrollen el pensamiento computacional. Sean 
+capaces de hacer un uso responsable de los entornos digitales y 
+de los vínculos que a través de ellos se facilitan. Integren las TIC 
+en el aprendizaje como herramienta que no lo permita acceder 
+a la información sino también producirla en forma individual y 
+colaborativa. 
+En síntesis, se espera que alumno pueda, por una parte, ser cono-
+cedor de diferentes disciplinas, de sus particulares modos de acercar-
+se al conocimiento y sus prácticas más habituales. Al mismo tiempo, 
+se promueve que pueda conjugar diferentes conocimientos en favor 
+de un objetivo común. En esta línea, los agrupamientos flexibles pro-
+pios del trabajo por proyectos que se orientan en esta actualización cu-
+rricular, ofrecen la posibilidad de vincular los conocimientos de las 
+diferentes áreas y aprender en espacios en los que los alumnos se 
+
+============================================================
+PAGE 19 (0-idx 18)
+============================================================
+18
+Diseño Curricular para la Enseñanza Primaria •  Dirección General de Cultura y Educación
+ubiquen en distintos roles e interactúa con diferentes pares con el 
+objetivo de resolver un problema, una inquietud, una tarea. De este 
+modo, se ponen en juego la solidaridad, la inventiva, la creatividad, 
+los vínculos sociales constructivos y cooperativos.  
+Palabras finales
+Este documento busca caracterizar una política pública de cons-
+trucción curricular a partir de los sujetos y basada en el propósito de 
+democratización social por medio de la educación común.   La posibi-
+lidad de producir cambios en nuestras escuelas que afecten las vidas 
+de los estudiantes, es una responsabilidad asumida desde esta polí-
+tica pública, generando situaciones de ejercicio real de los derechos, 
+distribuyendo con justicia los bienes culturales y ofreciendo políticas 
+de cuidado que atiendan su integralidad.
+
+============================================================
+PAGE 20 (0-idx 19)
+============================================================

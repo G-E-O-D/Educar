@@ -1,0 +1,146 @@
+AREA: 06_cs_naturales  |  digital d236-d293  |  printed p235-p292
+Total pages in area: 58
+======================================================================
+
+
+--- d236 (p235) ---
+Ciencias Naturales
+
+--- d237 (p236) ---
+236
+Diseño Curricular para la Enseñanza Primaria •  Dirección General de Cultura y Educación
+ Marco general de la enseñanza de las Ciencias Naturales en la Escuela Primaria
+La concepción de ciencia y las implicancias en su 
+enseñanza
+La enseñanza de las Ciencias Naturales en la Escuela Primaria 
+está íntimamente relacionada con una concepción de ciencia como 
+construcción social históricamente situada. Hoy está ampliamente 
+aceptado que una representación simplista de la ciencia, que aún 
+permanece vigente en el imaginario social, tuvo en la escuela un 
+foco importante de difusión a través del llamado método científico. 
+Esta idea sobre la práctica científica como la ejecución de una se-
+rie de pasos estructurados y universales que revelan la verdad de 
+la naturaleza sintetizaba una imagen de ciencia como la actividad 
+de una élite de intelectuales que “descubren” saberes ocultos a los 
+no especialistas. Este conocimiento se identificaba como verdadero 
+porque se obtiene en las condiciones particulares de un laboratorio 
+donde realizan sus experimentos. Esta representación lleva implíci-
+ta una imagen estereotipada de científico, como personas, general-
+mente varones, que llevan adelante su misión de trabajar en forma 
+aislada en un laboratorio con sus tubos de ensayo para lograr cono-
+cimientos puros y verdaderos.
+Hoy entendemos que la ciencia no logra ni pretende un cono-
+cimiento totalmente objetivo, sin por esto relativizar la producción 
+científica y negar las rigurosas metodologías de cada disciplina. Es 
+fundamental entender que la ciencia interpreta la realidad y no 
+representa la realidad en sí misma. Por lo tanto, no descubre “la” 
+verdad a través de un método científico universal. Las comunida-
+des científicas de las diferentes disciplinas debaten y confrontan 
+continuamente descripciones y explicaciones cada vez más preci-
+sas del mundo, a través de modelos que interpretan porciones de 
+la realidad y que se estructuran en teorías. La historia de la cienc
+--- d238 (p237) ---
+Ciencias Naturales
+Ciencia Naturales
+237
+valores propios de la práctica científica. Por lo tanto, la enseñanza de 
+las Ciencias Naturales tiene como meta promover el aprendizaje de 
+nuevos marcos explicativos y procedimientos que les permitan a los 
+estudiantes interpretar la realidad de su entorno desde los modelos 
+y estrategias científicas, así como fomentar valores y actitudes ne-
+cesarios para desenvolverse en la sociedad y tomar decisiones res-
+ponsables. En este sentido, es fundamental seguir problematizando 
+un modelo de enseñanza arraigado en la propia biografía escolar 
+del colectivo docente, que generalmente ha sido de tipo transmisivo 
+reproductivo en que predomina la lógica de almacenamiento de la 
+información.
+La enseñanza de las Ciencias Naturales por 
+indagación
+Para aproximar a los alumnos a una mirada particular del mun-
+do, como son las teorías y modelos científicos, el Diseño Curricular 
+se enmarca en un modelo de enseñanza constructivista, basado en 
+la indagación escolar. Por lo tanto, prioriza aquellas prácticas cen-
+tradas en lograr que el alumno construya no sólo una explicación 
+del mundo como modelo válido, sino también una actitud interro-
+gativa frente a los hechos y fenómenos naturales que lo rodean, así 
+como una postura crítica ante los mismos procesos de producción, 
+validación y aplicaciones del conocimiento científico. Estas consi-
+deraciones acerca de la imagen de ciencia y sus implicancias en el 
+modelo de enseñanza nos llevan a revisar algunas cuestiones rela-
+cionadas con las prácticas de enseñanza y el desarrollo curricular 
+de las Ciencias Naturales en la escuela.
+Podríamos considerar que es la formulación de una pregunta lo 
+que da comienzo al proceso de la indagación. Por lo tanto, hipo-
+tetizar, observar, explorar, experimentar, registrar, comparar datos, 
+ampliar la información, clasificar, generalizar son las acciones que 
+se vinculan con las metodologías científicas. En ese sentido, los 
+problemas seleccionados no sólo 
+--- d239 (p238) ---
+Diseño Curricular para la Enseñanza Primaria •  Dirección General de Cultura y Educación
+238
+se focalizan en el establecimiento y la identificación de las relaciones 
+e interacciones mutuas entre los procesos, hechos y fenómenos, me-
+diante el diseño de actividades experimentales sencillas y la mode-
+lización. Finalmente, el nivel explicativo –propio de los últimos años 
+de Segundo Ciclo– incorpora explicaciones con cierto nivel de gene-
+ralidad, para dar cuenta de la unidad y diversidad, las interacciones 
+y los cambios en el mundo natural. Las situaciones de enseñan-
+za proponen un mayor nivel de abstracción, haciendo referencia a 
+teorías que relacionan diferentes hechos y estableciendo relaciones 
+causales que dan coherencia a las diferentes observaciones.
+La integración de las tecnologías digitales en la 
+enseñanza de las Ciencias Naturales
+El propósito no es sólo incorporar recursos innovadores al re-
+pertorio de prácticas docentes, sino integrar las tecnologías digita-
+les a la enseñanza. De esta forma, permitirá mejorar la circulación 
+de los saberes y, por lo tanto, la apropiación y producción de nuevos 
+conocimientos en los estudiantes. Esto ocurrirá a medida que los 
+docentes no sólo aprendamos a usar los instrumentos tecnológi-
+cos, sino también a dominar su didáctica para lograr su integración 
+curricular. El propósito no es usarlas aisladamente como un fin en 
+sí mismas, sino como un recurso tecnológico que aporta nuevas di-
+mensiones a la enseñanza de determinados contenidos. Por lo tanto, 
+requieren su integración al contexto más amplio de una secuencia 
+didáctica con diversidad de situaciones de enseñanza. Es decir, el 
+foco no son las tecnologías digitales, sino los contenidos que nos 
+proponemos enseñar.
+
+--- d292 (p291) ---
+291
+Práctcas del Lenguaje. Primer ciclo
+Bibliografía
+Sánchez Ilabaca, Jaime. Integración Curricular de TICs: Concepto y Mo-
+delos. En: Revista Enfoques Educacionales. Vol. 5. Departamento de 
+Ciencias de la Computación: Universidad de Chile, 2003. Dispo-
+nible en: http://www.facso.uchile.cl/publicaciones/enfoques/07/
+Sanchez_IntegracionCurricularTICs.pdf.
+Sanmartí, Neus. Evaluar para aprender. Serie: 10 ideas claves. Barcelo-
+na: Editorial Grao, 2011.
+. Para aprender ciencias hace falta aprender a hablar sobre las expe-
+riencias y sobre las ideas. En: Textos de didáctica de la lengua y la lite-
+ratura. N.° 8. Abril, 1996. Disponible en: http://media.utp.edu.co/
+referencias-bibliograficas/uploads/referencias/articulo/1121-pa-
+ra-aprender-ciencias-hace-falta-aprender-a-hablar-sobre-las-ex-
+periencias-y-sobre-las-ideaspdf-aqaR9-articulo.pdf. 
+. Enseñar a elaborar textos científicos en las clases de Ciencias. En: 
+Alambique. Año IV. N.° 12. Barcelona: Editorial Grao, 1997.
+Sutton, Clive. Ideas sobre la ciencia e ideas sobre el lenguaje. En: Alambi-
+que. Año IV. N.° 12. Barcelona: Editorial Grao, 1997.
+Weissman, Hilda (Comp.). Didáctica de las Ciencias Naturales. Aportes y 
+reflexiones. Buenos Aires: Paidós, 1993.
+
+--- d293 (p292) ---
+
+--- d294 (p293) ---
+Inglés
+
+
+STRUCTURE KEYWORDS FOUND:
+  bloque: d[247, 249, 256, 290]
+  Primer Ciclo: d[238, 241, 284, 288, 290]
+  Segundo Ciclo: d[239, 260]
+  Propósitos: d[240, 241, 260]
+  Objetivos: d[241, 244, 248, 250, 251, 254, 256, 257, 258, 264, 267, 269, 270, 272, 275, 277, 279, 282, 285, 287, 289]
+  Modos de conocer: d[245, 246, 248, 249, 250, 252, 255, 256, 257, 258, 259, 265, 267, 268, 269, 270, 271, 273, 274, 276, 277, 278, 279, 280, 283, 285, 286, 287, 289, 290]
+  Situaciones de enseñanza: d[246, 249, 251, 252, 255, 257, 258, 259, 266, 268, 269, 271, 274, 276, 278, 280, 284, 286, 288, 290]
+  Unidad Pedagógica: d[247]

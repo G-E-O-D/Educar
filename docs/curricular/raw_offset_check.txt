@@ -1,0 +1,13 @@
+digital(1-idx) | first_num_on_page | expected_print(d-1) | match
+  d  6  |  5      |  p  5  |  True
+  d  7  |  6      |  p  6  |  True
+  d 10  |  9      |  p  9  |  True
+  d 11  |  10     |  p 10  |  True
+  d 12  |  11     |  p 11  |  True
+  d 14  |  13     |  p 13  |  True
+  d 21  |  None   |  p 20  |  None
+  d 51  |  50     |  p 50  |  True
+  d101  |  100    |  p100  |  True
+  d201  |  200    |  p200  |  True
+  d301  |  300    |  p300  |  True
+  d401  |  400    |  p400  |  True

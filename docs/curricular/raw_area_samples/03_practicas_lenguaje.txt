@@ -1,0 +1,127 @@
+AREA: 03_practicas_lenguaje  |  digital d44-d97  |  printed p43-p96
+Total pages in area: 54
+======================================================================
+
+
+--- d44 (p43) ---
+Prácticas del Lenguaje
+
+--- d45 (p44) ---
+Diseño Curricular para la Enseñanza Primaria •  Dirección General de Cultura y Educación
+44
+ Enfoque Curricular y Orientaciones para la Enseñanza
+El área de Prácticas del Lenguaje concibe el lenguaje como una 
+práctica social y cultural que se adecua en forma dinámica y con 
+gran versatilidad a contextos de uso particulares. Aprender a desen-
+volverse en una gama cada vez más amplia de situaciones es todo 
+un desafío que involucra un conocimiento lingüístico que solo se 
+puede adquirir en la práctica. 
+Para que los alumnos logren apropiarse progresivamente de las 
+prácticas del lenguaje, es preciso que, en el aula, se las tome como 
+modelos de referencia. Si en la vida social la escritura se realiza 
+con determinados propósitos, se dirige a destinatarios definidos, se 
+adecua a diferentes géneros discursivos y respeta un registro propio 
+de un contexto determinado, esta práctica debe desplegarse y ana-
+lizarse de igual modo en el aula. Lo mismo sucede con la práctica 
+de lectura. Un lector de literatura recomienda textos, sigue autores 
+o géneros predilectos, selecciona fragmentos que relee o estable-
+ce vínculos con otros materiales, como películas, series, música o 
+cuadros. La literatura en la escuela tiene que remitirse a esas prác-
+ticas para familiarizar a los alumnos y permitirles, de ese modo, 
+participar de ellas a partir de un repertorio cada vez más amplio y 
+diversificado. 
+Todos estos conocimientos, en tanto se materializan en prácti-
+cas, remiten a acción y a contexto de uso y distan de poder ser con-
+cebidos como estáticos o enciclopédicos. El modo de aprehenderlos, 
+precisamente, es ejerciendo prácticas variadas, en ámbitos diversos 
+y con propósitos diferenciados a lo largo de las distintas etapas de 
+la vida escolar. 
+Ámbitos de incumbencia
+Toda selección de contenidos implica un recorte que impone, 
+también, criterios de organización en una secuencia de presenta-
+ción progresiva. En ese recorte, las prácticas que se realizan a través 
+de la lectur
+--- d46 (p45) ---
+45
+Prácticas del Lenguaje
+Práctcas del Lenguaje
+Cabe destacar que no todos los contenidos se pueden presentar 
+mediante proyectos. Las secuencias didácticas permiten desplegar en 
+forma simultánea otras prácticas del lenguaje que requieren de aten-
+ción puntual y recursividad. Por su parte, las prácticas habituales y 
+sostenidas como, por ejemplo, la lectura de determinados géneros, el 
+seguimiento de autores de cuentos o novelas o el comentario sobre 
+noticias ocurridas en la semana pueden ser ejercidas en espacios acor-
+dados para tal fin, que sean previsibles y esperados por los alumnos. 
+Enfoque alfabetizador equilibrado
+El enfoque equilibrado sintetiza líneas de trabajo de diferentes 
+disciplinas –la Sociolingüística, la Psicolingüística, las Ciencias Cog-
+nitivas, las Ciencias de la Educación, la Lingüística del Texto, entre 
+las principales– con el objetivo de construir una propuesta para en-
+señar a leer y a escribir a los niños por sí mismos. 
+En la construcción de este enfoque alfabetizador provincial, se 
+reconocen los caminos recorridos a lo largo de años, en los que se 
+destacó la dimensión social del lenguaje y se valoró su aprendizaje 
+en función de las prácticas sociales que se desarrollan en diferentes 
+ámbitos. Por este motivo, al utilizar el término integrador, se asume 
+una continuidad con el trabajo realizado a la vez que se aportan 
+nuevos elementos que estructuran la propuesta de enseñanza de un 
+modo más secuenciado y organizado.
+La necesidad de reflexión sobre la lengua y sobre los procesos 
+metacognitivos implicados en la lectura y la escritura son los que 
+motivan, en esencia, la necesidad de plantear un enfoque alfabe-
+tizador que, en forma equilibrada, dé mayor visibilidad a estos as-
+pectos. 
+En el marco de prácticas de lectura y escritura en diferentes 
+ámbitos –de cuentos, poesías, folletos, calendarios escolares, eti-
+quetas, carteles, tapas de libros, índices, epígrafes–, los alumnos ini-
+cian su camino lector. 
+El trabajo de lectur
+--- d47 (p46) ---
+Diseño Curricular para la Enseñanza Primaria •  Dirección General de Cultura y Educación
+46
+no no insume tiempo de su aprendizaje en aprender a leer en forma 
+descontextualizada para, en el futuro, comenzar a leer textos, sino 
+que su aprendizaje sucede a medida que se produce el encuentro 
+con los textos. A través del análisis del género discursivo, del texto, 
+del contexto y de toda la información disponible, el estudiante hace 
+anticipaciones sobre el contenido y su significado. Así, el aprendizaje 
+no sucede en forma descontextualizada ni alejada del sentido y el 
+significado de los textos ni de la función social que cumplen. 
+Equilibrio entre diferentes tipos de conocimientos
+En las secuencias de enseñanza del enfoque equilibrado, todos 
+los ámbitos del área de Prácticas del Lenguaje –de la Literatura, de la 
+formación del estudiante y de la formación ciudadana– son conside-
+rados espacios propicios para la alfabetización.
+Dado que para desplegar las prácticas de lectura y escritura se 
+involucran procesos cognitivos, la metacognición es parte sustancial 
+de la propuesta. Por este motivo, se enseñan estrategias lectoras y 
+de escritura que favorezcan la comprensión y producción de textos 
+en forma explícita. 
+En forma secuenciada y progresiva, mientras se despliegan las 
+prácticas de lectura y escritura, se dedican espacios sostenidos al 
+análisis de las diferentes dimensiones lingüísticas: discursiva, prag-
+mática, léxica, sintáctica, morfológica y fonológica. Incrementar el 
+conocimiento de la lengua como sistema es un eje fundamental que 
+toma relevancia en diferentes etapas de la tarea. 
+
+--- d96 (p95) ---
+
+--- d97 (p96) ---
+
+--- d98 (p97) ---
+Matemática
+
+
+STRUCTURE KEYWORDS FOUND:
+  Primer Ciclo: d[48, 93, 94]
+  Segundo Ciclo: d[69]
+  Tercer año: d[60, 64, 66]
+  Cuarto año: d[70, 72, 75]
+  Quinto año: d[78, 80, 82]
+  Sexto año: d[85, 88, 90]
+  Propósitos: d[48, 69]
+  propósitos: d[45, 46, 50, 55, 56, 57, 58, 60, 61, 62, 63, 65, 66, 67, 68, 69, 72, 73, 76, 80, 81, 82, 83, 88, 90, 91]
+  Objetivos: d[48, 60, 69, 78, 85]
+  Orientaciones: d[45]
+  Unidad Pedagógica: d[48, 49, 53, 57]

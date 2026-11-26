@@ -1,0 +1,210 @@
+{
+  "schema_version": "1.0",
+  "generated": "2026-11-26",
+  "note": "Casos de referencia verificados directamente en el documento fuente. Usar para pruebas de regresión del extractor.",
+  "offset_rule": "printed_page = digital_page - 1",
+
+  "cases": [
+
+    {
+      "id": "GC-001",
+      "label": "CS Sociales 4° año — Objetivos del año",
+      "area": "Ciencias Sociales",
+      "ciclo": "Segundo Ciclo",
+      "year": "4°",
+      "bloque": null,
+      "digital_page": 201,
+      "printed_page": 200,
+      "text_original": "Objetivos del año\n CUARTO AÑO",
+      "context": "Página encabezada por 'Objetivos del año — CUARTO AÑO'. Contiene 7 objetivos del año para 4° grado en CS Sociales.",
+      "certainty": "ALTA — texto exacto identificado en la página",
+      "topics_confirmed": ["modos de vida de pueblos originarios", "migraciones", "derechos y obligaciones"]
+    },
+
+    {
+      "id": "GC-002",
+      "label": "CS Sociales 4° año — Pueblos originarios americanos (Bloque 1)",
+      "area": "Ciencias Sociales",
+      "ciclo": "Segundo Ciclo",
+      "year": "4°",
+      "bloque": "Sociedades, culturas: cambios y continuidades",
+      "digital_page": 202,
+      "printed_page": 201,
+      "text_original": "Los pueblos originarios americanos en el siglo XV.\n  Mayas, aztecas e incas y sus modos de transformar la  naturaleza para producir alimentos.\n  Semejanza y diversidad cultural de los pueblos originarios en el  pasado y en el presente.\n La conquista española de América, respuestas de los  pueblos originarios y conformación de la sociedad  colonial.\n  Principales motivaciones que impulsaron a los españoles a conquistar vastas áreas del territorio americano.",
+      "context": "Tabla tricolumna (Conceptos | Modos de conocer | Indicadores de avance). Aparece en página 201 impresa dentro de la sección Cuarto Año.",
+      "certainty": "ALTA — texto verificado en la tabla de contenidos",
+      "topics_confirmed": ["pueblos originarios", "mayas aztecas incas", "conquista española", "sociedad colonial"]
+    },
+
+    {
+      "id": "GC-003",
+      "label": "CS Sociales 4° año — Conquista y situaciones de enseñanza",
+      "area": "Ciencias Sociales",
+      "ciclo": "Segundo Ciclo",
+      "year": "4°",
+      "bloque": "Sociedades, culturas: cambios y continuidades",
+      "digital_page": 203,
+      "printed_page": 202,
+      "text_original": "Para reconstruir la vida cotidiana de algunos de los pueblos originarios del actual territorio argentino, antes de la conquista y en el presente, el docente propondrá situaciones de enseñanza que requieran:",
+      "context": "Página de Situaciones de enseñanza correspondiente al bloque de pueblos originarios/conquista, 4° año.",
+      "certainty": "ALTA",
+      "topics_confirmed": ["pueblos originarios antes de la conquista", "situaciones de enseñanza 4° año"]
+    },
+
+    {
+      "id": "GC-004",
+      "label": "CS Sociales 4° año — Organización federal (Bloque 2)",
+      "area": "Ciencias Sociales",
+      "ciclo": "Segundo Ciclo",
+      "year": "4°",
+      "bloque": "Sociedades, culturas y organización del espacio",
+      "digital_page": 204,
+      "printed_page": 203,
+      "text_original": "La forma de gobierno federal y su dimensión  territorial.\n  Organización federal del Estado argentino y los niveles de gobierno. La división política de la República  Argentina en 23 provincias y la Ciudad Autónoma de  Buenos Aires: su representación cartográfica.\n  División política de la provincia de Buenos Aires: los municipios (partidos), las ciudades o localidades.",
+      "context": "Tabla tricolumna en Bloque 2 de 4° año. Incluye organización federal, división política y representación cartográfica.",
+      "certainty": "ALTA",
+      "topics_confirmed": ["organización federal", "niveles de gobierno", "división política"]
+    },
+
+    {
+      "id": "GC-005",
+      "label": "CS Sociales 4° año — Recursos naturales PBA (Bloque 2)",
+      "area": "Ciencias Sociales",
+      "ciclo": "Segundo Ciclo",
+      "year": "4°",
+      "bloque": "Sociedades, culturas y organización del espacio",
+      "digital_page": 205,
+      "printed_page": 204,
+      "text_original": "Los recursos naturales en la provincia de Buenos  Aires: su uso, valoración y explotación. Los problemas  ambientales del territorio provincial y local.",
+      "context": "Tabla tricolumna, Bloque 2, 4° año. También menciona ambientes del territorio provincial.",
+      "certainty": "ALTA",
+      "topics_confirmed": ["recursos naturales PBA", "problemas ambientales", "ambientes"]
+    },
+
+    {
+      "id": "GC-006",
+      "label": "CS Sociales 3° año — Pueblos originarios del territorio argentino",
+      "area": "Ciencias Sociales",
+      "ciclo": "Primer Ciclo",
+      "year": "3°",
+      "bloque": "Sociedades, culturas: cambios y continuidades",
+      "digital_page": 195,
+      "printed_page": 194,
+      "text_original": "Formas de vida de los pueblos originarios del actual  territorio argentino en el pasado y en el presente.\n  Derecho a la identidad étnica y nacional y a pertenecer a una comunidad.\n   Aporte de los pueblos originarios a la construcción  de la identidad nacional.\n  Pueblos originarios del actual territorio argentino en  el pasado: sociedades cazadoras-recolectoras, sociedades agrícolas y formas de vida asociadas al nomadismo y al sedentarismo.",
+      "context": "Tabla tricolumna en la sección Tercer Año (Primer Ciclo). Precede al Segundo Ciclo donde aparece la conquista.",
+      "certainty": "ALTA",
+      "topics_confirmed": ["pueblos originarios 3° año", "cazadores-recolectores", "sedentarismo"]
+    },
+
+    {
+      "id": "GC-007",
+      "label": "Ciclo del agua — CS Naturales Segundo Ciclo",
+      "area": "Ciencias Naturales",
+      "ciclo": "Segundo Ciclo",
+      "year": "no especificado en bloque — Segundo Ciclo general",
+      "bloque": "El mundo físico y natural (estimado)",
+      "digital_page": 280,
+      "printed_page": 279,
+      "text_original": "de este modo, podrán experimentar y describir las transformaciones del agua en el ciclo hidrológico, explicar cómo se produce el paso del agua de la atmósfera a la superficie terrestre, de los continentes al mar y de este a la atmósfera, identificando los cambios de estado que atraviesa en ese pasaje.",
+      "context": "Aparece en situaciones de enseñanza. El término usado en el DC es 'ciclo hidrológico', no 'ciclo del agua'. También se detecta en CS Sociales como referencia contextual (d189), pero la enseñanza explícita del ciclo está en CS Naturales.",
+      "certainty": "ALTA — texto verificado en d280",
+      "topics_confirmed": ["ciclo hidrológico", "evaporación", "condensación", "cambios de estado del agua"],
+      "also_in_cs_sociales": false,
+      "note": "Término canónico en el DC es 'ciclo hidrológico'. Verificar en qué año exacto de Segundo Ciclo se ubica; requiere lectura adicional de la estructura de CS Naturales 2° Ciclo."
+    },
+
+    {
+      "id": "GC-008",
+      "label": "Fracciones — Primer Ciclo / 3° año (introducción)",
+      "area": "Matemática",
+      "ciclo": "Primer Ciclo",
+      "year": "3° (y contexto Unidad Pedagógica)",
+      "bloque": "Medida / Números",
+      "digital_page": 129,
+      "printed_page": 128,
+      "text_original": "Proponer situaciones que demanden recurrir a expresiones fraccionarias (1/2 metro, 1/4 kilogramo, 3/4 litro).\n\tUsan números fraccionarios cotidianos (medios y cuartos) al trabajar con medidas convencionales.",
+      "context": "Fracciones introducidas en contexto de medida, solo medios y cuartos. Indicador de avance: 'Usan números fraccionarios cotidianos (medios y cuartos) al trabajar con medidas convencionales.'",
+      "certainty": "ALTA",
+      "topics_confirmed": ["fracciones cotidianas", "medios y cuartos", "medida"]
+    },
+
+    {
+      "id": "GC-009",
+      "label": "Fracciones — 4° año (divisiones y equivalencias)",
+      "area": "Matemática",
+      "ciclo": "Segundo Ciclo",
+      "year": "4°",
+      "bloque": "Usar las fracciones en diferentes clases de problemas",
+      "digital_pages": [152, 153],
+      "printed_pages": [151, 152],
+      "text_original_d152": "USAR LAS FRACCIONES EN DIFERENTES CLASES DE PROBLEMAS\n[...]\nFracciones y divisiones.\n\tResolver problemas que involucran la división en que se reparte el resto y se expresa el resultado con una fracción.",
+      "text_original_d153": "Fracciones y equivalencias.\n\tElaborar recursos que permitan comparar fracciones y determinar equivalencias.\n\tComparan fracciones a partir de las relaciones entre ellas.\n\tOrdenan fracciones argumentan...",
+      "context": "Bloque 'Usar las fracciones en diferentes clases de problemas' — 4° año. Fracciones como resultado de divisiones y equivalencias entre fracciones.",
+      "certainty": "ALTA",
+      "topics_confirmed": ["fracciones y divisiones 4° año", "fracciones equivalentes 4° año"]
+    },
+
+    {
+      "id": "GC-010",
+      "label": "Fracciones — 5°/6° año (números racionales)",
+      "area": "Matemática",
+      "ciclo": "Segundo Ciclo",
+      "year": "5° y 6°",
+      "bloque": "Números racionales / Usar las fracciones en diferentes clases de problemas",
+      "digital_pages": [166, 167],
+      "printed_pages": [165, 166],
+      "text_original_d166": "BLOQUE: Números racionales\nUSAR LAS FRACCIONES EN DIFERENTES CLASES DE PROBLEMAS\n[...]\nFracciones como cociente de números naturales.\n\tResolver problemas para analizar a la fracción como cociente de números naturales.",
+      "text_original_d167": "Fracciones entre fracciones: comparación y uso de la recta numérica.\n\tResolver problemas que involucran comparar fracciones.\n\tResolver problemas que demandan encontrar fracciones entre dos números dados.",
+      "context": "Bloque 'Números racionales', 5°/6° año. Fracciones como cociente, comparación avanzada, recta numérica.",
+      "certainty": "ALTA",
+      "topics_confirmed": ["fracciones como cociente", "números racionales 5-6° año", "recta numérica con fracciones"]
+    },
+
+    {
+      "id": "GC-011",
+      "label": "Ortografía/Acentuación — Prácticas del Lenguaje Primer Ciclo",
+      "area": "Prácticas del Lenguaje",
+      "ciclo": "Primer Ciclo",
+      "year": "1° y 2° (Unidad Pedagógica)",
+      "bloque": "Reflexión sobre el lenguaje",
+      "digital_page": 53,
+      "printed_page": 52,
+      "text_original": "Reflexionen sobre diferentes aspectos del texto escrito (ortografía, puntuación, separación de palabras) a través del docente y escuchar las intervenciones de los otros.",
+      "context": "El término 'ortografía' aparece integrado en situaciones de escritura. En Primer Ciclo no se separan reglas de acentuación de manera explícita — se trabaja dentro de la reflexión sobre el texto escrito.",
+      "certainty": "ALTA para ortografía general; MEDIA para acentuación específica",
+      "note": "El término 'acentuación' como concepto independiente puede aparecer en años superiores del Segundo Ciclo. Verificar en 4°, 5° y 6° año de Prácticas del Lenguaje (d70-d97).",
+      "topics_confirmed": ["ortografía Primer Ciclo", "reflexión sobre el lenguaje"]
+    },
+
+    {
+      "id": "GC-012",
+      "label": "Ortografía — Segundo Ciclo, Prácticas del Lenguaje",
+      "area": "Prácticas del Lenguaje",
+      "ciclo": "Segundo Ciclo",
+      "year": "4° (y probablemente 5°–6°)",
+      "bloque": "Reflexión sobre el lenguaje",
+      "digital_page": 63,
+      "printed_page": 62,
+      "text_original": "En el trabajo con la ortografía, proponer situaciones diversas, que pueden incluir revisiones, armado de fichas de consulta, elaboración de reglas a partir de generalizaciones.",
+      "context": "Orientaciones para la enseñanza de la ortografía en Segundo Ciclo. Menciona generalización de reglas, fichas de consulta.",
+      "certainty": "ALTA",
+      "note": "El DC integra ortografía/acentuación dentro del ámbito de Reflexión sobre el lenguaje, no como bloque separado. No hay un 'Bloque: Acentuación' independiente.",
+      "topics_confirmed": ["ortografía 4° año", "reflexión sobre el lenguaje Segundo Ciclo"]
+    },
+
+    {
+      "id": "GC-013",
+      "label": "Educación Inclusiva — Módulo transversal",
+      "area": "Módulo Educación Inclusiva",
+      "ciclo": "Transversal",
+      "year": "Todos",
+      "bloque": null,
+      "digital_pages": [22, 31],
+      "printed_pages": [21, 30],
+      "text_original": "Educación inclusiva [heading en d22, p21]",
+      "context": "Módulo de 10 páginas (d22-d31). Marco conceptual de DUA (Diseño Universal para el Aprendizaje). No organizado por área ni año. Contiene principios de acceso, participación y representación para todos los estudiantes.",
+      "certainty": "ALTA",
+      "topics_confirmed": ["DUA", "educación inclusiva transversal", "barreras para el aprendizaje"]
+    }
+  ]
+}

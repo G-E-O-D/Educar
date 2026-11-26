@@ -1,0 +1,62 @@
+{
+  "file": {
+    "name": "dis-curricular-PBA-completo.pdf",
+    "path": "d:\\Sistemas\\educar\\docs\\dis-curricular-PBA-completo.pdf",
+    "size_bytes": 3617659,
+    "size_mb": 3.45,
+    "sha256": "1C53A2CC9D8AACC1D1B4CFD6DEAC2AF7FCDAD0834D232C9C391705EB46271A38",
+    "pdf_version": "1.6"
+  },
+  "pages": {
+    "total": 433,
+    "first_page_width_pt": 856.1,
+    "first_page_height_pt": 595.3,
+    "first_page_width_mm": 302.0,
+    "first_page_height_mm": 210.0
+  },
+  "metadata_raw": {
+    "format": "PDF 1.6",
+    "title": "",
+    "author": "",
+    "subject": "",
+    "keywords": "",
+    "creator": "Adobe InDesign CS6 (Macintosh)",
+    "producer": "Adobe PDF Library 10.0.1",
+    "creationDate": "D:20171225183604-03'00'",
+    "modDate": "D:20180104091128-03'00'",
+    "trapped": "",
+    "encryption": null
+  },
+  "text_layer": {
+    "first_5_pages": [
+      {
+        "page_0idx": 0,
+        "has_text": true,
+        "char_count": 164
+      },
+      {
+        "page_0idx": 1,
+        "has_text": false,
+        "char_count": 45
+      },
+      {
+        "page_0idx": 2,
+        "has_text": false,
+        "char_count": 0
+      },
+      {
+        "page_0idx": 3,
+        "has_text": true,
+        "char_count": 849
+      },
+      {
+        "page_0idx": 4,
+        "has_text": true,
+        "char_count": 1401
+      }
+    ],
+    "scan_estimate": "~1 of 30 sampled pages have sparse text (<30 chars)"
+  },
+  "encryption": false,
+  "needs_password": 0
+}

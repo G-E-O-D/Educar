@@ -1,0 +1,5567 @@
+[
+  {
+    "d_page": 1,
+    "p_page": 0,
+    "size": 51.0,
+    "bold": true,
+    "text": "Diseño Curricular"
+  },
+  {
+    "d_page": 1,
+    "p_page": 0,
+    "size": 35.0,
+    "bold": false,
+    "text": "Primer Ciclo"
+  },
+  {
+    "d_page": 1,
+    "p_page": 0,
+    "size": 35.0,
+    "bold": false,
+    "text": "Segundo Ciclo"
+  },
+  {
+    "d_page": 1,
+    "p_page": 0,
+    "size": 25.0,
+    "bold": true,
+    "text": "para la Educación Primaria"
+  },
+  {
+    "d_page": 2,
+    "p_page": 1,
+    "size": 51.0,
+    "bold": true,
+    "text": "Diseño Curricular"
+  },
+  {
+    "d_page": 2,
+    "p_page": 1,
+    "size": 22.0,
+    "bold": true,
+    "text": "para la Educación Primaria"
+  },
+  {
+    "d_page": 4,
+    "p_page": 3,
+    "size": 13.0,
+    "bold": false,
+    "text": "AUTORIDADES PROVINCIALES"
+  },
+  {
+    "d_page": 4,
+    "p_page": 3,
+    "size": 12.0,
+    "bold": false,
+    "text": "Gobernadora"
+  },
+  {
+    "d_page": 4,
+    "p_page": 3,
+    "size": 12.0,
+    "bold": false,
+    "text": "Lic. María Eugenia Vidal"
+  },
+  {
+    "d_page": 4,
+    "p_page": 3,
+    "size": 12.0,
+    "bold": false,
+    "text": "Vicegobernador"
+  },
+  {
+    "d_page": 4,
+    "p_page": 3,
+    "size": 12.0,
+    "bold": false,
+    "text": "Dr. Daniel Salvador"
+  },
+  {
+    "d_page": 4,
+    "p_page": 3,
+    "size": 12.0,
+    "bold": false,
+    "text": "Director General de Cultura y Educación"
+  },
+  {
+    "d_page": 4,
+    "p_page": 3,
+    "size": 12.0,
+    "bold": false,
+    "text": "Presidente del Consejo General de Cultura y Educación"
+  },
+  {
+    "d_page": 4,
+    "p_page": 3,
+    "size": 12.0,
+    "bold": false,
+    "text": "Lic. Gabriel Sánchez  Zinny"
+  },
+  {
+    "d_page": 4,
+    "p_page": 3,
+    "size": 12.0,
+    "bold": false,
+    "text": "Subsecretario de Educación"
+  },
+  {
+    "d_page": 4,
+    "p_page": 3,
+    "size": 12.0,
+    "bold": false,
+    "text": "Lic. Sergio H. Siciliano"
+  },
+  {
+    "d_page": 4,
+    "p_page": 3,
+    "size": 12.0,
+    "bold": false,
+    "text": "Subsecretario Administrativo"
+  },
+  {
+    "d_page": 4,
+    "p_page": 3,
+    "size": 12.0,
+    "bold": false,
+    "text": "Lic. Ignacio Sanguinetti"
+  },
+  {
+    "d_page": 4,
+    "p_page": 3,
+    "size": 12.0,
+    "bold": false,
+    "text": "Subsecretaria de Políticas Docentes y Gestión Territorial"
+  },
+  {
+    "d_page": 4,
+    "p_page": 3,
+    "size": 12.0,
+    "bold": false,
+    "text": "Dra. Florencia Castro"
+  },
+  {
+    "d_page": 4,
+    "p_page": 3,
+    "size": 12.0,
+    "bold": false,
+    "text": "Vicepresidente 1º"
+  },
+  {
+    "d_page": 4,
+    "p_page": 3,
+    "size": 12.0,
+    "bold": false,
+    "text": "Consejo General de Cultura y Educación"
+  },
+  {
+    "d_page": 4,
+    "p_page": 3,
+    "size": 12.0,
+    "bold": false,
+    "text": "Mg. Diego Julio Martínez"
+  },
+  {
+    "d_page": 4,
+    "p_page": 3,
+    "size": 12.0,
+    "bold": false,
+    "text": "Vicepresidente 2º"
+  },
+  {
+    "d_page": 4,
+    "p_page": 3,
+    "size": 12.0,
+    "bold": false,
+    "text": "Consejo General de Cultura y Educación"
+  },
+  {
+    "d_page": 4,
+    "p_page": 3,
+    "size": 12.0,
+    "bold": false,
+    "text": "Lic. Reynaldo Claudio Gómez"
+  },
+  {
+    "d_page": 4,
+    "p_page": 3,
+    "size": 12.0,
+    "bold": false,
+    "text": "Consejeros del Consejo General de Cultura y Educación"
+  },
+  {
+    "d_page": 4,
+    "p_page": 3,
+    "size": 12.0,
+    "bold": false,
+    "text": "Prof. María Valeria Iglesias, Prof. Ricardo Atilio Diani, Prof. Néstor Carasa, Lic. Luciana Padulo,"
+  },
+  {
+    "d_page": 4,
+    "p_page": 3,
+    "size": 12.0,
+    "bold": false,
+    "text": "Prof. Graciela Salvador, Prof. María del Carmen Pan Rivas, Prof. Graciela Veneciano y"
+  },
+  {
+    "d_page": 4,
+    "p_page": 3,
+    "size": 12.0,
+    "bold": false,
+    "text": "Lic. Marcelo Zarlenga"
+  },
+  {
+    "d_page": 6,
+    "p_page": 5,
+    "size": 12.0,
+    "bold": true,
+    "text": "Palabras preliminares"
+  },
+  {
+    "d_page": 6,
+    "p_page": 5,
+    "size": 13.0,
+    "bold": true,
+    "text": "Estimados supervisores, directores, docentes, padres y alumnos:"
+  },
+  {
+    "d_page": 6,
+    "p_page": 5,
+    "size": 12.0,
+    "bold": false,
+    "text": "Palabras iniciales"
+  },
+  {
+    "d_page": 6,
+    "p_page": 5,
+    "size": 12.0,
+    "bold": false,
+    "text": "Los sistemas educativos del siglo XXI están signados por importantes y vertiginosas transformaciones que nos ofrecen la"
+  },
+  {
+    "d_page": 6,
+    "p_page": 5,
+    "size": 12.0,
+    "bold": false,
+    "text": "oportunidad de innovar y volver a pensar prácticas pedagógicas que contribuyan con la construcción de mejores aprendizajes"
+  },
+  {
+    "d_page": 6,
+    "p_page": 5,
+    "size": 12.0,
+    "bold": false,
+    "text": "en el aula."
+  },
+  {
+    "d_page": 6,
+    "p_page": 5,
+    "size": 12.0,
+    "bold": false,
+    "text": "Vivimos en un mundo globalizado y diverso que nos enfrenta al reto de encontrar soluciones para las desigualdades que"
+  },
+  {
+    "d_page": 6,
+    "p_page": 5,
+    "size": 12.0,
+    "bold": false,
+    "text": "aún subsisten. En este escenario, debemos formar ciudadanos creativos, participativos, que valoren la diversidad y que se"
+  },
+  {
+    "d_page": 6,
+    "p_page": 5,
+    "size": 12.0,
+    "bold": false,
+    "text": "animen a ser transformadores de la realidad."
+  },
+  {
+    "d_page": 6,
+    "p_page": 5,
+    "size": 12.0,
+    "bold": false,
+    "text": "Asumir el enorme desafío de conducir el sistema educativo de la Provincia de Buenos Aires, con su complejidad, heteroge-"
+  },
+  {
+    "d_page": 6,
+    "p_page": 5,
+    "size": 12.0,
+    "bold": false,
+    "text": "neidad y diversidad, requiere planificar y llevar adelante en equipo, las líneas político pedagógicas que luego se expresan en"
+  },
+  {
+    "d_page": 6,
+    "p_page": 5,
+    "size": 12.0,
+    "bold": false,
+    "text": "el accionar cotidiano de las escuelas."
+  },
+  {
+    "d_page": 6,
+    "p_page": 5,
+    "size": 12.0,
+    "bold": false,
+    "text": "El Diseño Curricular del Nivel Primario expresa un proyecto pedagógico político que encarna el modelo de sociedad que"
+  },
+  {
+    "d_page": 6,
+    "p_page": 5,
+    "size": 12.0,
+    "bold": false,
+    "text": "deseamos acompañar en nuestras instituciones educativas. Este modelo empieza a cobrar vida en la escuela a partir de la"
+  },
+  {
+    "d_page": 6,
+    "p_page": 5,
+    "size": 12.0,
+    "bold": false,
+    "text": "construcción conjunta de saberes, en donde prime la investigación, la indagación, la búsqueda y se desarrollen competencias,"
+  },
+  {
+    "d_page": 6,
+    "p_page": 5,
+    "size": 12.0,
+    "bold": false,
+    "text": "destrezas, estrategias que permitan la autonomía por parte de los niños en la construcción y la búsqueda nuevos conocimientos."
+  },
+  {
+    "d_page": 6,
+    "p_page": 5,
+    "size": 12.0,
+    "bold": false,
+    "text": "Creemos que la tarea de enseñar requiere de una fuerte convicción que trasciende el voluntarismo individual, creemos"
+  },
+  {
+    "d_page": 6,
+    "p_page": 5,
+    "size": 12.0,
+    "bold": false,
+    "text": "también, que es posible generar las mejores condiciones para que la Provincia de Buenos Aires pueda alcanzar la excelencia"
+  },
+  {
+    "d_page": 6,
+    "p_page": 5,
+    "size": 12.0,
+    "bold": false,
+    "text": "educativa. Somos capaces de generar una propuesta educativa que pueda dar respuesta a las exigencias del presente y del"
+  },
+  {
+    "d_page": 6,
+    "p_page": 5,
+    "size": 12.0,
+    "bold": false,
+    "text": "futuro y que valore la diversidad cultural como un camino viable para construir una escuela de todos. Estamos convencidos"
+  },
+  {
+    "d_page": 6,
+    "p_page": 5,
+    "size": 12.0,
+    "bold": false,
+    "text": "de que todos los alumnos pueden participar del acto educativo, y que es en esa participación, donde puede reconocerse como"
+  },
+  {
+    "d_page": 6,
+    "p_page": 5,
+    "size": 12.0,
+    "bold": false,
+    "text": "sujeto transformador de su proyecto de vida y de su contexto."
+  },
+  {
+    "d_page": 6,
+    "p_page": 5,
+    "size": 12.0,
+    "bold": false,
+    "text": "En esta línea, uno de los propósitos que persigue este instrumento es el de acompañar a las escuelas y sus docentes, pro-"
+  },
+  {
+    "d_page": 6,
+    "p_page": 5,
+    "size": 12.0,
+    "bold": false,
+    "text": "poniendo nuevas lógicas que nos alienten a repensar diferentes alternativas de la enseñanza en la escuela y en el aula. Tal"
+  },
+  {
+    "d_page": 6,
+    "p_page": 5,
+    "size": 12.0,
+    "bold": false,
+    "text": "como lo explicita Phillips Meirieu:"
+  },
+  {
+    "d_page": 6,
+    "p_page": 5,
+    "size": 12.0,
+    "bold": false,
+    "text": "La responsabilidad del educador es hacer emerger el deseo de aprender. Es el educador quien debe crear situaciones que"
+  },
+  {
+    "d_page": 6,
+    "p_page": 5,
+    "size": 12.0,
+    "bold": false,
+    "text": "favorezcan la emergencia de este deseo. El enseñante no puede desear en lugar del alumno, pero puede crear situaciones favo-"
+  },
+  {
+    "d_page": 6,
+    "p_page": 5,
+    "size": 12.0,
+    "bold": false,
+    "text": "rables para que emerja el deseo. Estas situaciones serán más favorables si son diversificadas, variadas, estimulantes intelec-"
+  },
+  {
+    "d_page": 6,
+    "p_page": 5,
+    "size": 12.0,
+    "bold": false,
+    "text": "tualmente y activas. Es decir, que pondrán al alumno en la posición de actuar y no simplemente en la posición de recibir."
+  },
+  {
+    "d_page": 6,
+    "p_page": 5,
+    "size": 12.0,
+    "bold": false,
+    "text": "Los invito a ese desafío…"
+  },
+  {
+    "d_page": 6,
+    "p_page": 5,
+    "size": 12.0,
+    "bold": false,
+    "text": "Lic. Gabriel Sánchez Zinny"
+  },
+  {
+    "d_page": 6,
+    "p_page": 5,
+    "size": 12.0,
+    "bold": false,
+    "text": "Director General de Cultura y Educación"
+  },
+  {
+    "d_page": 7,
+    "p_page": 6,
+    "size": 14.0,
+    "bold": true,
+    "text": "Presentación del Diseño Curricular para el Nivel Primario."
+  },
+  {
+    "d_page": 7,
+    "p_page": 6,
+    "size": 14.0,
+    "bold": true,
+    "text": "Aprobado por Resolución N° 1482/17"
+  },
+  {
+    "d_page": 7,
+    "p_page": 6,
+    "size": 12.0,
+    "bold": false,
+    "text": "A las familias, docentes, equipos directivos y de supervisión de la Provincia de Buenos Aires."
+  },
+  {
+    "d_page": 7,
+    "p_page": 6,
+    "size": 12.0,
+    "bold": false,
+    "text": "La Ley de Educación Provincial N° 13688 encomienda la revisión curricular periódica de los Diseños Curriculares de"
+  },
+  {
+    "d_page": 7,
+    "p_page": 6,
+    "size": 12.0,
+    "bold": false,
+    "text": "los distintos Niveles y Modalidades."
+  },
+  {
+    "d_page": 7,
+    "p_page": 6,
+    "size": 12.0,
+    "bold": false,
+    "text": "Es entonces que, en el marco de las acciones de gestión curricular provincial, se ha iniciado este proceso de actuali-"
+  },
+  {
+    "d_page": 7,
+    "p_page": 6,
+    "size": 12.0,
+    "bold": false,
+    "text": "zación del Diseño Curricular del Nivel Primario, aprobado por Resolución Ministerial N° 3160 del año 2006."
+  },
+  {
+    "d_page": 7,
+    "p_page": 6,
+    "size": 12.0,
+    "bold": false,
+    "text": "Durante el presente año, la Subsecretaría de Educación, inició acciones de consulta territorial a distintos actores del"
+  },
+  {
+    "d_page": 7,
+    "p_page": 6,
+    "size": 12.0,
+    "bold": false,
+    "text": "sistema pertenecientes al nivel Primario. Para esta gestión, fue muy importante recabar ideas, opiniones y necesida-"
+  },
+  {
+    "d_page": 7,
+    "p_page": 6,
+    "size": 12.0,
+    "bold": false,
+    "text": "des de los diversos sectores del sistema educativo: familias, alumnos, equipos docentes, directivos y de supervisión"
+  },
+  {
+    "d_page": 7,
+    "p_page": 6,
+    "size": 12.0,
+    "bold": false,
+    "text": "educativa."
+  },
+  {
+    "d_page": 7,
+    "p_page": 6,
+    "size": 12.0,
+    "bold": false,
+    "text": "Este primer paso permitió avanzar en un recorrido hacia la consolidación de una propuesta aún más enriquecida,"
+  },
+  {
+    "d_page": 7,
+    "p_page": 6,
+    "size": 12.0,
+    "bold": false,
+    "text": "actualizada y de calidad para la formación de los alumnos del Nivel Primario de la Provincia de Buenos Aires."
+  },
+  {
+    "d_page": 7,
+    "p_page": 6,
+    "size": 12.0,
+    "bold": false,
+    "text": "Por otra parte, las autoridades del Ministerio de Educación de la Nación, en su oportunidad, han solicitado iniciar"
+  },
+  {
+    "d_page": 7,
+    "p_page": 6,
+    "size": 12.0,
+    "bold": false,
+    "text": "este proceso de actualización curricular. En este sentido, para la Provincia de Buenos Aires, se sugiere realizar ajustes"
+  },
+  {
+    "d_page": 7,
+    "p_page": 6,
+    "size": 12.0,
+    "bold": false,
+    "text": "necesarios en diversas áreas para tramitar la validez nacional de las cohortes 2018 y subsiguientes."
+  },
+  {
+    "d_page": 7,
+    "p_page": 6,
+    "size": 12.0,
+    "bold": false,
+    "text": "Cabe señalar que estas sugerencias han sido evaluadas en relación con las propias necesidades, expectativas y"
+  },
+  {
+    "d_page": 7,
+    "p_page": 6,
+    "size": 12.0,
+    "bold": false,
+    "text": "posibilidades del sistema educativo provincial, en consonancia con las expectativas de formación para los alumnos del"
+  },
+  {
+    "d_page": 7,
+    "p_page": 6,
+    "size": 12.0,
+    "bold": false,
+    "text": "sistema educativo bonaerense."
+  },
+  {
+    "d_page": 7,
+    "p_page": 6,
+    "size": 12.0,
+    "bold": false,
+    "text": "La participación responsable de todos ha posibilitado la construcción de los acuerdos necesarios que redundarán en"
+  },
+  {
+    "d_page": 7,
+    "p_page": 6,
+    "size": 12.0,
+    "bold": false,
+    "text": "pos de la mejora de la formación de los alumnos del nivel,  trascendiendo a las gestiones de gobierno del sistema, y que"
+  },
+  {
+    "d_page": 7,
+    "p_page": 6,
+    "size": 12.0,
+    "bold": false,
+    "text": "tiene como principal objetivo enriquecer las propuestas pedagógicas de los docentes con una clara mirada al futuro."
+  },
+  {
+    "d_page": 7,
+    "p_page": 6,
+    "size": 12.0,
+    "bold": false,
+    "text": "Considero que esta propuesta curricular contribuirá a la clarificación y la organización de la tarea de enseñanza y a"
+  },
+  {
+    "d_page": 7,
+    "p_page": 6,
+    "size": 12.0,
+    "bold": false,
+    "text": "la toma de decisiones didáctica de los docentes."
+  },
+  {
+    "d_page": 7,
+    "p_page": 6,
+    "size": 12.0,
+    "bold": false,
+    "text": "Los procesos de comprensión, de producción de textos y resolución de problemas deben afianzarse y profundizarse"
+  },
+  {
+    "d_page": 7,
+    "p_page": 6,
+    "size": 12.0,
+    "bold": false,
+    "text": "para alcanzar mejores niveles de desempeño."
+  },
+  {
+    "d_page": 7,
+    "p_page": 6,
+    "size": 12.0,
+    "bold": false,
+    "text": "Resulta necesario, entonces, pensar en una propuesta accesible y clara que permita optimizar los tiempos de la"
+  },
+  {
+    "d_page": 7,
+    "p_page": 6,
+    "size": 12.0,
+    "bold": false,
+    "text": "enseñanza, en particular en estas áreas mencionadas."
+  },
+  {
+    "d_page": 7,
+    "p_page": 6,
+    "size": 12.0,
+    "bold": false,
+    "text": "Se ha definido un esquema organizador para recuperar y presentar los contenidos considerados como recorte"
+  },
+  {
+    "d_page": 7,
+    "p_page": 6,
+    "size": 12.0,
+    "bold": false,
+    "text": "epistemológico y modos de conocer, los indicadores de avance y progreso de los aprendizajes de los alumnos y las"
+  },
+  {
+    "d_page": 7,
+    "p_page": 6,
+    "size": 12.0,
+    "bold": false,
+    "text": "situaciones de enseñanza orientadoras, presentadas por bloques."
+  },
+  {
+    "d_page": 8,
+    "p_page": 7,
+    "size": 12.0,
+    "bold": true,
+    "text": "Presentación"
+  },
+  {
+    "d_page": 8,
+    "p_page": 7,
+    "size": 12.0,
+    "bold": false,
+    "text": "Respecto de los enfoques para la enseñanza, éstos se han conservado en los sustantivo, pero se buscó profundi-"
+  },
+  {
+    "d_page": 8,
+    "p_page": 7,
+    "size": 12.0,
+    "bold": false,
+    "text": "zar algunos aspectos, tales como la enseñanza por indagación en Ciencias Naturales o el enfoque articulador para"
+  },
+  {
+    "d_page": 8,
+    "p_page": 7,
+    "size": 12.0,
+    "bold": false,
+    "text": "la enseñanza de la Matemática."
+  },
+  {
+    "d_page": 8,
+    "p_page": 7,
+    "size": 12.0,
+    "bold": false,
+    "text": "En Prácticas del Lenguaje, se han incorporado orientaciones y definiciones para fortalecer la adquisición del sis-"
+  },
+  {
+    "d_page": 8,
+    "p_page": 7,
+    "size": 12.0,
+    "bold": false,
+    "text": "tema de escritura, todo ello en el marco del enfoque social de las prácticas de escritura."
+  },
+  {
+    "d_page": 8,
+    "p_page": 7,
+    "size": 12.0,
+    "bold": false,
+    "text": "A la vez, este Diseño Curricular se completa con la elaboración de Documentos Curriculares de todas las áreas,"
+  },
+  {
+    "d_page": 8,
+    "p_page": 7,
+    "size": 12.0,
+    "bold": false,
+    "text": "en particular referidos a la planificación didáctica y ejemplos de secuencias de enseñanza de los diversos bloques"
+  },
+  {
+    "d_page": 8,
+    "p_page": 7,
+    "size": 12.0,
+    "bold": false,
+    "text": "de contenidos, los que acercamos a todos los docentes y estarán disponibles en forma digital para su consulta y"
+  },
+  {
+    "d_page": 8,
+    "p_page": 7,
+    "size": 12.0,
+    "bold": false,
+    "text": "utilización."
+  },
+  {
+    "d_page": 8,
+    "p_page": 7,
+    "size": 12.0,
+    "bold": false,
+    "text": "Complementariamente, la Subsecretaría de Educación dispondrá acciones de acompañamiento para favorecer"
+  },
+  {
+    "d_page": 8,
+    "p_page": 7,
+    "size": 12.0,
+    "bold": false,
+    "text": "una mejor apropiación del Diseño Curricular, tales como encuentros con Directores, Docentes y Supervisores para"
+  },
+  {
+    "d_page": 8,
+    "p_page": 7,
+    "size": 12.0,
+    "bold": false,
+    "text": "tratamiento del material, propuestas de capacitación virtual y presencial a cargo de la Dirección de Formación Do-"
+  },
+  {
+    "d_page": 8,
+    "p_page": 7,
+    "size": 12.0,
+    "bold": false,
+    "text": "cente Continua y la producción de nuevos materiales que completarán y orientarán la implementación del Diseño"
+  },
+  {
+    "d_page": 8,
+    "p_page": 7,
+    "size": 12.0,
+    "bold": false,
+    "text": "Curricular."
+  },
+  {
+    "d_page": 8,
+    "p_page": 7,
+    "size": 12.0,
+    "bold": false,
+    "text": "La mejora de los aprendizajes de nuestros alumnos, horizonte  central de nuestra tarea educativa, requiere del"
+  },
+  {
+    "d_page": 8,
+    "p_page": 7,
+    "size": 12.0,
+    "bold": false,
+    "text": "esfuerzo de todos y de la actualización de todas las estrategias pedagógicas disponibles."
+  },
+  {
+    "d_page": 8,
+    "p_page": 7,
+    "size": 12.0,
+    "bold": false,
+    "text": "El Diseño Curricular, como herramienta fundamental y necesaria para acompañar el trabajo de los docentes en el"
+  },
+  {
+    "d_page": 8,
+    "p_page": 7,
+    "size": 12.0,
+    "bold": false,
+    "text": "aula, resultará un elemento esencial para alcanzar este objetivo."
+  },
+  {
+    "d_page": 8,
+    "p_page": 7,
+    "size": 12.0,
+    "bold": false,
+    "text": "Lic. Sergio H. Siciliano"
+  },
+  {
+    "d_page": 8,
+    "p_page": 7,
+    "size": 12.0,
+    "bold": false,
+    "text": "Subsecretario de Educación"
+  },
+  {
+    "d_page": 10,
+    "p_page": 9,
+    "size": 12.0,
+    "bold": true,
+    "text": "Resolución"
+  },
+  {
+    "d_page": 12,
+    "p_page": 11,
+    "size": 12.0,
+    "bold": true,
+    "text": "Índice"
+  },
+  {
+    "d_page": 12,
+    "p_page": 11,
+    "size": 29.0,
+    "bold": true,
+    "text": "Índice"
+  },
+  {
+    "d_page": 13,
+    "p_page": 12,
+    "size": 28.0,
+    "bold": true,
+    "text": "Te damos la mano, caminemos juntos..."
+  },
+  {
+    "d_page": 14,
+    "p_page": 13,
+    "size": 12.0,
+    "bold": true,
+    "text": "Presentación general"
+  },
+  {
+    "d_page": 14,
+    "p_page": 13,
+    "size": 16.0,
+    "bold": true,
+    "text": "Principios organizadores del Diseño Curricular para el Nivel Primario"
+  },
+  {
+    "d_page": 14,
+    "p_page": 13,
+    "size": 14.0,
+    "bold": true,
+    "text": "La Educación entendida como política pública"
+  },
+  {
+    "d_page": 15,
+    "p_page": 14,
+    "size": 14.0,
+    "bold": true,
+    "text": "Consideraciones sobre la actualización curricular"
+  },
+  {
+    "d_page": 15,
+    "p_page": 14,
+    "size": 14.0,
+    "bold": true,
+    "text": "Características generales de la propuesta curricular"
+  },
+  {
+    "d_page": 15,
+    "p_page": 14,
+    "size": 13.0,
+    "bold": true,
+    "text": "Aspectos generales"
+  },
+  {
+    "d_page": 16,
+    "p_page": 15,
+    "size": 13.0,
+    "bold": true,
+    "text": "Estructura interna de las áreas curriculares"
+  },
+  {
+    "d_page": 16,
+    "p_page": 15,
+    "size": 13.0,
+    "bold": true,
+    "text": "Nuevos aportes: enfoques curriculares y contenidos"
+  },
+  {
+    "d_page": 16,
+    "p_page": 15,
+    "size": 13.0,
+    "bold": true,
+    "text": "transversales"
+  },
+  {
+    "d_page": 17,
+    "p_page": 16,
+    "size": 14.0,
+    "bold": true,
+    "text": "Expectativas de desempeño al egreso"
+  },
+  {
+    "d_page": 17,
+    "p_page": 16,
+    "size": 14.0,
+    "bold": true,
+    "text": "de la educación primaria"
+  },
+  {
+    "d_page": 19,
+    "p_page": 18,
+    "size": 14.0,
+    "bold": true,
+    "text": "Palabras finales"
+  },
+  {
+    "d_page": 22,
+    "p_page": 21,
+    "size": 51.0,
+    "bold": true,
+    "text": "Educación inclusiva"
+  },
+  {
+    "d_page": 23,
+    "p_page": 22,
+    "size": 16.0,
+    "bold": true,
+    "text": "Educación inclusiva"
+  },
+  {
+    "d_page": 23,
+    "p_page": 22,
+    "size": 14.0,
+    "bold": false,
+    "text": "La educación inclusiva"
+  },
+  {
+    "d_page": 23,
+    "p_page": 22,
+    "size": 12.0,
+    "bold": false,
+    "text": "Propósitos"
+  },
+  {
+    "d_page": 23,
+    "p_page": 22,
+    "size": 12.0,
+    "bold": false,
+    "text": "Enfoque"
+  },
+  {
+    "d_page": 24,
+    "p_page": 23,
+    "size": 12.0,
+    "bold": false,
+    "text": "Barreras"
+  },
+  {
+    "d_page": 24,
+    "p_page": 23,
+    "size": 14.0,
+    "bold": false,
+    "text": "Orientaciones metodológicas"
+  },
+  {
+    "d_page": 24,
+    "p_page": 23,
+    "size": 12.0,
+    "bold": false,
+    "text": "Cómo construir un aula inclusiva"
+  },
+  {
+    "d_page": 24,
+    "p_page": 23,
+    "size": 12.0,
+    "bold": false,
+    "text": "Formas de presentar la información por parte del docente"
+  },
+  {
+    "d_page": 25,
+    "p_page": 24,
+    "size": 12.0,
+    "bold": false,
+    "text": "Formas de expresar la información por parte del alumno"
+  },
+  {
+    "d_page": 25,
+    "p_page": 24,
+    "size": 12.0,
+    "bold": false,
+    "text": "Implicación del alumno en el aprendizaje"
+  },
+  {
+    "d_page": 26,
+    "p_page": 25,
+    "size": 12.0,
+    "bold": false,
+    "text": "Algunas propuestas para el trabajo en el aula inclusiva"
+  },
+  {
+    "d_page": 28,
+    "p_page": 27,
+    "size": 12.0,
+    "bold": false,
+    "text": "A modo de síntesis…"
+  },
+  {
+    "d_page": 29,
+    "p_page": 28,
+    "size": 22.0,
+    "bold": true,
+    "text": "Bibliografía"
+  },
+  {
+    "d_page": 30,
+    "p_page": 29,
+    "size": 12.0,
+    "bold": false,
+    "text": "Antecedentes"
+  },
+  {
+    "d_page": 30,
+    "p_page": 29,
+    "size": 12.0,
+    "bold": false,
+    "text": "Encuadre normativo"
+  },
+  {
+    "d_page": 32,
+    "p_page": 31,
+    "size": 37.0,
+    "bold": true,
+    "text": "Tecnología de la Información y"
+  },
+  {
+    "d_page": 32,
+    "p_page": 31,
+    "size": 37.0,
+    "bold": true,
+    "text": "la Comunicación"
+  },
+  {
+    "d_page": 33,
+    "p_page": 32,
+    "size": 16.0,
+    "bold": true,
+    "text": "Las tecnologías de la información, la innovación educativa y el rol docente"
+  },
+  {
+    "d_page": 33,
+    "p_page": 32,
+    "size": 14.0,
+    "bold": false,
+    "text": "Dimensiones del uso de la tecnología"
+  },
+  {
+    "d_page": 33,
+    "p_page": 32,
+    "size": 12.0,
+    "bold": false,
+    "text": "1. Alfabetización y multialfabetización"
+  },
+  {
+    "d_page": 33,
+    "p_page": 32,
+    "size": 12.0,
+    "bold": false,
+    "text": "2. Ciudadanía global e identidad local"
+  },
+  {
+    "d_page": 34,
+    "p_page": 33,
+    "size": 12.0,
+    "bold": false,
+    "text": "3. Construcción de conocimiento y acceso"
+  },
+  {
+    "d_page": 34,
+    "p_page": 33,
+    "size": 12.0,
+    "bold": false,
+    "text": "a la información"
+  },
+  {
+    "d_page": 35,
+    "p_page": 34,
+    "size": 12.0,
+    "bold": false,
+    "text": "4. Participación y protagonismo en entornos digitales"
+  },
+  {
+    "d_page": 35,
+    "p_page": 34,
+    "size": 12.0,
+    "bold": false,
+    "text": "5. Autonomía digital"
+  },
+  {
+    "d_page": 36,
+    "p_page": 35,
+    "size": 12.0,
+    "bold": false,
+    "text": "6. Programación Orientada a Objetos (POO)"
+  },
+  {
+    "d_page": 36,
+    "p_page": 35,
+    "size": 14.0,
+    "bold": false,
+    "text": "Transversalidad y planificación de las TIC"
+  },
+  {
+    "d_page": 36,
+    "p_page": 35,
+    "size": 14.0,
+    "bold": false,
+    "text": "De lo técnico a lo pedagógico"
+  },
+  {
+    "d_page": 37,
+    "p_page": 36,
+    "size": 16.0,
+    "bold": false,
+    "text": "Primero"
+  },
+  {
+    "d_page": 37,
+    "p_page": 36,
+    "size": 16.0,
+    "bold": false,
+    "text": "Segundo"
+  },
+  {
+    "d_page": 37,
+    "p_page": 36,
+    "size": 16.0,
+    "bold": false,
+    "text": "Tercero"
+  },
+  {
+    "d_page": 37,
+    "p_page": 36,
+    "size": 16.0,
+    "bold": false,
+    "text": "Cuarto"
+  },
+  {
+    "d_page": 37,
+    "p_page": 36,
+    "size": 16.0,
+    "bold": false,
+    "text": "Quinto"
+  },
+  {
+    "d_page": 37,
+    "p_page": 36,
+    "size": 16.0,
+    "bold": false,
+    "text": "Sexto"
+  },
+  {
+    "d_page": 38,
+    "p_page": 37,
+    "size": 14.0,
+    "bold": false,
+    "text": "Contenidos"
+  },
+  {
+    "d_page": 38,
+    "p_page": 37,
+    "size": 14.0,
+    "bold": false,
+    "text": "Sobre los modos de conocer"
+  },
+  {
+    "d_page": 38,
+    "p_page": 37,
+    "size": 14.0,
+    "bold": false,
+    "text": "Recursos"
+  },
+  {
+    "d_page": 38,
+    "p_page": 37,
+    "size": 12.0,
+    "bold": false,
+    "text": "Prácticas del Lenguaje"
+  },
+  {
+    "d_page": 38,
+    "p_page": 37,
+    "size": 12.0,
+    "bold": false,
+    "text": "Matemática"
+  },
+  {
+    "d_page": 38,
+    "p_page": 37,
+    "size": 12.0,
+    "bold": true,
+    "text": "Áreas Curriculares, uso sugerido de las TIC"
+  },
+  {
+    "d_page": 39,
+    "p_page": 38,
+    "size": 14.0,
+    "bold": false,
+    "text": "Contenidos"
+  },
+  {
+    "d_page": 39,
+    "p_page": 38,
+    "size": 14.0,
+    "bold": false,
+    "text": "Sobre los modos de conocer"
+  },
+  {
+    "d_page": 39,
+    "p_page": 38,
+    "size": 14.0,
+    "bold": false,
+    "text": "Recursos"
+  },
+  {
+    "d_page": 39,
+    "p_page": 38,
+    "size": 12.0,
+    "bold": false,
+    "text": "Ciencias Sociales"
+  },
+  {
+    "d_page": 39,
+    "p_page": 38,
+    "size": 12.0,
+    "bold": false,
+    "text": "Ciencias Naturales"
+  },
+  {
+    "d_page": 39,
+    "p_page": 38,
+    "size": 12.0,
+    "bold": false,
+    "text": "Lengua Extranjera"
+  },
+  {
+    "d_page": 40,
+    "p_page": 39,
+    "size": 14.0,
+    "bold": false,
+    "text": "Contenidos"
+  },
+  {
+    "d_page": 40,
+    "p_page": 39,
+    "size": 14.0,
+    "bold": false,
+    "text": "Sobre los modos de conocer"
+  },
+  {
+    "d_page": 40,
+    "p_page": 39,
+    "size": 14.0,
+    "bold": false,
+    "text": "Recursos"
+  },
+  {
+    "d_page": 40,
+    "p_page": 39,
+    "size": 12.0,
+    "bold": false,
+    "text": "Educación Artística"
+  },
+  {
+    "d_page": 40,
+    "p_page": 39,
+    "size": 12.0,
+    "bold": false,
+    "text": "Educación Física"
+  },
+  {
+    "d_page": 41,
+    "p_page": 40,
+    "size": 14.0,
+    "bold": false,
+    "text": "Contenidos"
+  },
+  {
+    "d_page": 41,
+    "p_page": 40,
+    "size": 14.0,
+    "bold": false,
+    "text": "Sobre los modos de conocer"
+  },
+  {
+    "d_page": 41,
+    "p_page": 40,
+    "size": 14.0,
+    "bold": false,
+    "text": "Recursos"
+  },
+  {
+    "d_page": 42,
+    "p_page": 41,
+    "size": 22.0,
+    "bold": true,
+    "text": "Bibliografía"
+  },
+  {
+    "d_page": 44,
+    "p_page": 43,
+    "size": 51.0,
+    "bold": true,
+    "text": "Prácticas del Lenguaje"
+  },
+  {
+    "d_page": 45,
+    "p_page": 44,
+    "size": 16.0,
+    "bold": true,
+    "text": "Enfoque Curricular y Orientaciones para la Enseñanza"
+  },
+  {
+    "d_page": 45,
+    "p_page": 44,
+    "size": 14.0,
+    "bold": true,
+    "text": "Ámbitos de incumbencia"
+  },
+  {
+    "d_page": 45,
+    "p_page": 44,
+    "size": 14.0,
+    "bold": true,
+    "text": "Modalidades de trabajo en el aula"
+  },
+  {
+    "d_page": 46,
+    "p_page": 45,
+    "size": 12.0,
+    "bold": true,
+    "text": "Prácticas del Lenguaje"
+  },
+  {
+    "d_page": 46,
+    "p_page": 45,
+    "size": 14.0,
+    "bold": true,
+    "text": "Enfoque alfabetizador equilibrado"
+  },
+  {
+    "d_page": 46,
+    "p_page": 45,
+    "size": 14.0,
+    "bold": true,
+    "text": "Presupuestos teóricos que guían una"
+  },
+  {
+    "d_page": 46,
+    "p_page": 45,
+    "size": 14.0,
+    "bold": true,
+    "text": "propuesta equilibrada e integradora"
+  },
+  {
+    "d_page": 46,
+    "p_page": 45,
+    "size": 13.0,
+    "bold": false,
+    "text": "La lectura y la escritura como prácticas sociales"
+  },
+  {
+    "d_page": 46,
+    "p_page": 45,
+    "size": 13.0,
+    "bold": false,
+    "text": "Alumnos lectores y escritores desde el inicio"
+  },
+  {
+    "d_page": 47,
+    "p_page": 46,
+    "size": 13.0,
+    "bold": false,
+    "text": "Equilibrio entre diferentes tipos de conocimientos"
+  },
+  {
+    "d_page": 48,
+    "p_page": 47,
+    "size": 22.0,
+    "bold": true,
+    "text": "Primer Ciclo"
+  },
+  {
+    "d_page": 48,
+    "p_page": 47,
+    "size": 16.0,
+    "bold": true,
+    "text": "Propósitos para el Primer Ciclo"
+  },
+  {
+    "d_page": 48,
+    "p_page": 47,
+    "size": 16.0,
+    "bold": true,
+    "text": "UNIDAD PEDAGÓGICA"
+  },
+  {
+    "d_page": 48,
+    "p_page": 47,
+    "size": 14.0,
+    "bold": true,
+    "text": "Objetivos de la Unidad Pedagógica"
+  },
+  {
+    "d_page": 48,
+    "p_page": 47,
+    "size": 22.0,
+    "bold": true,
+    "text": "PRIMER CICLO"
+  },
+  {
+    "d_page": 49,
+    "p_page": 48,
+    "size": 12.0,
+    "bold": false,
+    "text": "Unidad Pedagógica: PRÁCTICAS DEL LENGUAJE EN EL ÁMBITO DE LITERATURA"
+  },
+  {
+    "d_page": 49,
+    "p_page": 48,
+    "size": 12.0,
+    "bold": false,
+    "text": "ÁMBITO DE LA LITERATURA"
+  },
+  {
+    "d_page": 50,
+    "p_page": 49,
+    "size": 12.0,
+    "bold": false,
+    "text": "ÁMBITO DE LA LITERATURA"
+  },
+  {
+    "d_page": 51,
+    "p_page": 50,
+    "size": 12.0,
+    "bold": false,
+    "text": "ÁMBITO DE LA LITERATURA"
+  },
+  {
+    "d_page": 52,
+    "p_page": 51,
+    "size": 12.0,
+    "bold": false,
+    "text": "ÁMBITO DE LA LITERATURA"
+  },
+  {
+    "d_page": 53,
+    "p_page": 52,
+    "size": 12.0,
+    "bold": false,
+    "text": "Unidad Pedagógica: PRÁCTICAS DEL LENGUAJE EN EL ÁMBITO DE FORMACIÓN CIUDADANA"
+  },
+  {
+    "d_page": 53,
+    "p_page": 52,
+    "size": 12.0,
+    "bold": false,
+    "text": "ÁMBITO DE LA LITERATURA"
+  },
+  {
+    "d_page": 53,
+    "p_page": 52,
+    "size": 12.0,
+    "bold": false,
+    "text": "ÁMBITO DE LA"
+  },
+  {
+    "d_page": 53,
+    "p_page": 52,
+    "size": 12.0,
+    "bold": false,
+    "text": "FORMACIÓN CIUDADANA"
+  },
+  {
+    "d_page": 54,
+    "p_page": 53,
+    "size": 12.0,
+    "bold": false,
+    "text": "ÁMBITO DE LA"
+  },
+  {
+    "d_page": 54,
+    "p_page": 53,
+    "size": 12.0,
+    "bold": false,
+    "text": "FORMACIÓN CIUDADANA"
+  },
+  {
+    "d_page": 55,
+    "p_page": 54,
+    "size": 12.0,
+    "bold": false,
+    "text": "ÁMBITO DE LA"
+  },
+  {
+    "d_page": 55,
+    "p_page": 54,
+    "size": 12.0,
+    "bold": false,
+    "text": "FORMACIÓN CIUDADANA"
+  },
+  {
+    "d_page": 56,
+    "p_page": 55,
+    "size": 12.0,
+    "bold": false,
+    "text": "ÁMBITO DE LA"
+  },
+  {
+    "d_page": 56,
+    "p_page": 55,
+    "size": 12.0,
+    "bold": false,
+    "text": "FORMACIÓN CIUDADANA"
+  },
+  {
+    "d_page": 57,
+    "p_page": 56,
+    "size": 12.0,
+    "bold": false,
+    "text": "Unidad pedagógica: PRÁCTICAS DEL LENGUAJE EN EL ÁMBITO DE LA FORMACIÓN DEL ESTUDIANTE"
+  },
+  {
+    "d_page": 57,
+    "p_page": 56,
+    "size": 12.0,
+    "bold": false,
+    "text": "ÁMBITO DE LA"
+  },
+  {
+    "d_page": 57,
+    "p_page": 56,
+    "size": 12.0,
+    "bold": false,
+    "text": "FORM. CIUD."
+  },
+  {
+    "d_page": 57,
+    "p_page": 56,
+    "size": 12.0,
+    "bold": false,
+    "text": "ÁMBITO DE LA"
+  },
+  {
+    "d_page": 57,
+    "p_page": 56,
+    "size": 12.0,
+    "bold": false,
+    "text": "FORMACIÓN DEL ESTUDIANTE"
+  },
+  {
+    "d_page": 58,
+    "p_page": 57,
+    "size": 12.0,
+    "bold": false,
+    "text": "ÁMBITO DE LA"
+  },
+  {
+    "d_page": 58,
+    "p_page": 57,
+    "size": 12.0,
+    "bold": false,
+    "text": "FORMACIÓN DEL ESTUDIANTE"
+  },
+  {
+    "d_page": 59,
+    "p_page": 58,
+    "size": 12.0,
+    "bold": false,
+    "text": "ÁMBITO DE LA"
+  },
+  {
+    "d_page": 59,
+    "p_page": 58,
+    "size": 12.0,
+    "bold": false,
+    "text": "FORMACIÓN DEL ESTUDIANTE"
+  },
+  {
+    "d_page": 60,
+    "p_page": 59,
+    "size": 16.0,
+    "bold": true,
+    "text": "TERCER AÑO"
+  },
+  {
+    "d_page": 60,
+    "p_page": 59,
+    "size": 14.0,
+    "bold": true,
+    "text": "Objetivos"
+  },
+  {
+    "d_page": 60,
+    "p_page": 59,
+    "size": 12.0,
+    "bold": false,
+    "text": "Tercer año: PRÁCTICAS DEL LENGUAJE EN EL ÁMBITO DE LA LITERATURA"
+  },
+  {
+    "d_page": 60,
+    "p_page": 59,
+    "size": 12.0,
+    "bold": false,
+    "text": "ÁMBITO DE LA LITERATURA"
+  },
+  {
+    "d_page": 61,
+    "p_page": 60,
+    "size": 12.0,
+    "bold": false,
+    "text": "ÁMBITO DE LA LITERATURA"
+  },
+  {
+    "d_page": 62,
+    "p_page": 61,
+    "size": 12.0,
+    "bold": false,
+    "text": "ÁMBITO DE LA LITERATURA"
+  },
+  {
+    "d_page": 63,
+    "p_page": 62,
+    "size": 12.0,
+    "bold": false,
+    "text": "ÁMBITO DE LA LITERATURA"
+  },
+  {
+    "d_page": 64,
+    "p_page": 63,
+    "size": 12.0,
+    "bold": false,
+    "text": "Tercer año: PRÁCTICAS DEL LENGUAJE EN EL ÁMBITO DE LA FORMACIÓN CIUDADANA"
+  },
+  {
+    "d_page": 64,
+    "p_page": 63,
+    "size": 12.0,
+    "bold": false,
+    "text": "ÁMBITO DE LA"
+  },
+  {
+    "d_page": 64,
+    "p_page": 63,
+    "size": 12.0,
+    "bold": false,
+    "text": "FORMACIÓN CIUDADANA"
+  },
+  {
+    "d_page": 65,
+    "p_page": 64,
+    "size": 12.0,
+    "bold": false,
+    "text": "ÁMBITO DE LA"
+  },
+  {
+    "d_page": 65,
+    "p_page": 64,
+    "size": 12.0,
+    "bold": false,
+    "text": "FORMACIÓN CIUDADANA"
+  },
+  {
+    "d_page": 66,
+    "p_page": 65,
+    "size": 12.0,
+    "bold": false,
+    "text": "Tercer año: PRÁCTICAS DEL LENGUAJE EN EL ÁMBITO DE LA FORMACIÓN DEL ESTUDIANTE"
+  },
+  {
+    "d_page": 66,
+    "p_page": 65,
+    "size": 12.0,
+    "bold": false,
+    "text": "ÁMBITO DE LA"
+  },
+  {
+    "d_page": 66,
+    "p_page": 65,
+    "size": 12.0,
+    "bold": false,
+    "text": "FORMACIÓN DEL ESTUDIANTE"
+  },
+  {
+    "d_page": 67,
+    "p_page": 66,
+    "size": 12.0,
+    "bold": false,
+    "text": "ÁMBITO DE LA"
+  },
+  {
+    "d_page": 67,
+    "p_page": 66,
+    "size": 12.0,
+    "bold": false,
+    "text": "FORMACIÓN DEL ESTUDIANTE"
+  },
+  {
+    "d_page": 68,
+    "p_page": 67,
+    "size": 12.0,
+    "bold": false,
+    "text": "ÁMBITO DE LA"
+  },
+  {
+    "d_page": 68,
+    "p_page": 67,
+    "size": 12.0,
+    "bold": false,
+    "text": "FORMACIÓN DEL ESTUDIANTE"
+  },
+  {
+    "d_page": 69,
+    "p_page": 68,
+    "size": 22.0,
+    "bold": true,
+    "text": "Segundo Ciclo"
+  },
+  {
+    "d_page": 69,
+    "p_page": 68,
+    "size": 16.0,
+    "bold": true,
+    "text": "Propósitos para el Segundo Ciclo"
+  },
+  {
+    "d_page": 69,
+    "p_page": 68,
+    "size": 16.0,
+    "bold": true,
+    "text": "CUARTO AÑO"
+  },
+  {
+    "d_page": 69,
+    "p_page": 68,
+    "size": 14.0,
+    "bold": true,
+    "text": "Objetivos del año"
+  },
+  {
+    "d_page": 69,
+    "p_page": 68,
+    "size": 22.0,
+    "bold": true,
+    "text": "SEGUNDO CICLO"
+  },
+  {
+    "d_page": 70,
+    "p_page": 69,
+    "size": 12.0,
+    "bold": false,
+    "text": "Cuarto año: PRÁCTICAS DEL LENGUAJE EN EL ÁMBITO DE LA LITERATURA"
+  },
+  {
+    "d_page": 70,
+    "p_page": 69,
+    "size": 12.0,
+    "bold": false,
+    "text": "ÁMBITO DE LA LITERATURA"
+  },
+  {
+    "d_page": 71,
+    "p_page": 70,
+    "size": 12.0,
+    "bold": false,
+    "text": "ÁMBITO DE LA LITERATURA"
+  },
+  {
+    "d_page": 72,
+    "p_page": 71,
+    "size": 12.0,
+    "bold": false,
+    "text": "Cuarto año: PRÁCTICAS DEL LENGUAJE EN EL ÁMBITO DE LA FORMACIÓN CIUDADANA"
+  },
+  {
+    "d_page": 72,
+    "p_page": 71,
+    "size": 12.0,
+    "bold": false,
+    "text": "ÁMBITO DE LA LITERATURA"
+  },
+  {
+    "d_page": 72,
+    "p_page": 71,
+    "size": 12.0,
+    "bold": false,
+    "text": "ÁMBITO DE LA"
+  },
+  {
+    "d_page": 72,
+    "p_page": 71,
+    "size": 12.0,
+    "bold": false,
+    "text": "FORMACIÓN CIUDADANA"
+  },
+  {
+    "d_page": 73,
+    "p_page": 72,
+    "size": 12.0,
+    "bold": false,
+    "text": "ÁMBITO DE LA"
+  },
+  {
+    "d_page": 73,
+    "p_page": 72,
+    "size": 12.0,
+    "bold": false,
+    "text": "FORMACIÓN CIUDADANA"
+  },
+  {
+    "d_page": 74,
+    "p_page": 73,
+    "size": 12.0,
+    "bold": false,
+    "text": "ÁMBITO DE LA"
+  },
+  {
+    "d_page": 74,
+    "p_page": 73,
+    "size": 12.0,
+    "bold": false,
+    "text": "FORMACIÓN CIUDADANA"
+  },
+  {
+    "d_page": 75,
+    "p_page": 74,
+    "size": 12.0,
+    "bold": false,
+    "text": "Cuarto año: PRÁCTICAS DEL LENGUAJE EN EL ÁMBITO DE LA FORMACIÓN DEL ESTUDIANTE"
+  },
+  {
+    "d_page": 75,
+    "p_page": 74,
+    "size": 12.0,
+    "bold": false,
+    "text": "ÁMBITO DE LA"
+  },
+  {
+    "d_page": 75,
+    "p_page": 74,
+    "size": 12.0,
+    "bold": false,
+    "text": "FORMACIÓN DEL ESTUDIANTE"
+  },
+  {
+    "d_page": 76,
+    "p_page": 75,
+    "size": 12.0,
+    "bold": false,
+    "text": "ÁMBITO DE LA"
+  },
+  {
+    "d_page": 76,
+    "p_page": 75,
+    "size": 12.0,
+    "bold": false,
+    "text": "FORMACIÓN DEL ESTUDIANTE"
+  },
+  {
+    "d_page": 77,
+    "p_page": 76,
+    "size": 12.0,
+    "bold": false,
+    "text": "ÁMBITO DE LA"
+  },
+  {
+    "d_page": 77,
+    "p_page": 76,
+    "size": 12.0,
+    "bold": false,
+    "text": "FORMACIÓN DEL ESTUDIANTE"
+  },
+  {
+    "d_page": 78,
+    "p_page": 77,
+    "size": 16.0,
+    "bold": true,
+    "text": "QUINTO AÑO"
+  },
+  {
+    "d_page": 78,
+    "p_page": 77,
+    "size": 14.0,
+    "bold": true,
+    "text": "Objetivos del año"
+  },
+  {
+    "d_page": 78,
+    "p_page": 77,
+    "size": 12.0,
+    "bold": false,
+    "text": "Quinto año: PRÁCTICAS DEL LENGUAJE EN EL ÁMBITO DE LA LITERATURA"
+  },
+  {
+    "d_page": 78,
+    "p_page": 77,
+    "size": 12.0,
+    "bold": false,
+    "text": "ÁMBITO DE LA LITERATURA"
+  },
+  {
+    "d_page": 79,
+    "p_page": 78,
+    "size": 12.0,
+    "bold": false,
+    "text": "ÁMBITO DE LA LITERATURA"
+  },
+  {
+    "d_page": 80,
+    "p_page": 79,
+    "size": 12.0,
+    "bold": false,
+    "text": "Quinto año: PRÁCTICAS DEL LENGUAJE EN EL ÁMBITO DE LA FORMACIÓN CIUDADANA"
+  },
+  {
+    "d_page": 80,
+    "p_page": 79,
+    "size": 12.0,
+    "bold": false,
+    "text": "ÁMBITO DE LA LITERATURA"
+  },
+  {
+    "d_page": 80,
+    "p_page": 79,
+    "size": 12.0,
+    "bold": false,
+    "text": "ÁMBITO DE LA"
+  },
+  {
+    "d_page": 80,
+    "p_page": 79,
+    "size": 12.0,
+    "bold": false,
+    "text": "FORM. CIUD."
+  },
+  {
+    "d_page": 81,
+    "p_page": 80,
+    "size": 12.0,
+    "bold": false,
+    "text": "ÁMBITO DE LA"
+  },
+  {
+    "d_page": 81,
+    "p_page": 80,
+    "size": 12.0,
+    "bold": false,
+    "text": "FORMACIÓN CIUDADANA"
+  },
+  {
+    "d_page": 82,
+    "p_page": 81,
+    "size": 12.0,
+    "bold": false,
+    "text": "Quinto año: PRÁCTICAS DEL LENGUAJE EN EL ÁMBITO DE LA FORMACIÓN DEL ESTUDIANTE"
+  },
+  {
+    "d_page": 82,
+    "p_page": 81,
+    "size": 12.0,
+    "bold": false,
+    "text": "ÁMBITO DE LA"
+  },
+  {
+    "d_page": 82,
+    "p_page": 81,
+    "size": 12.0,
+    "bold": false,
+    "text": "FORMACIÓN DEL ESTUDIANTE"
+  },
+  {
+    "d_page": 82,
+    "p_page": 81,
+    "size": 12.0,
+    "bold": false,
+    "text": "ÁMBITO DE LA"
+  },
+  {
+    "d_page": 82,
+    "p_page": 81,
+    "size": 12.0,
+    "bold": false,
+    "text": "FORM. CIUD."
+  },
+  {
+    "d_page": 83,
+    "p_page": 82,
+    "size": 12.0,
+    "bold": false,
+    "text": "ÁMBITO DE LA"
+  },
+  {
+    "d_page": 83,
+    "p_page": 82,
+    "size": 12.0,
+    "bold": false,
+    "text": "FORMACIÓN DEL ESTUDIANTE"
+  },
+  {
+    "d_page": 84,
+    "p_page": 83,
+    "size": 12.0,
+    "bold": false,
+    "text": "ÁMBITO DE LA"
+  },
+  {
+    "d_page": 84,
+    "p_page": 83,
+    "size": 12.0,
+    "bold": false,
+    "text": "FORMACIÓN DEL ESTUDIANTE"
+  },
+  {
+    "d_page": 85,
+    "p_page": 84,
+    "size": 16.0,
+    "bold": true,
+    "text": "SEXTO AÑO"
+  },
+  {
+    "d_page": 85,
+    "p_page": 84,
+    "size": 14.0,
+    "bold": true,
+    "text": "Objetivos del año"
+  },
+  {
+    "d_page": 85,
+    "p_page": 84,
+    "size": 12.0,
+    "bold": false,
+    "text": "Sexto año: PRÁCTICAS DEL LENGUAJE EN EL ÁMBITO DE LA LITERATURA"
+  },
+  {
+    "d_page": 85,
+    "p_page": 84,
+    "size": 12.0,
+    "bold": false,
+    "text": "ÁMBITO DE LA LITERATURA"
+  },
+  {
+    "d_page": 86,
+    "p_page": 85,
+    "size": 12.0,
+    "bold": false,
+    "text": "ÁMBITO DE LA LITERATURA"
+  },
+  {
+    "d_page": 87,
+    "p_page": 86,
+    "size": 12.0,
+    "bold": false,
+    "text": "ÁMBITO DE LA LITERATURA"
+  },
+  {
+    "d_page": 88,
+    "p_page": 87,
+    "size": 12.0,
+    "bold": false,
+    "text": "Sexto año: PRÁCTICAS DEL LENGUAJE EN EL ÁMBITO DE LA FORMACIÓN CIUDADANA"
+  },
+  {
+    "d_page": 88,
+    "p_page": 87,
+    "size": 12.0,
+    "bold": false,
+    "text": "ÁMBITO DE LA"
+  },
+  {
+    "d_page": 88,
+    "p_page": 87,
+    "size": 12.0,
+    "bold": false,
+    "text": "FORMACIÓN CIUDADANA"
+  },
+  {
+    "d_page": 89,
+    "p_page": 88,
+    "size": 12.0,
+    "bold": false,
+    "text": "ÁMBITO DE LA"
+  },
+  {
+    "d_page": 89,
+    "p_page": 88,
+    "size": 12.0,
+    "bold": false,
+    "text": "FORMACIÓN CIUDADANA"
+  },
+  {
+    "d_page": 90,
+    "p_page": 89,
+    "size": 12.0,
+    "bold": false,
+    "text": "Sexto año: PRÁCTICAS DEL LENGUAJE EN EL ÁMBITO DE LA FORMACIÓN DEL ESTUDIANTE"
+  },
+  {
+    "d_page": 90,
+    "p_page": 89,
+    "size": 12.0,
+    "bold": false,
+    "text": "ÁMBITO DE LA"
+  },
+  {
+    "d_page": 90,
+    "p_page": 89,
+    "size": 12.0,
+    "bold": false,
+    "text": "FORMACIÓN DEL ESTUDIANTE"
+  },
+  {
+    "d_page": 91,
+    "p_page": 90,
+    "size": 12.0,
+    "bold": false,
+    "text": "ÁMBITO DE LA"
+  },
+  {
+    "d_page": 91,
+    "p_page": 90,
+    "size": 12.0,
+    "bold": false,
+    "text": "FORMACIÓN DEL ESTUDIANTE"
+  },
+  {
+    "d_page": 92,
+    "p_page": 91,
+    "size": 12.0,
+    "bold": false,
+    "text": "ÁMBITO DE LA L"
+  },
+  {
+    "d_page": 92,
+    "p_page": 91,
+    "size": 12.0,
+    "bold": false,
+    "text": "FORMACIÓN DEL ESTUDIANTE"
+  },
+  {
+    "d_page": 93,
+    "p_page": 92,
+    "size": 22.0,
+    "bold": true,
+    "text": "Bibliografía"
+  },
+  {
+    "d_page": 94,
+    "p_page": 93,
+    "size": 12.0,
+    "bold": true,
+    "text": "Bibliografía"
+  },
+  {
+    "d_page": 95,
+    "p_page": 94,
+    "size": 14.0,
+    "bold": false,
+    "text": "Sitios recomendados"
+  },
+  {
+    "d_page": 98,
+    "p_page": 97,
+    "size": 51.0,
+    "bold": true,
+    "text": "Matemática"
+  },
+  {
+    "d_page": 99,
+    "p_page": 98,
+    "size": 16.0,
+    "bold": true,
+    "text": "Enfoque Curricular y Orientaciones para la Enseñanza"
+  },
+  {
+    "d_page": 100,
+    "p_page": 99,
+    "size": 12.0,
+    "bold": true,
+    "text": "Matemática"
+  },
+  {
+    "d_page": 100,
+    "p_page": 99,
+    "size": 18.0,
+    "bold": true,
+    "text": "Matemática"
+  },
+  {
+    "d_page": 100,
+    "p_page": 99,
+    "size": 14.0,
+    "bold": true,
+    "text": "Propósitos del área"
+  },
+  {
+    "d_page": 101,
+    "p_page": 100,
+    "size": 18.0,
+    "bold": true,
+    "text": "Primer Ciclo"
+  },
+  {
+    "d_page": 101,
+    "p_page": 100,
+    "size": 18.0,
+    "bold": true,
+    "text": "Unidad Pedagógica"
+  },
+  {
+    "d_page": 101,
+    "p_page": 100,
+    "size": 14.0,
+    "bold": true,
+    "text": "Objetivos"
+  },
+  {
+    "d_page": 101,
+    "p_page": 100,
+    "size": 14.0,
+    "bold": true,
+    "text": "Propósitos del Ciclo"
+  },
+  {
+    "d_page": 102,
+    "p_page": 101,
+    "size": 12.0,
+    "bold": false,
+    "text": "Primer año"
+  },
+  {
+    "d_page": 102,
+    "p_page": 101,
+    "size": 14.0,
+    "bold": true,
+    "text": "BLOQUE: Números Naturales"
+  },
+  {
+    "d_page": 103,
+    "p_page": 102,
+    "size": 12.0,
+    "bold": false,
+    "text": "Segundo año"
+  },
+  {
+    "d_page": 103,
+    "p_page": 102,
+    "size": 12.0,
+    "bold": false,
+    "text": "Primero y segundo año"
+  },
+  {
+    "d_page": 104,
+    "p_page": 103,
+    "size": 12.0,
+    "bold": false,
+    "text": "Primer año"
+  },
+  {
+    "d_page": 104,
+    "p_page": 103,
+    "size": 12.0,
+    "bold": false,
+    "text": "Segundo año"
+  },
+  {
+    "d_page": 105,
+    "p_page": 104,
+    "size": 12.0,
+    "bold": false,
+    "text": "Primer año"
+  },
+  {
+    "d_page": 105,
+    "p_page": 104,
+    "size": 14.0,
+    "bold": true,
+    "text": "BLOQUE: Operaciones con Números Naturales"
+  },
+  {
+    "d_page": 106,
+    "p_page": 105,
+    "size": 12.0,
+    "bold": false,
+    "text": "Primer año"
+  },
+  {
+    "d_page": 106,
+    "p_page": 105,
+    "size": 12.0,
+    "bold": false,
+    "text": "Segundo año"
+  },
+  {
+    "d_page": 107,
+    "p_page": 106,
+    "size": 12.0,
+    "bold": false,
+    "text": "Primer año"
+  },
+  {
+    "d_page": 108,
+    "p_page": 107,
+    "size": 12.0,
+    "bold": false,
+    "text": "Primer año"
+  },
+  {
+    "d_page": 109,
+    "p_page": 108,
+    "size": 12.0,
+    "bold": false,
+    "text": "Primer año"
+  },
+  {
+    "d_page": 109,
+    "p_page": 108,
+    "size": 12.0,
+    "bold": false,
+    "text": "Primer año"
+  },
+  {
+    "d_page": 110,
+    "p_page": 109,
+    "size": 12.0,
+    "bold": false,
+    "text": "Primer año"
+  },
+  {
+    "d_page": 110,
+    "p_page": 109,
+    "size": 12.0,
+    "bold": false,
+    "text": "Segundo año"
+  },
+  {
+    "d_page": 111,
+    "p_page": 110,
+    "size": 12.0,
+    "bold": false,
+    "text": "Segundo año"
+  },
+  {
+    "d_page": 112,
+    "p_page": 111,
+    "size": 14.0,
+    "bold": true,
+    "text": "BLOQUE: Medida"
+  },
+  {
+    "d_page": 112,
+    "p_page": 111,
+    "size": 12.0,
+    "bold": false,
+    "text": "Primer año"
+  },
+  {
+    "d_page": 112,
+    "p_page": 111,
+    "size": 12.0,
+    "bold": false,
+    "text": "Segundo año"
+  },
+  {
+    "d_page": 113,
+    "p_page": 112,
+    "size": 12.0,
+    "bold": false,
+    "text": "Segundo año"
+  },
+  {
+    "d_page": 113,
+    "p_page": 112,
+    "size": 12.0,
+    "bold": false,
+    "text": "Medidas de tiempo"
+  },
+  {
+    "d_page": 113,
+    "p_page": 112,
+    "size": 12.0,
+    "bold": false,
+    "text": "Primer año"
+  },
+  {
+    "d_page": 113,
+    "p_page": 112,
+    "size": 12.0,
+    "bold": false,
+    "text": "Segundo año"
+  },
+  {
+    "d_page": 114,
+    "p_page": 113,
+    "size": 14.0,
+    "bold": true,
+    "text": "BLOQUE: Geometría"
+  },
+  {
+    "d_page": 114,
+    "p_page": 113,
+    "size": 12.0,
+    "bold": false,
+    "text": "Primer año"
+  },
+  {
+    "d_page": 115,
+    "p_page": 114,
+    "size": 12.0,
+    "bold": false,
+    "text": "Segundo año"
+  },
+  {
+    "d_page": 116,
+    "p_page": 115,
+    "size": 12.0,
+    "bold": false,
+    "text": "Primer año"
+  },
+  {
+    "d_page": 116,
+    "p_page": 115,
+    "size": 12.0,
+    "bold": false,
+    "text": "Segundo año"
+  },
+  {
+    "d_page": 117,
+    "p_page": 116,
+    "size": 12.0,
+    "bold": false,
+    "text": "Segundo año"
+  },
+  {
+    "d_page": 117,
+    "p_page": 116,
+    "size": 12.0,
+    "bold": false,
+    "text": "Primer año"
+  },
+  {
+    "d_page": 117,
+    "p_page": 116,
+    "size": 14.0,
+    "bold": true,
+    "text": "BLOQUE: Espacio"
+  },
+  {
+    "d_page": 118,
+    "p_page": 117,
+    "size": 12.0,
+    "bold": false,
+    "text": "Primer año"
+  },
+  {
+    "d_page": 119,
+    "p_page": 118,
+    "size": 12.0,
+    "bold": false,
+    "text": "Segundo año"
+  },
+  {
+    "d_page": 120,
+    "p_page": 119,
+    "size": 12.0,
+    "bold": false,
+    "text": "Segundo año"
+  },
+  {
+    "d_page": 121,
+    "p_page": 120,
+    "size": 18.0,
+    "bold": true,
+    "text": "Primer Ciclo"
+  },
+  {
+    "d_page": 121,
+    "p_page": 120,
+    "size": 18.0,
+    "bold": true,
+    "text": "Tercer año"
+  },
+  {
+    "d_page": 121,
+    "p_page": 120,
+    "size": 14.0,
+    "bold": true,
+    "text": "Objetivos del año"
+  },
+  {
+    "d_page": 122,
+    "p_page": 121,
+    "size": 14.0,
+    "bold": true,
+    "text": "BLOQUE: Números Naturales"
+  },
+  {
+    "d_page": 123,
+    "p_page": 122,
+    "size": 14.0,
+    "bold": true,
+    "text": "BLOQUE: Operaciones con Números Naturales"
+  },
+  {
+    "d_page": 129,
+    "p_page": 128,
+    "size": 14.0,
+    "bold": true,
+    "text": "BLOQUE: Medida"
+  },
+  {
+    "d_page": 130,
+    "p_page": 129,
+    "size": 14.0,
+    "bold": true,
+    "text": "BLOQUE: Geometría"
+  },
+  {
+    "d_page": 133,
+    "p_page": 132,
+    "size": 14.0,
+    "bold": true,
+    "text": "BLOQUE: Espacio"
+  },
+  {
+    "d_page": 135,
+    "p_page": 134,
+    "size": 18.0,
+    "bold": true,
+    "text": "Segundo Ciclo"
+  },
+  {
+    "d_page": 135,
+    "p_page": 134,
+    "size": 18.0,
+    "bold": true,
+    "text": "Cuarto año"
+  },
+  {
+    "d_page": 135,
+    "p_page": 134,
+    "size": 12.0,
+    "bold": true,
+    "text": "Propósitos del Ciclo"
+  },
+  {
+    "d_page": 135,
+    "p_page": 134,
+    "size": 12.0,
+    "bold": true,
+    "text": "Objetivos del año"
+  },
+  {
+    "d_page": 136,
+    "p_page": 135,
+    "size": 14.0,
+    "bold": true,
+    "text": "BLOQUE: Números Naturales"
+  },
+  {
+    "d_page": 137,
+    "p_page": 136,
+    "size": 14.0,
+    "bold": true,
+    "text": "BLOQUE: Operaciones con Números Naturales"
+  },
+  {
+    "d_page": 140,
+    "p_page": 139,
+    "size": 14.0,
+    "bold": true,
+    "text": "BLOQUE: Números Racionales"
+  },
+  {
+    "d_page": 142,
+    "p_page": 141,
+    "size": 14.0,
+    "bold": true,
+    "text": "BLOQUE: Medidas"
+  },
+  {
+    "d_page": 143,
+    "p_page": 142,
+    "size": 14.0,
+    "bold": true,
+    "text": "BLOQUE: Proporcionalidad"
+  },
+  {
+    "d_page": 143,
+    "p_page": 142,
+    "size": 14.0,
+    "bold": true,
+    "text": "BLOQUE: Geometría"
+  },
+  {
+    "d_page": 146,
+    "p_page": 145,
+    "size": 14.0,
+    "bold": true,
+    "text": "BLOQUE: Espacio"
+  },
+  {
+    "d_page": 147,
+    "p_page": 146,
+    "size": 18.0,
+    "bold": true,
+    "text": "Quinto año"
+  },
+  {
+    "d_page": 147,
+    "p_page": 146,
+    "size": 12.0,
+    "bold": true,
+    "text": "Objetivos del año"
+  },
+  {
+    "d_page": 148,
+    "p_page": 147,
+    "size": 14.0,
+    "bold": true,
+    "text": "BLOQUE: Números Naturales"
+  },
+  {
+    "d_page": 149,
+    "p_page": 148,
+    "size": 14.0,
+    "bold": true,
+    "text": "BLOQUE: Operaciones con Números Naturales"
+  },
+  {
+    "d_page": 152,
+    "p_page": 151,
+    "size": 14.0,
+    "bold": true,
+    "text": "BLOQUE: Números Racionales"
+  },
+  {
+    "d_page": 155,
+    "p_page": 154,
+    "size": 14.0,
+    "bold": true,
+    "text": "BLOQUE: Proporcionalidad"
+  },
+  {
+    "d_page": 156,
+    "p_page": 155,
+    "size": 14.0,
+    "bold": true,
+    "text": "BLOQUE: Medidas"
+  },
+  {
+    "d_page": 157,
+    "p_page": 156,
+    "size": 14.0,
+    "bold": true,
+    "text": "BLOQUE: Geometría"
+  },
+  {
+    "d_page": 159,
+    "p_page": 158,
+    "size": 14.0,
+    "bold": true,
+    "text": "BLOQUE: Espacio"
+  },
+  {
+    "d_page": 161,
+    "p_page": 160,
+    "size": 12.0,
+    "bold": true,
+    "text": "Objetivos del año"
+  },
+  {
+    "d_page": 161,
+    "p_page": 160,
+    "size": 18.0,
+    "bold": true,
+    "text": "Sexto año"
+  },
+  {
+    "d_page": 162,
+    "p_page": 161,
+    "size": 14.0,
+    "bold": true,
+    "text": "BLOQUE: Números Naturales"
+  },
+  {
+    "d_page": 163,
+    "p_page": 162,
+    "size": 14.0,
+    "bold": true,
+    "text": "BLOQUE: Operaciones con Números Naturales"
+  },
+  {
+    "d_page": 166,
+    "p_page": 165,
+    "size": 14.0,
+    "bold": true,
+    "text": "BLOQUE: Números racionales"
+  },
+  {
+    "d_page": 168,
+    "p_page": 167,
+    "size": 14.0,
+    "bold": true,
+    "text": "BLOQUE: Proporcionalidad"
+  },
+  {
+    "d_page": 170,
+    "p_page": 169,
+    "size": 14.0,
+    "bold": true,
+    "text": "BLOQUE: Medidas"
+  },
+  {
+    "d_page": 171,
+    "p_page": 170,
+    "size": 14.0,
+    "bold": true,
+    "text": "BLOQUE: Geometría y espacio"
+  },
+  {
+    "d_page": 174,
+    "p_page": 173,
+    "size": 12.0,
+    "bold": true,
+    "text": "Bibliografía"
+  },
+  {
+    "d_page": 174,
+    "p_page": 173,
+    "size": 22.0,
+    "bold": true,
+    "text": "Bibliografía"
+  },
+  {
+    "d_page": 174,
+    "p_page": 173,
+    "size": 12.0,
+    "bold": true,
+    "text": "Sobre la enseñanza de las operaciones"
+  },
+  {
+    "d_page": 174,
+    "p_page": 173,
+    "size": 12.0,
+    "bold": true,
+    "text": "con números naturales"
+  },
+  {
+    "d_page": 175,
+    "p_page": 174,
+    "size": 12.0,
+    "bold": true,
+    "text": "Sobre la enseñanza de los números racionales"
+  },
+  {
+    "d_page": 176,
+    "p_page": 175,
+    "size": 12.0,
+    "bold": true,
+    "text": "Sobre la enseñanza de la proporcionalidad"
+  },
+  {
+    "d_page": 176,
+    "p_page": 175,
+    "size": 12.0,
+    "bold": true,
+    "text": "Sobre la enseñanza de la geometría y el espacio"
+  },
+  {
+    "d_page": 177,
+    "p_page": 176,
+    "size": 12.0,
+    "bold": true,
+    "text": "Sobre la enseñanza de la medida"
+  },
+  {
+    "d_page": 180,
+    "p_page": 179,
+    "size": 51.0,
+    "bold": true,
+    "text": "Ciencias Sociales"
+  },
+  {
+    "d_page": 181,
+    "p_page": 180,
+    "size": 16.0,
+    "bold": false,
+    "text": "Enfoque Curricular y Orientaciones para la Enseñanza"
+  },
+  {
+    "d_page": 182,
+    "p_page": 181,
+    "size": 12.0,
+    "bold": true,
+    "text": "Ciencias Sociales"
+  },
+  {
+    "d_page": 184,
+    "p_page": 183,
+    "size": 16.0,
+    "bold": true,
+    "text": "Propósitos generales del área"
+  },
+  {
+    "d_page": 184,
+    "p_page": 183,
+    "size": 16.0,
+    "bold": true,
+    "text": "Primer Ciclo"
+  },
+  {
+    "d_page": 184,
+    "p_page": 183,
+    "size": 14.0,
+    "bold": true,
+    "text": "Propósitos del ciclo"
+  },
+  {
+    "d_page": 185,
+    "p_page": 184,
+    "size": 16.0,
+    "bold": true,
+    "text": "Unidad Pedagógica"
+  },
+  {
+    "d_page": 185,
+    "p_page": 184,
+    "size": 14.0,
+    "bold": true,
+    "text": "Objetivos de la Unidad Pedagógica"
+  },
+  {
+    "d_page": 186,
+    "p_page": 185,
+    "size": 14.0,
+    "bold": true,
+    "text": "BLOQUE: Sociedades y culturas: Cambios y continuidades"
+  },
+  {
+    "d_page": 186,
+    "p_page": 185,
+    "size": 16.0,
+    "bold": true,
+    "text": "PRIMER AÑO"
+  },
+  {
+    "d_page": 187,
+    "p_page": 186,
+    "size": 12.0,
+    "bold": true,
+    "text": "Situaciones de enseñanza"
+  },
+  {
+    "d_page": 188,
+    "p_page": 187,
+    "size": 14.0,
+    "bold": true,
+    "text": "BLOQUE: Sociedades, culturas y organización del espacio"
+  },
+  {
+    "d_page": 188,
+    "p_page": 187,
+    "size": 12.0,
+    "bold": true,
+    "text": "Situaciones de enseñanza"
+  },
+  {
+    "d_page": 190,
+    "p_page": 189,
+    "size": 14.0,
+    "bold": true,
+    "text": "BLOQUE: Sociedades, culturas: cambios y continuidades"
+  },
+  {
+    "d_page": 190,
+    "p_page": 189,
+    "size": 16.0,
+    "bold": true,
+    "text": "SEGUNDO AÑO"
+  },
+  {
+    "d_page": 191,
+    "p_page": 190,
+    "size": 12.0,
+    "bold": true,
+    "text": "Situaciones de enseñanza"
+  },
+  {
+    "d_page": 192,
+    "p_page": 191,
+    "size": 14.0,
+    "bold": true,
+    "text": "BLOQUE: Sociedades, culturas y organización del espacio"
+  },
+  {
+    "d_page": 193,
+    "p_page": 192,
+    "size": 12.0,
+    "bold": true,
+    "text": "Situaciones de enseñanza"
+  },
+  {
+    "d_page": 194,
+    "p_page": 193,
+    "size": 14.0,
+    "bold": true,
+    "text": "Objetivos del año"
+  },
+  {
+    "d_page": 194,
+    "p_page": 193,
+    "size": 16.0,
+    "bold": true,
+    "text": "TERCER AÑO"
+  },
+  {
+    "d_page": 195,
+    "p_page": 194,
+    "size": 14.0,
+    "bold": true,
+    "text": "BLOQUE: Sociedades, culturas: Cambios y continuidades"
+  },
+  {
+    "d_page": 196,
+    "p_page": 195,
+    "size": 12.0,
+    "bold": true,
+    "text": "Situaciones de enseñanza"
+  },
+  {
+    "d_page": 198,
+    "p_page": 197,
+    "size": 14.0,
+    "bold": true,
+    "text": "BLOQUE: Sociedades, culturas y organización del espacio"
+  },
+  {
+    "d_page": 198,
+    "p_page": 197,
+    "size": 12.0,
+    "bold": true,
+    "text": "Situaciones de enseñanza"
+  },
+  {
+    "d_page": 200,
+    "p_page": 199,
+    "size": 16.0,
+    "bold": true,
+    "text": "Segundo Ciclo"
+  },
+  {
+    "d_page": 200,
+    "p_page": 199,
+    "size": 14.0,
+    "bold": true,
+    "text": "Propósitos del Ciclo"
+  },
+  {
+    "d_page": 201,
+    "p_page": 200,
+    "size": 14.0,
+    "bold": true,
+    "text": "Objetivos del año"
+  },
+  {
+    "d_page": 201,
+    "p_page": 200,
+    "size": 16.0,
+    "bold": true,
+    "text": "CUARTO AÑO"
+  },
+  {
+    "d_page": 202,
+    "p_page": 201,
+    "size": 14.0,
+    "bold": true,
+    "text": "BLOQUE: Las sociedades a través del tiempo"
+  },
+  {
+    "d_page": 203,
+    "p_page": 202,
+    "size": 12.0,
+    "bold": true,
+    "text": "Situaciones de enseñanza"
+  },
+  {
+    "d_page": 204,
+    "p_page": 203,
+    "size": 14.0,
+    "bold": true,
+    "text": "BLOQUE: Sociedades y territorios"
+  },
+  {
+    "d_page": 206,
+    "p_page": 205,
+    "size": 12.0,
+    "bold": true,
+    "text": "Situaciones de enseñanza"
+  },
+  {
+    "d_page": 209,
+    "p_page": 208,
+    "size": 14.0,
+    "bold": true,
+    "text": "Objetivos del año"
+  },
+  {
+    "d_page": 209,
+    "p_page": 208,
+    "size": 16.0,
+    "bold": true,
+    "text": "QUINTO AÑO"
+  },
+  {
+    "d_page": 210,
+    "p_page": 209,
+    "size": 14.0,
+    "bold": true,
+    "text": "BLOQUE: Las sociedades a través del tiempo"
+  },
+  {
+    "d_page": 212,
+    "p_page": 211,
+    "size": 12.0,
+    "bold": true,
+    "text": "Situaciones de enseñanza"
+  },
+  {
+    "d_page": 214,
+    "p_page": 213,
+    "size": 14.0,
+    "bold": true,
+    "text": "BLOQUE: Sociedades y territorios"
+  },
+  {
+    "d_page": 217,
+    "p_page": 216,
+    "size": 12.0,
+    "bold": true,
+    "text": "Situaciones de enseñanza"
+  },
+  {
+    "d_page": 220,
+    "p_page": 219,
+    "size": 16.0,
+    "bold": true,
+    "text": "Objetivos del año"
+  },
+  {
+    "d_page": 220,
+    "p_page": 219,
+    "size": 14.0,
+    "bold": true,
+    "text": "SEXTO AÑO"
+  },
+  {
+    "d_page": 221,
+    "p_page": 220,
+    "size": 14.0,
+    "bold": true,
+    "text": "BLOQUE: Las sociedades a través del tiempo"
+  },
+  {
+    "d_page": 222,
+    "p_page": 221,
+    "size": 12.0,
+    "bold": true,
+    "text": "Situaciones de enseñanza"
+  },
+  {
+    "d_page": 225,
+    "p_page": 224,
+    "size": 14.0,
+    "bold": true,
+    "text": "BLOQUE: Sociedades y territorios"
+  },
+  {
+    "d_page": 227,
+    "p_page": 226,
+    "size": 12.0,
+    "bold": true,
+    "text": "Situaciones de enseñanza"
+  },
+  {
+    "d_page": 229,
+    "p_page": 228,
+    "size": 22.0,
+    "bold": true,
+    "text": "Bibliografía"
+  },
+  {
+    "d_page": 229,
+    "p_page": 228,
+    "size": 12.0,
+    "bold": true,
+    "text": "Bibliografía de referencia para los temas de enseñanza"
+  },
+  {
+    "d_page": 229,
+    "p_page": 228,
+    "size": 12.0,
+    "bold": true,
+    "text": "Primer Ciclo"
+  },
+  {
+    "d_page": 230,
+    "p_page": 229,
+    "size": 12.0,
+    "bold": true,
+    "text": "Bibliografía"
+  },
+  {
+    "d_page": 230,
+    "p_page": 229,
+    "size": 14.0,
+    "bold": true,
+    "text": "Enlaces interesantes"
+  },
+  {
+    "d_page": 231,
+    "p_page": 230,
+    "size": 14.0,
+    "bold": true,
+    "text": "Bibliografía General Disciplinar – Segundo Ciclo"
+  },
+  {
+    "d_page": 232,
+    "p_page": 231,
+    "size": 14.0,
+    "bold": true,
+    "text": "Bibliografía de consulta para los temas de enseñanza"
+  },
+  {
+    "d_page": 232,
+    "p_page": 231,
+    "size": 12.0,
+    "bold": true,
+    "text": "Enlaces interesantes"
+  },
+  {
+    "d_page": 236,
+    "p_page": 235,
+    "size": 51.0,
+    "bold": true,
+    "text": "Ciencias Naturales"
+  },
+  {
+    "d_page": 237,
+    "p_page": 236,
+    "size": 16.0,
+    "bold": true,
+    "text": "Marco general de la enseñanza de las Ciencias Naturales en la Escuela Primaria"
+  },
+  {
+    "d_page": 237,
+    "p_page": 236,
+    "size": 14.0,
+    "bold": true,
+    "text": "La concepción de ciencia y las implicancias en su"
+  },
+  {
+    "d_page": 237,
+    "p_page": 236,
+    "size": 14.0,
+    "bold": true,
+    "text": "enseñanza"
+  },
+  {
+    "d_page": 237,
+    "p_page": 236,
+    "size": 14.0,
+    "bold": true,
+    "text": "La finalidad de la educación científica en la Escuela"
+  },
+  {
+    "d_page": 237,
+    "p_page": 236,
+    "size": 14.0,
+    "bold": true,
+    "text": "Primaria"
+  },
+  {
+    "d_page": 238,
+    "p_page": 237,
+    "size": 12.0,
+    "bold": true,
+    "text": "Ciencias Naturales"
+  },
+  {
+    "d_page": 238,
+    "p_page": 237,
+    "size": 14.0,
+    "bold": true,
+    "text": "La enseñanza de las Ciencias Naturales por"
+  },
+  {
+    "d_page": 238,
+    "p_page": 237,
+    "size": 14.0,
+    "bold": true,
+    "text": "indagación"
+  },
+  {
+    "d_page": 238,
+    "p_page": 237,
+    "size": 14.0,
+    "bold": true,
+    "text": "La progresión de los contenidos en la enseñanza de"
+  },
+  {
+    "d_page": 238,
+    "p_page": 237,
+    "size": 14.0,
+    "bold": true,
+    "text": "las Ciencias Naturales"
+  },
+  {
+    "d_page": 239,
+    "p_page": 238,
+    "size": 14.0,
+    "bold": true,
+    "text": "La integración de las tecnologías digitales en la"
+  },
+  {
+    "d_page": 239,
+    "p_page": 238,
+    "size": 14.0,
+    "bold": true,
+    "text": "enseñanza de las Ciencias Naturales"
+  },
+  {
+    "d_page": 240,
+    "p_page": 239,
+    "size": 16.0,
+    "bold": true,
+    "text": "Propósitos generales del área"
+  },
+  {
+    "d_page": 240,
+    "p_page": 239,
+    "size": 14.0,
+    "bold": true,
+    "text": "¿Qué se espera que aprendan de Ciencias Naturales los niños al terminar la Escuela Primaria?"
+  },
+  {
+    "d_page": 241,
+    "p_page": 240,
+    "size": 18.0,
+    "bold": true,
+    "text": "Primer Ciclo"
+  },
+  {
+    "d_page": 241,
+    "p_page": 240,
+    "size": 16.0,
+    "bold": true,
+    "text": "Propósitos específicos"
+  },
+  {
+    "d_page": 241,
+    "p_page": 240,
+    "size": 14.0,
+    "bold": true,
+    "text": "Objetivos de la unidad pedagógica"
+  },
+  {
+    "d_page": 244,
+    "p_page": 243,
+    "size": 16.0,
+    "bold": true,
+    "text": "PRIMERO Y SEGUNDO AÑO"
+  },
+  {
+    "d_page": 244,
+    "p_page": 243,
+    "size": 14.0,
+    "bold": true,
+    "text": "Objetivos generales del año"
+  },
+  {
+    "d_page": 244,
+    "p_page": 243,
+    "size": 14.0,
+    "bold": true,
+    "text": "BLOQUE: Seres vivos"
+  },
+  {
+    "d_page": 244,
+    "p_page": 243,
+    "size": 12.0,
+    "bold": true,
+    "text": "Objetivos del año"
+  },
+  {
+    "d_page": 246,
+    "p_page": 245,
+    "size": 12.0,
+    "bold": true,
+    "text": "Situaciones de enseñanza de Primer Año"
+  },
+  {
+    "d_page": 246,
+    "p_page": 245,
+    "size": 12.0,
+    "bold": true,
+    "text": "Situaciones de enseñanza de Segundo Año"
+  },
+  {
+    "d_page": 247,
+    "p_page": 246,
+    "size": 12.0,
+    "bold": true,
+    "text": "Sugerencias para agrupamientos flexibles"
+  },
+  {
+    "d_page": 248,
+    "p_page": 247,
+    "size": 13.0,
+    "bold": true,
+    "text": "BLOQUE: Materiales"
+  },
+  {
+    "d_page": 248,
+    "p_page": 247,
+    "size": 14.0,
+    "bold": true,
+    "text": "Objetivos del año"
+  },
+  {
+    "d_page": 249,
+    "p_page": 248,
+    "size": 12.0,
+    "bold": true,
+    "text": "Situaciones de enseñanza para Primer Año"
+  },
+  {
+    "d_page": 249,
+    "p_page": 248,
+    "size": 12.0,
+    "bold": true,
+    "text": "Situaciones de enseñanza para Segundo Año"
+  },
+  {
+    "d_page": 249,
+    "p_page": 248,
+    "size": 12.0,
+    "bold": true,
+    "text": "Sugerencias de agrupamientos flexibles"
+  },
+  {
+    "d_page": 250,
+    "p_page": 249,
+    "size": 13.0,
+    "bold": true,
+    "text": "BLOQUE: El mundo físico"
+  },
+  {
+    "d_page": 250,
+    "p_page": 249,
+    "size": 14.0,
+    "bold": true,
+    "text": "Objetivos del año"
+  },
+  {
+    "d_page": 251,
+    "p_page": 250,
+    "size": 12.0,
+    "bold": true,
+    "text": "Situaciones de enseñanza para Primer Año"
+  },
+  {
+    "d_page": 251,
+    "p_page": 250,
+    "size": 12.0,
+    "bold": true,
+    "text": "Situaciones de enseñanza para Segundo Año"
+  },
+  {
+    "d_page": 251,
+    "p_page": 250,
+    "size": 12.0,
+    "bold": true,
+    "text": "Sugerencias de agrupamientos flexibles"
+  },
+  {
+    "d_page": 251,
+    "p_page": 250,
+    "size": 13.0,
+    "bold": true,
+    "text": "BLOQUE: La Tierra y el universo"
+  },
+  {
+    "d_page": 251,
+    "p_page": 250,
+    "size": 14.0,
+    "bold": true,
+    "text": "Objetivos del año"
+  },
+  {
+    "d_page": 252,
+    "p_page": 251,
+    "size": 12.0,
+    "bold": true,
+    "text": "Situaciones de enseñanza para Primer Año"
+  },
+  {
+    "d_page": 252,
+    "p_page": 251,
+    "size": 12.0,
+    "bold": true,
+    "text": "Situaciones de enseñanza para Segundo Año"
+  },
+  {
+    "d_page": 253,
+    "p_page": 252,
+    "size": 12.0,
+    "bold": true,
+    "text": "Sugerencias de agrupamientos flexibles"
+  },
+  {
+    "d_page": 254,
+    "p_page": 253,
+    "size": 16.0,
+    "bold": true,
+    "text": "TERCER AÑO"
+  },
+  {
+    "d_page": 254,
+    "p_page": 253,
+    "size": 14.0,
+    "bold": true,
+    "text": "Objetivos generales del año"
+  },
+  {
+    "d_page": 254,
+    "p_page": 253,
+    "size": 13.0,
+    "bold": true,
+    "text": "BLOQUE: Seres vivos"
+  },
+  {
+    "d_page": 254,
+    "p_page": 253,
+    "size": 14.0,
+    "bold": true,
+    "text": "Objetivos del año"
+  },
+  {
+    "d_page": 255,
+    "p_page": 254,
+    "size": 12.0,
+    "bold": true,
+    "text": "Situaciones de enseñanza"
+  },
+  {
+    "d_page": 256,
+    "p_page": 255,
+    "size": 13.0,
+    "bold": true,
+    "text": "BLOQUE: Materiales"
+  },
+  {
+    "d_page": 256,
+    "p_page": 255,
+    "size": 14.0,
+    "bold": true,
+    "text": "Objetivos del año"
+  },
+  {
+    "d_page": 257,
+    "p_page": 256,
+    "size": 12.0,
+    "bold": true,
+    "text": "Situaciones de enseñanza"
+  },
+  {
+    "d_page": 257,
+    "p_page": 256,
+    "size": 13.0,
+    "bold": true,
+    "text": "BLOQUE: Mundo físico"
+  },
+  {
+    "d_page": 257,
+    "p_page": 256,
+    "size": 14.0,
+    "bold": true,
+    "text": "Objetivos del año"
+  },
+  {
+    "d_page": 258,
+    "p_page": 257,
+    "size": 12.0,
+    "bold": true,
+    "text": "Situaciones de enseñanza"
+  },
+  {
+    "d_page": 258,
+    "p_page": 257,
+    "size": 13.0,
+    "bold": true,
+    "text": "BLOQUE: La Tierra y el universo"
+  },
+  {
+    "d_page": 258,
+    "p_page": 257,
+    "size": 14.0,
+    "bold": true,
+    "text": "Objetivos del año"
+  },
+  {
+    "d_page": 259,
+    "p_page": 258,
+    "size": 12.0,
+    "bold": true,
+    "text": "Situaciones de enseñanza"
+  },
+  {
+    "d_page": 260,
+    "p_page": 259,
+    "size": 18.0,
+    "bold": true,
+    "text": "Segundo Ciclo"
+  },
+  {
+    "d_page": 260,
+    "p_page": 259,
+    "size": 16.0,
+    "bold": true,
+    "text": "Propósitos específicos"
+  },
+  {
+    "d_page": 264,
+    "p_page": 263,
+    "size": 16.0,
+    "bold": true,
+    "text": "CUARTO  AÑO"
+  },
+  {
+    "d_page": 264,
+    "p_page": 263,
+    "size": 14.0,
+    "bold": true,
+    "text": "Objetivos generales del año"
+  },
+  {
+    "d_page": 264,
+    "p_page": 263,
+    "size": 13.0,
+    "bold": true,
+    "text": "BLOQUE: Seres vivos"
+  },
+  {
+    "d_page": 264,
+    "p_page": 263,
+    "size": 14.0,
+    "bold": true,
+    "text": "Objetivos del año"
+  },
+  {
+    "d_page": 266,
+    "p_page": 265,
+    "size": 12.0,
+    "bold": true,
+    "text": "Situaciones de enseñanza"
+  },
+  {
+    "d_page": 267,
+    "p_page": 266,
+    "size": 13.0,
+    "bold": true,
+    "text": "BLOQUE: Materiales"
+  },
+  {
+    "d_page": 267,
+    "p_page": 266,
+    "size": 14.0,
+    "bold": true,
+    "text": "Objetivos del año"
+  },
+  {
+    "d_page": 268,
+    "p_page": 267,
+    "size": 12.0,
+    "bold": true,
+    "text": "Situaciones de enseñanza"
+  },
+  {
+    "d_page": 269,
+    "p_page": 268,
+    "size": 13.0,
+    "bold": true,
+    "text": "BLOQUE: Mundo físico"
+  },
+  {
+    "d_page": 269,
+    "p_page": 268,
+    "size": 14.0,
+    "bold": true,
+    "text": "Objetivos del año"
+  },
+  {
+    "d_page": 269,
+    "p_page": 268,
+    "size": 12.0,
+    "bold": true,
+    "text": "Situaciones de enseñanza"
+  },
+  {
+    "d_page": 270,
+    "p_page": 269,
+    "size": 13.0,
+    "bold": true,
+    "text": "BLOQUE: La Tierra y el universo"
+  },
+  {
+    "d_page": 270,
+    "p_page": 269,
+    "size": 14.0,
+    "bold": true,
+    "text": "Objetivos del año"
+  },
+  {
+    "d_page": 271,
+    "p_page": 270,
+    "size": 12.0,
+    "bold": true,
+    "text": "Situaciones de enseñanza"
+  },
+  {
+    "d_page": 272,
+    "p_page": 271,
+    "size": 16.0,
+    "bold": true,
+    "text": "QUINTO  AÑO"
+  },
+  {
+    "d_page": 272,
+    "p_page": 271,
+    "size": 14.0,
+    "bold": true,
+    "text": "Objetivos generales del año"
+  },
+  {
+    "d_page": 272,
+    "p_page": 271,
+    "size": 13.0,
+    "bold": true,
+    "text": "BLOQUE: Seres vivos"
+  },
+  {
+    "d_page": 272,
+    "p_page": 271,
+    "size": 14.0,
+    "bold": true,
+    "text": "Objetivos del año"
+  },
+  {
+    "d_page": 274,
+    "p_page": 273,
+    "size": 12.0,
+    "bold": true,
+    "text": "Situaciones de enseñanza"
+  },
+  {
+    "d_page": 275,
+    "p_page": 274,
+    "size": 13.0,
+    "bold": true,
+    "text": "BLOQUE: Materiales"
+  },
+  {
+    "d_page": 275,
+    "p_page": 274,
+    "size": 14.0,
+    "bold": true,
+    "text": "Objetivos del año"
+  },
+  {
+    "d_page": 276,
+    "p_page": 275,
+    "size": 12.0,
+    "bold": true,
+    "text": "Situaciones de enseñanza"
+  },
+  {
+    "d_page": 277,
+    "p_page": 276,
+    "size": 13.0,
+    "bold": true,
+    "text": "BLOQUE: Mundo físico"
+  },
+  {
+    "d_page": 277,
+    "p_page": 276,
+    "size": 14.0,
+    "bold": true,
+    "text": "Objetivos del año"
+  },
+  {
+    "d_page": 278,
+    "p_page": 277,
+    "size": 12.0,
+    "bold": true,
+    "text": "Situaciones de enseñanza"
+  },
+  {
+    "d_page": 279,
+    "p_page": 278,
+    "size": 13.0,
+    "bold": true,
+    "text": "BLOQUE: La Tierra y el universo"
+  },
+  {
+    "d_page": 279,
+    "p_page": 278,
+    "size": 14.0,
+    "bold": true,
+    "text": "Objetivos del año"
+  },
+  {
+    "d_page": 280,
+    "p_page": 279,
+    "size": 12.0,
+    "bold": true,
+    "text": "Situaciones de enseñanza"
+  },
+  {
+    "d_page": 282,
+    "p_page": 281,
+    "size": 16.0,
+    "bold": true,
+    "text": "SEXTO  AÑO"
+  },
+  {
+    "d_page": 282,
+    "p_page": 281,
+    "size": 14.0,
+    "bold": true,
+    "text": "Objetivos generales del año"
+  },
+  {
+    "d_page": 282,
+    "p_page": 281,
+    "size": 13.0,
+    "bold": true,
+    "text": "BLOQUE: Seres vivos"
+  },
+  {
+    "d_page": 282,
+    "p_page": 281,
+    "size": 14.0,
+    "bold": true,
+    "text": "Objetivos del año"
+  },
+  {
+    "d_page": 284,
+    "p_page": 283,
+    "size": 12.0,
+    "bold": true,
+    "text": "Situaciones de enseñanza"
+  },
+  {
+    "d_page": 285,
+    "p_page": 284,
+    "size": 13.0,
+    "bold": true,
+    "text": "BLOQUE: Materiales"
+  },
+  {
+    "d_page": 285,
+    "p_page": 284,
+    "size": 14.0,
+    "bold": true,
+    "text": "Objetivos del año"
+  },
+  {
+    "d_page": 286,
+    "p_page": 285,
+    "size": 12.0,
+    "bold": true,
+    "text": "Situaciones de enseñanza"
+  },
+  {
+    "d_page": 287,
+    "p_page": 286,
+    "size": 13.0,
+    "bold": true,
+    "text": "BLOQUE: Mundo físico"
+  },
+  {
+    "d_page": 287,
+    "p_page": 286,
+    "size": 14.0,
+    "bold": true,
+    "text": "Objetivos del año"
+  },
+  {
+    "d_page": 288,
+    "p_page": 287,
+    "size": 12.0,
+    "bold": true,
+    "text": "Situaciones de enseñanza"
+  },
+  {
+    "d_page": 289,
+    "p_page": 288,
+    "size": 13.0,
+    "bold": true,
+    "text": "BLOQUE: La Tierra y el universo"
+  },
+  {
+    "d_page": 289,
+    "p_page": 288,
+    "size": 14.0,
+    "bold": true,
+    "text": "Objetivos del año"
+  },
+  {
+    "d_page": 290,
+    "p_page": 289,
+    "size": 12.0,
+    "bold": true,
+    "text": "Situaciones de enseñanza"
+  },
+  {
+    "d_page": 291,
+    "p_page": 290,
+    "size": 22.0,
+    "bold": true,
+    "text": "Bibliografía"
+  },
+  {
+    "d_page": 292,
+    "p_page": 291,
+    "size": 12.0,
+    "bold": true,
+    "text": "Bibliografía"
+  },
+  {
+    "d_page": 294,
+    "p_page": 293,
+    "size": 51.0,
+    "bold": true,
+    "text": "Inglés"
+  },
+  {
+    "d_page": 295,
+    "p_page": 294,
+    "size": 16.0,
+    "bold": true,
+    "text": "Enfoque Curricular y Orientaciones para la Enseñanza"
+  },
+  {
+    "d_page": 295,
+    "p_page": 294,
+    "size": 14.0,
+    "bold": true,
+    "text": "Modos de conocer o"
+  },
+  {
+    "d_page": 295,
+    "p_page": 294,
+    "size": 14.0,
+    "bold": true,
+    "text": "tasks"
+  },
+  {
+    "d_page": 296,
+    "p_page": 295,
+    "size": 14.0,
+    "bold": true,
+    "text": "Cómo leer los contenidos en relación con los"
+  },
+  {
+    "d_page": 296,
+    "p_page": 295,
+    "size": 14.0,
+    "bold": true,
+    "text": "indicadores de avance"
+  },
+  {
+    "d_page": 296,
+    "p_page": 295,
+    "size": 14.0,
+    "bold": true,
+    "text": "La planificación por proyectos"
+  },
+  {
+    "d_page": 296,
+    "p_page": 295,
+    "size": 14.0,
+    "bold": true,
+    "text": "La enseñanza diversificada"
+  },
+  {
+    "d_page": 297,
+    "p_page": 296,
+    "size": 14.0,
+    "bold": true,
+    "text": "El contexto literario"
+  },
+  {
+    "d_page": 297,
+    "p_page": 296,
+    "size": 14.0,
+    "bold": true,
+    "text": "Evaluación"
+  },
+  {
+    "d_page": 298,
+    "p_page": 297,
+    "size": 12.0,
+    "bold": true,
+    "text": "Inglés"
+  },
+  {
+    "d_page": 298,
+    "p_page": 297,
+    "size": 16.0,
+    "bold": true,
+    "text": "Segundo Ciclo"
+  },
+  {
+    "d_page": 298,
+    "p_page": 297,
+    "size": 16.0,
+    "bold": true,
+    "text": "Propósitos generales del área y ciclo:"
+  },
+  {
+    "d_page": 299,
+    "p_page": 298,
+    "size": 13.0,
+    "bold": true,
+    "text": "CUARTO AÑO"
+  },
+  {
+    "d_page": 299,
+    "p_page": 298,
+    "size": 14.0,
+    "bold": true,
+    "text": "Objetivos del año"
+  },
+  {
+    "d_page": 301,
+    "p_page": 300,
+    "size": 12.0,
+    "bold": true,
+    "text": "Situaciones de enseñanza"
+  },
+  {
+    "d_page": 302,
+    "p_page": 301,
+    "size": 13.0,
+    "bold": true,
+    "text": "QUINTO AÑO"
+  },
+  {
+    "d_page": 302,
+    "p_page": 301,
+    "size": 14.0,
+    "bold": true,
+    "text": "Objetivos del año"
+  },
+  {
+    "d_page": 304,
+    "p_page": 303,
+    "size": 12.0,
+    "bold": true,
+    "text": "Situaciones de enseñanza"
+  },
+  {
+    "d_page": 305,
+    "p_page": 304,
+    "size": 13.0,
+    "bold": true,
+    "text": "SEXTO AÑO"
+  },
+  {
+    "d_page": 305,
+    "p_page": 304,
+    "size": 14.0,
+    "bold": true,
+    "text": "Objetivos del año"
+  },
+  {
+    "d_page": 307,
+    "p_page": 306,
+    "size": 12.0,
+    "bold": true,
+    "text": "Situaciones de enseñanza"
+  },
+  {
+    "d_page": 309,
+    "p_page": 308,
+    "size": 14.0,
+    "bold": true,
+    "text": "Otras referencias"
+  },
+  {
+    "d_page": 309,
+    "p_page": 308,
+    "size": 13.0,
+    "bold": true,
+    "text": "Materiales curriculares complementarios disponibles"
+  },
+  {
+    "d_page": 312,
+    "p_page": 311,
+    "size": 51.0,
+    "bold": true,
+    "text": "Educación Artística"
+  },
+  {
+    "d_page": 313,
+    "p_page": 312,
+    "size": 16.0,
+    "bold": true,
+    "text": "Enfoque curricular y orientaciones generales para la enseñanza."
+  },
+  {
+    "d_page": 313,
+    "p_page": 312,
+    "size": 14.0,
+    "bold": true,
+    "text": "Ejes estructuradores"
+  },
+  {
+    "d_page": 313,
+    "p_page": 312,
+    "size": 14.0,
+    "bold": true,
+    "text": "Espacio"
+  },
+  {
+    "d_page": 313,
+    "p_page": 312,
+    "size": 14.0,
+    "bold": true,
+    "text": "Tiempo"
+  },
+  {
+    "d_page": 314,
+    "p_page": 313,
+    "size": 12.0,
+    "bold": true,
+    "text": "Educación Artística"
+  },
+  {
+    "d_page": 314,
+    "p_page": 313,
+    "size": 14.0,
+    "bold": true,
+    "text": "Subjetividad"
+  },
+  {
+    "d_page": 314,
+    "p_page": 313,
+    "size": 14.0,
+    "bold": true,
+    "text": "Relato"
+  },
+  {
+    "d_page": 314,
+    "p_page": 313,
+    "size": 14.0,
+    "bold": true,
+    "text": "Instancias relacionales del abordaje de los contenidos"
+  },
+  {
+    "d_page": 315,
+    "p_page": 314,
+    "size": 14.0,
+    "bold": true,
+    "text": "Modelos evaluativos"
+  },
+  {
+    "d_page": 315,
+    "p_page": 314,
+    "size": 12.0,
+    "bold": true,
+    "text": "1. Evaluación basada en la construcción preestablecida de"
+  },
+  {
+    "d_page": 315,
+    "p_page": 314,
+    "size": 12.0,
+    "bold": true,
+    "text": "criterios"
+  },
+  {
+    "d_page": 316,
+    "p_page": 315,
+    "size": 12.0,
+    "bold": true,
+    "text": "2. Evaluación basada en la construcción de registros de"
+  },
+  {
+    "d_page": 316,
+    "p_page": 315,
+    "size": 12.0,
+    "bold": true,
+    "text": "aprendizaje"
+  },
+  {
+    "d_page": 317,
+    "p_page": 316,
+    "size": 16.0,
+    "bold": true,
+    "text": "Propósitos generales del área"
+  },
+  {
+    "d_page": 317,
+    "p_page": 316,
+    "size": 16.0,
+    "bold": true,
+    "text": "Propósitos para Primer Ciclo"
+  },
+  {
+    "d_page": 318,
+    "p_page": 317,
+    "size": 16.0,
+    "bold": true,
+    "text": "UNIDAD PEDAGÓGICA"
+  },
+  {
+    "d_page": 318,
+    "p_page": 317,
+    "size": 14.0,
+    "bold": true,
+    "text": "Objetivos de la Unidad Pedagógica"
+  },
+  {
+    "d_page": 318,
+    "p_page": 317,
+    "size": 12.0,
+    "bold": true,
+    "text": "Lenguaje/Disciplina: ARTES VISUALES"
+  },
+  {
+    "d_page": 318,
+    "p_page": 317,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: El espacio plástico visual"
+  },
+  {
+    "d_page": 318,
+    "p_page": 317,
+    "size": 13.0,
+    "bold": true,
+    "text": "Primer Ciclo"
+  },
+  {
+    "d_page": 318,
+    "p_page": 317,
+    "size": 14.0,
+    "bold": true,
+    "text": "PRIMER AÑO"
+  },
+  {
+    "d_page": 319,
+    "p_page": 318,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Elementos del lenguaje plástico visual"
+  },
+  {
+    "d_page": 319,
+    "p_page": 318,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Elementos del lenguaje plástico visual"
+  },
+  {
+    "d_page": 319,
+    "p_page": 318,
+    "size": 12.0,
+    "bold": true,
+    "text": "Situaciones de enseñanza"
+  },
+  {
+    "d_page": 320,
+    "p_page": 319,
+    "size": 12.0,
+    "bold": true,
+    "text": "Lenguaje/Disciplina: DANZA"
+  },
+  {
+    "d_page": 320,
+    "p_page": 319,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Elementos del lenguaje de la danza"
+  },
+  {
+    "d_page": 320,
+    "p_page": 319,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Organización y contextualización del movimiento"
+  },
+  {
+    "d_page": 321,
+    "p_page": 320,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Composición y producción coreográfica"
+  },
+  {
+    "d_page": 321,
+    "p_page": 320,
+    "size": 12.0,
+    "bold": true,
+    "text": "Situaciones de enseñanza"
+  },
+  {
+    "d_page": 322,
+    "p_page": 321,
+    "size": 12.0,
+    "bold": true,
+    "text": "Lenguaje/Disciplina: MÚSICA"
+  },
+  {
+    "d_page": 322,
+    "p_page": 321,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Elementos del lenguaje musical"
+  },
+  {
+    "d_page": 322,
+    "p_page": 321,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Organización musical"
+  },
+  {
+    "d_page": 323,
+    "p_page": 322,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Producción musical"
+  },
+  {
+    "d_page": 323,
+    "p_page": 322,
+    "size": 12.0,
+    "bold": true,
+    "text": "Situaciones de enseñanza"
+  },
+  {
+    "d_page": 324,
+    "p_page": 323,
+    "size": 12.0,
+    "bold": true,
+    "text": "Lenguaje/Disciplina: TEATRO"
+  },
+  {
+    "d_page": 324,
+    "p_page": 323,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Elementos del lenguaje teatral"
+  },
+  {
+    "d_page": 324,
+    "p_page": 323,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Organización teatral"
+  },
+  {
+    "d_page": 325,
+    "p_page": 324,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Producción teatral"
+  },
+  {
+    "d_page": 325,
+    "p_page": 324,
+    "size": 12.0,
+    "bold": true,
+    "text": "Situaciones de enseñanza"
+  },
+  {
+    "d_page": 326,
+    "p_page": 325,
+    "size": 12.0,
+    "bold": true,
+    "text": "Lenguaje/Disciplina: ARTES VISUALES"
+  },
+  {
+    "d_page": 326,
+    "p_page": 325,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: El espacio plástico visual"
+  },
+  {
+    "d_page": 326,
+    "p_page": 325,
+    "size": 13.0,
+    "bold": true,
+    "text": "PRIMER CICLO"
+  },
+  {
+    "d_page": 326,
+    "p_page": 325,
+    "size": 14.0,
+    "bold": true,
+    "text": "SEGUNDO AÑO"
+  },
+  {
+    "d_page": 326,
+    "p_page": 325,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Elementos del lenguaje plástico visual"
+  },
+  {
+    "d_page": 327,
+    "p_page": 326,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Elementos del lenguaje plástico visual"
+  },
+  {
+    "d_page": 327,
+    "p_page": 326,
+    "size": 12.0,
+    "bold": true,
+    "text": "Situaciones de enseñanza"
+  },
+  {
+    "d_page": 328,
+    "p_page": 327,
+    "size": 12.0,
+    "bold": true,
+    "text": "Lenguaje/Disciplina: DANZA"
+  },
+  {
+    "d_page": 328,
+    "p_page": 327,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Elementos del lenguaje de la danza"
+  },
+  {
+    "d_page": 328,
+    "p_page": 327,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Organización y contextualización del movimiento"
+  },
+  {
+    "d_page": 329,
+    "p_page": 328,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Composición y producción coreográfica"
+  },
+  {
+    "d_page": 329,
+    "p_page": 328,
+    "size": 12.0,
+    "bold": true,
+    "text": "Situaciones de enseñanza"
+  },
+  {
+    "d_page": 330,
+    "p_page": 329,
+    "size": 12.0,
+    "bold": true,
+    "text": "Lenguaje/Disciplina: MÚSICA"
+  },
+  {
+    "d_page": 330,
+    "p_page": 329,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Elementos del lenguaje musical"
+  },
+  {
+    "d_page": 330,
+    "p_page": 329,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Organización musical"
+  },
+  {
+    "d_page": 331,
+    "p_page": 330,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Producción musical"
+  },
+  {
+    "d_page": 331,
+    "p_page": 330,
+    "size": 12.0,
+    "bold": true,
+    "text": "Situaciones de enseñanza"
+  },
+  {
+    "d_page": 332,
+    "p_page": 331,
+    "size": 12.0,
+    "bold": true,
+    "text": "Lenguaje/Disciplina: TEATRO"
+  },
+  {
+    "d_page": 332,
+    "p_page": 331,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Elementos del lenguaje teatral"
+  },
+  {
+    "d_page": 332,
+    "p_page": 331,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Organización teatral"
+  },
+  {
+    "d_page": 333,
+    "p_page": 332,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Producción teatral"
+  },
+  {
+    "d_page": 333,
+    "p_page": 332,
+    "size": 12.0,
+    "bold": true,
+    "text": "Situaciones de enseñanza"
+  },
+  {
+    "d_page": 334,
+    "p_page": 333,
+    "size": 16.0,
+    "bold": true,
+    "text": "Primer ciclo"
+  },
+  {
+    "d_page": 334,
+    "p_page": 333,
+    "size": 14.0,
+    "bold": true,
+    "text": "Objetivos del año"
+  },
+  {
+    "d_page": 334,
+    "p_page": 333,
+    "size": 12.0,
+    "bold": true,
+    "text": "Lenguaje/Disciplina: ARTES VISUALES"
+  },
+  {
+    "d_page": 334,
+    "p_page": 333,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: El espacio plástico visual"
+  },
+  {
+    "d_page": 334,
+    "p_page": 333,
+    "size": 14.0,
+    "bold": true,
+    "text": "TERCER AÑO"
+  },
+  {
+    "d_page": 335,
+    "p_page": 334,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Organización del espacio plástico"
+  },
+  {
+    "d_page": 335,
+    "p_page": 334,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Elementos del lenguaje visual"
+  },
+  {
+    "d_page": 335,
+    "p_page": 334,
+    "size": 12.0,
+    "bold": true,
+    "text": "Situaciones de enseñanza"
+  },
+  {
+    "d_page": 336,
+    "p_page": 335,
+    "size": 12.0,
+    "bold": true,
+    "text": "Lenguaje/Disciplina: DANZA"
+  },
+  {
+    "d_page": 336,
+    "p_page": 335,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Elementos del lenguaje de la danza"
+  },
+  {
+    "d_page": 336,
+    "p_page": 335,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Organización y contextualización del movimiento"
+  },
+  {
+    "d_page": 337,
+    "p_page": 336,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Composición y producción coreográfica"
+  },
+  {
+    "d_page": 337,
+    "p_page": 336,
+    "size": 12.0,
+    "bold": true,
+    "text": "Situaciones de enseñanza"
+  },
+  {
+    "d_page": 338,
+    "p_page": 337,
+    "size": 12.0,
+    "bold": true,
+    "text": "Lenguaje/Disciplina: MÚSICA"
+  },
+  {
+    "d_page": 338,
+    "p_page": 337,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Elementos del lenguaje musical"
+  },
+  {
+    "d_page": 338,
+    "p_page": 337,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Organización musical"
+  },
+  {
+    "d_page": 339,
+    "p_page": 338,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Producción musical"
+  },
+  {
+    "d_page": 339,
+    "p_page": 338,
+    "size": 12.0,
+    "bold": true,
+    "text": "Situaciones de enseñanza"
+  },
+  {
+    "d_page": 340,
+    "p_page": 339,
+    "size": 12.0,
+    "bold": true,
+    "text": "Lenguaje/Disciplina: TEATRO"
+  },
+  {
+    "d_page": 340,
+    "p_page": 339,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Elementos del lenguaje teatral"
+  },
+  {
+    "d_page": 340,
+    "p_page": 339,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Organización teatral"
+  },
+  {
+    "d_page": 341,
+    "p_page": 340,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Producción teatral"
+  },
+  {
+    "d_page": 341,
+    "p_page": 340,
+    "size": 12.0,
+    "bold": true,
+    "text": "Situaciones de enseñanza"
+  },
+  {
+    "d_page": 342,
+    "p_page": 341,
+    "size": 16.0,
+    "bold": true,
+    "text": "Segundo ciclo"
+  },
+  {
+    "d_page": 342,
+    "p_page": 341,
+    "size": 14.0,
+    "bold": true,
+    "text": "Objetivos del año"
+  },
+  {
+    "d_page": 342,
+    "p_page": 341,
+    "size": 14.0,
+    "bold": true,
+    "text": "CUARTO AÑO"
+  },
+  {
+    "d_page": 342,
+    "p_page": 341,
+    "size": 16.0,
+    "bold": true,
+    "text": "Propósitos del Segundo Ciclo"
+  },
+  {
+    "d_page": 343,
+    "p_page": 342,
+    "size": 12.0,
+    "bold": true,
+    "text": "Lenguaje/Disciplina: ARTES VISUALES"
+  },
+  {
+    "d_page": 343,
+    "p_page": 342,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: El espacio y su organización compositiva"
+  },
+  {
+    "d_page": 343,
+    "p_page": 342,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Elementos del lenguaje visual"
+  },
+  {
+    "d_page": 344,
+    "p_page": 343,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Análisis y producción plástico visual"
+  },
+  {
+    "d_page": 344,
+    "p_page": 343,
+    "size": 12.0,
+    "bold": true,
+    "text": "Situaciones de enseñanza"
+  },
+  {
+    "d_page": 345,
+    "p_page": 344,
+    "size": 12.0,
+    "bold": true,
+    "text": "Lenguaje/Disciplina: DANZA"
+  },
+  {
+    "d_page": 345,
+    "p_page": 344,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Conceptualización de los componentes del lenguaje"
+  },
+  {
+    "d_page": 345,
+    "p_page": 344,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Interacción para la composición"
+  },
+  {
+    "d_page": 346,
+    "p_page": 345,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Análisis y producción coreográfica"
+  },
+  {
+    "d_page": 346,
+    "p_page": 345,
+    "size": 12.0,
+    "bold": true,
+    "text": "Situaciones de enseñanza"
+  },
+  {
+    "d_page": 347,
+    "p_page": 346,
+    "size": 12.0,
+    "bold": true,
+    "text": "Lenguaje/Disciplina: MÚSICA"
+  },
+  {
+    "d_page": 347,
+    "p_page": 346,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Elementos del lenguaje musical"
+  },
+  {
+    "d_page": 347,
+    "p_page": 346,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Organización musical"
+  },
+  {
+    "d_page": 348,
+    "p_page": 347,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Producción musical"
+  },
+  {
+    "d_page": 348,
+    "p_page": 347,
+    "size": 12.0,
+    "bold": true,
+    "text": "Situaciones de enseñanza"
+  },
+  {
+    "d_page": 349,
+    "p_page": 348,
+    "size": 12.0,
+    "bold": true,
+    "text": "Lenguaje/Disciplina: TEATRO"
+  },
+  {
+    "d_page": 349,
+    "p_page": 348,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Elementos del lenguaje teatral"
+  },
+  {
+    "d_page": 349,
+    "p_page": 348,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Organización teatral"
+  },
+  {
+    "d_page": 350,
+    "p_page": 349,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Producción teatral"
+  },
+  {
+    "d_page": 350,
+    "p_page": 349,
+    "size": 12.0,
+    "bold": true,
+    "text": "Situaciones de enseñanza"
+  },
+  {
+    "d_page": 351,
+    "p_page": 350,
+    "size": 16.0,
+    "bold": true,
+    "text": "Segundo ciclo"
+  },
+  {
+    "d_page": 351,
+    "p_page": 350,
+    "size": 14.0,
+    "bold": true,
+    "text": "Objetivos del año"
+  },
+  {
+    "d_page": 351,
+    "p_page": 350,
+    "size": 14.0,
+    "bold": true,
+    "text": "QUINTO AÑO"
+  },
+  {
+    "d_page": 351,
+    "p_page": 350,
+    "size": 12.0,
+    "bold": true,
+    "text": "Lenguaje/Disciplina: ARTES VISUALES"
+  },
+  {
+    "d_page": 351,
+    "p_page": 350,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: El espacio y su organización compositiva"
+  },
+  {
+    "d_page": 352,
+    "p_page": 351,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Elementos del lenguaje plástico visual"
+  },
+  {
+    "d_page": 352,
+    "p_page": 351,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Análisis y producción plástico visual"
+  },
+  {
+    "d_page": 352,
+    "p_page": 351,
+    "size": 12.0,
+    "bold": true,
+    "text": "Situaciones de enseñanza"
+  },
+  {
+    "d_page": 353,
+    "p_page": 352,
+    "size": 12.0,
+    "bold": true,
+    "text": "Lenguaje/Disciplina: DANZA"
+  },
+  {
+    "d_page": 353,
+    "p_page": 352,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Conceptualización de los componentes del lenguaje"
+  },
+  {
+    "d_page": 353,
+    "p_page": 352,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Interacción para la composición"
+  },
+  {
+    "d_page": 354,
+    "p_page": 353,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Análisis y producción coreográfica"
+  },
+  {
+    "d_page": 354,
+    "p_page": 353,
+    "size": 12.0,
+    "bold": true,
+    "text": "Situaciones de enseñanza"
+  },
+  {
+    "d_page": 355,
+    "p_page": 354,
+    "size": 12.0,
+    "bold": true,
+    "text": "Lenguaje/Disciplina: MÚSICA"
+  },
+  {
+    "d_page": 355,
+    "p_page": 354,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Elementos del lenguaje musical"
+  },
+  {
+    "d_page": 355,
+    "p_page": 354,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Organización musical"
+  },
+  {
+    "d_page": 356,
+    "p_page": 355,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Producción musical"
+  },
+  {
+    "d_page": 356,
+    "p_page": 355,
+    "size": 12.0,
+    "bold": true,
+    "text": "Situaciones de enseñanza"
+  },
+  {
+    "d_page": 357,
+    "p_page": 356,
+    "size": 12.0,
+    "bold": true,
+    "text": "Lenguaje/Disciplina: TEATRO"
+  },
+  {
+    "d_page": 357,
+    "p_page": 356,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Elementos del lenguaje teatral"
+  },
+  {
+    "d_page": 357,
+    "p_page": 356,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Organización teatral"
+  },
+  {
+    "d_page": 358,
+    "p_page": 357,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Producción teatral"
+  },
+  {
+    "d_page": 358,
+    "p_page": 357,
+    "size": 12.0,
+    "bold": true,
+    "text": "Situaciones de enseñanza"
+  },
+  {
+    "d_page": 359,
+    "p_page": 358,
+    "size": 16.0,
+    "bold": true,
+    "text": "Segundo ciclo"
+  },
+  {
+    "d_page": 359,
+    "p_page": 358,
+    "size": 14.0,
+    "bold": true,
+    "text": "Objetivos del año"
+  },
+  {
+    "d_page": 359,
+    "p_page": 358,
+    "size": 14.0,
+    "bold": true,
+    "text": "SEXTO AÑO"
+  },
+  {
+    "d_page": 359,
+    "p_page": 358,
+    "size": 12.0,
+    "bold": true,
+    "text": "Lenguaje/Disciplina: ARTES VISUALES"
+  },
+  {
+    "d_page": 359,
+    "p_page": 358,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: El espacio plástico visual"
+  },
+  {
+    "d_page": 360,
+    "p_page": 359,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Elementos del lenguaje plástico visual"
+  },
+  {
+    "d_page": 360,
+    "p_page": 359,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Análisis y producción en el campo plástico visual"
+  },
+  {
+    "d_page": 360,
+    "p_page": 359,
+    "size": 12.0,
+    "bold": true,
+    "text": "Situaciones de enseñanza"
+  },
+  {
+    "d_page": 361,
+    "p_page": 360,
+    "size": 12.0,
+    "bold": true,
+    "text": "Lenguaje/Disciplina: DANZA"
+  },
+  {
+    "d_page": 361,
+    "p_page": 360,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Conceptualización de los componentes del lenguaje"
+  },
+  {
+    "d_page": 361,
+    "p_page": 360,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Interacción para la composición"
+  },
+  {
+    "d_page": 362,
+    "p_page": 361,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Análisis y producción coreográfica"
+  },
+  {
+    "d_page": 362,
+    "p_page": 361,
+    "size": 12.0,
+    "bold": true,
+    "text": "Situaciones de enseñanza"
+  },
+  {
+    "d_page": 363,
+    "p_page": 362,
+    "size": 12.0,
+    "bold": true,
+    "text": "Lenguaje/Disciplina: MÚSICA"
+  },
+  {
+    "d_page": 363,
+    "p_page": 362,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Elementos del lenguaje musical"
+  },
+  {
+    "d_page": 363,
+    "p_page": 362,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Organización musical"
+  },
+  {
+    "d_page": 364,
+    "p_page": 363,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Producción musical"
+  },
+  {
+    "d_page": 364,
+    "p_page": 363,
+    "size": 12.0,
+    "bold": true,
+    "text": "Situaciones de enseñanza"
+  },
+  {
+    "d_page": 365,
+    "p_page": 364,
+    "size": 12.0,
+    "bold": true,
+    "text": "Lenguaje/Disciplina: TEATRO"
+  },
+  {
+    "d_page": 365,
+    "p_page": 364,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Elementos del lenguaje teatral"
+  },
+  {
+    "d_page": 365,
+    "p_page": 364,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Organización teatral"
+  },
+  {
+    "d_page": 366,
+    "p_page": 365,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Producción teatral"
+  },
+  {
+    "d_page": 366,
+    "p_page": 365,
+    "size": 12.0,
+    "bold": true,
+    "text": "Situaciones de enseñanza"
+  },
+  {
+    "d_page": 367,
+    "p_page": 366,
+    "size": 22.0,
+    "bold": true,
+    "text": "Bibliografía"
+  },
+  {
+    "d_page": 368,
+    "p_page": 367,
+    "size": 12.0,
+    "bold": true,
+    "text": "Bibliografía"
+  },
+  {
+    "d_page": 370,
+    "p_page": 369,
+    "size": 14.0,
+    "bold": true,
+    "text": "Notas"
+  },
+  {
+    "d_page": 372,
+    "p_page": 371,
+    "size": 51.0,
+    "bold": true,
+    "text": "Educación Física"
+  },
+  {
+    "d_page": 373,
+    "p_page": 372,
+    "size": 16.0,
+    "bold": true,
+    "text": "Educación Física. Enfoque curricular y orientaciones generales para la enseñanza."
+  },
+  {
+    "d_page": 374,
+    "p_page": 373,
+    "size": 12.0,
+    "bold": true,
+    "text": "Educación Física"
+  },
+  {
+    "d_page": 376,
+    "p_page": 375,
+    "size": 14.0,
+    "bold": true,
+    "text": "Propósitos generales del área"
+  },
+  {
+    "d_page": 376,
+    "p_page": 375,
+    "size": 16.0,
+    "bold": true,
+    "text": "Primer Ciclo"
+  },
+  {
+    "d_page": 376,
+    "p_page": 375,
+    "size": 14.0,
+    "bold": true,
+    "text": "Propósitos del ciclo"
+  },
+  {
+    "d_page": 377,
+    "p_page": 376,
+    "size": 13.0,
+    "bold": true,
+    "text": "Bloques de contenidos"
+  },
+  {
+    "d_page": 377,
+    "p_page": 376,
+    "size": 14.0,
+    "bold": true,
+    "text": "Los bloques de contenidos para el Primer Ciclo"
+  },
+  {
+    "d_page": 377,
+    "p_page": 376,
+    "size": 14.0,
+    "bold": true,
+    "text": "de la escolaridad primaria son:"
+  },
+  {
+    "d_page": 377,
+    "p_page": 376,
+    "size": 14.0,
+    "bold": true,
+    "text": "Objetivos de la unidad pedagógica"
+  },
+  {
+    "d_page": 377,
+    "p_page": 376,
+    "size": 13.0,
+    "bold": true,
+    "text": "Primer Ciclo"
+  },
+  {
+    "d_page": 378,
+    "p_page": 377,
+    "size": 14.0,
+    "bold": true,
+    "text": "BLOQUE: Conciencia y constitución corporal – Nociones corporales y capacidades motoras"
+  },
+  {
+    "d_page": 378,
+    "p_page": 377,
+    "size": 14.0,
+    "bold": true,
+    "text": "PRIMER AÑO de la Unidad Pedagógica"
+  },
+  {
+    "d_page": 379,
+    "p_page": 378,
+    "size": 14.0,
+    "bold": true,
+    "text": "BLOQUE: Prácticas gimnásticas, atléticas y acuáticas – Habilidades motoras básicas y combinadas"
+  },
+  {
+    "d_page": 381,
+    "p_page": 380,
+    "size": 14.0,
+    "bold": true,
+    "text": "BLOQUE: Prácticas vinculadas con el ambiente natural – Campamentos y juegos en el ambiente"
+  },
+  {
+    "d_page": 382,
+    "p_page": 381,
+    "size": 14.0,
+    "bold": true,
+    "text": "BLOQUE: Prácticas ludomotrices – Los juegos sociomotores y el jugar con los otros"
+  },
+  {
+    "d_page": 384,
+    "p_page": 383,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Prácticas motrices expresivas - comunicación corporal, gestual y motriz"
+  },
+  {
+    "d_page": 385,
+    "p_page": 384,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Conciencia y constitución corporal – Nociones corporales y capacidades motoras"
+  },
+  {
+    "d_page": 385,
+    "p_page": 384,
+    "size": 14.0,
+    "bold": true,
+    "text": "SEGUNDO AÑO de la Unidad Pedagógica"
+  },
+  {
+    "d_page": 386,
+    "p_page": 385,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Prácticas gimnásticas, atléticas y acuáticas – Habilidades motoras básicas y combinadas"
+  },
+  {
+    "d_page": 388,
+    "p_page": 387,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Prácticas vinculadas con el ambiente natural – Campamentos y juegos en el ambiente"
+  },
+  {
+    "d_page": 389,
+    "p_page": 388,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Prácticas ludomotrices – Los juegos sociomotores y el jugar con los otros"
+  },
+  {
+    "d_page": 391,
+    "p_page": 390,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Prácticas motrices expresivas – Comunicación corporal, gestual y motriz"
+  },
+  {
+    "d_page": 392,
+    "p_page": 391,
+    "size": 14.0,
+    "bold": true,
+    "text": "TERCER AÑO"
+  },
+  {
+    "d_page": 392,
+    "p_page": 391,
+    "size": 14.0,
+    "bold": true,
+    "text": "Objetivos del año:"
+  },
+  {
+    "d_page": 393,
+    "p_page": 392,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Conciencia y constitución corporal – Nociones corporales y capacidades motoras"
+  },
+  {
+    "d_page": 394,
+    "p_page": 393,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Prácticas gimnásticas, atléticas y acuáticas – Habilidades motoras básicas y combinadas"
+  },
+  {
+    "d_page": 396,
+    "p_page": 395,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Prácticas vinculadas con el ambiente natural – Campamentos y juegos en el ambiente"
+  },
+  {
+    "d_page": 397,
+    "p_page": 396,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Prácticas ludomotrices – Los juegos sociomotores y el jugar con los otros"
+  },
+  {
+    "d_page": 399,
+    "p_page": 398,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Prácticas motrices expresivas – Comunicación corporal, gestual y motriz"
+  },
+  {
+    "d_page": 400,
+    "p_page": 399,
+    "size": 16.0,
+    "bold": true,
+    "text": "Propósitos generales del área"
+  },
+  {
+    "d_page": 400,
+    "p_page": 399,
+    "size": 16.0,
+    "bold": true,
+    "text": "Propósitos del ciclo"
+  },
+  {
+    "d_page": 400,
+    "p_page": 399,
+    "size": 16.0,
+    "bold": true,
+    "text": "Segundo Ciclo"
+  },
+  {
+    "d_page": 401,
+    "p_page": 400,
+    "size": 13.0,
+    "bold": true,
+    "text": "Bloques de contenidos"
+  },
+  {
+    "d_page": 401,
+    "p_page": 400,
+    "size": 14.0,
+    "bold": true,
+    "text": "Los bloques de contenidos para el Segundo Ciclo"
+  },
+  {
+    "d_page": 401,
+    "p_page": 400,
+    "size": 14.0,
+    "bold": true,
+    "text": "de la escolaridad primaria son:"
+  },
+  {
+    "d_page": 401,
+    "p_page": 400,
+    "size": 16.0,
+    "bold": true,
+    "text": "CUARTO AÑO"
+  },
+  {
+    "d_page": 401,
+    "p_page": 400,
+    "size": 14.0,
+    "bold": true,
+    "text": "Objetivos del año"
+  },
+  {
+    "d_page": 402,
+    "p_page": 401,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Conciencia y constitución corporal – Organización de nociones corporales y desarrollo de las"
+  },
+  {
+    "d_page": 402,
+    "p_page": 401,
+    "size": 12.0,
+    "bold": true,
+    "text": "capacidades motoras"
+  },
+  {
+    "d_page": 403,
+    "p_page": 402,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Prácticas gimnásticas, deportivas, atléticas y acuáticas – Habilidades motoras combinadas y específicas"
+  },
+  {
+    "d_page": 405,
+    "p_page": 404,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Prácticas vinculadas con el ambiente natural – Campamentos y juegos en el ambiente"
+  },
+  {
+    "d_page": 407,
+    "p_page": 406,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Prácticas ludomotrices – Los juegos sociomotores, deportivos y minideportes"
+  },
+  {
+    "d_page": 410,
+    "p_page": 409,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Prácticas motrices expresivas – Comunicación corporal, gestual y motriz"
+  },
+  {
+    "d_page": 411,
+    "p_page": 410,
+    "size": 14.0,
+    "bold": true,
+    "text": "QUINTO AÑO"
+  },
+  {
+    "d_page": 411,
+    "p_page": 410,
+    "size": 14.0,
+    "bold": true,
+    "text": "Objetivos del año"
+  },
+  {
+    "d_page": 412,
+    "p_page": 411,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Conciencia y constitución corporal – Organización de nociones corporales y desarrollo de las capacidades motoras"
+  },
+  {
+    "d_page": 413,
+    "p_page": 412,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Prácticas gimnásticas, deportivas, atléticas y acuáticas – Habilidades motoras combinadas y específicas"
+  },
+  {
+    "d_page": 415,
+    "p_page": 414,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Prácticas vinculadas con el ambiente natural – Campamentos y juegos en el ambiente"
+  },
+  {
+    "d_page": 417,
+    "p_page": 416,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Prácticas ludomotrices – Los juegos sociomotores, deportivos y minideportes"
+  },
+  {
+    "d_page": 418,
+    "p_page": 417,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Prácticas motrices expresivas – Comunicación corporal, gestual y motriz"
+  },
+  {
+    "d_page": 420,
+    "p_page": 419,
+    "size": 14.0,
+    "bold": true,
+    "text": "SEXTO AÑO"
+  },
+  {
+    "d_page": 420,
+    "p_page": 419,
+    "size": 14.0,
+    "bold": true,
+    "text": "Objetivos del año"
+  },
+  {
+    "d_page": 421,
+    "p_page": 420,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Conciencia y constitución corporal – Organización de nociones corporales y desarrollo de las"
+  },
+  {
+    "d_page": 421,
+    "p_page": 420,
+    "size": 12.0,
+    "bold": true,
+    "text": "capacidades motoras"
+  },
+  {
+    "d_page": 422,
+    "p_page": 421,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Prácticas gimnásticas, deportivas, atléticas y acuáticas – Habilidades motoras combinadas y específicas"
+  },
+  {
+    "d_page": 425,
+    "p_page": 424,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Prácticas vinculadas con el ambiente natural – Campamentos y juegos en el ambiente"
+  },
+  {
+    "d_page": 427,
+    "p_page": 426,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Prácticas ludomotrices – Los juegos sociomotores, deportivos y minideportes"
+  },
+  {
+    "d_page": 429,
+    "p_page": 428,
+    "size": 12.0,
+    "bold": true,
+    "text": "BLOQUE: Prácticas motrices expresivas – Comunicación corporal, gestual y motriz"
+  },
+  {
+    "d_page": 430,
+    "p_page": 429,
+    "size": 22.0,
+    "bold": true,
+    "text": "Bibliografía"
+  },
+  {
+    "d_page": 431,
+    "p_page": 430,
+    "size": 14.0,
+    "bold": true,
+    "text": "Páginas web"
+  },
+  {
+    "d_page": 432,
+    "p_page": 431,
+    "size": 14.0,
+    "bold": true,
+    "text": "Notas"
+  },
+  {
+    "d_page": 433,
+    "p_page": 432,
+    "size": 12.0,
+    "bold": true,
+    "text": "Este libro se terminó de imprimir el xxxxxxx de xxxxxxxxxx en"
+  },
+  {
+    "d_page": 433,
+    "p_page": 432,
+    "size": 12.0,
+    "bold": true,
+    "text": "xxxxxxxx"
+  }
+]

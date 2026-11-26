@@ -44,3 +44,9 @@ logs/
 
 # TypeScript
 *.tsbuildinfo
+
+# Python virtual environments (docs/curricular analysis tooling)
+docs/.venv/
+
+# Source PDF — redistribución pendiente de decisión propietario (ver ISSUES_REGISTER.md I-11)
+docs/dis-curricular-PBA-completo.pdf
