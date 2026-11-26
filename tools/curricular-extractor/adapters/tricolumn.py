@@ -69,8 +69,18 @@ def _make_bbox(cell: RawCell) -> Optional[tuple]:
     return None
 
 
-COLUMN_NAMES = {0: "Conceptos", 1: "Modos de conocer", 2: "Indicadores de avance"}
-COLUMN_TYPES = {0: "CONCEPT", 1: "WAY_OF_KNOWING", 2: "PROGRESS_INDICATOR"}
+COLUMN_NAMES = {
+    0: "Conceptos",
+    1: "Modos de conocer",
+    2: "Indicadores de avance",
+    3: "Situaciones de enseñanza",
+}
+COLUMN_TYPES = {
+    0: "CONCEPT",
+    1: "WAY_OF_KNOWING",
+    2: "PROGRESS_INDICATOR",
+    3: "TEACHING_SITUATION",
+}
 
 
 class TricolumnAdapter:
@@ -100,7 +110,7 @@ class TricolumnAdapter:
         for row in raw_table.rows:
             row_elements: dict[int, list[ExtractedElement]] = {}
 
-            for col in (0, 1, 2):
+            for col in (0, 1, 2, 3):
                 cell = row.cells.get(col)
                 if not cell or cell.is_empty:
                     continue
@@ -161,10 +171,11 @@ class TricolumnAdapter:
 
                 row_elements[col] = col_elements
 
-            # Crear relaciones CONCEPT_WAY_OF_KNOWING (col 0 ↔ col 1)
+            # Crear relaciones por fila (row-based, sin producto cartesiano entre filas)
             concepts = row_elements.get(0, [])
             ways = row_elements.get(1, [])
             indicators = row_elements.get(2, [])
+            situations = row_elements.get(3, [])
 
             for concept in concepts:
                 for way in ways:
@@ -189,6 +200,20 @@ class TricolumnAdapter:
                         source_stable_id=concept.stable_id,
                         target_stable_id=indicator.stable_id,
                         relation_type="CONTENT_PROGRESS_INDICATOR",
+                        relation_basis="SOURCE_EXPRESSED",
+                        digital_page=concept.digital_page,
+                        row_index=row.row_index,
+                        notes=merged_note,
+                    ))
+
+                for situation in situations:
+                    merged_note = ""
+                    if row.cells.get(3) and row.cells[3].row_span > 1:
+                        merged_note = f"Celda combinada col 3 abarca {row.cells[3].row_span} filas."
+                    relations.append(ExtractedRelation(
+                        source_stable_id=concept.stable_id,
+                        target_stable_id=situation.stable_id,
+                        relation_type="CONTENT_TEACHING_SITUATION",
                         relation_basis="SOURCE_EXPRESSED",
                         digital_page=concept.digital_page,
                         row_index=row.row_index,

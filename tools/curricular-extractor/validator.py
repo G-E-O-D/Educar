@@ -61,8 +61,8 @@ def validate_element(elem: ExtractedElement) -> ValidationResult:
     if elem.review_status == "ambiguous" and not elem.notes.strip():
         result.add_error(f"[{elem.stable_id}] review_status=ambiguous pero notes vacío.")
 
-    # column_index válido
-    if elem.column_index not in (0, 1, 2):
+    # column_index válido (-1=objetivos/no-tabla, 0-3=columnas de tabla)
+    if elem.column_index not in (-1, 0, 1, 2, 3):
         result.add_warning(f"[{elem.stable_id}] column_index={elem.column_index} inusual.")
 
     # element_type válido

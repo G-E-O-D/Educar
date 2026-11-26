@@ -50,3 +50,7 @@ docs/.venv/
 
 # Source PDF — redistribución pendiente de decisión propietario (ver ISSUES_REGISTER.md I-11)
 docs/dis-curricular-PBA-completo.pdf
+
+# Salidas del extractor curricular — no redistribuir hasta autorización (I-11)
+# Copias locales se conservan; solo se excluyen del repositorio
+docs/curricular/pilot_output/

@@ -73,13 +73,18 @@ ELEMENT_TYPE_CODES = {
     "TRANSVERSAL":        "TRV",
 }
 
-# Umbrales de coordenadas para clasificar columnas en tablas tricolumna
-# (como fracción del ancho de la página, ajustados para A4 ~595pt)
-# Estos son puntos de corte para x0 de cada span
+# Umbrales de coordenadas para clasificar columnas en tablas de MAT/CSS/CSN.
+# Las tablas tienen 4 columnas (verificado contra d136 DC PBA 2018):
+#   col0 Conceptos:           x0 ~60-120   (x0/page < 0.27)
+#   col1 Modos de conocer:    x0 ~175-220  (0.27 <= x0/page < 0.54)
+#   col2 Indicadores avance:  x0 ~330-380  (0.54 <= x0/page < 0.84)
+#   col3 Situaciones enseñ.:  x0 ~510-580  (x0/page >= 0.84)
+# Corrección Etapa 02.3.1: thresholds anteriores (0.37, 0.67) eran incorrectos.
 TRICOLUMN_THRESHOLDS = {
-    "col0_max": 0.37,   # Conceptos: x0/page_width < 0.37
-    "col1_max": 0.67,   # Modos de conocer: 0.37 <= x0/page_width < 0.67
-    # Indicadores: x0/page_width >= 0.67
+    "col0_max": 0.27,   # Conceptos: x0/page_width < 0.27
+    "col1_max": 0.54,   # Modos de conocer: 0.27 <= x0/page_width < 0.54
+    "col2_max": 0.84,   # Indicadores: 0.54 <= x0/page_width < 0.84
+    # Situaciones de enseñanza: x0/page_width >= 0.84
 }
 
 # Encabezados que marcan inicio de tabla tricolumna

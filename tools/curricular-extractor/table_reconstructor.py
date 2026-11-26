@@ -172,17 +172,17 @@ class TricolumnReconstructor:
             table.add_ambiguity("No se encontraron spans después del encabezado de tabla.")
             return table
 
-        # Clasificar cada span en columna
-        # Separar spans por columna
-        col_spans: dict[int, list[Span]] = {0: [], 1: [], 2: []}
+        # Clasificar cada span en columna 0–3
+        col_spans: dict[int, list[Span]] = {0: [], 1: [], 2: [], 3: []}
         for span in all_spans:
             col = classify_column(span.x0, self.page_width)
-            col_spans[col].append(span)
+            if col in col_spans:
+                col_spans[col].append(span)
 
         # Construir filas para columna 0 (eje de la tabla)
         col0_rows = self._group_col_spans_into_items(col_spans[0])
 
-        # Para cada item de col 0, buscar los spans de col 1 y 2 que lo solapan en Y
+        # Para cada item de col 0, buscar los spans de col 1–3 que lo solapan en Y
         row_index = 0
         for item_spans in col0_rows:
             if not item_spans:
@@ -204,6 +204,8 @@ class TricolumnReconstructor:
             c1_spans = self._spans_overlapping_y(col_spans[1], y_min, y_max)
             # Spans de col 2 que solapan
             c2_spans = self._spans_overlapping_y(col_spans[2], y_min, y_max)
+            # Spans de col 3 (Situaciones de enseñanza) que solapan
+            c3_spans = self._spans_overlapping_y(col_spans[3], y_min, y_max)
 
             row = RawTableRow(row_index=row_index, y0=y_min, y1=y_max)
             row.cells[0] = cell0
@@ -227,9 +229,16 @@ class TricolumnReconstructor:
                     page_start=c2_spans[0].page_digital,
                     page_end=c2_spans[-1].page_digital,
                 )
-            else:
-                # Celda 2 vacía → ambigüedad leve
-                pass
+
+            if c3_spans:
+                row.cells[3] = RawCell(
+                    column=3, row_index=row_index,
+                    spans=c3_spans,
+                    y0=min(s.y0 for s in c3_spans),
+                    y1=max(s.y1 for s in c3_spans),
+                    page_start=c3_spans[0].page_digital,
+                    page_end=c3_spans[-1].page_digital,
+                )
 
             table.rows.append(row)
             row_index += 1

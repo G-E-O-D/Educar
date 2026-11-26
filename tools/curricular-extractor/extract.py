@@ -40,15 +40,14 @@ from exporter import export_to_json
 
 def scan_bounds(doc: fitz.Document, area_name: str, year: int) -> dict:
     """
-    Escanea el documento buscando los headings de inicio/fin de un área/año.
-    Devuelve {start_digital, end_digital, blocks_found}.
+    Detecta los límites reales de un área/año usando detección a nivel de span
+    con filtro de tamaño de fuente (>= 14pt) para evitar falsos positivos con
+    contenido curricular que contiene palabras como "cuartos" o "quintos".
 
-    Busca patrones como:
-      - "CUARTO AÑO" (all caps)
-      - "cuarto año" (lowercase)
-      - "4to año", "4° año"
+    Para MAT Segundo Ciclo, año 4° no tiene heading explícito; se usa el inicio
+    implícito del ciclo (d135) verificado en Etapa 02.3.1.
 
-    Dentro del rango conocido del área (de CURRICULAR_STRUCTURE.md).
+    Retorna {area, year, search_range, hits, end_hits, start_digital, end_digital}.
     """
     area_ranges = {
         "MAT": (98, 179),
@@ -57,59 +56,79 @@ def scan_bounds(doc: fitz.Document, area_name: str, year: int) -> dict:
         "LEN": (44, 97),
     }
 
-    year_patterns = {
-        1: ["PRIMER AÑO", "primer año", "1° AÑO"],
-        2: ["SEGUNDO AÑO", "segundo año", "2° AÑO"],
-        3: ["TERCER AÑO", "tercer año", "3° AÑO"],
-        4: ["CUARTO AÑO", "cuarto año", "4° AÑO", "CUARTO"],
-        5: ["QUINTO AÑO", "quinto año", "5° AÑO"],
-        6: ["SEXTO AÑO", "sexto año", "6° AÑO"],
+    # Inicio implícito de Segundo Ciclo (cuando año 4° no tiene heading explícito)
+    segundo_ciclo_implicit_start = {
+        "MAT": 135,
     }
 
-    from config import AREA_CODES
-    area_code = {v: k for k, v in AREA_CODES.items()}.get(area_name, area_name)
-    area_key = area_name if area_name in area_ranges else next(
-        (k for k, v in AREA_CODES.items() if v == area_name), None
-    )
+    # Textos de heading de año (minúsculas exacto o prefijo) con tamaño mínimo de fuente.
+    # Verificado: "Quinto año" d147 sz=18, "Sexto año" d161 sz=18 en MAT Segundo Ciclo.
+    # En CSS/CSN se usan versiones en MAYÚSCULAS; ambas cubiertas por comparación lower().
+    year_heading_texts = {
+        1: ["primer año"],
+        2: ["segundo año"],
+        3: ["tercer año"],
+        4: ["cuarto año"],
+        5: ["quinto año"],
+        6: ["sexto año"],
+    }
+    MIN_HEADING_SIZE = 14.0
 
-    # Intentar con el código directamente
     start_range, end_range = area_ranges.get(area_name, (98, 179))
 
-    patterns = year_patterns.get(year, [])
-    # Also handle next year patterns to find end boundary
-    next_patterns = year_patterns.get(year + 1, []) if year < 6 else []
+    def find_year_heading(patterns, page_start, page_end):
+        """Devuelve el primer hit con span de tamaño >= MIN_HEADING_SIZE."""
+        for d in range(page_start, page_end + 1):
+            page = doc[d - 1]
+            for blk in page.get_text("dict", sort=True).get("blocks", []):
+                if blk.get("type") != 0:
+                    continue
+                for ln in blk.get("lines", []):
+                    for sp in ln.get("spans", []):
+                        # Normalizar whitespace ("QUINTO  AÑO" tiene 2 espacios en este PDF)
+                        t = " ".join(sp.get("text", "").strip().lower().split())
+                        sz = sp.get("size", 0)
+                        if sz >= MIN_HEADING_SIZE:
+                            for pat in patterns:
+                                if t == pat or t.startswith(pat):
+                                    return {
+                                        "digital_page": d,
+                                        "pattern": pat,
+                                        "size": sz,
+                                        "text": sp.get("text", "").strip(),
+                                    }
+        return None
 
-    hits = []
-    for digital_page in range(start_range, end_range + 1):
-        page = doc[digital_page - 1]
-        text = page.get_text()
-        for pat in patterns:
-            if pat in text:
-                hits.append({"digital_page": digital_page, "pattern": pat})
-                break
+    this_patterns = year_heading_texts.get(year, [])
+    this_hit = find_year_heading(this_patterns, start_range, end_range)
 
-    # Find end boundary (start of next year)
-    end_hits = []
-    for digital_page in range(start_range, end_range + 1):
-        if hits and digital_page <= hits[0]["digital_page"]:
-            continue
-        page = doc[digital_page - 1]
-        text = page.get_text()
-        for pat in next_patterns:
-            if pat in text:
-                end_hits.append({"digital_page": digital_page, "pattern": pat})
-                break
+    # Caso especial: año 4° sin heading explícito en MAT Segundo Ciclo
+    if this_hit is None and year == 4 and area_name in segundo_ciclo_implicit_start:
+        implicit = segundo_ciclo_implicit_start[area_name]
+        this_hit = {
+            "digital_page": implicit,
+            "pattern": "segundo_ciclo_implicit",
+            "size": 0,
+            "text": "(inicio implícito Segundo Ciclo)",
+        }
 
-    result = {
+    # Detectar heading del año siguiente para fijar el fin del año actual
+    next_patterns = year_heading_texts.get(year + 1, []) if year < 6 else []
+    search_from = (this_hit["digital_page"] + 1) if this_hit else start_range
+    next_hit = find_year_heading(next_patterns, search_from, end_range) if next_patterns else None
+
+    hits = [this_hit] if this_hit else []
+    end_hits = [next_hit] if next_hit else []
+
+    return {
         "area": area_name,
         "year": year,
         "search_range": [start_range, end_range],
         "hits": hits,
         "end_hits": end_hits,
-        "start_digital": hits[0]["digital_page"] if hits else None,
-        "end_digital": (end_hits[0]["digital_page"] - 1) if end_hits else end_range,
+        "start_digital": this_hit["digital_page"] if this_hit else None,
+        "end_digital": (next_hit["digital_page"] - 1) if next_hit else end_range,
     }
-    return result
 
 
 # ---------------------------------------------------------------------------
@@ -326,40 +345,56 @@ def _extract_objective_items(text: str) -> list[str]:
 def verify_gc007(doc: fitz.Document) -> dict:
     """
     Busca el año específico del ciclo hidrológico en CS Naturales Segundo Ciclo.
-    Rango conocido: d260–d290. Texto: "ciclo hidrológico".
+    Rango d260–d290. Detecta headings de año por span con size >= 14pt para
+    evitar falsos positivos desde índices o tablas de contenido.
+
+    Verificado en Etapa 02.3.1:
+      - d272: "QUINTO AÑO" size=16 → inicio 5°
+      - d279: ciclo hidrológico
+      - d282: "SEXTO AÑO" size=16
     """
     target_term = "ciclo hidrol"
-    year_patterns = {
-        "CUARTO AÑO": 4, "cuarto año": 4,
-        "QUINTO AÑO": 5, "quinto año": 5,
-        "SEXTO AÑO": 6, "sexto año": 6,
-        "4° año": 4, "5° año": 5, "6° año": 6,
+    # Textos de heading de año (minúsculas) detectados por span con size >= MIN_SIZE
+    year_heading_texts = {
+        "cuarto año": 4,
+        "quinto año": 5,
+        "sexto año": 6,
     }
+    MIN_HEADING_SIZE = 14.0
 
     hits = []
-    year_headings_seen = {}
+    year_headings_seen = {}   # {year: digital_page} — solo headings con size >= 14pt
 
     for digital_page in range(260, 291):
         page = doc[digital_page - 1]
+
+        # Detectar headings de año a nivel de span (con filtro de tamaño)
+        for blk in page.get_text("dict", sort=True).get("blocks", []):
+            if blk.get("type") != 0:
+                continue
+            for ln in blk.get("lines", []):
+                for sp in ln.get("spans", []):
+                    # Normalizar whitespace ("QUINTO  AÑO" tiene 2 espacios en este PDF)
+                    t = " ".join(sp.get("text", "").strip().lower().split())
+                    sz = sp.get("size", 0)
+                    if sz >= MIN_HEADING_SIZE:
+                        for pat, yr in year_heading_texts.items():
+                            if t == pat or t.startswith(pat):
+                                # Sobrescribir con la aparición más reciente (evita ToC d261)
+                                year_headings_seen[yr] = digital_page
+
+        # Buscar el término de ciclo hidrológico en el texto completo de la página
         text = page.get_text()
-
-        # Registrar headings de año
-        for pat, yr in year_patterns.items():
-            if pat in text and yr not in year_headings_seen:
-                year_headings_seen[yr] = digital_page
-
-        # Buscar el término
         if target_term.lower() in text.lower():
-            # Determinar año: buscar el heading de año más reciente antes de esta página
+            # Año: heading con size >= 14pt más reciente visto antes de esta página
             current_year = None
             for yr, pg in sorted(year_headings_seen.items(), key=lambda x: x[1], reverse=True):
                 if pg <= digital_page:
                     current_year = yr
                     break
 
-            # Extraer contexto
             idx = text.lower().find(target_term.lower())
-            context = text[max(0, idx-100):idx+200].strip()
+            context = text[max(0, idx - 100):idx + 200].strip()
 
             hits.append({
                 "digital_page": digital_page,

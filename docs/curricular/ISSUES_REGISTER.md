@@ -236,19 +236,23 @@ El propietario del proyecto debe decidir si incluir el PDF en el commit o manten
 | Código | I-12 |
 | Tipo | EST |
 | Prioridad | BAJA |
-| Estado | PARCIALMENTE VERIFICADO — Etapa 02.3 |
+| Estado | VERIFICADO — Etapa 02.3.1 |
 
 **Descripción:**
-GC-007 identificó el texto del "ciclo hidrológico" en CS Naturales d280, dentro del Segundo Ciclo, pero sin determinar a qué año específico (4°, 5° o 6°) pertenece el bloque. El modelo lo representa con `year_scope = 'CYCLE'` hasta que se verifique.
+GC-007 identificó el texto del "ciclo hidrológico" en CS Naturales d279-d280, dentro del Segundo Ciclo. La determinación de año requería detección robusta de headings.
 
-**Resultado de Etapa 02.3:**  
-El script `verify_gc007()` escaneó d260–d290 y encontró el término en **d279 (p278)** y **d280 (p279)**.  
-- Contexto d279: *"Cambios en la hidrosfera: el ciclo hidrológico. Mareas y corrientes marinas."*  
-- Contexto d280: *"experimentar y describir las transformaciones del agua en el ciclo hidrológico..."*
+**Resultado de Etapa 02.3.1 — VERIFICADO:**  
+El script `verify_gc007()` (revisado en Etapa 02.3.1) detecta headings de año por tamaño de fuente ≥ 14pt, evitando falsos positivos del índice d261.
 
-Los headings de año (CUARTO, QUINTO, SEXTO) aparecen todos en d261 (página de índice), por lo que el algoritmo no puede determinar el año con certeza. El ciclo hidrológico corresponde **muy probablemente a 4°** (introducción a la hidrosfera en el primer año del Segundo Ciclo). Requiere verificación manual.
+Headings detectados en d260–d290 con size ≥ 14pt:
+- d272: **"QUINTO AÑO"** (size=16) → inicio de 5°
+- d282: **"SEXTO AÑO"** (size=16) → inicio de 6°
 
-**Acción pendiente:** Verificar manualmente d261–d280 para confirmar que d279 está dentro de la sección de 4°. Actualizar `year_scope` a `YEAR` una vez confirmado.
+Contenido ciclo hidrológico en d279: *"Cambios en la hidrosfera: el ciclo hidrológico. Mareas y corrientes marinas."* → dentro de QUINTO AÑO (d272–d281).
+
+**Conclusión: GC-007 pertenece a 5° año (QUINTO AÑO).** `year_scope = 'YEAR'`, `year = 5`.
+
+**Bug corregido:** La versión anterior de `verify_gc007()` usaba búsqueda de texto en página completa y encontraba "CUARTO AÑO" en el índice d261, asignando incorrectamente año 4°. Corregido en Etapa 02.3.1 con detección span-level.
 
 ---
 

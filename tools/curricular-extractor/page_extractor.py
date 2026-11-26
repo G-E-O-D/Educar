@@ -161,18 +161,27 @@ def find_table_header_row(rows: list[TextRow]) -> Optional[int]:
 
 def classify_column(x0: float, page_width: float) -> int:
     """
-    Clasifica un span en columna 0, 1 o 2 según su posición X.
+    Clasifica un span en columna 0, 1, 2 o 3 según su posición X.
     0 = Conceptos/Contenidos (izquierda)
-    1 = Modos de conocer (centro)
-    2 = Indicadores de avance (derecha)
+    1 = Modos de conocer (centro-izquierda)
+    2 = Indicadores de avance (centro-derecha)
+    3 = Situaciones de enseñanza (derecha)
+
+    Thresholds verificados contra d136 DC PBA 2018 (Etapa 02.3.1):
+      col0: x0 ~60-120   (x0/page < 0.27)
+      col1: x0 ~175-220  (0.27 ≤ x0/page < 0.54)
+      col2: x0 ~330-380  (0.54 ≤ x0/page < 0.84)
+      col3: x0 ~510-580  (x0/page ≥ 0.84)
     """
     ratio = x0 / page_width
-    if ratio < 0.37:
+    if ratio < 0.27:
         return 0
-    elif ratio < 0.67:
+    elif ratio < 0.54:
         return 1
-    else:
+    elif ratio < 0.84:
         return 2
+    else:
+        return 3
 
 
 def extract_page_content(

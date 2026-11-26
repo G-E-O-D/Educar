@@ -28,12 +28,16 @@ def make_span(text: str, x0: float, y0: float, x1: float = None, y1: float = Non
 # Coordenadas aproximadas para A4 (595pt ancho)
 PAGE_WIDTH = 595.0
 
-# Fila 1: 3 celdas independientes
+# Fila 1: 4 celdas independientes (col0–col3; thresholds: 0.27=160.65, 0.54=321.3, 0.84=499.8)
 TRICOLUMN_ROW1 = [
-    make_span("Concepto sintético 1",    x0=40,  y0=100, x1=200, y1=115),
-    make_span("Modo de conocer A",       x0=215, y0=100, x1=380, y1=115),
-    make_span("Indicador alfa",          x0=400, y0=100, x1=560, y1=115),
+    make_span("Concepto sintético 1",    x0=40,  y0=100, x1=160, y1=115),   # col0
+    make_span("Modo de conocer A",       x0=215, y0=100, x1=320, y1=115),   # col1
+    make_span("Indicador alfa",          x0=350, y0=100, x1=490, y1=115),   # col2
+    make_span("Situación de enseñanza A", x0=520, y0=100, x1=590, y1=115), # col3
 ]
+
+# Col3 fixture independiente para pruebas de TEACHING_SITUATION
+TRICOLUMN_ROW1_COL3 = make_span("Situación de enseñanza A", x0=520, y0=100, x1=590, y1=115)
 
 # Fila 2: columna 1 combinada (cubre fila 2 y 3)
 # Gap entre fila 2 (y1=135) y fila 3 (y0=165) es 30pt > umbral 12pt → reconstructor las separa

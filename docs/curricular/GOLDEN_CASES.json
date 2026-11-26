@@ -98,19 +98,21 @@
 
     {
       "id": "GC-007",
-      "label": "Ciclo del agua — CS Naturales Segundo Ciclo",
+      "label": "Ciclo del agua — CS Naturales Segundo Ciclo 5°",
       "area": "Ciencias Naturales",
       "ciclo": "Segundo Ciclo",
-      "year": "no especificado en bloque — Segundo Ciclo general",
-      "bloque": "El mundo físico y natural (estimado)",
-      "digital_page": 280,
-      "printed_page": 279,
-      "text_original": "de este modo, podrán experimentar y describir las transformaciones del agua en el ciclo hidrológico, explicar cómo se produce el paso del agua de la atmósfera a la superficie terrestre, de los continentes al mar y de este a la atmósfera, identificando los cambios de estado que atraviesa en ese pasaje.",
-      "context": "Aparece en situaciones de enseñanza. El término usado en el DC es 'ciclo hidrológico', no 'ciclo del agua'. También se detecta en CS Sociales como referencia contextual (d189), pero la enseñanza explícita del ciclo está en CS Naturales.",
-      "certainty": "ALTA — texto verificado en d280",
-      "topics_confirmed": ["ciclo hidrológico", "evaporación", "condensación", "cambios de estado del agua"],
+      "year": "5°",
+      "year_scope": "YEAR",
+      "bloque": "La Tierra y el universo",
+      "digital_page": 279,
+      "printed_page": 278,
+      "text_original": "Cambios en la hidrosfera: el ciclo hidrológico. Mareas y corrientes marinas.",
+      "context": "El término aparece en Conceptos de CS Naturales QUINTO AÑO, bloque 'La Tierra y el universo' (d279). Heading 'QUINTO AÑO' (size=16) en d272; heading 'SEXTO AÑO' (size=16) en d282. También se detecta en Situaciones de enseñanza (d280) y en CS Sociales como referencia contextual (d189).",
+      "certainty": "ALTA — texto en d279 (Conceptos), año verificado por heading span-level en Etapa 02.3.1",
+      "topics_confirmed": ["ciclo hidrológico", "hidrosfera", "mareas", "corrientes marinas", "cambios de estado del agua"],
       "also_in_cs_sociales": false,
-      "note": "Término canónico en el DC es 'ciclo hidrológico'. Verificar en qué año exacto de Segundo Ciclo se ubica; requiere lectura adicional de la estructura de CS Naturales 2° Ciclo."
+      "year_determination_method": "span-level heading detection (size>=14pt), no full-text search",
+      "note": "Corrección Etapa 02.3.1: año previo (4°) era incorrecto. Bug: verify_gc007 v1 usaba búsqueda full-text y encontraba CUARTO AÑO en índice d261. Corregido con detección span-level."
     },
 
     {

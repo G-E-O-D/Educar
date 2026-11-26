@@ -1,67 +1,82 @@
-# Registro de Problemas de Extracción — Etapa 02.3
+# Registro de Problemas de Extracción — Etapa 02.3 / 02.3.1
 
-**Fecha:** 2026-11-26  
+**Fecha última actualización:** 2026-11-26  
 **Extractor:** 0.1.0-pilot  
-**Área procesada:** Matemática (MAT) — Segundo Ciclo (4°, 5°, 6°)
+**Área procesada:** Matemática (MAT) — Segundo Ciclo 4°
 
 ---
 
 ## EI-01 — Relaciones por producto cartesiano
 
 **Severidad:** ALTA  
-**Estado:** ABIERTO
+**Estado:** CORREGIDO — Etapa 02.3.1
 
-**Descripción:**  
-El adaptador tricolumna genera relaciones `CONCEPT_WAY_OF_KNOWING` como producto cartesiano de todos los conceptos de col0 con todos los modos de conocer de col1 dentro de un mismo bloque. Para un bloque con 10 conceptos y 20 modos de conocer, esto genera 200 relaciones en lugar de ~20.
+**Descripción original:**  
+El adaptador tricolumna con thresholds erróneos mezclaba Conceptos (col0) y Modos de conocer (col1) en la misma columna clasificada, produciendo producto cartesiano a nivel de bloque.
 
-**Evidencia:**  
-- Piloto: 706 conceptos × ~26 modos de conocer ≈ 18220 relaciones `CONCEPT_WAY_OF_KNOWING`.
-- Relación real esperada: cada concepto se vincula solo con los modos de conocer de su fila (1:1 o 1:N por celdas combinadas).
+**Causa raíz corregida:**  
+Los thresholds de columna eran incorrectos (0.37/0.67 para 2 columnas), cuando el DC PBA 2018 tiene 4 columnas:
+- col0 Conceptos: x0/page < 0.27
+- col1 Modos de conocer: 0.27 ≤ x0/page < 0.54
+- col2 Indicadores de avance: 0.54 ≤ x0/page < 0.84
+- col3 Situaciones de enseñanza: x0/page ≥ 0.84
 
-**Causa raíz:**  
-`adapters/tricolumn.py`: La función `adapt()` vincula todos los conceptos con todos los modos de conocer en la misma instancia del bloque, en lugar de usar la correspondencia por fila de la tabla.
+**Correcciones aplicadas en Etapa 02.3.1:**
+- `config.py`: thresholds actualizados (0.27, 0.54, 0.84)
+- `page_extractor.py`: `classify_column()` retorna 0–3 (antes 0–2)
+- `table_reconstructor.py`: `TricolumnReconstructor` procesa col3
+- `adapters/tricolumn.py`: COLUMN_TYPES incluye `TEACHING_SITUATION` para col3
 
-**Acción requerida para Etapa 02.4:**  
-Modificar `TricolumnAdapter.adapt()` para crear relaciones por fila: `cell[0]` de la misma `RawTableRow` con `cell[1]` de esa misma fila. Para celdas combinadas (row_span > 1), vincular el modo de conocer con los N conceptos que cubre.
+**Resultado:**
+- Piloto v1 (thresholds incorrectos): 1551 elementos, 22726 relaciones (inválidos)
+- Piloto v2 (thresholds correctos): 619 elementos, 9526 relaciones (d135-d146)
+
+**Nota:** Las relaciones M:N restantes dentro de cada fila son legítimas (celdas combinadas y multi-ítem). Se documentan como pendiente de análisis adicional en Etapa 02.4.
 
 ---
 
 ## EI-02 — Bounds MAT 4° mayores al estimado
 
 **Severidad:** MEDIA  
-**Estado:** DOCUMENTADO
+**Estado:** CORREGIDO — Etapa 02.3.1
 
-**Descripción:**  
-El rango real de Matemática 4° no es d135–d146 (estimado preliminar) sino d135–d179. Esto se debe a que el Segundo Ciclo de Matemática en el DC PBA 2018 no segmenta los contenidos por año en secciones separadas. Los tres años (4°, 5°, 6°) están agrupados en bloques temáticos sucesivos dentro del mismo apartado.
+**Descripción original:**  
+El algoritmo `scan_bounds()` usaba búsqueda de texto completo de página, que coincidía con palabras de contenido como "cuartos" o "quintos" (fracciones matemáticas), no solo headings de año.
 
-**Evidencia:**  
-- Scan_bounds detectó inicio en d135 (patrón "CUARTO AÑO") y fin en d179 (límite del área MAT).
-- Los 20 bloques detectados incluyen 3 repeticiones de los mismos nombres de bloque (un conjunto por año).
+**Causa raíz corregida:**  
+Búsqueda full-text sin filtro de tamaño de fuente → falsos positivos con contenido curricular.
 
-**Acción requerida para Etapa 02.4:**  
-Implementar segmentación por año dentro del área: buscar los headings de año (CUARTO AÑO, QUINTO AÑO, SEXTO AÑO) como delimitadores internos y procesar solo el rango entre el inicio de 4° y el inicio de 5°.
+**Correcciones aplicadas en Etapa 02.3.1:**
+- `scan_bounds()` reescrito para buscar headings a nivel de span con size ≥ 14pt
+- Whitespace normalizado para manejar "QUINTO  AÑO" (2 espacios en este PDF)
+- Caso especial: MAT 4° no tiene heading explícito → usa d135 (inicio implícito Segundo Ciclo)
+- La normalización funciona también para CSN ("QUINTO AÑO" size=16 en d272)
+
+**Resultado verificado:**
+- MAT 4°: d135–d146 ✓ (d147 = "Quinto año" size=18, inicio de 5°)
+- MAT 5°: d147–d160 ✓ (d161 = "Sexto año" size=18, inicio de 6°)
+- MAT 6°: d161–d179 ✓ (fin de área MAT)
 
 ---
 
 ## EI-03 — Incertidumbre en año de GC-007
 
 **Severidad:** MEDIA  
-**Estado:** PARCIALMENTE RESUELTO — pendiente verificación manual
+**Estado:** RESUELTO — Etapa 02.3.1
 
-**Descripción:**  
-El término "ciclo hidrológico" fue encontrado en d279 (p278) y d280 (p279). El algoritmo `verify_gc007()` determina el año mirando el heading de año más reciente antes de d279. Sin embargo, los headings "CUARTO AÑO", "QUINTO AÑO" y "SEXTO AÑO" aparecen todos en d261 (página de índice del área CS Naturales), haciendo que la determinación del año sea no confiable.
+**Descripción original:**  
+El algoritmo `verify_gc007()` determinaba año = 4° erróneamente porque encontraba "CUARTO AÑO" en el índice d261 antes que "QUINTO AÑO" en el heading real d272.
 
-**Resultado del algoritmo:** Año = 4° (no determinista cuando hay empate de páginas).
+**Corrección aplicada en Etapa 02.3.1:**
+- `verify_gc007()` reescrito con detección span-level (size ≥ 14pt)
+- Sobrescribe con la aparición MÁS RECIENTE del heading (evita el ToC d261)
+- Whitespace normalizado
 
-**Evidencia del contexto en d279:**  
-*"Cambios en la hidrosfera: el ciclo hidrológico. Mareas y corrientes marinas. Movimiento del agua en diferentes materiales del suelo..."*
-
-**Hipótesis:** El ciclo hidrológico corresponde a 4° (primer año del Segundo Ciclo) por ser una introducción a la hidrosfera. Los contenidos de 5° y 6° típicamente profundizan temas como ecosistemas y procesos geológicos.
-
-**Acción requerida:**  
-Verificar manualmente d261–d280 para identificar los headings de año dentro del cuerpo del texto (no solo en la tabla de contenidos). Actualizar I-12 cuando se confirme.
-
-**Actualización I-12:** De "pendiente" a "PARCIALMENTE VERIFICADO — probablemente 4°".
+**Resultado:**
+- GC-007 año = **5° (QUINTO AÑO)** ✓
+- Heading d272 "QUINTO AÑO" size=16 → ciclo hidrológico d279 → heading d282 "SEXTO AÑO" size=16
+- I-12 actualizado a VERIFICADO en ISSUES_REGISTER.md
+- GOLDEN_CASES.json GC-007 actualizado: year="5°", year_scope="YEAR", bloque="La Tierra y el universo"
 
 ---
 
