@@ -225,7 +225,10 @@ COMMENT ON TABLE curriculum_blocks IS 'Bloques de contenido dentro de un área/c
 
 CREATE TABLE curriculum_elements (
     id                  uuid PRIMARY KEY DEFAULT gen_random_uuid(),
-    stable_id           text NOT NULL UNIQUE,
+    -- Corrección Etapa 02.3: unique por (stable_id, area_id) no globalmente.
+    -- Razón: el mismo concepto puede existir en diferentes documentos fuente
+    -- con el mismo stable_id asignado por el extractor.
+    stable_id           text NOT NULL,
     element_type        element_type_t NOT NULL,
     area_id             uuid NOT NULL REFERENCES curriculum_areas(id),
     block_id            uuid REFERENCES curriculum_blocks(id),
@@ -279,21 +282,37 @@ CREATE TABLE element_source_refs (
 COMMENT ON TABLE element_source_refs IS 'Trazabilidad documental: qué página, tabla, fila y columna del PDF origina cada elemento';
 
 CREATE TABLE element_year_scope (
+    -- Corrección Etapa 02.3: PK surrogate + partial unique indexes (en lugar de COALESCE PK)
+    -- Razón: COALESCE PK no es estándar PostgreSQL y genera comportamiento ambiguo con NULLs.
+    id          uuid PRIMARY KEY DEFAULT gen_random_uuid(),
     element_id  uuid NOT NULL REFERENCES curriculum_elements(id) ON DELETE CASCADE,
     year_id     uuid REFERENCES education_years(id),
     cycle_id    uuid REFERENCES curriculum_cycles(id),
     scope_kind  year_scope_t NOT NULL,
 
-    PRIMARY KEY (element_id, COALESCE(year_id, '00000000-0000-0000-0000-000000000000'::uuid),
-                             COALESCE(cycle_id, '00000000-0000-0000-0000-000000000000'::uuid)),
-
     CONSTRAINT scope_consistency CHECK (
-        (scope_kind = 'YEAR' AND year_id IS NOT NULL) OR
+        (scope_kind = 'YEAR' AND year_id IS NOT NULL AND cycle_id IS NULL) OR
         (scope_kind = 'CYCLE' AND cycle_id IS NOT NULL AND year_id IS NULL) OR
-        (scope_kind = 'DOCUMENT')
+        (scope_kind = 'DOCUMENT' AND year_id IS NULL AND cycle_id IS NULL)
     )
 );
 COMMENT ON TABLE element_year_scope IS 'Relación M:N entre elementos y años/ciclos a los que aplican';
+
+-- Unicidad parcial según scope_kind (reemplaza el COALESCE PK)
+-- Un elemento puede pertenecer a un año específico solo una vez
+CREATE UNIQUE INDEX uq_element_year_year
+    ON element_year_scope(element_id, year_id)
+    WHERE scope_kind = 'YEAR' AND year_id IS NOT NULL;
+
+-- Un elemento puede pertenecer a un ciclo solo una vez (scope de ciclo, sin año específico)
+CREATE UNIQUE INDEX uq_element_year_cycle
+    ON element_year_scope(element_id, cycle_id)
+    WHERE scope_kind = 'CYCLE' AND cycle_id IS NOT NULL;
+
+-- Un elemento puede tener scope de documento solo una vez
+CREATE UNIQUE INDEX uq_element_year_document
+    ON element_year_scope(element_id)
+    WHERE scope_kind = 'DOCUMENT';
 
 -- ---------------------------------------------------------------------------
 -- CAPA 4: RELACIONES Y TERMINOLOGÍA
@@ -334,6 +353,49 @@ CREATE TABLE term_aliases (
 COMMENT ON TABLE term_aliases IS 'Sinónimos y alias de búsqueda. Ej: ciclo del agua → ciclo hidrológico';
 
 -- ---------------------------------------------------------------------------
+-- CAPA 5: IDEMPOTENCIA DE IMPORTACIONES
+-- ---------------------------------------------------------------------------
+-- Corrección Etapa 02.3: tablas de importación para estrategia idempotente.
+-- Permiten re-ejecutar el extractor sin duplicar ni perder datos.
+
+CREATE TABLE import_batches (
+    id              uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+    source_id       uuid NOT NULL REFERENCES document_sources(id),
+    extractor_version text NOT NULL,
+    area_code       text NOT NULL,
+    year_number     int,                   -- NULL = ciclo completo
+    started_at      timestamptz NOT NULL DEFAULT now(),
+    finished_at     timestamptz,
+    status          text NOT NULL DEFAULT 'running'
+                    CHECK (status IN ('running', 'completed', 'failed', 'rolled_back')),
+    elements_added  int NOT NULL DEFAULT 0,
+    relations_added int NOT NULL DEFAULT 0,
+    sha256          char(64),              -- hash del PDF procesado
+    notes           text
+);
+COMMENT ON TABLE import_batches IS 'Registro de cada ejecución del extractor; permite idempotencia y auditoría';
+
+CREATE TABLE import_conflicts (
+    id                  uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+    batch_id            uuid NOT NULL REFERENCES import_batches(id) ON DELETE CASCADE,
+    conflict_type       text NOT NULL
+                        CHECK (conflict_type IN (
+                            'STABLE_ID_COLLISION',      -- mismo stable_id, texto distinto
+                            'DUPLICATE_TEXT',           -- mismo texto, distinto stable_id
+                            'PAGE_MISMATCH',            -- mismo stable_id, página diferente
+                            'REVIEW_STATUS_DOWNGRADE',  -- intento de bajar de validated a extracted
+                            'OTHER'
+                        )),
+    existing_element_id uuid REFERENCES curriculum_elements(id),
+    incoming_stable_id  text NOT NULL,
+    incoming_text       text NOT NULL,
+    resolved            boolean NOT NULL DEFAULT false,
+    resolution          text,
+    created_at          timestamptz NOT NULL DEFAULT now()
+);
+COMMENT ON TABLE import_conflicts IS 'Conflictos detectados durante importaciones; requieren revisión manual';
+
+-- ---------------------------------------------------------------------------
 -- ÍNDICES
 -- ---------------------------------------------------------------------------
 
@@ -347,6 +409,10 @@ CREATE INDEX idx_elements_year_scope  ON curriculum_elements(year_scope);
 -- Solo elementos validados (índice parcial — optimiza la interfaz docente)
 CREATE INDEX idx_elements_validated ON curriculum_elements(area_id, element_type)
     WHERE review_status = 'validated';
+
+-- Unicidad de stable_id dentro de cada área (corrección Etapa 02.3)
+CREATE UNIQUE INDEX uq_elements_stable_id_area
+    ON curriculum_elements(stable_id, area_id);
 
 -- Trazabilidad por página
 CREATE INDEX idx_source_refs_page     ON element_source_refs(source_id, digital_page);

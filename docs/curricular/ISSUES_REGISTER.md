@@ -236,12 +236,19 @@ El propietario del proyecto debe decidir si incluir el PDF en el commit o manten
 | Código | I-12 |
 | Tipo | EST |
 | Prioridad | BAJA |
-| Estado | PENDIENTE — a verificar en Etapa 02.3 |
+| Estado | PARCIALMENTE VERIFICADO — Etapa 02.3 |
 
 **Descripción:**
 GC-007 identificó el texto del "ciclo hidrológico" en CS Naturales d280, dentro del Segundo Ciclo, pero sin determinar a qué año específico (4°, 5° o 6°) pertenece el bloque. El modelo lo representa con `year_scope = 'CYCLE'` hasta que se verifique.
 
-**Acción:** ejecutar script de análisis sobre rango d260–d290 buscando headings de año en CS Naturales Segundo Ciclo.
+**Resultado de Etapa 02.3:**  
+El script `verify_gc007()` escaneó d260–d290 y encontró el término en **d279 (p278)** y **d280 (p279)**.  
+- Contexto d279: *"Cambios en la hidrosfera: el ciclo hidrológico. Mareas y corrientes marinas."*  
+- Contexto d280: *"experimentar y describir las transformaciones del agua en el ciclo hidrológico..."*
+
+Los headings de año (CUARTO, QUINTO, SEXTO) aparecen todos en d261 (página de índice), por lo que el algoritmo no puede determinar el año con certeza. El ciclo hidrológico corresponde **muy probablemente a 4°** (introducción a la hidrosfera en el primer año del Segundo Ciclo). Requiere verificación manual.
+
+**Acción pendiente:** Verificar manualmente d261–d280 para confirmar que d279 está dentro de la sección de 4°. Actualizar `year_scope` a `YEAR` una vez confirmado.
 
 ---
 

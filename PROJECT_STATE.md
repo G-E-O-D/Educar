@@ -2,7 +2,7 @@
 
 > **Última actualización:** 2026-11-26  
 > **Versión:** 0.2.0  
-> **Estado:** Etapa 02.2 completada — diseño del modelo de datos curricular
+> **Estado:** Etapa 02.3 completada — motor de extracción curricular y prueba piloto
 
 ---
 
@@ -244,10 +244,57 @@ Ver `docs/curricular/ISSUES_REGISTER.md` para detalle completo.
 
 ---
 
+## Etapa 02.3 — Motor de extracción curricular y prueba piloto (2026-11-26)
+
+### Entregables generados
+
+| Archivo | Descripción |
+|---------|-------------|
+| `tools/curricular-extractor/` | Extractor modular (10 módulos Python) |
+| `tools/curricular-extractor/tests/` | 85 tests automatizados (5 suites) |
+| `docs/curricular/EXTRACTOR_ARCHITECTURE.md` | Arquitectura detallada del extractor |
+| `docs/curricular/PILOT_EXTRACTION_REPORT.md` | Reporte de extracción MAT Segundo Ciclo |
+| `docs/curricular/EXTRACTION_ISSUES.md` | 6 issues técnicos del extractor (EI-01 a EI-06) |
+| `docs/curricular/PILOT_VALIDATION_REPORT.md` | Validación contra golden cases |
+| `docs/curricular/model/SCHEMA_DRAFT.sql` | Corregido: PK surrogate, import_batches, stable_id |
+
+### Resultados del piloto
+
+- SHA-256 del PDF verificado ✓
+- Rango real MAT 4°: **d135–d179** (Segundo Ciclo completo, 44 páginas)
+- Bloques detectados: 20 (3 repeticiones × 7 bloques temáticos = 3 años)
+- Elementos extraídos: 1551 (706 CONCEPT, 726 WAY_OF_KNOWING, 119 PROGRESS_INDICATOR)
+- Relaciones generadas: 22726 (issue EI-01: producto cartesiano — a corregir en 02.4)
+- Validación: 0 errores, 0 warnings
+- Tests: **85/85 pasan** (incluye 2 tests de integración con PDF real)
+
+### GC-007 verificado
+
+- Ciclo hidrológico encontrado en d279 (p278) y d280 (p279)
+- Año determinado: **4°** (confianza media — headings de año en d261 incluyen 4°, 5° y 6°)
+- I-12 actualizado: "PARCIALMENTE VERIFICADO — muy probablemente 4°"
+
+### Correcciones al esquema
+
+- `element_year_scope`: PK surrogate + 3 partial unique indexes (reemplaza COALESCE PK)
+- Nuevas tablas: `import_batches` + `import_conflicts` (idempotencia)
+- `curriculum_elements.stable_id`: unicidad por `(stable_id, area_id)` no global
+
+### Issues identificados en el extractor
+
+| ID | Severidad | Descripción |
+|---|---|---|
+| EI-01 | ALTA | Relaciones como producto cartesiano (22726 en lugar de ~1500) |
+| EI-02 | MEDIA | Bounds MAT 4° = rango Segundo Ciclo completo (no sección individual) |
+| EI-03 | MEDIA | Año GC-007 determinado con baja confianza (headings en página de índice) |
+| EI-04 | BAJA | Gap entre filas insuficiente para filas muy compactas |
+| EI-05 | BAJA | Rango inválido cuando dos bloques están en la misma página |
+| EI-06 | BAJA | Encabezados de página pueden no filtrarse por posición Y atípica |
+
+---
+
 ## Próximo paso
 
-**Etapa 02.3 — Extracción curricular estructurada** (bloqueada hasta aprobación del propietario).
+**Etapa 02.4** — bloqueada hasta aprobación explícita del propietario.
 
-Prioridad de extracción: Matemática completa → Prácticas del Lenguaje Segundo Ciclo → Ciencias Sociales Segundo Ciclo → Ciencias Naturales → resto.
-
-Bloqueos previos a iniciar: I-01 (verificación SINBA), I-05 (estrategia celdas combinadas en extractor), I-11 (decisión PDF en git).
+Prioridades: (1) corregir EI-01 (relaciones por fila, no cartesianas); (2) implementar segmentación por año dentro de MAT Segundo Ciclo; (3) extender a Prácticas del Lenguaje; (4) verificar manualmente I-12 (d261–d280).
