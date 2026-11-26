@@ -225,9 +225,18 @@ COMMENT ON TABLE curriculum_blocks IS 'Bloques de contenido dentro de un área/c
 
 CREATE TABLE curriculum_elements (
     id                  uuid PRIMARY KEY DEFAULT gen_random_uuid(),
-    -- Corrección Etapa 02.3: unique por (stable_id, area_id) no globalmente.
-    -- Razón: el mismo concepto puede existir en diferentes documentos fuente
-    -- con el mismo stable_id asignado por el extractor.
+    -- Identidad canónica: UNIQUE(stable_id, area_id).
+    -- Estrategia multi-revisión (Etapa 02.3.2):
+    --   Esta fila representa el estado ACTUAL (canónico) del elemento.
+    --   Cada cambio de original_text, review_status u otros campos controlados
+    --   produce una nueva fila en element_revisions antes de actualizar esta tabla.
+    --   current_revision avanza con cada revisión.
+    --   Dos batches importando el mismo (stable_id, area_id) producen un
+    --   STABLE_ID_COLLISION en import_conflicts si el texto difiere; si el texto
+    --   es idéntico, el import es idempotente (no crea revisión nueva).
+    --   Para fuentes documentales distintas (ej. DC 2018 vs actualización 2024)
+    --   se espera stable_id distinto porque el AREA cambia; si reutilizan el mismo
+    --   stable_id se detecta como conflicto PAGE_MISMATCH o STABLE_ID_COLLISION.
     stable_id           text NOT NULL,
     element_type        element_type_t NOT NULL,
     area_id             uuid NOT NULL REFERENCES curriculum_areas(id),
@@ -237,6 +246,7 @@ CREATE TABLE curriculum_elements (
     normalized_text     text,
     extraction_method   extraction_method_t NOT NULL DEFAULT 'MANUAL',
     review_status       review_status_t NOT NULL DEFAULT 'extracted',
+    current_revision    int NOT NULL DEFAULT 1 CHECK (current_revision >= 1),
     replaced_by_id      uuid REFERENCES curriculum_elements(id),
     notes               text,
     created_at          timestamptz NOT NULL DEFAULT now(),
@@ -251,9 +261,10 @@ CREATE TABLE curriculum_elements (
         OR review_status <> 'ambiguous'
     )
 );
-COMMENT ON TABLE curriculum_elements IS 'Tabla central polimórfica: conceptos, modos de conocer, indicadores, situaciones, objetivos, propósitos, orientaciones';
+COMMENT ON TABLE curriculum_elements IS 'Tabla central polimórfica: conceptos, modos de conocer, indicadores, situaciones, objetivos, propósitos, orientaciones. Fila = estado canónico actual; historial en element_revisions.';
 COMMENT ON COLUMN curriculum_elements.stable_id IS 'Formato: {AREA}-{CICLO}-{AÑO}-{BLOQUE}-{TIPO}-{SEQ:04d}. Ej: CSS-2C-4-BLQ1-CON-0003';
 COMMENT ON COLUMN curriculum_elements.review_status IS 'Solo registros validated llegan a la interfaz docente';
+COMMENT ON COLUMN curriculum_elements.current_revision IS 'Número de la revisión actual; avanza cada vez que element_revisions agrega una fila para este elemento';
 
 -- Al menos un source_ref por elemento (ver FK en element_source_refs + trigger)
 CREATE TABLE element_source_refs (
@@ -280,6 +291,51 @@ CREATE TABLE element_source_refs (
     UNIQUE (element_id, source_id, digital_page, column_index)
 );
 COMMENT ON TABLE element_source_refs IS 'Trazabilidad documental: qué página, tabla, fila y columna del PDF origina cada elemento';
+
+-- ---------------------------------------------------------------------------
+-- HISTORIAL DE REVISIONES (Etapa 02.3.2)
+-- ---------------------------------------------------------------------------
+-- Cada vez que el importador cambia original_text, normalized_text o review_status
+-- de un elemento EXISTENTE, primero inserta aquí el estado anterior, luego actualiza
+-- curriculum_elements. revision_number=1 corresponde a la extracción inicial.
+--
+-- Idempotencia: si el texto del re-import es idéntico al original_text actual
+-- NO se crea nueva revisión. Si difiere, se detecta como STABLE_ID_COLLISION
+-- y queda en import_conflicts hasta resolución manual; si se aprueba la corrección,
+-- el operador actualiza curriculum_elements y el trigger crea la revisión.
+--
+-- Historia inmutable: element_revisions nunca se actualiza ni elimina (solo CASCADE
+-- al borrar el elemento padre, operación que requiere autorización explícita).
+
+CREATE TABLE element_revisions (
+    id                  uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+    element_id          uuid NOT NULL REFERENCES curriculum_elements(id) ON DELETE CASCADE,
+    revision_number     int NOT NULL CHECK (revision_number >= 1),
+    -- Snapshot del estado anterior al cambio (inmutable desde INSERT)
+    original_text       text NOT NULL,
+    normalized_text     text,
+    review_status       review_status_t NOT NULL,
+    import_batch_id     uuid REFERENCES import_batches(id),
+    -- Qué cambió y por qué
+    change_reason       text CHECK (change_reason IN (
+                            'initial_extraction',   -- revisión 1: primera extracción
+                            'corrected_text',       -- texto corregido manualmente
+                            'corrected_year',       -- año/ciclo reasignado
+                            'status_change',        -- review_status actualizado
+                            're_extraction',        -- re-importado con extractor actualizado
+                            'merge',                -- fusionado con otro elemento
+                            'split',                -- dividido en dos elementos
+                            'other'
+                        )),
+    changed_fields      text[],  -- columnas que cambiaron respecto a revisión anterior
+    created_at          timestamptz NOT NULL DEFAULT now(),
+    created_by          text NOT NULL DEFAULT 'extractor',  -- 'extractor' | 'manual:<usuario>'
+
+    UNIQUE (element_id, revision_number)
+);
+COMMENT ON TABLE element_revisions IS 'Historial inmutable de revisiones. revision_number=1 = extracción inicial. Nunca se actualiza; solo se INSERT.';
+COMMENT ON COLUMN element_revisions.change_reason IS 'initial_extraction|corrected_text|corrected_year|status_change|re_extraction|merge|split|other';
+COMMENT ON COLUMN element_revisions.changed_fields IS 'Ej: ARRAY[''original_text'', ''review_status'']. Permite auditar qué cambió sin comparar filas.';
 
 CREATE TABLE element_year_scope (
     -- Corrección Etapa 02.3: PK surrogate + partial unique indexes (en lugar de COALESCE PK)
@@ -410,9 +466,16 @@ CREATE INDEX idx_elements_year_scope  ON curriculum_elements(year_scope);
 CREATE INDEX idx_elements_validated ON curriculum_elements(area_id, element_type)
     WHERE review_status = 'validated';
 
--- Unicidad de stable_id dentro de cada área (corrección Etapa 02.3)
+-- Unicidad canónica: un elemento por (stable_id, área).
+-- Multi-revisión: el historial vive en element_revisions, no en filas adicionales aquí.
+-- Un re-import del mismo (stable_id, area_id) con texto idéntico es idempotente;
+-- con texto distinto produce STABLE_ID_COLLISION en import_conflicts.
 CREATE UNIQUE INDEX uq_elements_stable_id_area
     ON curriculum_elements(stable_id, area_id);
+
+-- Índice de revisiones (para recuperar estado en un momento dado)
+CREATE INDEX idx_revisions_element    ON element_revisions(element_id, revision_number);
+CREATE INDEX idx_revisions_batch      ON element_revisions(import_batch_id);
 
 -- Trazabilidad por página
 CREATE INDEX idx_source_refs_page     ON element_source_refs(source_id, digital_page);
