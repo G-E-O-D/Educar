@@ -60,22 +60,94 @@ class RawCell:
 
     def items(self) -> list[str]:
         """
-        Divide el contenido en ítems separados por viñetas o saltos de línea.
-        Cada ítem es un concepto/indicador independiente.
+        Divide el contenido en ítems curriculares independientes.
+
+        Estrategia (EI-08 fix):
+        1. Bullets PUA (): el DC PBA 2018 usa este carácter como viñeta. Aparece
+           en el mismo renglón visual que el primer texto del ítem (y0 difiere <= 3pt).
+           Agrupar spans en renglones visuales (y0 dentro de LINE_TOLERANCE), luego
+           tratar cada renglón con PUA como inicio de nuevo ítem; renglones sin PUA
+           son continuaciones del ítem actual.
+        2. Viñetas estándar (·, •, -, –) en raw_text: comportamiento previo (compatible
+           con fixtures de tests existentes que no usan PUA).
+        3. Sin viñetas: texto único — no dividir por saltos de línea tipográficos
+           (corrige el caso EI-08: "Números hasta el orden\nde los millones." = 1 ítem).
         """
+        LINE_TOLERANCE = 3.0  # pt: distancia y0 máxima para "mismo renglón visual"
+
+        if not self.spans:
+            return []
+
+        sorted_spans = sorted(self.spans, key=lambda s: (s.y0, s.x0))
+
+        # Agrupar spans en renglones visuales
+        visual_lines: list[list] = [[sorted_spans[0]]]
+        for sp in sorted_spans[1:]:
+            if abs(sp.y0 - visual_lines[-1][0].y0) <= LINE_TOLERANCE:
+                visual_lines[-1].append(sp)
+            else:
+                visual_lines.append([sp])
+
+        # Detectar presencia de PUA en la celda
+        def _is_pure_pua(text: str) -> bool:
+            return bool(text) and all(ord(c) > 0xE000 for c in text)
+
+        has_pua = any(
+            _is_pure_pua(sp.text.strip())
+            for line in visual_lines
+            for sp in line
+            if sp.text.strip()
+        )
+
+        if has_pua:
+            items_accumulator: list[list[str]] = []
+            current_texts: list[str] = []
+
+            for line in visual_lines:
+                has_pua_in_line = any(
+                    _is_pure_pua(sp.text.strip()) for sp in line if sp.text.strip()
+                )
+                line_text = " ".join(
+                    sp.text.strip()
+                    for sp in sorted(line, key=lambda s: s.x0)
+                    if sp.text.strip() and not _is_pure_pua(sp.text.strip())
+                ).strip()
+
+                if has_pua_in_line:
+                    # Renglón con PUA: cierra ítem anterior, inicia nuevo
+                    if current_texts:
+                        items_accumulator.append(current_texts)
+                    current_texts = [line_text] if line_text else []
+                else:
+                    # Renglón de continuación
+                    if line_text:
+                        current_texts.append(line_text)
+
+            if current_texts:
+                items_accumulator.append(current_texts)
+
+            result = [" ".join(ts).strip() for ts in items_accumulator if ts]
+            return result if result else []
+
+        # Sin PUA: comprobar viñetas estándar en raw_text (compatibilidad fixtures)
         text = self.raw_text
-        # Separar por viñetas tipográficas al inicio de línea o después de salto
-        parts = re.split(r'\n+\s*[·•\-–]\s*', text)
-        # También separar si la línea no empieza con viñeta pero hay salto
-        result = []
-        for part in parts:
-            # Dentro de cada parte, separar por saltos de línea si hay contenido
-            sub = re.split(r'\n', part)
-            for s in sub:
-                s = s.strip().lstrip('·•\-– \t')
-                if s:
-                    result.append(s)
-        return result
+        if re.search(r'(^|[\n])\s*[·•\-–]\s+\S', text):
+            parts = re.split(r'\n+\s*[·•\-–]\s*', text)
+            result = []
+            for part in parts:
+                for s in re.split(r'\n', part):
+                    s = s.strip().lstrip('·•\\-– \t')
+                    if s:
+                        result.append(s)
+            return result
+
+        # Sin viñetas: todo el contenido es un único ítem (EI-08: no dividir continuaciones)
+        full = " ".join(
+            sp.text.strip()
+            for sp in sorted_spans
+            if sp.text.strip() and not _is_pure_pua(sp.text.strip())
+        ).strip()
+        return [full] if full else []
 
 
 @dataclass

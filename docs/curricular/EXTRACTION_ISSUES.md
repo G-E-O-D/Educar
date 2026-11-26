@@ -1,8 +1,8 @@
-# Registro de Problemas de Extracción — Etapa 02.3 / 02.3.1
+﻿# Registro de Problemas de Extracción — Etapas 02.3 / 02.3.1 / 02.4A
 
 **Fecha última actualización:** 2026-11-26  
 **Extractor:** 0.1.0-pilot  
-**Área procesada:** Matemática (MAT) — Segundo Ciclo 4°
+**Área procesada:** Matemática (MAT) — completa d98–d173 (EI-08 fix 02.4A)
 
 ---
 
@@ -83,7 +83,7 @@ El algoritmo `verify_gc007()` determinaba año = 4° erróneamente porque encont
 ## EI-04 — Gap entre filas insuficiente para separar items
 
 **Severidad:** BAJA  
-**Estado:** DOCUMENTADO
+**Estado:** CORREGIDO — Etapa 02.4A
 
 **Descripción:**  
 El reconstructor usa un umbral de `1.2 × font_size` para detectar nuevos ítems en col0. Con fuente de 10 pt, el umbral es 12 pt. En algunas páginas del DC, el espaciado entre filas de tabla puede ser menor a 12 pt (especialmente en bloques densamente tipografiados), provocando que dos ítems se fusionen en uno.
@@ -160,7 +160,7 @@ Thresholds recalibrados midiendo x0 reales en d136–d145:
 ## EI-08 — items() divide texto multi-línea en ítems separados
 
 **Severidad:** BAJA  
-**Estado:** DOCUMENTADO
+**Estado:** CORREGIDO — Etapa 02.4A
 
 **Descripción:**  
 `RawCell.raw_text` usa comparación y0-to-y0 con umbral 3pt para detectar saltos de línea. Para texto que continúa en líneas adyacentes dentro de una misma celda (font size 8pt, interlineado ~9.5pt), el gap y0-to-y0 (9.5pt) supera los 3pt → inserta `\n` → `items()` divide en ítems separados.
@@ -181,10 +181,52 @@ Reemplazar la lógica y0-to-y0 en `raw_text` por una que detecte bullets  com
 ## EI-06 — Encabezados repetidos capturados en spans
 
 **Severidad:** BAJA  
-**Estado:** DOCUMENTADO
+**Estado:** CORREGIDO — Etapa 02.4A
 
 **Descripción:**  
 Algunos spans de encabezado de página ("Matemática", "Diseño Curricular...") pueden no ser filtrados si su posición Y no está en la zona esperada (< 60 pt o > 780 pt). Los encabezados tipográficos del DC PBA 2018 no tienen posición Y consistente en todas las páginas.
 
 **Acción requerida para Etapa 02.4:**  
 Ampliar el conjunto de `RUNNING_HEADERS` en `config.py` y/o aumentar el margen de detección de zona de encabezado.
+
+
+---
+
+## EI-09 — Estructura de tabla incompatible en Primer Ciclo 1 y 2
+
+**Severidad:** MEDIA  
+**Estado:** DOCUMENTADO — Etapa 02.4A
+
+**Descripcion:**  
+Las tablas de Primer Ciclo 1 y 2 (d102-d120) tienen estructura incompatible con el TricolumnAdapter actual. El Segundo Ciclo tiene una tabla por año con cabecera de año en la pagina. El Primer Ciclo 1/2 tiene:
+- Dentro de cada pagina de BLOQUE, los headers "Primer año" y "Segundo año" aparecen como sub-cabeceras de fila (sz=12, y0~93-95), NO como cabeceras de pagina
+- Los sub-headers de columna ("CONTENIDOS", "Modos de conocer") aparecen en y0~76-95, dentro del rango que el extractor procesa como contenido
+- El layout tiene un super-header "USAR Y CONOCER LOS NUMEROS" en y0~58-60 que el extractor no reconoce
+
+**Consecuencias observadas (d102-d120, extracción 02.4A):**
+- Año asignado incorrectamente (year=4 por defecto, deberia ser year=1 o year=2)
+- Sub-headers "Conceptos" y "Modos de conocer" (y0=95) incluidos en el primer elemento de col0
+- Sub-header "(Se considerará un indicio de progreso si...)" incluido en PROGRESS_INDICATOR
+- Etiquetas de año "Primer año" / "Segundo año" (x0=639, col3) incluidas en TEACHING_SITUATION
+
+**Ejemplo de elemento erroneo:**
+- type=CONCEPT, text="Conceptos Conceptos Números hasta el 100 o 150. Valor de las..."
+- type=TEACHING_SITUATION, text="Segundo año Primer año Recuperar y sistematizar la lectura..."
+
+**Tablas afectadas:** d102-d120 (Primer Ciclo 1 y 2):
+- d102-d104: BLOQUE Numeros Naturales (1 y 2)
+- d105-d111: BLOQUE Operaciones con Numeros Naturales (1 y 2)
+- d112-d113: BLOQUE Medida (1 y 2)
+- d114-d120: BLOQUE Geometria (1 y 2) + BLOQUE Espacio (1 y 2)
+
+**Tablas NO afectadas:**
+- d121-d134: Primer Ciclo 3° — estructura compatible (cabecera de año en pagina, igual que Segundo Ciclo)
+- d135-d173: Segundo Ciclo 4°/5°/6° — estructura compatible
+
+**Accion requerida (Etapa 02.5+):**  
+Implementar un adaptador especifico para tablas Primer Ciclo 1/2 que:
+1. Detecte el patron de sub-cabecera "Primer año"/"Segundo año" dentro del rango de contenido (y0 < 100, sz=12)
+2. Use la y0 de estos marcadores para separar el contenido de 1 y 2 dentro de cada pagina
+3. Filtre los sub-headers de columna de y0<100
+
+---

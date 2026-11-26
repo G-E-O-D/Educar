@@ -158,8 +158,11 @@ class TestEI05PDFIntegration:
         try:
             result = extract_pilot(doc, 135, 146)
             total = len(result["elements"])
-            assert total >= 570, (
-                f"Post-fix EI-05: total de elementos debe ser >= 570 (pre-fix), obtuvo {total}"
+            # EI-08 (02.4A): items() ya no sobre-segmenta continuaciones.
+            # Umbral bajado a 150 (sanity check: extraccion funciona, 7 bloques presentes).
+            # Pre-EI-08: 625; post-EI-08: ~326 (correcto — menos falsos fragmentos).
+            assert total >= 150, (
+                f"Post-fix EI-05: total de elementos debe ser >= 150, obtuvo {total}"
             )
         finally:
             doc.close()

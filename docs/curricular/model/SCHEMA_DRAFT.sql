@@ -375,13 +375,17 @@ CREATE UNIQUE INDEX uq_element_year_document
 -- ---------------------------------------------------------------------------
 
 CREATE TABLE element_relations (
-    id                  uuid PRIMARY KEY DEFAULT gen_random_uuid(),
-    source_element_id   uuid NOT NULL REFERENCES curriculum_elements(id),
-    target_element_id   uuid NOT NULL REFERENCES curriculum_elements(id),
-    relation_type       relation_type_t NOT NULL,
-    relation_basis      relation_basis_t NOT NULL,
-    source_ref_id       uuid REFERENCES element_source_refs(id),
-    notes               text,
+    id                      uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+    source_element_id       uuid NOT NULL REFERENCES curriculum_elements(id),
+    target_element_id       uuid NOT NULL REFERENCES curriculum_elements(id),
+    relation_type           relation_type_t NOT NULL,
+    relation_basis          relation_basis_t NOT NULL,
+    source_ref_id           uuid REFERENCES element_source_refs(id),
+    -- GAP 02.4A: revision_snapshot_id preserva qué revisión estaba activa al crear la relación.
+    -- FK: element_revisions(id). NULL = relación creada antes del multi-revision schema.
+    -- Debe agregarse como: revision_snapshot_id uuid REFERENCES element_revisions(id) ON DELETE SET NULL
+    -- (no FK aún porque element_revisions puede no existir en deploy inicial; agregar en Etapa 02.5)
+    notes                   text,
 
     CONSTRAINT no_self_relation CHECK (source_element_id <> target_element_id),
     CONSTRAINT inferred_needs_notes CHECK (
@@ -583,3 +587,59 @@ VALUES
 -- ---------------------------------------------------------------------------
 -- NO EJECUTAR como migración sin aprobación del propietario.
 -- Revisar con Supabase Migration (supabase migration new) en Etapa posterior.
+
+
+-- ---------------------------------------------------------------------------
+-- GAPS DE INTEGRIDAD MULTI-REVISION — Etapa 02.4A
+-- (Concepto de triggers; requieren aprobacion antes de deploy)
+-- ---------------------------------------------------------------------------
+
+-- GAP 1: revision_snapshot_id en element_relations y element_source_refs
+-- Para agregar en Etapa 02.5+ (despues de deploy inicial):
+--
+--   ALTER TABLE element_relations
+--       ADD COLUMN revision_snapshot_id uuid REFERENCES element_revisions(id) ON DELETE SET NULL;
+--
+--   ALTER TABLE element_source_refs
+--       ADD COLUMN revision_snapshot_id uuid REFERENCES element_revisions(id) ON DELETE SET NULL;
+--
+-- Semantica: registra la revision del elemento fuente activa al momento de crear la relacion.
+-- NULL = relacion creada antes del multi-revision schema (backfill posterior).
+
+-- GAP 2: current_revision FK integrity
+-- PostgreSQL no admite FK compuesta con columnas de otra tabla directamente sobre
+-- (element_id, revision_number). Se usa trigger para garantizar la integridad:
+--
+-- CREATE OR REPLACE FUNCTION enforce_current_revision_integrity()
+-- RETURNS TRIGGER LANGUAGE plpgsql AS 
+-- BEGIN
+--     -- Avanzar current_revision al insertar una nueva revision
+--     UPDATE curriculum_elements
+--     SET current_revision = NEW.revision_number
+--     WHERE id = NEW.element_id
+--       AND NEW.revision_number > current_revision;
+--     RETURN NEW;
+-- END;
+-- ;
+--
+-- CREATE TRIGGER trg_advance_current_revision
+-- AFTER INSERT ON element_revisions
+-- FOR EACH ROW EXECUTE FUNCTION enforce_current_revision_integrity();
+
+-- GAP 3: immutabilidad de element_revisions
+-- Las revisiones son INSERT-only. Rechazar UPDATE y DELETE:
+--
+-- CREATE OR REPLACE FUNCTION reject_revision_mutation()
+-- RETURNS TRIGGER LANGUAGE plpgsql AS 
+-- BEGIN
+--     RAISE EXCEPTION 'element_revisions es INSERT-only. Crear nueva revision en lugar de modificar.';
+-- END;
+-- ;
+--
+-- CREATE TRIGGER trg_revisions_immutable
+-- BEFORE UPDATE OR DELETE ON element_revisions
+-- FOR EACH ROW EXECUTE FUNCTION reject_revision_mutation();
+
+-- ---------------------------------------------------------------------------
+-- FIN DEL SCHEMA DRAFT (Etapa 02.4A)
+-- ---------------------------------------------------------------------------

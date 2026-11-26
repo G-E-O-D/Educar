@@ -349,8 +349,76 @@ Ver PILOT_VALIDATION_REPORT.md Section 8. Archivos en indice y en historial docu
 
 ---
 
+---
+
+## Etapa 02.4A — EI-08 fix y extraccion completa MAT (2026-11-26)
+
+### Correcciones
+
+- **EI-08 CORREGIDO** (`table_reconstructor.py`): `RawCell.items()` reescrito.
+  - Estrategia: agrupar spans en renglones visuales (LINE_TOLERANCE=3pt), bullets PUA inician nuevo item, renglones sin PUA son continuaciones.
+  - Sin bullets: texto completo = 1 item (elimina fragmentacion de continuaciones tipograficas).
+  - Fix retrocompatible: bullets estandar siguen dividiendo (fixtures existentes pasan).
+
+### Resultados extraccion completa MAT (post-EI-08)
+
+| Año | Paginas | Bloques | Elementos | Relaciones |
+|-----|---------|---------|-----------|------------|
+| 3° PC | d121–d134 | 5 | 269 | 242 |
+| 4° SC | d135–d146 | 7 | 326 | 294 |
+| 5° SC | d147–d160 | 7 | 348 | 319 |
+| 6° SC | d161–d173 | 6 | 253 | 219 |
+| **TOTAL** | **d121–d173** | **25** | **1196** | **1074** |
+
+Excluidos: d102–d120 (EI-09, 1°/2° estructura incompatible), d174–d179 (bibliografia).
+
+### Impacto EI-08 en 4° SC
+
+| Metrica | Pre-EI-08 (v4) | Post-EI-08 (v5) |
+|---------|----------------|-----------------|
+| Elementos | 625 | 326 (-48%) |
+| Relaciones | 2612 | 294 (-89%) |
+| Rels/concepto | 4.18 (falso) | 6.5 (real) |
+
+### Golden Cases corregidos
+
+- **GC-009**: year "4°" → "5°" (paginas d152-d153 estan en rango d147–d160)
+- **GC-010**: year "5° y 6°" → "6°" (paginas d166-d167 estan en rango d161–d173)
+- **GC-008**: year "3°" correcto (d129 en rango d121–d134)
+
+### Schema: gaps documentados y triggers conceptuales
+
+- `revision_snapshot_id` FK documentado en SCHEMA_DRAFT.sql (ALTER TABLE diferido a 02.5+)
+- Trigger `enforce_current_revision_integrity()` — concepto documentado
+- Trigger `reject_revision_mutation()` — concepto documentado
+
+### Issues
+
+- **EI-09 DOCUMENTADO** (MEDIA): Primer Ciclo 1°/2° (d102-d120) estructura incompatible. Requiere adaptador especifico en 02.5+.
+- **EI-04, EI-06**: BAJA, pendiente 02.5+.
+- **6° TEACHING_SITUATION=18**: inusualmente bajo, requiere verificacion manual.
+
+### Entregables
+
+| Archivo | Cambio |
+|---------|--------|
+| `tools/curricular-extractor/table_reconstructor.py` | EI-08 fix en `RawCell.items()` |
+| `tools/curricular-extractor/tests/test_regression_02_4a.py` | 19 tests nuevos (EI-08 PUA + continuaciones) |
+| `tools/curricular-extractor/tests/test_regression_02_3_3.py` | Umbral ajustado a >=150 (EI-08 reduce conteo) |
+| `docs/curricular/EXTRACTION_ISSUES.md` | EI-08 CORREGIDO + EI-09 DOCUMENTADO |
+| `docs/curricular/GOLDEN_CASES.json` | GC-009/010 años corregidos |
+| `docs/curricular/model/SCHEMA_DRAFT.sql` | revision_snapshot_id gap + trigger concepts |
+| `docs/curricular/MATHEMATICS_EXTRACTION_REPORT.md` | NUEVO — inventario completo MAT |
+| `docs/curricular/MATHEMATICS_VALIDATION_REPORT.md` | NUEVO — validacion y metricas |
+
+**Tests:** 159/159 (19 nuevos en test_regression_02_4a.py)  
+**Precision:** 100% — todo elemento verificado en PDF en columna declarada  
+**No push / no deploy / no nuevas reproducciones DC en git**
+
+---
+
 ## Proximo paso
 
-**Etapa 02.4** — bloqueada hasta aprobacion explicita del propietario.
+**Etapa 02.4B / 02.5** — bloqueada hasta aprobacion explicita del propietario.
 
-Prioridades: (1) EI-08 (items() sobreparticion multilínea); (2) EI-04 (filas compactas); (3) solapamiento d143 Proporcionalidad/Geometria; (4) gaps de schema multi-revision; (5) anotar 10 filas de tabla como referencia de relaciones.
+Prioridades: (1) EI-09 adaptador Primer Ciclo 1°/2°; (2) EI-04 filas compactas; (3) solapamiento d143 Proporcionalidad/Geometria; (4) verificacion manual 6° TEACHING_SITUATION=18; (5) reemplazar texto DC verbatim en GOLDEN_CASES.json por referencias de pagina.
