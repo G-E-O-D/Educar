@@ -94,8 +94,12 @@ class TricolumnAdapter:
     - Mismo criterio para col 2.
     """
 
-    def __init__(self, id_gen: IDGenerator):
+    def __init__(self, id_gen: IDGenerator, cell_items_fn=None):
         self.id_gen = id_gen
+        # Función opcional para dividir una RawCell en ítems.
+        # Si es None se usa cell.items() (PUA bullets, default para MAT).
+        # Para CSS pasar css_split_items (x0-based).
+        self._cell_items_fn = cell_items_fn
 
     def adapt(
         self,
@@ -119,7 +123,9 @@ class TricolumnAdapter:
                 col_type = COLUMN_TYPES[col]
 
                 # Dividir la celda en ítems individuales
-                cell_items = cell.items()
+                cell_items = (
+                    self._cell_items_fn(cell) if self._cell_items_fn else cell.items()
+                )
                 if not cell_items:
                     # Celda con texto no parseable como ítems
                     cell_items = [cell.raw_text] if cell.raw_text.strip() else []

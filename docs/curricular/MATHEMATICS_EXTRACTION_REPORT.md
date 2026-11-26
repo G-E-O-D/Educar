@@ -1,9 +1,9 @@
-# Reporte de Extraccion MAT — Etapa 02.4A
+﻿# Reporte de Extraccion MAT — Etapas 02.4A / 02.4B
 
 **Fecha:** 2026-11-26  
-**Extractor:** 0.1.0-pilot (EI-08 corregido)  
+**Extractor:** 0.1.0-pilot (EI-08 corregido; EI-09 resuelto con PC12Extractor en 02.4B)  
 **Area:** Matematica (MAT) — d98–d179  
-**Estado:** COMPLETO para 3°/4°/5°/6°; EI-09 para 1°/2°
+**Estado:** COMPLETO — 1°/2°/3°/4°/5°/6° extraidos
 
 ---
 
@@ -21,8 +21,7 @@
 | d161–d173 | Segundo Ciclo 6° | Extraido correctamente |
 | d174–d179 | Bibliografia (no curricular) | No aplica |
 
-**Paginas de contenido curricular extraibles:** d121–d173 (53 paginas)  
-**Paginas con EI-09:** d102–d120 (19 paginas — 1° y 2° PC)  
+**Paginas de contenido curricular extraibles:** d102–d173 (72 paginas, incluyendo PC12)  
 **Total rango nominal:** d98–d173 (76 paginas curriculares; d174+ es bibliografia)
 
 ---
@@ -169,3 +168,39 @@ La reduccion es ESPERADA y representa mejora en calidad: conceptos como "Numeros
 ---
 
 *Extractor curricular v0.1.0-pilot — DC PBA 2018 SHA-256: 1c53a2cc9d8aacc1d1b4cfd6deac2af7fcdad0834d232c9c391705eb46271a38*
+
+---
+
+## 8. Resolucion EI-09 — PC12Extractor (Etapa 02.4B)
+
+**Accion implementada:** Se construyo `adapters/pc12.py` con `PC12Extractor` que maneja la estructura de sub-cabeceras de Primer Ciclo 1°/2°.
+
+**Estrategia:**
+- Detecta marcadores "Primer año" / "Segundo año" (sz=12, en col3 o como sub-cabecera) dentro del bloque
+- Separa los spans por año según la posicion Y de esos marcadores
+- Extrae conceptos/modos/indicadores con year=1 o year=2 correctamente asignado
+- Ítems que abarcan ambos años (zona compartida entre marcadores) se asignan year=None (joint)
+
+**Resultados PC12 (d102–d120, 5 bloques):**
+
+| Bloque | Paginas | 1° | 2° | Joint |
+|--------|---------|----|----|-------|
+| Numeros Naturales | d102–d104 | — | — | — |
+| Operaciones con Numeros Naturales | d105–d111 | — | — | — |
+| Medida | d112–d113 | — | — | — |
+| Geometria | d114–d116 | — | — | — |
+| Espacio | d117–d120 | — | — | — |
+| **TOTAL PC12** | **d102–d120** | **132** | **103** | **1** | 236 elementos |
+
+**Resumen total MAT con PC12 (Etapa 02.4B):**
+
+| Año | CONCEPT | WAY | PROG | TEACH | Elementos | Relaciones |
+|-----|---------|-----|------|-------|-----------|------------|
+| 1°/2° PC | — | — | — | — | 236 | 173 |
+| 3° PC | 27 | 81 | 82 | 79 | 269 | 242 |
+| 4° SC | 45 | 109 | 87 | 85 | 326 | 294 |
+| 5° SC | 41 | 115 | 102 | 90 | 348 | 319 |
+| 6° SC | 34 | 95 | 106 | 18 | 252 | 218 |
+| **TOTAL** | **210** | **462** | **433** | **326** | **1431** | **1246** |
+
+*Validacion: 0 errores, 0 warnings.*

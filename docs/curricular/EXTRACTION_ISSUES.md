@@ -230,3 +230,103 @@ Implementar un adaptador especifico para tablas Primer Ciclo 1/2 que:
 3. Filtre los sub-headers de columna de y0<100
 
 ---
+
+## EI-10 — Situaciones de enseñanza contamina extracción de conceptos CSS
+
+**Severidad:** MEDIA  
+**Estado:** PARCIALMENTE CORREGIDO — Etapa 02.4B
+
+**Descripción:**  
+En CSS, las páginas de "Situaciones de enseñanza" son páginas narrativas (sin columna Modos de conocer). El TricolumnReconstructor las incluía en el mismo bloque que las páginas de tabla porque el rango de bloque cubre ambas. El texto narrativo aparecía como ítems CONCEPT/WAY_OF_KNOWING contaminados.
+
+**Causas y evidencia:**  
+- d196 (3°), d203, d206–d208 (4°), d215–d219 (5°), d223–d224, d227–d232 (6°) son páginas situaciones
+- En esas páginas col1 (Modos de conocer) tiene 0 spans → no hay contenido de tabla
+- El texto narrativo (x0≈60–130pt) queda en col0 → se extrae como CONCEPT
+
+**Corrección aplicada en Etapa 02.4B:**  
+En `extract_standard_year()` de `extract_all.py`, después del header filtering, se agrega un "table page cutoff": se detecta la última página del bloque con contenido en `way_col` (col1 para CSS 3°+, col2 para CSS 1°/2°). Las páginas posteriores a esa última página de tabla se eliminan de `spans_by_page` antes de la reconstrucción.
+
+**Efecto de la corrección:**  
+- 3°: 76 → 89 elementos  
+- 4°: 83 → 106 elementos  
+- 5°: 69 → 133 elementos  
+- Total CSS: 411 → 533 elementos (+30%)
+
+**Contaminación residual:**  
+Algunos elementos CONCEPT con texto de cabecera "Situaciones de enseñanza" persisten en la primera página de ciertos bloques (donde el cutoff no aplica). Documentado como pendiente para Etapa 02.5+.
+
+---
+
+## EI-11 — Artefactos de texto en css_split_items (concatenaciones)
+
+**Severidad:** BAJA  
+**Estado:** DOCUMENTADO — Etapa 02.4B
+
+**Descripción:**  
+La función `css_split_items()` une los spans de un mismo grupo con `"".join(s.text for s in grp)` sin agregar espacio entre spans. En el PDF algunos spans terminan sin espacio y el siguiente comienza sin espacio, produciendo palabras pegadas:
+
+- `"dimensión"` + `"comunidad local."` → `"dimensióncomunidad local."` (artefacto por corte de línea)
+- `"transformar la"` + `"moración..."` → texto ilegible (ligatura PDF no decodificada)
+- `"Los pueblos originarios americanos en el siglo XV."` + `"La signifi"` → concatenación entre ítems
+
+La causa raíz combina:
+1. PDF con spans sin trailing space en fin de línea
+2. Reglas 0–4 de css_split_items no cubren todos los casos de inicio de nuevo ítem
+3. Algunos caracteres con ligatura (fi, fl, etc.) se codifican en la zona PUA del PDF → no son el PUA de bullets de MAT, sino artefactos tipográficos
+
+**Acción requerida para Etapa 02.5+:**  
+Mejorar texto_join: agregar espacio cuando el span anterior termina sin espacio y el siguiente no comienza con espacio. Revisar decodificación de ligaturasEn el PDF.
+
+---
+
+## EI-12 — digital_page no poblado en elementos CSS
+
+**Severidad:** BAJA  
+**Estado:** DOCUMENTADO — Etapa 02.4B
+
+**Descripción:**  
+Todos los elementos CSS tienen `digital_page=None` y `printed_page=None` en la salida JSON. El valor esperado es el número de página digital (1-based) donde inicia el span del elemento.
+
+**Causa raíz:**  
+`RawCell.page_start` retorna `None` cuando no se ha establecido el atributo `page` en los `Span` objects. `extract_spans()` y `extract_page_content()` crean spans sin asignar `digital_page` a nivel de span individual. El `TricolumnReconstructor` reconstruye celdas pero no propaga el número de página a `RawCell.page_start`.
+
+**Efecto:**  
+Los campos `digital_page` y `printed_page` no permiten trazar el elemento a su página de origen. `printed_page = page - 1` donde `page=None` debería generar TypeError pero no lo hace porque el adaptador no llega a ese código (hay un default `0` en el dataclass que se pisa con `None`).
+
+**Acción requerida para Etapa 02.5+:**  
+En `TricolumnReconstructor._group_col_spans_into_items()`, almacenar el número de página del primer span en la `RawCell` resultante. O en `extract_spans()`, asignar `page_num` a cada `Span`.
+
+---
+
+## EI-13 — Números de página PDF capturados como TEACHING_SITUATION en CSS
+
+**Severidad:** BAJA  
+**Estado:** DOCUMENTADO — Etapa 02.4B
+
+**Descripción:**  
+En CSS 3°–6°, el TricolumnAdapter asigna `TEACHING_SITUATION` al contenido de col3 (x0 > 511pt). En el DC PBA 2018, CSS no tiene columna "Situaciones de enseñanza" en su tabla; col3 en CSS corresponde a:
+- Números de página del documento (ej: "195", "201", "209")
+- Nombre del área ("Ciencias Sociales")
+- Encabezados repetidos de tipo EI-06 no filtrados
+
+Esto genera 15 elementos TEACHING_SITUATION espurios en CSS (13 con texto de número de página o área).
+
+**Corrección para Etapa 02.5+:**  
+Para CSS, el TricolumnAdapter debería ignorar col3. Opciones: post-filtrar elementos TEACHING_SITUATION cuyo `original_text` sea un número o un nombre de área, o extender CSSAdapter/TricolumnAdapter con un parámetro `max_col=2` para CSS.
+
+---
+
+## EI-14 — Bibliografía bleed en 6° CSS Bloque 2
+
+**Severidad:** BAJA  
+**Estado:** DOCUMENTADO — Etapa 02.4B
+
+**Descripción:**  
+El bloque "Sociedades y territorios" (6°, d225–d232) contiene al final del bloque texto de bibliografía ("Bibliografía General Disciplinar – Segundo Ciclo", referencias de publicaciones) que se extrae como CONCEPT. Esto ocurre porque:
+1. El rango 6° termina en d232 (bibliography_start=233 en config)
+2. Las páginas d229–d232 tienen col1 ≥ 17 spans (pasan el cutoff EI-10)
+3. Sin embargo, parte del texto en col0 de esas páginas corresponde a referencias bibliográficas mezcladas con contenido curricular
+
+**Acción requerida para Etapa 02.5+:**  
+Verificar si la bibliografía comienza antes de d233 en la zona de 6° y ajustar `bibliography_start` o agregar un filtro por keywords ("Bibliografía", "Buenos Aires:", "Editorial").
