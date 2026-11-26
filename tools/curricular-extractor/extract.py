@@ -209,6 +209,20 @@ def extract_pilot(doc: fitz.Document, start_page: int, end_page: int) -> dict:
         else:
             blk_end = end_page
 
+        # EI-05: cuando dos bloques comienzan en la misma página, blk_end < blk_start.
+        # En ese caso usamos blk_end = blk_start para incluir al menos esa página,
+        # sabiendo que su contenido también será procesado por el bloque siguiente.
+        # La ambigüedad queda registrada para revisión manual.
+        if blk_end < blk_start:
+            ambiguities.append(
+                f"EI-05: bloque '{block_info['block_name']}' d{blk_start}: "
+                f"blk_end={blk_end} < blk_start={blk_start} "
+                f"(mismo arranque que el bloque siguiente). "
+                f"Usando blk_end={blk_start}; contenido de d{blk_start} "
+                f"también incluido en el bloque siguiente."
+            )
+            blk_end = blk_start
+
         print(f"  Procesando bloque: '{block_info['block_name'][:40]}' (d{blk_start}–d{blk_end})")
 
         # Recolectar spans de todas las páginas del bloque

@@ -1,4 +1,4 @@
-# Reporte de Validación Semántica — Etapa 02.3.2
+# Reporte de Validación Semántica — Etapa 02.3.2 / 02.3.3
 
 **Fecha:** 2026-11-26  
 **Extractor:** 0.1.0-pilot  
@@ -9,13 +9,14 @@
 
 ## Resumen ejecutivo
 
-Etapa 02.3.1 corrigió EI-01/02/03. Etapa 02.3.2 descubrió y corrigió EI-07 (causa raíz de todos los errores anteriores):
+Etapa 02.3.1 corrigió EI-01/02/03. Etapa 02.3.2 descubrió y corrigió EI-07. Etapa 02.3.3 corrigió EI-05.
 
 | Error | Descripción | Estado anterior | Estado actual |
 |-------|-------------|-----------------|---------------|
 | EI-01 | Tabla tiene 4 columnas (no 3), thresholds incorrectos | ABIERTO | CORREGIDO |
 | EI-02 | Segmentación de año por texto completo (falsos positivos) | DOCUMENTADO | CORREGIDO |
 | EI-03 / GC-007 | Año del ciclo hidrológico determinado incorrectamente | PARCIALMENTE RESUELTO | RESUELTO |
+| EI-05 | Bloque omitido cuando dos bloques empiezan en la misma página | DOCUMENTADO | CORREGIDO |
 | EI-07 | Thresholds calibrados para portrait A4 (595pt); PDF usa landscape (841.9pt) | — | CORREGIDO |
 | EI-08 | items() divide texto multi-línea en ítems separados (y0-to-y0 gap) | — | DOCUMENTADO |
 
@@ -25,22 +26,22 @@ Etapa 02.3.1 corrigió EI-01/02/03. Etapa 02.3.2 descubrió y corrigió EI-07 (c
 
 ### Resultados del piloto
 
-| Métrica | Piloto v2 (Etapa 02.3.1) | Piloto v3 (Etapa 02.3.2) | Cambio |
-|---------|--------------------------|--------------------------|--------|
-| Rango procesado | d135–d146 (solo 4°) | d135–d146 (solo 4°) | Sin cambio |
-| Páginas digitales | 11 | 11 | Sin cambio |
-| Bloques detectados | 7 (solo 4°) | 6 (solo 4°) | -1 (bloque inválido excluido) |
-| Elementos totales | 619 | **570** | -8% |
-| — CONCEPT | 213 | **125** | -41% (EI-07: líneas dentro de concepto se contaban separadas) |
-| — WAY_OF_KNOWING | 196 | **158** | -19% |
-| — PROGRESS_INDICATOR | 207 | **136** | -34% |
-| — TEACHING_SITUATION | 3 | **151** | +4933% (EI-07: antes clasificados como PROGRESS_INDICATOR) |
-| Relaciones totales | 9526 | **2498** | -74% |
-| — CONCEPT_WAY_OF_KNOWING | 4738 | **858** | -82% |
-| — CONTENT_PROGRESS_INDICATOR | 4785 | **805** | -83% |
-| — CONTENT_TEACHING_SITUATION | 3 | **835** | +27700% |
-| Errores de validación | 0 | 0 | Sin cambio |
-| Avg relaciones/elemento | 15.39 | **4.38** | -72% |
+| Métrica | Piloto v2 (Etapa 02.3.1) | Piloto v3 (Etapa 02.3.2) | Piloto v4 (Etapa 02.3.3) | Cambio v3→v4 |
+|---------|--------------------------|--------------------------|--------------------------|-------|
+| Rango procesado | d135–d146 | d135–d146 | d135–d146 | Sin cambio |
+| Páginas digitales | 11 | 11 | 11 | Sin cambio |
+| Bloques omitidos | 1 (Proporcionalidad) | 1 (Proporcionalidad) | **0** | -1 |
+| Elementos totales | 619 | 570 | **625** | +55 |
+| — CONCEPT | 213 | 125 | **140** | +15 |
+| — WAY_OF_KNOWING | 196 | 158 | **176** | +18 |
+| — PROGRESS_INDICATOR | 207 | 136 | **147** | +11 |
+| — TEACHING_SITUATION | 3 | 151 | **162** | +11 |
+| Relaciones totales | 9526 | 2498 | **2612** | +114 |
+| — CONCEPT_WAY_OF_KNOWING | 4738 | 858 | **908** | +50 |
+| — CONTENT_PROGRESS_INDICATOR | 4785 | 805 | **835** | +30 |
+| — CONTENT_TEACHING_SITUATION | 3 | 835 | **869** | +34 |
+| Errores de validación | 0 | 0 | **0** | Sin cambio |
+| Avg relaciones/elemento | 15.39 | 4.38 | **4.18** | -0.20 |
 
 ### Causa raíz de los errores (EI-07)
 
@@ -129,8 +130,10 @@ x0 ~510-580  → col3 Situaciones enseñ.  (x0/page ≥ 0.84)
 | `TestRelationTypes` | 6 | Tipos de relación por columna, basis SOURCE_EXPRESSED |
 | `TestEI07LandscapePageWidth` | 9 | x0 reales d136 con page_width=841.9 → col correcta |
 | `TestEI07PDFIntegration` | 3 | Ancho real 841.9pt; spans col1/col2 en columna correcta |
+| `TestEI05BlockSamePage` | 5 | EI-05: causa raíz, fix, iteración correcta |
+| `TestEI05PDFIntegration` | 3 | Proporcionalidad no omitido, elementos >=570, 0 "sin spans" |
 
-**Suite total:** 137/137 tests (7 suites)
+**Suite total:** 145/145 tests (8 suites)
 
 ---
 

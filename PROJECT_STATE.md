@@ -293,8 +293,64 @@ Ver `docs/curricular/ISSUES_REGISTER.md` para detalle completo.
 
 ---
 
-## Próximo paso
+---
 
-**Etapa 02.4** — bloqueada hasta aprobación explícita del propietario.
+## Etapa 02.3.1 — Correcciones semanticas (2026-11-26)
 
-Prioridades: (1) corregir EI-01 (relaciones por fila, no cartesianas); (2) implementar segmentación por año dentro de MAT Segundo Ciclo; (3) extender a Prácticas del Lenguaje; (4) verificar manualmente I-12 (d261–d280).
+4 columnas (EI-01 corregido), segmentacion por ano (EI-02), GC-007 = 5° (EI-03). 36 tests nuevos.
+
+---
+
+## Etapa 02.3.2 — EI-07 y validacion (2026-11-26)
+
+EI-07 corregido: thresholds recalibrados para A4 landscape (841.9pt). 12 tests nuevos. Validacion independiente: precision 100%, recall 56%. Schema multi-revision disenado. 137/137 tests.
+
+---
+
+## Etapa 02.3.3 — EI-05 y cierre del piloto (2026-11-26)
+
+### Correcciones
+
+- **EI-05 CORREGIDO** (extract.py): bloque Proporcionalidad ya no se omite. `blk_end = max(blk_start, blk_end)` + ambiguedad registrada.
+
+### Resultados piloto v4 (d135–d146)
+
+| Metrica | Valor |
+|---------|-------|
+| Elementos | 625 (antes 570, +55) |
+| Relaciones | 2612 (antes 2498, +114) |
+| Bloques omitidos | 0 (antes 1) |
+| Precision elementos | 100% |
+| Precision relaciones | 100% |
+| Exactitud de ano | 100% |
+| Trazabilidad | 100% |
+| Tests | 145/145 |
+
+### Criterios de aceptacion
+
+✅ Precision 100%, ✅ 0 bloques omitidos, ✅ 0 errores de validacion, ✅ 145/145 tests  
+⚠️ Exhaustividad de elementos: 56.6% de spans (limite inferior; elementos reales no calculables sin anotacion manual)  
+⚠️ Schema multi-revision: 2 gaps de constraints identificados (revision_snapshot_id, current_revision FK)
+
+### JSON con contenido del DC PBA 2018
+
+Ver PILOT_VALIDATION_REPORT.md Section 8. Archivos en indice y en historial documentados. Historial no reescrito (restriccion del brief).
+
+### Entregables
+
+| Archivo | Cambio |
+|---------|--------|
+| `tools/curricular-extractor/extract.py` | EI-05 fix + ambiguedad EI-05 |
+| `tools/curricular-extractor/tests/test_regression_02_3_3.py` | 8 tests nuevos (145 total) |
+| `docs/curricular/EXTRACTION_ISSUES.md` | EI-05 actualizado a CORREGIDO |
+| `docs/curricular/PILOT_VALIDATION_REPORT.md` | Reescrito con v4 metrics + Sections 2-8 |
+| `docs/curricular/SEMANTIC_VALIDATION_REPORT.md` | Metricas v4 actualizadas |
+| `docs/curricular/model/SCHEMA_DRAFT.sql` | element_revisions + current_revision |
+
+---
+
+## Proximo paso
+
+**Etapa 02.4** — bloqueada hasta aprobacion explicita del propietario.
+
+Prioridades: (1) EI-08 (items() sobreparticion multilínea); (2) EI-04 (filas compactas); (3) solapamiento d143 Proporcionalidad/Geometria; (4) gaps de schema multi-revision; (5) anotar 10 filas de tabla como referencia de relaciones.

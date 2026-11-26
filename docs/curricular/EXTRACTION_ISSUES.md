@@ -95,22 +95,35 @@ Revisar casos donde `raw_text` contenga más de ~80 caracteres (probable fusión
 
 ---
 
-## EI-05 — Ambigüedad detectada en bloque Proporcionalidad (d143)
+## EI-05 — Bloque omitido cuando dos bloques empiezan en la misma página
 
 **Severidad:** BAJA  
-**Estado:** DOCUMENTADO
+**Estado:** CORREGIDO — Etapa 02.3.3
 
 **Descripción:**  
-El bloque 5 (Proporcionalidad, d143) tiene un rango calculado de d143–d142, con `start > end`. Esto ocurre porque los bloques 5 (Proporcionalidad) y 6 (Geometría) se detectaron en la misma página d143 y la diferencia entre ellos es 0 páginas.
+El bloque 5 (Proporcionalidad, d143) tenía rango calculado d143–d142 con `start > end`. Dos bloques consecutivos (`Proporcionalidad` y `Geometría`) comienzan en la misma página d143, por lo que `find_block_starts()` asignaba `blk_end = siguiente_bloque.start - 1 = 143 - 1 = 142`.
 
 **Causa raíz:**  
-`find_block_starts()` asigna a cada bloque hasta la página anterior al siguiente bloque. Cuando dos bloques están en la misma página, el rango queda como `[143, 142]`.
+`find_block_starts()` asigna a cada bloque hasta la página anterior al siguiente. Cuando dos bloques comienzan en la misma página, el rango queda como `[143, 142]`. `range(143, 143)` es vacío → el bloque se saltaba silenciosamente sin ningún mensaje de error, solo la nota "sin spans" que era difícil de distinguir de otros casos.
 
-**Consecuencia:**  
-El bloque Proporcionalidad d143 se omite en la extracción (rango inválido). La ambigüedad registrada corresponde a este caso.
+**Corrección (Etapa 02.3.3):**  
+En `extract_pilot()`, antes de iterar el rango, se agrega:
+```python
+if blk_end < blk_start:
+    ambiguities.append(
+        f"EI-05: bloque '{block_info['block_name']}' d{blk_start}: "
+        f"blk_end={blk_end} < blk_start={blk_start} ..."
+    )
+    blk_end = blk_start
+```
+Esto garantiza que el bloque procese al menos su página de inicio. El contenido de d143 queda incluido tanto en Proporcionalidad como en Geometría (solapamiento explícito, registrado como ambigüedad).
 
-**Acción requerida para Etapa 02.4:**  
-En `extract_pilot()`, agregar validación: si `blk_end < blk_start`, usar `blk_end = blk_start` y agregar nota de ambigüedad.
+**Resultado post-corrección (Etapa 02.3.3, d135–d146):**
+- Bloques omitidos: **0** (antes: 1 — Proporcionalidad omitido)
+- Elementos totales: **625** (antes: 570, +55 de Proporcionalidad)
+- Ambigüedades: 1 (EI-05 registrada, antes era silenciosa)
+
+**Nota:** El solapamiento de d143 (contenido compartido entre Proporcionalidad y Geometría) queda registrado en ambiguities. Los elementos de d143 pueden aparecer duplicados entre ambos bloques. Se resuelve en Etapa 02.4 con segmentación por Y dentro de la misma página.
 
 ---
 
