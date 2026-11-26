@@ -2,7 +2,7 @@
 
 > **Última actualización:** 2026-11-26  
 > **Versión:** 0.2.0  
-> **Estado:** Etapa 02.1 completada — auditoría documental curricular
+> **Estado:** Etapa 02.2 completada — diseño del modelo de datos curricular
 
 ---
 
@@ -202,10 +202,52 @@ Ver `docs/curricular/ISSUES_REGISTER.md` para detalle completo.
 
 ---
 
+## Etapa 02.2 — Diseño del modelo de datos curricular (2026-11-26)
+
+### Entregables generados
+
+| Archivo | Descripción |
+|---------|-------------|
+| `docs/curricular/model/DATA_MODEL.md` | Descripción completa del modelo en 4 capas |
+| `docs/curricular/model/ER_DIAGRAM.md` | Diagrama ER en Mermaid (principal + 3 vistas simplificadas) |
+| `docs/curricular/model/DATA_DICTIONARY.md` | Entidades, campos, tipos, restricciones |
+| `docs/curricular/model/SCHEMA_DRAFT.sql` | Borrador de esquema PostgreSQL (no ejecutar) |
+| `docs/curricular/model/RELATIONSHIP_RULES.md` | 7 tipos de relación + reglas semánticas |
+| `docs/curricular/model/VALIDATION_RULES.md` | 10 restricciones DB + 10 casos de prueba estructurales |
+| `docs/curricular/model/GOLDEN_CASE_MAPPING.json` | Mapeo de los 13 golden cases al modelo |
+| `docs/curricular/model/DECISIONS.md` | 11 decisiones técnicas con justificaciones |
+
+### Decisiones clave de diseño
+
+- Tabla central polimórfica `curriculum_elements` (11 tipos, discriminador `element_type`)
+- Trazabilidad en tabla separada `element_source_refs` (página, fila, columna, coordenadas PDF)
+- Estados de revisión: extracted → pending → ambiguous → validated → rejected → replaced
+- 7 áreas oficiales + 2 módulos + FEyC/EdTec como TRANSVERSAL_CONTENT (no AREA)
+- Principios organizadores como FRAMEWORK en `document_sections`
+- Identificadores estables: `{AREA}-{CICLO}-{AÑO}-{BLOQUE}-{TIPO}-{SEQ:04d}`
+- Alias/sinónimos en tabla separada con 6 tipos (SEARCH_ALIAS, VALIDATED_SYNONYM, etc.)
+- Separación `SOURCE_EXPRESSED` vs `PEDAGOGICALLY_INFERRED` en todas las relaciones
+- Vigencia DC PBA 2018: `partially_verified` (evidencia DGCyE 2026-04-24 registrada)
+
+### Issues actualizados
+
+- **I-01** — estado actualizado a PARCIALMENTE VERIFICADO (evidencia externa aportada)
+- **I-10** — RESUELTO (docs/.venv/ en .gitignore)
+- **I-12** — NUEVO: año exacto del ciclo hidrológico en CS Naturales 2°C (BAJA prioridad)
+
+### Cobertura del modelo
+
+- 13/13 golden cases representables sin pérdida de significado
+- 12/13 completamente determinados; 1/13 (GC-007) con year_scope=CYCLE hasta I-12
+- Todas las estructuras curriculares del DC PBA 2018 tienen representación
+- Preparado para FTS, pgvector (sin embeddings todavía), búsqueda híbrida, alias
+
+---
+
 ## Próximo paso
 
-**Etapa 02.2 — Extracción curricular estructurada** (bloqueada hasta aprobación del propietario).
+**Etapa 02.3 — Extracción curricular estructurada** (bloqueada hasta aprobación del propietario).
 
 Prioridad de extracción: Matemática completa → Prácticas del Lenguaje Segundo Ciclo → Ciencias Sociales Segundo Ciclo → Ciencias Naturales → resto.
 
-Bloqueos previos a iniciar: resolver I-01, I-05, I-10, I-11 (ver ISSUES_REGISTER.md).
+Bloqueos previos a iniciar: I-01 (verificación SINBA), I-05 (estrategia celdas combinadas en extractor), I-11 (decisión PDF en git).

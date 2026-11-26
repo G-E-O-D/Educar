@@ -227,18 +227,45 @@ El propietario del proyecto debe decidir si incluir el PDF en el commit o manten
 
 ---
 
+---
+
+## I-12 — Año exacto del ciclo hidrológico en CS Naturales (nuevo en Etapa 02.2)
+
+| Campo | Valor |
+|-------|-------|
+| Código | I-12 |
+| Tipo | EST |
+| Prioridad | BAJA |
+| Estado | PENDIENTE — a verificar en Etapa 02.3 |
+
+**Descripción:**
+GC-007 identificó el texto del "ciclo hidrológico" en CS Naturales d280, dentro del Segundo Ciclo, pero sin determinar a qué año específico (4°, 5° o 6°) pertenece el bloque. El modelo lo representa con `year_scope = 'CYCLE'` hasta que se verifique.
+
+**Acción:** ejecutar script de análisis sobre rango d260–d290 buscando headings de año en CS Naturales Segundo Ciclo.
+
+---
+
+## I-01 — Actualización en Etapa 02.2
+
+**Estado actualizado:** PARCIALMENTE VERIFICADO
+
+El propietario del proyecto aportó evidencia externa: documento oficial de DGCyE actualizado el 24/04/2026 que continúa referenciando el DC de Educación Primaria de 2018. Esto actualiza el campo `verification_status` del documento fuente a `partially_verified`. La verificación exhaustiva en SINBA / Boletín Oficial PBA sigue pendiente.
+
+---
+
 ## Resumen de issues por prioridad
 
 | Prioridad | Issues |
 |-----------|--------|
-| ALTA | I-01, I-05, I-10, I-11 |
+| ALTA | I-01 (parcialmente verificado), I-05, I-11 |
 | MEDIA | I-02, I-03, I-06, I-07, I-08 |
-| BAJA | I-04, I-09 |
+| BAJA | I-04, I-09, I-10 (resuelto), I-12 |
 
-## Issues que bloquean Etapa 02.2
+*I-10 resuelto: docs/.venv/ agregado a .gitignore en commit 6e0e3c7.*
+
+## Issues que bloquean Etapa 02.3 (extracción)
 
 Los siguientes deben resolverse antes de iniciar la extracción de contenido:
-- **I-01** — verificar vigencia normativa (decisión editorial)
-- **I-05** — estrategia para celdas combinadas (técnico)
-- **I-10** — .gitignore para docs/.venv/ (entorno)
+- **I-01** — vigencia normativa (parcialmente verificado; verificación SINBA pendiente)
+- **I-05** — estrategia para celdas combinadas (técnico, diseñada en EXTRACTION_STRATEGY.md)
 - **I-11** — permisos de redistribución del PDF (decisión propietario)

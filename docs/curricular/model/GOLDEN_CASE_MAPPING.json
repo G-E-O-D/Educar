@@ -1,0 +1,448 @@
+{
+  "schema_version": "1.0",
+  "generated": "2026-11-26",
+  "note": "Mapeo de los 13 golden cases al modelo de datos diseñado en Etapa 02.2. No modifica los resultados esperados de los golden cases; registra cómo el modelo los representa.",
+
+  "model_entities_referenced": [
+    "document_sources",
+    "curriculum_areas",
+    "curriculum_cycles",
+    "education_years",
+    "curriculum_blocks",
+    "curriculum_elements",
+    "element_source_refs",
+    "element_year_scope",
+    "element_relations",
+    "term_aliases"
+  ],
+
+  "mappings": [
+
+    {
+      "golden_case_id": "GC-001",
+      "label": "CS Sociales 4° año — Objetivos del año",
+      "model_representation": {
+        "curriculum_element": {
+          "element_type": "YEAR_OBJECTIVE",
+          "stable_id": "CSS-2C-4-OBJ-0001",
+          "area_stable_code": "PBA-PRIMARY-CSS",
+          "block_id": null,
+          "year_scope": "YEAR",
+          "review_status": "validated"
+        },
+        "element_year_scope": {
+          "year_id": "education_years.year_number=4",
+          "cycle_id": null,
+          "scope_kind": "YEAR"
+        },
+        "element_source_refs": {
+          "digital_page": 201,
+          "printed_page": 200,
+          "section_name": "Ciencias Sociales / Segundo Ciclo / Cuarto Año",
+          "column_name": null,
+          "column_index": null
+        }
+      },
+      "representation_notes": "Los 7 objetivos de 4° año se modelan como 7 registros YEAR_OBJECTIVE separados, todos con year_scope=YEAR, year_id=4°. No tienen block_id porque son objetivos del año, no de un bloque específico."
+    },
+
+    {
+      "golden_case_id": "GC-002",
+      "label": "CS Sociales 4° año — Pueblos originarios americanos (Bloque 1)",
+      "model_representation": {
+        "curriculum_block": {
+          "stable_code": "PBA-PRIMARY-CSS-2C-BLQ1",
+          "name": "Sociedades, culturas: cambios y continuidades",
+          "area_stable_code": "PBA-PRIMARY-CSS",
+          "cycle_id": "PBA-PRIMARY-C2",
+          "year_id": "4°",
+          "page_start_digital": 202,
+          "page_end_digital": 203
+        },
+        "curriculum_elements": [
+          {
+            "element_type": "CONCEPT",
+            "stable_id": "CSS-2C-4-BLQ1-CON-0001",
+            "original_text": "Los pueblos originarios americanos en el siglo XV.",
+            "year_scope": "YEAR"
+          },
+          {
+            "element_type": "CONCEPT",
+            "stable_id": "CSS-2C-4-BLQ1-CON-0002",
+            "original_text": "La conquista española de América, respuestas de los pueblos originarios y conformación de la sociedad colonial.",
+            "year_scope": "YEAR"
+          }
+        ],
+        "element_source_refs": {
+          "digital_page": 202,
+          "printed_page": 201,
+          "table_name": "Bloque 1",
+          "column_index": 0,
+          "column_name": "Conceptos"
+        },
+        "element_relations_examples": [
+          {
+            "relation_type": "CONCEPT_WAY_OF_KNOWING",
+            "relation_basis": "SOURCE_EXPRESSED",
+            "note": "CON-0001 relacionado con el MOD DE CONOCER en columna 1 misma fila"
+          }
+        ]
+      },
+      "representation_notes": "El texto del GC incluye varios conceptos de la misma celda de tabla. Cada bullet se extrae como CONCEPT separado con correlativo en stable_id. Las relaciones CONCEPT_WAY_OF_KNOWING usan coordenadas Y para resolver celdas combinadas."
+    },
+
+    {
+      "golden_case_id": "GC-003",
+      "label": "CS Sociales 4° año — Conquista y situaciones de enseñanza",
+      "model_representation": {
+        "curriculum_element": {
+          "element_type": "TEACHING_SITUATION",
+          "stable_id": "CSS-2C-4-BLQ1-SIT-0001",
+          "area_stable_code": "PBA-PRIMARY-CSS",
+          "block_id": "PBA-PRIMARY-CSS-2C-BLQ1",
+          "year_scope": "YEAR"
+        },
+        "element_source_refs": {
+          "digital_page": 203,
+          "printed_page": 202,
+          "section_name": "Situaciones de enseñanza — Bloque 1",
+          "column_index": null
+        },
+        "element_relations": [
+          {
+            "source_element_id": "CSS-2C-4-BLQ1-SIT-0001",
+            "target_element_id": "CSS-2C-4-BLQ1-CON-0001",
+            "relation_type": "CONTENT_TEACHING_SITUATION",
+            "relation_basis": "SOURCE_EXPRESSED",
+            "note": "La situación de enseñanza está en la sección inmediatamente posterior al Bloque 1"
+          }
+        ]
+      },
+      "representation_notes": "Las situaciones de enseñanza se vinculan al bloque vía block_id. La relación a conceptos individuales es SOURCE_EXPRESSED cuando la situación menciona el concepto explícitamente."
+    },
+
+    {
+      "golden_case_id": "GC-004",
+      "label": "CS Sociales 4° año — Organización federal (Bloque 2)",
+      "model_representation": {
+        "curriculum_block": {
+          "stable_code": "PBA-PRIMARY-CSS-2C-BLQ2",
+          "name": "Sociedades, culturas y organización del espacio",
+          "page_start_digital": 204
+        },
+        "curriculum_elements": [
+          {
+            "element_type": "CONCEPT",
+            "stable_id": "CSS-2C-4-BLQ2-CON-0001",
+            "original_text": "Organización federal del Estado argentino y los niveles de gobierno. La división política de la República Argentina en 23 provincias y la Ciudad Autónoma de Buenos Aires: su representación cartográfica."
+          }
+        ],
+        "element_source_refs": {
+          "digital_page": 204,
+          "printed_page": 203,
+          "column_index": 0,
+          "column_name": "Conceptos"
+        }
+      },
+      "representation_notes": "Bloque 2 coexiste con Bloque 1 para 4° año. Dos bloques distintos en curriculum_blocks apuntando al mismo area_id y year_id."
+    },
+
+    {
+      "golden_case_id": "GC-005",
+      "label": "CS Sociales 4° año — Recursos naturales PBA (Bloque 2)",
+      "model_representation": {
+        "curriculum_element": {
+          "element_type": "CONCEPT",
+          "stable_id": "CSS-2C-4-BLQ2-CON-0005",
+          "original_text": "Los recursos naturales en la provincia de Buenos Aires: su uso, valoración y explotación. Los problemas ambientales del territorio provincial y local."
+        },
+        "element_source_refs": {
+          "digital_page": 205,
+          "printed_page": 204,
+          "column_index": 0
+        },
+        "transversal_relations": [
+          {
+            "relation_type": "TRANSVERSAL_LINK",
+            "relation_basis": "PEDAGOGICALLY_INFERRED",
+            "note": "Puede vincularse a Educación Ambiental (contenido transversal). Requiere validación humana antes de activar."
+          }
+        ]
+      },
+      "representation_notes": "El vínculo con Ed. Ambiental es PEDAGOGICALLY_INFERRED; no se activa automáticamente en la extracción."
+    },
+
+    {
+      "golden_case_id": "GC-006",
+      "label": "CS Sociales 3° año — Pueblos originarios del territorio argentino",
+      "model_representation": {
+        "curriculum_element": {
+          "element_type": "CONCEPT",
+          "stable_id": "CSS-1C-3-BLQ1-CON-0001",
+          "area_stable_code": "PBA-PRIMARY-CSS",
+          "year_scope": "YEAR"
+        },
+        "element_year_scope": {
+          "year_id": "education_years.year_number=3",
+          "cycle_id": null,
+          "scope_kind": "YEAR"
+        },
+        "element_source_refs": {
+          "digital_page": 195,
+          "printed_page": 194,
+          "column_index": 0
+        },
+        "progression_relation": {
+          "relation_type": "YEAR_PROGRESSION",
+          "target_stable_id": "CSS-2C-4-BLQ1-CON-0001",
+          "relation_basis": "PEDAGOGICALLY_INFERRED",
+          "notes": "El DC trata pueblos originarios en 3° año (Primer Ciclo) con enfoque local, y en 4° año amplía a América y la conquista. La progresión es implícita en la secuencia de secciones del DC (p. 194 → p. 201)."
+        }
+      },
+      "representation_notes": "GC-006 (3° año) y GC-002 (4° año) comparten el tema 'pueblos originarios' con progresión de escala: territorio argentino en 3° → América continental en 4°. La relación de progresión es PEDAGOGICALLY_INFERRED."
+    },
+
+    {
+      "golden_case_id": "GC-007",
+      "label": "Ciclo del agua — CS Naturales Segundo Ciclo",
+      "model_representation": {
+        "curriculum_element": {
+          "element_type": "TEACHING_SITUATION",
+          "stable_id": "CSN-2C-X-BLJX-SIT-CICLO-HIDRO",
+          "area_stable_code": "PBA-PRIMARY-CSN",
+          "year_scope": "CYCLE",
+          "review_status": "ambiguous",
+          "notes": "Año específico no determinado en Etapa 02.1. El DC ubica este texto en d280, dentro del Segundo Ciclo de Ciencias Naturales, pero sin heading de año explícito en ese rango. Ver I-09 (pendiente verificación exacta en Etapa 02.2+). GC-007 original."
+        },
+        "element_year_scope": {
+          "year_id": null,
+          "cycle_id": "PBA-PRIMARY-C2",
+          "scope_kind": "CYCLE"
+        },
+        "element_source_refs": {
+          "digital_page": 280,
+          "printed_page": 279,
+          "section_name": "Ciencias Naturales / Segundo Ciclo / Situaciones de enseñanza"
+        }
+      },
+      "term_alias": {
+        "canonical_term": "ciclo hidrológico",
+        "alias_text": "ciclo del agua",
+        "alias_kind": "SEARCH_ALIAS",
+        "notes": "El DC usa exclusivamente 'ciclo hidrológico'. Alias para recuperar por búsqueda coloquial."
+      },
+      "representation_notes": "Modelado con year_scope=CYCLE hasta que una revisión específica del PDF determine el año. El alias permite recuperación por 'ciclo del agua' sin alterar el texto oficial.",
+      "new_issue": {
+        "id": "I-12",
+        "description": "Verificar año exacto del ciclo hidrológico (d278-d282) en CS Naturales Segundo Ciclo. Podría ser 4°, 5° o sin desagregar.",
+        "action": "Ejecutar script de análisis sobre rango d260-d290 buscando headings de año."
+      }
+    },
+
+    {
+      "golden_case_id": "GC-008",
+      "label": "Fracciones — Primer Ciclo / 3° año (introducción)",
+      "model_representation": {
+        "curriculum_elements": [
+          {
+            "element_type": "CONCEPT",
+            "stable_id": "MAT-1C-3-BLQ-MEDIDA-CON-FRAC-001",
+            "original_text": "Proponer situaciones que demanden recurrir a expresiones fraccionarias (1/2 metro, 1/4 kilogramo, 3/4 litro).",
+            "year_scope": "YEAR"
+          },
+          {
+            "element_type": "PROGRESS_INDICATOR",
+            "stable_id": "MAT-1C-3-BLQ-MEDIDA-IDA-FRAC-001",
+            "original_text": "Usan números fraccionarios cotidianos (medios y cuartos) al trabajar con medidas convencionales.",
+            "year_scope": "YEAR"
+          }
+        ],
+        "element_year_scope": {
+          "year_id": "education_years.year_number=3",
+          "scope_kind": "YEAR"
+        },
+        "element_source_refs": {
+          "digital_page": 129,
+          "printed_page": 128,
+          "section_name": "Matemática / Primer Ciclo / 3° año / Bloque Medida"
+        }
+      }
+    },
+
+    {
+      "golden_case_id": "GC-009",
+      "label": "Fracciones — 4° año (divisiones y equivalencias)",
+      "model_representation": {
+        "curriculum_block": {
+          "stable_code": "PBA-PRIMARY-MAT-2C-4-BLQ-FRACCIONES",
+          "name": "Usar las fracciones en diferentes clases de problemas",
+          "year_id": "education_years.year_number=4"
+        },
+        "curriculum_elements": [
+          {
+            "element_type": "CONCEPT",
+            "stable_id": "MAT-2C-4-BLQ-FRAC-CON-DIV-001",
+            "original_text": "Fracciones y divisiones."
+          },
+          {
+            "element_type": "CONCEPT",
+            "stable_id": "MAT-2C-4-BLQ-FRAC-CON-EQV-001",
+            "original_text": "Fracciones y equivalencias."
+          }
+        ],
+        "element_source_refs_range": {
+          "digital_pages": [152, 153],
+          "printed_pages": [151, 152]
+        },
+        "progression_from": {
+          "source_stable_id": "MAT-1C-3-BLQ-MEDIDA-CON-FRAC-001",
+          "relation_type": "YEAR_PROGRESSION",
+          "relation_basis": "PEDAGOGICALLY_INFERRED",
+          "notes": "La progresión 3°→4° se infiere de la secuencia de bloques: en 3° se introducen medios y cuartos en contexto de medida; en 4° se formalizan fracciones como divisiones y equivalencias. DC pp. 128→151."
+        }
+      }
+    },
+
+    {
+      "golden_case_id": "GC-010",
+      "label": "Fracciones — 5°/6° año (números racionales)",
+      "model_representation": {
+        "curriculum_block": {
+          "stable_code": "PBA-PRIMARY-MAT-2C-56-BLQ-RACIONALES",
+          "name": "Números racionales — Usar las fracciones en diferentes clases de problemas",
+          "year_id": null,
+          "note": "Bloque compartido por 5° y 6°; usar element_year_scope con dos registros: year_id=5° y year_id=6°"
+        },
+        "curriculum_elements": [
+          {
+            "element_type": "CONCEPT",
+            "stable_id": "MAT-2C-56-BLQ-RAC-CON-COC-001",
+            "original_text": "Fracciones como cociente de números naturales.",
+            "year_scope": "YEAR",
+            "note": "Dos registros en element_year_scope: 5° y 6°"
+          }
+        ],
+        "element_source_refs_range": {
+          "digital_pages": [166, 167],
+          "printed_pages": [165, 166]
+        },
+        "progression_from": {
+          "source_stable_id": "MAT-2C-4-BLQ-FRAC-CON-DIV-001",
+          "relation_type": "YEAR_PROGRESSION",
+          "relation_basis": "PEDAGOGICALLY_INFERRED",
+          "notes": "Progresión 4°→5°/6°: de fracciones como resultado de divisiones a fracciones como cociente formal de números naturales. DC pp. 151→165."
+        }
+      },
+      "representation_notes": "El bloque es compartido por 5° y 6°. Se modela con dos registros en element_year_scope (scope_kind=YEAR, year_id=5° y YEAR, year_id=6°) para permitir filtros por año."
+    },
+
+    {
+      "golden_case_id": "GC-011",
+      "label": "Ortografía/Acentuación — Prácticas del Lenguaje Primer Ciclo",
+      "model_representation": {
+        "curriculum_element": {
+          "element_type": "CONTENT",
+          "stable_id": "LEN-1C-UP-BLQ-REFLEXION-CON-ORTO-001",
+          "area_stable_code": "PBA-PRIMARY-LEN",
+          "original_text": "Reflexionen sobre diferentes aspectos del texto escrito (ortografía, puntuación, separación de palabras)...",
+          "year_scope": "YEAR",
+          "review_status": "validated"
+        },
+        "element_year_scope": {
+          "year_id": "education_years.special_scope=UP_1_2",
+          "cycle_id": null,
+          "scope_kind": "YEAR"
+        },
+        "element_source_refs": {
+          "digital_page": 53,
+          "printed_page": 52,
+          "section_name": "Prácticas del Lenguaje / Primer Ciclo / Unidad Pedagógica",
+          "column_index": 0,
+          "column_name": "Contenidos y modos de conocer"
+        }
+      },
+      "structural_note": {
+        "finding": "No existe bloque 'Ortografía' ni 'Acentuación' en Prácticas del Lenguaje",
+        "model_implication": "No crear curriculum_block con nombre 'Ortografía'. El contenido pertenece al bloque 'Reflexión sobre el lenguaje'.",
+        "search_impact": "Una consulta por 'ortografía' debe buscar en normalized_text, no en block names."
+      }
+    },
+
+    {
+      "golden_case_id": "GC-012",
+      "label": "Ortografía — Segundo Ciclo, Prácticas del Lenguaje",
+      "model_representation": {
+        "curriculum_element": {
+          "element_type": "DIDACTIC_GUIDANCE",
+          "stable_id": "LEN-2C-4-BLQ-REFLEXION-GDI-ORTO-001",
+          "area_stable_code": "PBA-PRIMARY-LEN",
+          "original_text": "En el trabajo con la ortografía, proponer situaciones diversas, que pueden incluir revisiones, armado de fichas de consulta, elaboración de reglas a partir de generalizaciones.",
+          "year_scope": "YEAR"
+        },
+        "element_year_scope": {
+          "year_id": "education_years.year_number=4",
+          "scope_kind": "YEAR"
+        },
+        "element_source_refs": {
+          "digital_page": 63,
+          "printed_page": 62
+        }
+      },
+      "progression_from_gc011": {
+        "relation_type": "YEAR_PROGRESSION",
+        "relation_basis": "PEDAGOGICALLY_INFERRED",
+        "notes": "Ortografía en Primer Ciclo (GC-011, integrada en reflexión básica) → Segundo Ciclo (GC-012, con fichas de consulta y generalización de reglas). Progresión implícita en la secuencia del DC."
+      }
+    },
+
+    {
+      "golden_case_id": "GC-013",
+      "label": "Educación Inclusiva — Módulo transversal",
+      "model_representation": {
+        "curriculum_area": {
+          "stable_code": "PBA-PRIMARY-INC",
+          "area_kind": "MODULE",
+          "official_name": "Módulo Educación Inclusiva",
+          "table_structure_type": "NONE",
+          "page_start_digital": 23,
+          "page_end_digital": 32
+        },
+        "curriculum_elements": [
+          {
+            "element_type": "AREA_PURPOSE",
+            "stable_id": "INC-DOC-PRO-DUA-001",
+            "original_text": "[propósitos del módulo DUA — texto de d23]",
+            "year_scope": "DOCUMENT",
+            "block_id": null
+          }
+        ],
+        "element_year_scope": {
+          "year_id": null,
+          "cycle_id": null,
+          "scope_kind": "DOCUMENT"
+        },
+        "element_source_refs": {
+          "digital_page": 23,
+          "printed_page": 22,
+          "section_name": "Módulo Educación Inclusiva"
+        }
+      },
+      "structural_note": {
+        "finding": "El módulo no tiene ciclo ni año; aplica a todo el nivel",
+        "model_implication": "year_scope = 'DOCUMENT'. element_year_scope con scope_kind='DOCUMENT', year_id=NULL, cycle_id=NULL.",
+        "search_impact": "Al consultar cualquier área/ciclo/año, el motor puede incluir elementos de Ed. Inclusiva via flag 'show_transversal=true'."
+      }
+    }
+
+  ],
+
+  "coverage_summary": {
+    "total_golden_cases": 13,
+    "fully_representable": 12,
+    "partially_representable": 1,
+    "not_representable": 0,
+    "partially_representable_detail": "GC-007: año específico del ciclo hidrológico no determinado; modelado como CYCLE hasta verificación (I-12). No es un defecto del modelo sino información pendiente.",
+    "new_issues_identified": ["I-12"],
+    "errors_found_in_golden_cases": "Ninguno. Los resultados esperados de los 13 golden cases no fueron modificados."
+  }
+}
