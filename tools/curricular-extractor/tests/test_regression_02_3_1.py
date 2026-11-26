@@ -75,19 +75,19 @@ class TestColumnThresholdsEI01:
         assert col != 2, "x0=520 (Situaciones) no debe caer en col2"
 
     def test_boundary_col0_col1(self):
-        # 0.27 * 595 = 160.65
-        assert classify_column(160, PAGE_WIDTH) == 0
-        assert classify_column(161, PAGE_WIDTH) == 1
+        # 0.192 * 841.9 = 161.6pt
+        assert classify_column(161, PAGE_WIDTH) == 0   # 161/841.9 = 0.191 < 0.192
+        assert classify_column(162, PAGE_WIDTH) == 1   # 162/841.9 = 0.192 >= 0.192
 
     def test_boundary_col1_col2(self):
-        # 0.54 * 595 = 321.3
-        assert classify_column(321, PAGE_WIDTH) == 1
-        assert classify_column(322, PAGE_WIDTH) == 2
+        # 0.404 * 841.9 = 340.3pt
+        assert classify_column(340, PAGE_WIDTH) == 1   # 340/841.9 = 0.40383 < 0.404
+        assert classify_column(341, PAGE_WIDTH) == 2   # 341/841.9 = 0.40502 >= 0.404
 
     def test_boundary_col2_col3(self):
-        # 0.84 * 595 = 499.8
-        assert classify_column(499, PAGE_WIDTH) == 2
-        assert classify_column(500, PAGE_WIDTH) == 3
+        # 0.608 * 841.9 = 511.9pt
+        assert classify_column(511, PAGE_WIDTH) == 2   # 511/841.9 = 0.60693 < 0.608
+        assert classify_column(512, PAGE_WIDTH) == 3   # 512/841.9 = 0.60812 >= 0.608
 
 
 # ---------------------------------------------------------------------------

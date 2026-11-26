@@ -114,6 +114,57 @@ En `extract_pilot()`, agregar validación: si `blk_end < blk_start`, usar `blk_e
 
 ---
 
+## EI-07 — Thresholds calibrados para página A4 portrait, el PDF usa A4 landscape
+
+**Severidad:** CRÍTICA  
+**Estado:** CORREGIDO — Etapa 02.3.2
+
+**Descripción:**  
+Los thresholds de columna (0.27, 0.54, 0.84) se calibraron visualmente asumiendo A4 portrait (595.3pt). El DC PBA 2018 usa A4 landscape (841.9pt × 595.3pt). Al multiplicar ratios × 841.9pt, los límites absolutos eran incorrectos:
+- Límite col0/col1: 0.27 × 841.9 = **227.3pt** → incluía todo Modos de conocer (x0=163–339)
+- Límite col1/col2: 0.54 × 841.9 = **454.6pt** → incluía todo Indicadores (x0=341–511)
+- Límite col2/col3: 0.84 × 841.9 = **707.2pt** → incluía todo Situaciones (x0=513–777)
+
+**Efecto:** Todo el texto de col1–col3 era clasificado una columna a la izquierda de lo correcto. Modos de conocer terminaba en col0 (como CONCEPT), Indicadores en col1 (como WAY_OF_KNOWING), Situaciones en col2 (como PROGRESS_INDICATOR). Los 3 TEACHING_SITUATION del piloto v2 eran ruido.
+
+**Corrección (Etapa 02.3.2):**  
+Thresholds recalibrados midiendo x0 reales en d136–d145:
+- col0/col1: 0.27 → **0.192** (límite absoluto ~161pt, entre col0 max=161.2 y col1 min=163.9)
+- col1/col2: 0.54 → **0.404** (límite absoluto ~340pt, entre col1 max=338.7 y col2 min=341.3)
+- col2/col3: 0.84 → **0.608** (límite absoluto ~512pt, entre col2 max=511.3 y col3 min=513.4)
+
+`classify_column()` ahora lee thresholds desde `TRICOLUMN_THRESHOLDS` en config.py (antes tenía valores hardcodeados).  
+`PAGE_WIDTH` en fixtures.py actualizado de 595.0 a 841.9.
+
+**Resultado piloto v3 (d135–d146):**
+- Elementos: 570 (antes 619 con mezcla de columnas)
+- CONCEPT: 125, WAY_OF_KNOWING: 158, PROGRESS_INDICATOR: 136, TEACHING_SITUATION: **151** (antes 3)
+- Relaciones: 2498 (antes 9526)
+- Avg rels/elem: 4.38 (antes 15.39)
+
+---
+
+## EI-08 — items() divide texto multi-línea en ítems separados
+
+**Severidad:** BAJA  
+**Estado:** DOCUMENTADO
+
+**Descripción:**  
+`RawCell.raw_text` usa comparación y0-to-y0 con umbral 3pt para detectar saltos de línea. Para texto que continúa en líneas adyacentes dentro de una misma celda (font size 8pt, interlineado ~9.5pt), el gap y0-to-y0 (9.5pt) supera los 3pt → inserta `\n` → `items()` divide en ítems separados.
+
+Ejemplo en d136 col0: "Números hasta el orden" (y0=114.8) + "de los millones." (y0=124.4):
+- gap = 9.6pt > 3pt → raw_text = "Números hasta el orden \nde los millones."
+- items() devuelve ["Números hasta el orden", "de los millones."] — 2 ítems para 1 concepto
+
+**Consecuencia:** El número de CONCEPT, WAY_OF_KNOWING y PROGRESS_INDICATOR es mayor al real (~2× por promedio de 2 líneas por ítem). Genera producto cartesiano intra-row entre líneas del mismo concepto y los modos de conocer correspondientes.
+
+**Interacción con  bullet:** Los bullets del PDF tienen y0 ligeramente mayor al del texto de su misma línea (1-2pt), lo que complica cualquier fix basado en y0-to-y1. Ver análisis detallado en ETAPA_02_3_2 commit notes.
+
+**Acción requerida para Etapa 02.4:**  
+Reemplazar la lógica y0-to-y0 en `raw_text` por una que detecte bullets  como separadores de ítems y agrupe líneas adyacentes del mismo ítem. Alternativa: usar el gap real (y0_next - y1_prev) > N×font_size como umbral.
+
+---
+
 ## EI-06 — Encabezados repetidos capturados en spans
 
 **Severidad:** BAJA  

@@ -21,39 +21,38 @@ class TestClassifyColumn:
         assert classify_column(40, PAGE_WIDTH) == 0
 
     def test_col1_center(self):
-        # 0.27 * 595 = 160.65; real Modos de conocer x0 ~175
+        # 0.192 * 841.9 = 161.6; real Modos de conocer x0 ~175
         assert classify_column(175, PAGE_WIDTH) == 1
 
     def test_col2_indicadores(self):
-        # 0.54 * 595 = 321.3; real Indicadores x0 ~355
+        # 0.404 * 841.9 = 340.3; real Indicadores x0 ~355
         assert classify_column(355, PAGE_WIDTH) == 2
 
     def test_col3_situaciones(self):
-        # 0.84 * 595 = 499.8; real Situaciones x0 ~520
+        # 0.608 * 841.9 = 511.9; real Situaciones x0 ~520
         assert classify_column(520, PAGE_WIDTH) == 3
 
     def test_boundary_col0_col1(self):
-        # 0.27 * 595 = 160.65
-        assert classify_column(160, PAGE_WIDTH) == 0   # 160/595 = 0.2689 < 0.27
-        assert classify_column(161, PAGE_WIDTH) == 1   # 161/595 = 0.2706 >= 0.27
+        # 0.192 * 841.9 = 161.6pt
+        assert classify_column(161, PAGE_WIDTH) == 0   # 161/841.9 = 0.191 < 0.192
+        assert classify_column(162, PAGE_WIDTH) == 1   # 162/841.9 = 0.192 >= 0.192
 
     def test_boundary_col1_col2(self):
-        # 0.54 * 595 = 321.3
-        assert classify_column(321, PAGE_WIDTH) == 1   # 321/595 = 0.5395 < 0.54
-        assert classify_column(322, PAGE_WIDTH) == 2   # 322/595 = 0.5412 >= 0.54
+        # 0.404 * 841.9 = 340.3pt
+        assert classify_column(340, PAGE_WIDTH) == 1   # 340/841.9 = 0.40383 < 0.404
+        assert classify_column(341, PAGE_WIDTH) == 2   # 341/841.9 = 0.40502 >= 0.404
 
     def test_boundary_col2_col3(self):
-        # 0.84 * 595 = 499.8
-        assert classify_column(499, PAGE_WIDTH) == 2   # 499/595 = 0.8387 < 0.84
-        assert classify_column(500, PAGE_WIDTH) == 3   # 500/595 = 0.8403 >= 0.84
+        # 0.608 * 841.9 = 511.9pt
+        assert classify_column(511, PAGE_WIDTH) == 2   # 511/841.9 = 0.60693 < 0.608
+        assert classify_column(512, PAGE_WIDTH) == 3   # 512/841.9 = 0.60812 >= 0.608
 
     def test_old_col1_x0_now_col1(self):
-        # x0=222 que antes estaba justo al borde del umbral viejo (0.37*595=220.15)
-        # con nuevos thresholds 222/595=0.373, 0.27<=0.373<0.54 → col1
+        # x0=222; con thresholds correctos 222/841.9=0.264, 0.192<=0.264<0.404 → col1
         assert classify_column(222, PAGE_WIDTH) == 1
 
     def test_old_col2_threshold_now_col2(self):
-        # x0=400, 400/595=0.672, 0.54<=0.672<0.84 → col2
+        # x0=400, 400/841.9=0.475, 0.404<=0.475<0.608 → col2
         assert classify_column(400, PAGE_WIDTH) == 2
 
 

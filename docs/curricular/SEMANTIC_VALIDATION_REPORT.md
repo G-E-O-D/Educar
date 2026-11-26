@@ -1,4 +1,4 @@
-# Reporte de Validación Semántica — Etapa 02.3.1
+# Reporte de Validación Semántica — Etapa 02.3.2
 
 **Fecha:** 2026-11-26  
 **Extractor:** 0.1.0-pilot  
@@ -9,45 +9,56 @@
 
 ## Resumen ejecutivo
 
-Etapa 02.3.1 corrigió tres errores semánticos identificados en Etapa 02.3:
+Etapa 02.3.1 corrigió EI-01/02/03. Etapa 02.3.2 descubrió y corrigió EI-07 (causa raíz de todos los errores anteriores):
 
 | Error | Descripción | Estado anterior | Estado actual |
 |-------|-------------|-----------------|---------------|
 | EI-01 | Tabla tiene 4 columnas (no 3), thresholds incorrectos | ABIERTO | CORREGIDO |
 | EI-02 | Segmentación de año por texto completo (falsos positivos) | DOCUMENTADO | CORREGIDO |
 | EI-03 / GC-007 | Año del ciclo hidrológico determinado incorrectamente | PARCIALMENTE RESUELTO | RESUELTO |
+| EI-07 | Thresholds calibrados para portrait A4 (595pt); PDF usa landscape (841.9pt) | — | CORREGIDO |
+| EI-08 | items() divide texto multi-línea en ítems separados (y0-to-y0 gap) | — | DOCUMENTADO |
 
 ---
 
-## Comparación antes / después
+## Comparación antes / después (mismo rango d135–d146)
 
 ### Resultados del piloto
 
-| Métrica | Piloto v1 (Etapa 02.3) | Piloto v2 (Etapa 02.3.1) | Cambio |
-|---------|------------------------|--------------------------|--------|
-| Rango procesado | d135–d179 (todo MAT 2C) | d135–d146 (solo 4°) | Correcto |
-| Páginas digitales | 44 | 11 | -75% |
-| Bloques detectados | 20 (3 años) | 7 (solo 4°) | Correcto |
-| Elementos totales | 1551 | 619 | -60% |
-| — CONCEPT | 706 | 213 | Correcto |
-| — WAY_OF_KNOWING | 726 | 196 | Correcto |
-| — PROGRESS_INDICATOR | 119 | 207 | +74% (antes sub-extraído) |
-| — TEACHING_SITUATION | 0 | 3 | Nueva columna detectada |
-| — YEAR_OBJECTIVE | 0 | 0 | Sin cambio |
-| Relaciones totales | 22726 | 9526 | -58% |
-| — CONCEPT_WAY_OF_KNOWING | ~18220 | 4738 | -74% |
-| — CONTENT_PROGRESS_INDICATOR | ~4506 | 4785 | +6% |
-| — CONTENT_TEACHING_SITUATION | 0 | 3 | Nueva |
+| Métrica | Piloto v2 (Etapa 02.3.1) | Piloto v3 (Etapa 02.3.2) | Cambio |
+|---------|--------------------------|--------------------------|--------|
+| Rango procesado | d135–d146 (solo 4°) | d135–d146 (solo 4°) | Sin cambio |
+| Páginas digitales | 11 | 11 | Sin cambio |
+| Bloques detectados | 7 (solo 4°) | 6 (solo 4°) | -1 (bloque inválido excluido) |
+| Elementos totales | 619 | **570** | -8% |
+| — CONCEPT | 213 | **125** | -41% (EI-07: líneas dentro de concepto se contaban separadas) |
+| — WAY_OF_KNOWING | 196 | **158** | -19% |
+| — PROGRESS_INDICATOR | 207 | **136** | -34% |
+| — TEACHING_SITUATION | 3 | **151** | +4933% (EI-07: antes clasificados como PROGRESS_INDICATOR) |
+| Relaciones totales | 9526 | **2498** | -74% |
+| — CONCEPT_WAY_OF_KNOWING | 4738 | **858** | -82% |
+| — CONTENT_PROGRESS_INDICATOR | 4785 | **805** | -83% |
+| — CONTENT_TEACHING_SITUATION | 3 | **835** | +27700% |
 | Errores de validación | 0 | 0 | Sin cambio |
+| Avg relaciones/elemento | 15.39 | **4.38** | -72% |
 
-### Análisis de relaciones restantes
+### Causa raíz de los errores (EI-07)
 
-Las 9526 relaciones del piloto v2 reflejan la estructura real de las tablas del DC:
-- Las celdas combinadas (merged cells) producen relaciones M:N legítimas
-- El método `cell.items()` puede sobresegmentar texto multi-línea → genera más relaciones por fila
-- El test de regresión `test_two_rows_produce_two_relations` verifica la ausencia de cartesiano cross-row
+El DC PBA 2018 usa páginas A4 landscape (841.9pt × 595.3pt). Los thresholds ratios (0.27, 0.54, 0.84) aplicados sobre 841.9pt producen límites absolutos INCORRECTOS:
+- col0/col1: 0.27×841.9=**227.3pt** → Modos de conocer (x0=163–339) clasificaba como col0
+- col1/col2: 0.54×841.9=**454.6pt** → Indicadores (x0=341–511) clasificaba como col1
+- col2/col3: 0.84×841.9=**707.2pt** → Situaciones (x0=513–777) clasificaba como col2
 
-Análisis adicional de M:N intra-fila se agenda para Etapa 02.4.
+Los thresholds correctos para 841.9pt (medidos en d136–d145): **0.192 / 0.404 / 0.608**
+
+### Análisis de relaciones post-corrección
+
+Las 2498 relaciones del piloto v3 son estructuralmente correctas pero incluyen sobre-segmentación por items():
+- EI-08: `cell.items()` divide texto de 2 líneas en 2 ítems (gap y0-to-y0 ≈ 9.5pt > umbral 3pt)
+- Ejemplo: "Números hasta el orden" + "de los millones." → 2 CONCEPT en lugar de 1
+- Consecuencia: productos cartesianos intra-celda (2 fragmentos × N modos de conocer)
+- El test `test_two_rows_produce_two_relations` verifica ausencia de cartesiano cross-row
+- Fix de EI-08 se agenda para Etapa 02.4 (requiere revisar lógica raw_text)
 
 ---
 
@@ -88,8 +99,8 @@ x0 ~510-580  → col3 Situaciones enseñ.  (x0/page ≥ 0.84)
 
 ## Tests de regresión
 
-**Suite agregada:** `tests/test_regression_02_3_1.py`  
-**Tests:** 36 (todos pasan)
+**Suite agregada Etapa 02.3.1:** `tests/test_regression_02_3_1.py` — 36 tests  
+**Suite agregada Etapa 02.3.2:** `tests/test_regression_02_3_2.py` — 12 tests
 
 | Clase | Tests | Cobertura |
 |-------|-------|-----------|
@@ -99,8 +110,10 @@ x0 ~510-580  → col3 Situaciones enseñ.  (x0/page ≥ 0.84)
 | `TestYearHeadingDetectionEI02` | 8 | Detección heading por span-size, MAT 4°/5°/6° |
 | `TestGC007Year5` | 4 | GC-007 año=5°, d279, conclusión correcta |
 | `TestRelationTypes` | 6 | Tipos de relación por columna, basis SOURCE_EXPRESSED |
+| `TestEI07LandscapePageWidth` | 9 | x0 reales d136 con page_width=841.9 → col correcta |
+| `TestEI07PDFIntegration` | 3 | Ancho real 841.9pt; spans col1/col2 en columna correcta |
 
-**Suite total:** 125/125 tests (6 suites)
+**Suite total:** 137/137 tests (7 suites)
 
 ---
 

@@ -25,10 +25,15 @@ def make_span(text: str, x0: float, y0: float, x1: float = None, y1: float = Non
 
 
 # Página de prueba con tabla tricolumna sintética (NO es contenido del DC)
-# Coordenadas aproximadas para A4 (595pt ancho)
-PAGE_WIDTH = 595.0
+# DC PBA 2018 usa A4 landscape (841.9pt ancho × 595.3pt alto).
+# Los x0 de las fixtures deben quedar en columna correcta con thresholds 0.192/0.404/0.608:
+#   col0 (x0=40): 40/841.9=0.048 < 0.192 ✓
+#   col1 (x0=215): 215/841.9=0.255, 0.192≤0.255<0.404 ✓
+#   col2 (x0=350,400): 0.416,0.475, 0.404≤<0.608 ✓
+#   col3 (x0=520): 520/841.9=0.618 ≥ 0.608 ✓
+PAGE_WIDTH = 841.9
 
-# Fila 1: 4 celdas independientes (col0–col3; thresholds: 0.27=160.65, 0.54=321.3, 0.84=499.8)
+# Fila 1: 4 celdas independientes (col0–col3; thresholds: 0.192=161.6, 0.404=340.3, 0.608=511.9)
 TRICOLUMN_ROW1 = [
     make_span("Concepto sintético 1",    x0=40,  y0=100, x1=160, y1=115),   # col0
     make_span("Modo de conocer A",       x0=215, y0=100, x1=320, y1=115),   # col1

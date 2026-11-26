@@ -167,18 +167,20 @@ def classify_column(x0: float, page_width: float) -> int:
     2 = Indicadores de avance (centro-derecha)
     3 = Situaciones de enseñanza (derecha)
 
-    Thresholds verificados contra d136 DC PBA 2018 (Etapa 02.3.1):
-      col0: x0 ~60-120   (x0/page < 0.27)
-      col1: x0 ~175-220  (0.27 ≤ x0/page < 0.54)
-      col2: x0 ~330-380  (0.54 ≤ x0/page < 0.84)
-      col3: x0 ~510-580  (x0/page ≥ 0.84)
+    Thresholds en TRICOLUMN_THRESHOLDS (config.py), calibrados para A4 landscape
+    (841.9pt ancho). Límites absolutos medidos en d136–d145 DC PBA 2018:
+      col0: x0 ≤ 161pt   → x0/page < 0.192
+      col1: x0 164–338pt → 0.192 ≤ x0/page < 0.404
+      col2: x0 341–511pt → 0.404 ≤ x0/page < 0.608
+      col3: x0 ≥ 513pt   → x0/page ≥ 0.608
     """
+    from config import TRICOLUMN_THRESHOLDS
     ratio = x0 / page_width
-    if ratio < 0.27:
+    if ratio < TRICOLUMN_THRESHOLDS["col0_max"]:
         return 0
-    elif ratio < 0.54:
+    elif ratio < TRICOLUMN_THRESHOLDS["col1_max"]:
         return 1
-    elif ratio < 0.84:
+    elif ratio < TRICOLUMN_THRESHOLDS["col2_max"]:
         return 2
     else:
         return 3
