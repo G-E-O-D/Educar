@@ -54,3 +54,4 @@ docs/dis-curricular-PBA-completo.pdf
 # Salidas del extractor curricular — no redistribuir hasta autorización (I-11)
 # Copias locales se conservan; solo se excluyen del repositorio
 docs/curricular/pilot_output/
+docs/curricular/extract_*.json

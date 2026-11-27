@@ -344,3 +344,140 @@ class TestCSSGoldenCases:
         year3_concepts = [e for e in found
                           if e.get("year") == 3 and e.get("element_type") == "CONCEPT"]
         assert len(year3_concepts) >= 1, "No CONCEPT year=3 containing 'pueblo' found for GC-006"
+
+
+# ---------------------------------------------------------------------------
+# CSN extraction counts — smoke test (Etapa 02.4C)
+# ---------------------------------------------------------------------------
+
+class TestCSNExtractionCounts:
+    """Smoke tests verifying CSN extraction totals (Etapa 02.4C)."""
+
+    SCRATCHPAD = Path(r"C:\Users\GComunal\AppData\Local\Temp\claude\8c6fedd7d95bbcdc\7ccd7963-2824-4911-9990-6c653e3fec80\scratchpad")
+
+    @pytest.fixture
+    def csn_data(self):
+        import json
+        p = self.SCRATCHPAD / "extract_CSN_all.json"
+        if not p.exists():
+            pytest.skip("CSN JSON not in scratchpad")
+        return json.loads(p.read_text(encoding="utf-8"))
+
+    def test_total_elements_minimum(self, csn_data):
+        """CSN debe tener al menos 850 elementos (todos los años presentes)."""
+        assert len(csn_data["elements"]) >= 850
+
+    def test_no_validation_errors(self, csn_data):
+        assert csn_data["validation"]["error_count"] == 0
+
+    def test_all_6_years_present(self, csn_data):
+        years = {e["year"] for e in csn_data["elements"]}
+        assert years == {1, 2, 3, 4, 5, 6}
+
+    def test_all_4_bloques_per_year_minimum(self, csn_data):
+        """Cada año debe tener al menos 3 bloques distintos."""
+        from collections import defaultdict
+        year_blocks = defaultdict(set)
+        for e in csn_data["elements"]:
+            year_blocks[e["year"]].add(e["block_name"])
+        for year in [1, 2, 3, 4, 5, 6]:
+            assert len(year_blocks.get(year, set())) >= 1, f"Año {year} sin bloques"
+
+    def test_col_types_present(self, csn_data):
+        types = {e["element_type"] for e in csn_data["elements"]}
+        assert "CONCEPT" in types
+        assert "WAY_OF_KNOWING" in types
+        assert "PROGRESS_INDICATOR" in types
+
+    def test_no_teaching_situation(self, csn_data):
+        """CSN no debe tener TEACHING_SITUATION (Situaciones son páginas separadas)."""
+        ts = [e for e in csn_data["elements"] if e["element_type"] == "TEACHING_SITUATION"]
+        assert len(ts) == 0
+
+    def test_relation_types(self, csn_data):
+        rel_types = {r["relation_type"] for r in csn_data["relations"]}
+        assert "CONCEPT_WAY_OF_KNOWING" in rel_types
+        assert "CONTENT_PROGRESS_INDICATOR" in rel_types
+
+    def test_year_1_has_seres_vivos(self, csn_data):
+        """Año 1 debe tener bloque Seres vivos."""
+        y1_sv = [e for e in csn_data["elements"]
+                 if e["year"] == 1 and "Seres" in e.get("block_name", "")]
+        assert len(y1_sv) >= 5
+
+    def test_year_4_has_seres_vivos(self, csn_data):
+        """Año 4 debe tener bloque Seres vivos (bug CSN 4° bloque saltado)."""
+        y4_sv = [e for e in csn_data["elements"]
+                 if e["year"] == 4 and "Seres" in e.get("block_name", "")]
+        assert len(y4_sv) >= 10
+
+
+# ---------------------------------------------------------------------------
+# CSN GC-007 — ciclo hidrológico (Etapa 02.4C)
+# ---------------------------------------------------------------------------
+
+class TestCSNGoldenCases:
+    """Validación de GC-007 y muestras CSN."""
+
+    SCRATCHPAD = Path(r"C:\Users\GComunal\AppData\Local\Temp\claude\8c6fedd7d95bbcdc\7ccd7963-2824-4911-9990-6c653e3fec80\scratchpad")
+
+    @pytest.fixture
+    def csn_elements(self):
+        import json
+        p = self.SCRATCHPAD / "extract_CSN_all.json"
+        if not p.exists():
+            pytest.skip("CSN JSON not in scratchpad")
+        return json.loads(p.read_text(encoding="utf-8"))["elements"]
+
+    def _find(self, elements, text_prefix):
+        return [e for e in elements
+                if text_prefix.lower() in e.get("original_text", "").lower()]
+
+    def test_gc007_ciclo_hidrologico_year5(self, csn_elements):
+        """GC-007: 'ciclo hidrológico' → year=5, bloque La Tierra y el universo."""
+        found = self._find(csn_elements, "ciclo hidrol")
+        assert len(found) >= 1, "GC-007: ciclo hidrológico no encontrado"
+        y5 = [e for e in found
+              if e.get("year") == 5 and "Tierra" in e.get("block_name", "")]
+        assert len(y5) >= 1, (
+            f"GC-007: ciclo hidrológico encontrado pero no en year=5 Tierra: "
+            f"{[(e['year'], e['block_name'][:30]) for e in found]}"
+        )
+
+    def test_gc007_not_year4(self, csn_elements):
+        """GC-007 bug anterior: hidrosfera no debe atribuirse SOLO a year=4."""
+        found = self._find(csn_elements, "ciclo hidrol")
+        y5_hits = [e for e in found if e.get("year") == 5]
+        assert len(y5_hits) >= 1, "GC-007: año 5 ausente, posible regresión"
+
+    def test_csn_year1_seres_vivos_los_animales(self, csn_elements):
+        """CSN año 1 debe tener 'LOS ANIMALES' como CONCEPT en Seres vivos."""
+        found = self._find(csn_elements, "LOS ANIMALES")
+        y1 = [e for e in found
+              if e.get("year") == 1 and e.get("element_type") == "CONCEPT"]
+        assert len(y1) >= 1, "CSN 1° Seres vivos: LOS ANIMALES no encontrado"
+
+    def test_csn_year4_diversidad_seres_vivos(self, csn_elements):
+        """CSN año 4 debe tener 'DIVERSIDAD DE LOS SERES VIVOS' en Seres vivos."""
+        found = self._find(csn_elements, "DIVERSIDAD DE LOS SERES VIVOS")
+        y4 = [e for e in found
+              if e.get("year") == 4 and e.get("element_type") == "CONCEPT"]
+        assert len(y4) >= 1, "CSN 4° Seres vivos: DIVERSIDAD no encontrado (bug bloque saltado?)"
+
+    def test_csn_year5_hidrosfera_as_concept(self, csn_elements):
+        """CSN 5° debe tener hidrosfera como CONCEPT."""
+        found = self._find(csn_elements, "hidrosfera")
+        y5_c = [e for e in found
+                if e.get("year") == 5 and e.get("element_type") == "CONCEPT"]
+        assert len(y5_c) >= 1, "CSN 5° hidrosfera no encontrada como CONCEPT"
+
+    def test_csn_year2_la_tierra_geoformas(self, csn_elements):
+        """CSN año 2 debe tener La Tierra/geoformas."""
+        found = self._find(csn_elements, "geoformas")
+        y2 = [e for e in found if e.get("year") == 2]
+        assert len(y2) >= 1, "CSN 2° geoformas no encontrado"
+
+    def test_csn_no_year_none_elements(self, csn_elements):
+        """No debe haber elementos con year=None (todos deben tener año asignado)."""
+        none_yr = [e for e in csn_elements if e.get("year") is None]
+        assert len(none_yr) == 0, f"CSN tiene {len(none_yr)} elementos sin año"

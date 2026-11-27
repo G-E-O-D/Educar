@@ -29,6 +29,7 @@ from table_reconstructor import TricolumnReconstructor
 from adapters.tricolumn import TricolumnAdapter, ExtractedElement, ExtractedRelation
 from adapters.css import CSSAdapter, css_split_items
 from adapters.pc12 import PC12Extractor, find_year_markers, split_spans_by_year
+from adapters.csn import CSNAdapter
 from id_generator import IDGenerator
 from validator import validate_all
 from exporter import export_to_json
@@ -71,6 +72,24 @@ AREA_CONFIG = {
             },
         },
         "bibliography_start": 233,   # d233: "Bibliografía General Disciplinar – Segundo Ciclo"
+    },
+    "CSN": {
+        "area_name": "Ciencias Naturales",
+        "ciclos": {
+            "Primer Ciclo": {
+                "range": (241, 259),
+                # 1° y 2° son sección conjunta d244-d253 con marcadores de año por página
+                # NO están en years_standard; se extraen con extract_csn12
+                "years_standard": [3],       # 3° sí tiene heading "TERCER AÑO" en d254
+                "csn12_range": (244, 253),   # rango de la sección 1°/2°
+            },
+            "Segundo Ciclo": {
+                "range": (260, 290),
+                "years_standard": [4, 5, 6],
+            },
+        },
+        # d291: "Bibliografía" (sz=22) — fin del área CSN
+        "bibliography_start": 291,
     },
 }
 
@@ -142,10 +161,9 @@ def detect_year_bounds(doc: fitz.Document, area: str) -> dict:
             end = sorted_years[i + 1][1] - 1
         else:
             # Último año: fin del área
-            if area == "MAT":
-                end = AREA_CONFIG["MAT"]["bibliography_start"] - 1
-            elif area == "CSS":
-                end = AREA_CONFIG["CSS"].get("bibliography_start", 236) - 1
+            bib_start = AREA_CONFIG.get(area, {}).get("bibliography_start", 0)
+            if bib_start:
+                end = bib_start - 1
             else:
                 end = start + 20
 
@@ -208,10 +226,13 @@ def extract_standard_year(
     """
     reconstructor = TricolumnReconstructor(page_width=page_width)
     if area_code == "CSS" and year <= 2:
-        adapter: TricolumnAdapter | CSSAdapter = CSSAdapter(id_gen)
+        adapter: TricolumnAdapter | CSSAdapter | CSNAdapter = CSSAdapter(id_gen)
     elif area_code == "CSS":
         # CSS 3+: layout igual a MAT (col1=Modos, col2=Indicadores) pero sin PUA bullets
         adapter = TricolumnAdapter(id_gen, cell_items_fn=css_split_items)
+    elif area_code == "CSN":
+        # CSN: col0=Conceptos, col1=Modos, col3=Indicadores (col2 vacío); sin PUA bullets
+        adapter = CSNAdapter(id_gen)
     else:
         adapter = TricolumnAdapter(id_gen)
 
@@ -258,14 +279,28 @@ def extract_standard_year(
             spans_by_page[digital_page] = content["spans"]
             pages_processed.append(digital_page)
 
-        # CSS: las cabeceras de columna se repiten en cada página de continuación.
+        # has_tricolumn check usa spans SIN filtrar para detectar bloques válidos.
+        # IMPORTANTE: se hace ANTES del filtro CSS/CSN porque dicho filtro elimina
+        # las cabeceras de columna de las páginas 2+ del bloque. Si blk_start es
+        # una página heading (año + bloque sin tabla, e.g. CSN d264), las cabeceras
+        # solo existen en blk_start+1 y serían eliminadas por el filtro. Chequear
+        # antes garantiza que no se salten bloques válidos (EI-bug CSN 4° Seres vivos).
+        all_spans_flat_raw = [s for sp in spans_by_page.values() for s in sp]
+        has_tricolumn = any(
+            "Conceptos" in s.text or "Modos de conocer" in s.text or "CONTENIDOS" in s.text
+            for s in all_spans_flat_raw
+        )
+        if not has_tricolumn:
+            continue  # skip non-table blocks (orientaciones, etc.)
+
+        # CSS/CSN: las cabeceras de columna se repiten en cada página de continuación.
         # Filtrar SOLO en páginas 2+ del bloque (no en la primera, que necesitamos
         # para calcular header_y_cutoff correctamente).
         _CSS_HDR = frozenset({
             "Conceptos", "Modos de conocer", "CONTENIDOS",
             "Indicadores de avance", "INDICADORES DE AVANCE", "Indicadores",
         })
-        if area_code == "CSS":
+        if area_code in ("CSS", "CSN"):
             for pg_num in spans_by_page:
                 if pg_num == blk_start:
                     continue  # conservar primera página para detectar header_y
@@ -278,8 +313,10 @@ def extract_standard_year(
         # (col1=0 en 3°+, col2=0 en 1°/2°). Recortar el bloque en la última página
         # que sí tiene contenido de tabla, para evitar que el texto narrativo de
         # Situaciones contamine la extracción de conceptos/modos/indicadores.
-        if area_code == "CSS":
-            way_col = 1 if year >= 3 else 2
+        if area_code in ("CSS", "CSN"):
+            # CSS 1°/2°: col2 tiene Modos (way_col=2). CSS 3°+: col1 (way_col=1).
+            # CSN: col1 siempre (Modos en col1 para todos los años).
+            way_col = 1 if (area_code == "CSN" or year >= 3) else 2
             last_table_page = blk_start
             for pg_num in sorted(spans_by_page.keys()):
                 if any(classify_column(sp.x0, page_width) == way_col
@@ -288,14 +325,6 @@ def extract_standard_year(
             for pg_num in list(spans_by_page.keys()):
                 if pg_num > last_table_page:
                     del spans_by_page[pg_num]
-
-        all_spans_flat = [s for sp in spans_by_page.values() for s in sp]
-        has_tricolumn = any(
-            "Conceptos" in s.text or "Modos de conocer" in s.text or "CONTENIDOS" in s.text
-            for s in all_spans_flat
-        )
-        if not has_tricolumn:
-            continue  # skip non-table blocks (orientaciones, etc.)
 
         # Header Y cutoff.
         # MAT: primer match (break) para evitar capturar "Modos de conocer" en contenido.
@@ -306,9 +335,14 @@ def extract_standard_year(
         first_page_spans = spans_by_page.get(blk_start, [])
         header_y = 0.0
         HEADER_KEYWORDS = ("Conceptos", "Modos de conocer", "CONTENIDOS", "Indicadores", "INDICADORES")
-        if area_code == "CSS":
+        if area_code in ("CSS", "CSN"):
             block_y0_on_page = block_info.get("y0", 0.0)
-            css_hdr_zone = block_y0_on_page + 160.0  # cubre las 3 filas de cabecera
+            # CSS: 160pt cubre las 3 filas de cabecera habituales.
+            # CSN: 300pt porque en algunas páginas las cabeceras de columna
+            #      aparecen hasta 200-230pt por debajo del encabezado del bloque
+            #      (el texto "Objetivos del año" llena la zona intermedia).
+            hdr_zone_offset = 300.0 if area_code == "CSN" else 160.0
+            css_hdr_zone = block_y0_on_page + hdr_zone_offset
             for span in first_page_spans:
                 if span.y0 < css_hdr_zone and any(kw in span.text for kw in HEADER_KEYWORDS):
                     header_y = max(header_y, span.y1)
@@ -438,6 +472,209 @@ def extract_pc12(
 
 
 # ---------------------------------------------------------------------------
+# Extracción CSN 1°/2° — sección conjunta con marcadores de año por página
+# ---------------------------------------------------------------------------
+
+CSN_YEAR1_MARKER = "CONTENIDOS DE PRIMER AÑO"
+CSN_YEAR2_MARKER = "CONTENIDOS DE SEGUNDO AÑO"
+
+_CSN_HDR = frozenset({
+    "Conceptos", "Modos de conocer", "CONTENIDOS",
+    "Indicadores de avance", "INDICADORES DE AVANCE", "Indicadores",
+})
+
+
+def split_csn12_spans(spans_by_page: dict) -> tuple[dict, dict]:
+    """
+    Separa spans de las páginas CSN 1°/2° según marcadores de año.
+
+    Retorna (year1_pages, year2_pages). Páginas sin marcador (intro de bloque,
+    situaciones de enseñanza) NO se incluyen en ninguno de los dos.
+    Para páginas con ambos marcadores (d252), el split se hace por y0 del 2° marcador.
+    """
+    year1_spans: dict[int, list] = {}
+    year2_spans: dict[int, list] = {}
+
+    for dp in sorted(spans_by_page.keys()):
+        spans = spans_by_page[dp]
+        y1_y: Optional[float] = None
+        y2_y: Optional[float] = None
+
+        for sp in spans:
+            text = sp.text.strip()
+            if CSN_YEAR1_MARKER in text:
+                if y1_y is None or sp.y0 < y1_y:
+                    y1_y = sp.y0
+            if CSN_YEAR2_MARKER in text:
+                if y2_y is None or sp.y0 < y2_y:
+                    y2_y = sp.y0
+
+        if y1_y is not None and y2_y is not None:
+            # Ambos marcadores en la misma página: split en la y0 del marcador 2°
+            year1_spans[dp] = [sp for sp in spans if sp.y0 < y2_y]
+            year2_spans[dp] = [sp for sp in spans if sp.y0 >= y2_y]
+        elif y1_y is not None:
+            year1_spans[dp] = spans
+        elif y2_y is not None:
+            year2_spans[dp] = spans
+        # Else: sin marcador de año → página intro / situaciones → omitir
+
+    return year1_spans, year2_spans
+
+
+def _csn12_header_y(year_pages: dict) -> float:
+    """
+    Calcula header_y_cutoff para una sección de año CSN.
+    Busca todas las cabeceras de columna y el marcador de sección en las páginas
+    para garantizar que el reconstructor las excluya correctamente.
+    """
+    HEADER_KWS = ("Conceptos", "Modos de conocer", "CONTENIDOS", "Indicadores")
+    header_y = 0.0
+    for sp_list in year_pages.values():
+        for sp in sp_list:
+            if any(kw in sp.text for kw in HEADER_KWS):
+                header_y = max(header_y, sp.y1)
+    return header_y
+
+
+def extract_csn12(
+    doc: fitz.Document,
+    start_page: int,
+    end_page: int,
+    area_name: str,
+    id_gen: IDGenerator,
+    page_width: float = 841.9,
+) -> dict:
+    """
+    Extrae CSN Primer Ciclo 1° y 2° usando marcadores de año por página.
+
+    Estrategia:
+    1. Detectar bloques (BLOQUE: ...) en d244-d253.
+    2. Para cada bloque, recopilar spans y filtrar cabeceras repetidas.
+    3. split_csn12_spans() asigna cada página a year 1, year 2, o descarta.
+    4. Para páginas con ambos años (d252), split por y0 del marcador 2°.
+    5. Aplicar cutoff EI-10: eliminar páginas sin col1 (Modos, way_col=1).
+    6. Reconstruir tabla y adaptar con CSNAdapter.
+    """
+    adapter = CSNAdapter(id_gen)
+    reconstructor = TricolumnReconstructor(page_width=page_width)
+
+    all_elements: list[ExtractedElement] = []
+    all_relations: list[ExtractedRelation] = []
+    ambiguities: list[str] = []
+    pages_processed: list[int] = []
+    year_counts = {1: 0, 2: 0, None: 0}
+
+    block_starts = find_block_starts(doc, start_page, end_page)
+    print(f"    Bloques CSN12 detectados: {len(block_starts)}")
+    for b in block_starts:
+        print(f"      d{b['digital_page']}: {b['block_name'][:55]}")
+
+    if not block_starts:
+        block_starts = [{
+            "digital_page": start_page,
+            "printed_page": start_page - 1,
+            "text": "BLOQUE: (sin heading)",
+            "block_name": "(sin heading)",
+            "y0": 0.0,
+        }]
+        ambiguities.append(f"CSN12: sin bloques detectados en d{start_page}-d{end_page}.")
+
+    for block_idx, block_info in enumerate(block_starts):
+        blk_start = block_info["digital_page"]
+        blk_end = (
+            block_starts[block_idx + 1]["digital_page"] - 1
+            if block_idx + 1 < len(block_starts) else end_page
+        )
+        if blk_end < blk_start:
+            ambiguities.append(
+                f"EI-05 CSN12: bloque '{block_info['block_name']}' d{blk_start}: "
+                f"blk_end={blk_end} < blk_start. Usando blk_end={blk_start}."
+            )
+            blk_end = blk_start
+
+        # Recopilar spans del bloque
+        spans_by_page: dict[int, list] = {}
+        for dp in range(blk_start, blk_end + 1):
+            page = doc[dp - 1]
+            content = extract_page_content(page, dp, filter_headers=True)
+            spans_by_page[dp] = content["spans"]
+            pages_processed.append(dp)
+
+        # Filtrar cabeceras de columna repetidas (páginas de continuación)
+        for pg_num in spans_by_page:
+            if pg_num == blk_start:
+                continue
+            spans_by_page[pg_num] = [
+                sp for sp in spans_by_page[pg_num]
+                if not (sp.y0 < 150 and any(h in sp.text for h in _CSN_HDR))
+            ]
+
+        # Separar por año según marcadores de página
+        year1_pages, year2_pages = split_csn12_spans(spans_by_page)
+
+        for year, year_pages in [(1, year1_pages), (2, year2_pages)]:
+            if not year_pages:
+                continue
+
+            # EI-10 cutoff: eliminar páginas sin col1 (Modos) posterior a la última con tabla
+            last_table_page = min(year_pages.keys())
+            for pg, sp_list in sorted(year_pages.items()):
+                if any(classify_column(s.x0, page_width) == 1 for s in sp_list):
+                    last_table_page = pg
+            for pg in list(year_pages.keys()):
+                if pg > last_table_page:
+                    del year_pages[pg]
+
+            if not year_pages:
+                continue
+
+            # Verificar que hay contenido tricolumna real
+            all_spans_flat = [s for sp_list in year_pages.values() for s in sp_list]
+            has_tc = any(
+                "Conceptos" in s.text or "Modos de conocer" in s.text or "CONTENIDOS" in s.text
+                for s in all_spans_flat
+            )
+            if not has_tc:
+                continue
+
+            # header_y: máximo y1 de todas las cabeceras en year_pages
+            header_y = _csn12_header_y(year_pages)
+
+            raw_table = reconstructor.reconstruct(
+                spans_by_page=year_pages,
+                area=area_name,
+                ciclo="Primer Ciclo",
+                year=year,
+                block_name=block_info["block_name"],
+                block_number=block_idx + 1,
+                header_y_cutoff=header_y,
+            )
+            ambiguities.extend(raw_table.ambiguities)
+
+            elements, relations = adapter.adapt(raw_table)
+            all_elements.extend(elements)
+            all_relations.extend(relations)
+
+            for e in elements:
+                yr = e.year if e.year in (1, 2) else None
+                year_counts[yr] += 1
+
+    print(f"    CSN12: elementos y1={year_counts[1]}, y2={year_counts[2]}, joint={year_counts[None]}")
+
+    return {
+        "years": [1, 2],
+        "pages": (start_page, end_page),
+        "pages_processed": sorted(set(pages_processed)),
+        "block_starts": block_starts,
+        "elements": all_elements,
+        "relations": all_relations,
+        "ambiguities": ambiguities,
+        "year_counts": year_counts,
+    }
+
+
+# ---------------------------------------------------------------------------
 # Verificación situaciones de enseñanza 6° SC
 # ---------------------------------------------------------------------------
 
@@ -493,7 +730,7 @@ def verify_teach6(doc: fitz.Document, start: int, end: int, area_name: str) -> d
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--area", default="MAT", choices=["MAT", "CSS"])
+    parser.add_argument("--area", default="MAT", choices=["MAT", "CSS", "CSN"])
     parser.add_argument("--verify-teach6", action="store_true")
     parser.add_argument("--output", default="")
     args = parser.parse_args()
@@ -588,6 +825,37 @@ def main():
             result = extract_standard_year(
                 doc, start, end, area_name, ciclo, year, id_gen,
                 area_code="CSS",
+            )
+            all_elements.extend(result["elements"])
+            all_relations.extend(result["relations"])
+            all_ambiguities.extend(result["ambiguities"])
+            year_results[str(year)] = result
+            print(f"  {year}°: {len(result['elements'])} elementos, {len(result['relations'])} relaciones")
+
+    # === CSN ===
+    elif args.area == "CSN":
+        # CSN 1°/2°: sección conjunta d244-d253 con marcadores de año por página
+        csn12_start = area_cfg["ciclos"]["Primer Ciclo"]["csn12_range"][0]
+        csn12_end   = area_cfg["ciclos"]["Primer Ciclo"]["csn12_range"][1]
+        print(f"\n[3a] Extrayendo CSN 1°/2° (d{csn12_start}-d{csn12_end}) con CSN12Extractor...")
+        csn12_result = extract_csn12(doc, csn12_start, csn12_end, area_name, id_gen)
+        all_elements.extend(csn12_result["elements"])
+        all_relations.extend(csn12_result["relations"])
+        all_ambiguities.extend(csn12_result["ambiguities"])
+        year_results["1_2"] = csn12_result
+        print(f"  CSN12 total: {len(csn12_result['elements'])} elementos, {len(csn12_result['relations'])} relaciones")
+
+        # CSN 3°-6°: extracción estándar con CSNAdapter
+        for year in [3, 4, 5, 6]:
+            if year not in year_bounds:
+                print(f"\n  WARN: CSN año {year}° sin bounds detectados, omitiendo.")
+                continue
+            start, end = year_bounds[year]
+            ciclo = "Primer Ciclo" if year == 3 else "Segundo Ciclo"
+            print(f"\n[3{chr(97+year-2)}] Extrayendo CSN {year}° (d{start}-d{end})...")
+            result = extract_standard_year(
+                doc, start, end, area_name, ciclo, year, id_gen,
+                area_code="CSN",
             )
             all_elements.extend(result["elements"])
             all_relations.extend(result["relations"])
